@@ -1,0 +1,11 @@
+# TODO: This ~~article~~ type is a stub. You can help CWTools by expanding it.
+
+types = {
+    type[ai_goaltype] = {
+        path = "game/common/ai_goaltypes"
+    }
+}
+
+ai_goaltype = {
+
+}

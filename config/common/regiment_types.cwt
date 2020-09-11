@@ -1,0 +1,5 @@
+types = {
+    type[regiment_type] = {
+        path = "game/common/regiment_types"
+    }
+}

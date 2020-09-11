@@ -1,0 +1,22 @@
+enums = {
+    enum[duration] = {
+        days
+        months
+        years
+    }
+    enum[minmax] = {
+        min
+        max
+    }
+    enum[sexualities] = {
+        heterosexual
+        homosexual
+        bisexual
+        asexual
+        none
+    }
+    enum[genders] = {
+        male
+        female
+    }
+}

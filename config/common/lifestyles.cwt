@@ -1,0 +1,22 @@
+types = {
+    type[lifestyle] = {
+        path = "game/common/lifestyles"
+    }
+}
+
+types = {
+    type[lifestyle_perk] = {
+        path = "game/common/lifestyle_perks"
+    }
+}
+
+lifestyle = {
+    ## push_scope = character
+    is_highlighted = single_alias_right[trigger_clause]
+
+    xp_per_level = int
+    base_xp_gain = int
+
+    # TODO icon
+    icon = scalar
+}

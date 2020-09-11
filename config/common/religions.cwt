@@ -1,0 +1,9 @@
+types = {
+    type[religion] = {
+        path = "game/common/religion/religions"
+    }
+    type[faith] = {
+        path = "game/common/religion/religions"
+        skip_root_key = { any faiths }
+    }
+}

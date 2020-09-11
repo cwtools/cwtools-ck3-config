@@ -1,0 +1,43 @@
+types = {
+	type[decision] = {
+		path = "game/common/decisions"
+	}
+}
+
+## replace_scope = { root = character this = character }
+decision = {
+    title = localisation
+    title = single_alias_right[complex_event_desc]
+
+    picture = scalar
+
+    major = bool
+
+    ## cardinality = 0..1
+    selection_tooltip = localisation
+    ## cardinality = 0..1
+    selection_tooltip = single_alias_right
+    desc = localisation
+    desc = single_alias_right
+    ## cardinality = 0..1
+    confirm_text = localisation
+    ## cardinality = 0..1
+    ## cardinality = 0..1
+    confirm_text = single_alias_right
+
+    ## cardinality = 0..inf
+    immediate = single_alias_right[effect_clause]
+    ## cardinality = 0..1
+    is_shown = single_alias_right[trigger_clause]
+    ## cardinality = 0..1
+    is_valid_showing_failures_only = single_alias_right[trigger_clause]
+    ## cardinality = 0..1
+    is_valid = single_alias_right[trigger_clause]
+    ## cardinality = 0..1
+    ai_potential = single_alias_right[trigger_clause]
+
+    ## cardinality = 0..1
+    effect = single_alias_right[effect_clause]
+    ## cardinality = 0..1
+    ai_will_do = single_alias_right[weight_block]
+}

@@ -1,0 +1,5 @@
+types = {
+    type[terrain] = {
+        path = "game/common/terrains"
+    }
+}

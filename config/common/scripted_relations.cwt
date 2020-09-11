@@ -1,0 +1,5 @@
+types = {
+    type[scripted_relation] = {
+        path = "game/common/scripted_relations"
+    }
+}

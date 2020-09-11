@@ -1,0 +1,33 @@
+types = {
+    type[character_interaction] = {
+        path = "game/common/character_interactions"
+    }
+}
+
+character_interaction = {
+    ## cardinality = 0..1
+    is_shown = single_alias_right[trigger_clause]
+    ## cardinality = 0..1
+    is_valid_showing_failures_only = single_alias_right[trigger_clause]
+    ## cardinality = 0..1
+    has_valid_target_showing_failures_only = single_alias_right[trigger_clause]
+    ## cardinality = 0..1
+    is_valid = single_alias_right[trigger_clause]
+    ## cardinality = 0..1
+    can_send = single_alias_right[trigger_clause]
+    ## cardinality = 0..1
+    can_be_picked = single_alias_right[trigger_clause]
+    ## cardinality = 0..1
+    is_highlighted = single_alias_right[trigger_clause]
+
+    ## cardinality = 0..1
+    on_send = single_alias_right[effect_clause]
+    ## cardinality = 0..1
+    on_accept = single_alias_right[effect_clause]
+    ## cardinality = 0..1
+    on_decline = single_alias_right[effect_clause]
+    ## cardinality = 0..1
+    on_auto_accept = single_alias_right[effect_clause]
+    ## cardinality = 0..1
+    ai_accept = single_alias_right[weight_block]
+}

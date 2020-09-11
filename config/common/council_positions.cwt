@@ -1,0 +1,5 @@
+types = {
+    type[council_position] = {
+        path = "game/common/council_positions"
+    }
+}
