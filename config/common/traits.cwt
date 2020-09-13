@@ -12,11 +12,43 @@ types = {
     }
 }
 
+single_alias[complex_desc] = {
+    ## cardinality = 0..inf
+    desc = localisation
+
+    ## cardinality = 0..inf
+    random_valid = {
+        ## cardinality = 2..inf
+        desc = localisation
+    }
+
+    ## cardinality = 0..inf
+    first_valid = {
+        ## cardinality = 1..inf
+        triggered_desc = {
+            desc = localisation
+            trigger = {
+                ## cardinality = 1..inf
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+        }
+        # This should probably be recursive in some way
+        ## cardinality = 0..inf
+        desc = localisation
+    }
+}
+
 ## replace_scope = { this = character }
 trait = {
+    ## cardinality 0..1
+    ### Trait localization name
     name = localisation
+    ## cardinality 1..1
+    ### Trait index. Must be unique.
     index = int
+    ## cardinality = 0..1
     icon = single_alias_right[complex_desc]
+    ## cardinality = 0..inf
     desc = single_alias_right[complex_desc]
 
     ## cardinality = 0..1
@@ -86,6 +118,83 @@ trait = {
     ## cardinality = 0..1
     ### Will stop visual aging, and make the character immune to natural death. Can still be killed by script. Fertility will match visual age. You can use set_immortal_age to change the visual age
     immortal = bool
+
+    ## cardinality = 0..1
+    ### Modifies a character's diplomacy score. [Default: 0]
+    diplomacy = int
+
+    ## cardinality = 0..1
+    ### Modifies a character's martial score. [Default: 0]
+    martial = int
+
+    ## cardinality = 0..1
+    ### Modifies a character's stewardship score. [Default: 0]
+    stewardship = int
+
+    ## cardinality = 0..1
+    ### Modifies a character's learning score. [Default: 0]
+    learning = int
+
+    ## cardinality = 0..1
+    ### Modifies a character's prowess score. [Default: 0]
+    prowess = int
+
+    ## cardinality = 0..1
+    ### Modifies a character's intrigue score. [Default: 0]
+    intrigue = int
+
+    ## cardinality = 0..1
+    ### Modifies the general opinion of characters towards this character that could be sexually attracted to them. [Default: 0]
+    attraction_opinion = int
+
+    #TODO: ai values are used in other types. Can we move these out somewhere?
+    ## cardinality = 0..1
+    ### Modifies how a trait affects an AI's tendencies to make bold decisions. [Default: 0]
+    ai_boldness = int_value_field
+    ## cardinality = 0..1
+    ai_boldness = enum[ai_value]
+
+    ## cardinality = 0..1
+    ### Modifies how a trait affects an AI's tendencies to make decisions in line with their faith. [Default: 0]
+    ai_zeal = int_value_field
+    ## cardinality = 0..1
+    ai_zeal = enum[ai_value]
+
+    ## cardinality = 0..1
+    ### Modifies how a trait affects an AI's tendencies to make decisions that are well reasoned and logical. [Default: 0]
+    ai_rationality = int_value_field
+    ## cardinality = 0..1
+    ai_rationality = enum[ai_value]
+
+    ## cardinality = 0..1
+    ### Modifies how a trait affects an AI's tendencies to make decisions to enrich themselves or keep money. [Default: 0]
+    ai_greed = int_value_field
+    ## cardinality = 0..1
+    ai_greed = enum[ai_value]
+
+    ## cardinality = 0..1
+    ### Modifies how a trait affects an AI's tendencies to make honorable decisions. [Default: 0]
+    ai_honor = int_value_field
+    ## cardinality = 0..1
+    ai_honor = enum[ai_value]
+
+    ## cardinality = 0..1
+    ### Modifies how a trait affects an AI's tendencies to make kind decisions and their empathy for others. [Default: 0]
+    ai_compassion = int_value_field
+    ## cardinality = 0..1
+    ai_compassion = enum[ai_value]
+
+    ## cardinality = 0..1
+    ### Modifies how a trait affects an AI's tendencies to try to get revenge when wronged. [Default : 0]
+    ai_vengefulness = int_value_field
+    ## cardinality = 0..1
+    ai_vengefulness = enum[ai_value]
+
+    ## cardinality = 0..1
+    ### Modifies how active an AI tends to be? Maybe ambition. [Default : 0]
+    ai_energy = int_value_field
+    ## cardinality = 0..1
+    ai_energy = enum[ai_value]
 
     ## cardinality = 0..1
     ### Mark as physical [Default: no]

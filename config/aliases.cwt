@@ -7,3 +7,14 @@ single_alias[trigger_clause] = {
 single_alias[effect_clause] = {
     alias_name[effect] = alias_match_left[effect]
 }
+
+single_alias[cost] = {
+    ## cardinality = 0..1
+    gold = int_value_field
+
+    ## cardinality = 0..1
+    piety = int_value_field
+
+    ## cardinality = 0..1
+    prestige = int_value_field
+}
