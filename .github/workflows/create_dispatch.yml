@@ -2,7 +2,7 @@ name: Create a repository dispatch for cwtools/cwtools-cache-files
 on: push 
 
 jobs:
-  hoi4_dispatch:
+  ck3_dispatch:
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.CWTOOLSBOT_TOKEN }}
