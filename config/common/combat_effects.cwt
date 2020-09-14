@@ -19,6 +19,9 @@ single_alias[combat_effect] = {
     ## cardinality = 0..1
     ### advantage bonuts for static effects or multiplier for dynamic effects
     advantage = int_value_field
+    ## replace_scope = { ROOT = character THIS = combat }
+    ## cardinality = 0..inf
+    alias_name[modifier] = alias_match_left[modifier]
     ## cardinality = 0..1
     ### Is this an adjacency effect
     ## cardinality = 0..1

@@ -61,234 +61,21 @@ trait = {
     # TODO: Many of these seem like they're possibly soft-coded.
     # TODO: Can some of these be replaced with keyed templates?
 
+    ### A permanent effect applied to the trait holder
+    ## replace_scope = { ROOT = character THIS = character }
+    ## cardinality = 0..inf
+    alias_name[modifier] = alias_match_left[modifier]
     ## cardinality = 0..1
-    monthly_lifestyle_xp_gain_mult = float
-    ## cardinality = 0..1
-    monthly_intrigue_lifestyle_xp_gain_mult = float
-    ## cardinality = 0..1
-    monthly_diplomacy_lifestyle_xp_gain_mult = float
-    ## cardinality = 0..1
-    monthly_stewardship_lifestyle_xp_gain_mult = float
-    ## cardinality = 0..1
-    monthly_martial_lifestyle_xp_gain_mult = float
-    ## cardinality = 0..1
-    monthly_learning_lifestyle_xp_gain_mult = float
-
-    ## cardinality = 0..1
-    development_growth_factor = float
-
-    ## cardinality = 0..1
-    stress_loss_mult = float
-    ## cardinality = 0..1
-    stress_gain_mult = float
-
-    ## cardinality = 0..1
-    monthly_income_mult = float
-
-    ## cardinality = 0..1
-    dread_gain_mult = float
-    ## cardinality = 0..1
-    dread_baseline_add = int
-    ## cardinality = 0..1
-    dread_loss_mult = float
-    ## cardinality = 0..1
-    dread_decay_mult = float
-
-    ## cardinality = 0..1   
-    tyranny_gain_mult = float
-
-    ## cardinality = 0..1   
-    enemy_hostile_scheme_success_chance_mult = float
-    ## cardinality = 0..1   
-    enemy_hostile_scheme_success_chance_add = float
-    ## cardinality = 0..1   
-    enemy_personal_scheme_success_chance_mult = float
-    ## cardinality = 0..1   
-    enemy_personal_scheme_success_chance_add = float
-    ## cardinality = 0..1   
-    scheme_discovery_chance_mult = float
-    ## cardinality = 0..1   
-    scheme_discovery_chance_add = float
-
-    ## cardinality = 0..1
-    hostile_scheme_resistance_mult = float
-    ## cardinality = 0..1
-    hostile_scheme_resistance_add = float
-    ## cardinality = 0..1
-    hostile_scheme_power_mult = float
-    ## cardinality = 0..1
-    hostile_scheme_power_add = float
-    ## cardinality = 0..1
-    owned_hostile_scheme_success_chance_mult = float
-    ## cardinality = 0..1
-    owned_hostile_scheme_success_chance_add = float
-    ## cardinality = 0..1
-    personal_scheme_power_mult = float
-    ## cardinality = 0..1
-    personal_scheme_power_add = float
-    ## cardinality = 0..1
-	owned_personal_scheme_success_chance_mult = float
-    ## cardinality = 0..1
-	owned_personal_scheme_success_chance_add = float
-	
-	
-
-    ## cardinality = 0..1
-    seduce_scheme_power_add = float
-    ## cardinality = 0..1
-    seduce_scheme_power_mult = float
-    
-
-    ## cardinality = 0..1
-    negate_health_penalty_add = float
-
-    ## cardinality = 0..1
-    monthly_prestige = float
-    ## cardinality = 0..1
-    monthly_prestige_gain_mult = float
-
-    ## cardinality = 0..1
-    monthly_piety = float
-    ## cardinality = 0..1
-    monthly_piety_gain_mult = float
-    ## cardinality = 0..1
-    faith_conversion_piety_cost_mult = float
-
-    ## cardinality = 0..1
-    tax_mult = float
-    
-    ## cardinality = 0..1
-    levy_size = float
-
-    ## cardinality = 0..1
-    vassal_limit = int
-	
-
-    ## cardinality = 0..1
-    county_opinion_add = int
-    ## cardinality = 0..1
-    opinion_of_liege = int
-    ## cardinality = 0..1
-    liege_opinion = int
-    ## cardinality = 0..1
-    opinion_of_vassal = int
-    ## cardinality = 0..1
-    vassal_opinion = int
-    ## cardinality = 0..1
-    religious_vassal_opinion = int
-    ## cardinality = 0..1
-    general_opinion = int
-    ## cardinality = 0..1
-    same_faith_opinion = int
-    ## cardinality = 0..1
-    same_opinion_if_same_faith = int
-    ## cardinality = 0..1
-    opinion_of_different_faith = int
-    ## cardinality = 0..1
-    prisoner_opinion = int
-    ## cardinality = 0..1
-    same_culture_opinion = int
-    ## cardinality = 0..1
-    dynasty_opinion = int
-    ## cardinality = 0..1
-    dynasty_house_opinion = int
-    ## cardinality = 0..1
-    close_relative_opinion = int
-    ## cardinality = 0..1
-    ### Modifies the general opinion of characters towards this character that could be sexually attracted to them. [Default: 0]
-    attraction_opinion = int
-    ## cardinality = 0..1
-    clergy_opinion = int
-    ## cardinality = 0..1
-    tribal_government_opinion = int
-    ## cardinality = 0..1
-    independent_ruler_opinion = int
-    ## cardinality = 0..1
-    twin_opinion = int
-
-    ## cardinality = 0..1
-    build_speed = float
-    ## cardinality = 0..1
-    holding_build_speed = float
-    ## cardinality = 0..1
-    build_gold_cost = float
-    ## cardinality = 0..1
-    holding_build_gold_cost = float
+    same_opinion_if_same_faith = int_value_field
     
     ## cardinality = 0..1
     add_commander_trait = bool
-    ## cardinality = 0..1
-    supply_duration = float
-    ## cardinality = 0..1
-    siege_phase_time = float
-    ## cardinality = 0..1
-    enemy_hard_casualty_modifier = float
-    ## cardinality = 0..1
-    hard_casualty_modifier = float
-    ## cardinality = 0..1
-    hostile_county_attrition = float
-    ## cardinality = 0..1
-    raid_speed = float
-    ## cardinality = 0..1
-    enemy_terrain_advantage = float
-    #TODO: Check if these advantage fields are floats or ints
-    ## cardinality = 0..inf
-    <terrain>_advantage = int
-    ## cardinality = 0..inf
-    <terrain>_attrition_mult = float
-    ## cardinality = 0..inf
-    <terrain>_cancel_negative_supply = bool
-    
-    ## cardinality = 0..1
-    min_combat_roll = int
-    ## cardinality = 0..1
-	max_combat_roll = int
-
+    # Work around for bad expected type on this modifier
     ## cardinality = 0..1
     no_water_crossing_penalty = bool
-    ## cardinality = 0..1
-    movement_speed = float
-    ## cardinality = 0..1
-    retreat_losses = float
-    ## cardinality = 0..1
-    tolerance_advantage_mod = int
-    ## cardinality = 0..1
-    advantage_against_coreligionists = int
+    # Work around for bad expected type on this modifier
     ## cardinality = 0..1
     ignore_negative_culture_opinion = bool
-    ## cardinality = 0..1
-	monthly_county_control_change_factor = float
-
-
-    ## cardinality = 0..1
-    ### Modifies a character's diplomacy score. [Default: 0]
-    diplomacy = int
-    ## cardinality = 0..1
-    ### Modifies a character's martial score. [Default: 0]
-    martial = int
-    ## cardinality = 0..1
-    ### Modifies a character's stewardship score. [Default: 0]
-    stewardship = int
-    ## cardinality = 0..1
-    ### Modifies a character's learning score. [Default: 0]
-    learning = int
-    ## cardinality = 0..1
-    ### Modifies a character's prowess score. [Default: 0]
-    prowess = int
-    ## cardinality = 0..1
-    ### Modifies a character's intrigue score. [Default: 0]
-    intrigue = int
-
-    ## cardinality = 0..1
-    ### Health Modifier
-    health = float
-    ## cardinality = 0..1
-    life_expectancy = int
-    ## cardinality = 0..1
-    ### Fertility Modifier
-    fertility = float
-    ## cardinality = 0..1
-    inbreeding_chance = float
     ## cardinality = 0..1
     disables_combat_leadership = bool
     ## cardinality = 0..1
@@ -304,8 +91,6 @@ trait = {
     illegitimate_bastard = bool
     ## cardinality = 0..1
     legitimate_bastard = bool
-
-
     ## cardinality = 0..1
     ### Will stop visual aging, and make the character immune to natural death. Can still be killed by script. Fertility will match visual age. You can use set_immortal_age to change the visual age
     immortal = bool
@@ -396,72 +181,7 @@ trait = {
     ## cardinality = 0..1
     ### When gaining this trait, every single morph gene will be shifted by this percentage towards 0 or 1; whichever it is closest to. E.G., 0.4 will shift 25% towards 0, resulting in 0.3
     portrait_extremity_shift = float[0..1]
-
-    ###################################
-    ######AI Value Modifications#######
-    ###################################
-
-    #TODO: ai values are used in other types. Can we move these out somewhere?
-    ## cardinality = 0..1
-    ### Modifies how a trait affects an AI's tendencies to make bold decisions. [Default: 0]
-    ai_boldness = int_value_field
-    ## cardinality = 0..1
-    ai_boldness = enum[ai_value]
-
-    ## cardinality = 0..1
-    ### Modifies how a trait affects an AI's tendencies to make decisions in line with their faith. [Default: 0]
-    ai_zeal = int_value_field
-    ## cardinality = 0..1
-    ai_zeal = enum[ai_value]
-
-    ## cardinality = 0..1
-    ### Modifies how a trait affects an AI's tendencies to make decisions that are well reasoned and logical. [Default: 0]
-    ai_rationality = int_value_field
-    ## cardinality = 0..1
-    ai_rationality = enum[ai_value]
-
-    ## cardinality = 0..1
-    ### Modifies how a trait affects an AI's tendencies to make decisions to enrich themselves or keep money. [Default: 0]
-    ai_greed = int_value_field
-    ## cardinality = 0..1
-    ai_greed = enum[ai_value]
-
-    ## cardinality = 0..1
-    ### Modifies how a trait affects an AI's tendencies to make honorable decisions. [Default: 0]
-    ai_honor = int_value_field
-    ## cardinality = 0..1
-    ai_honor = enum[ai_value]
-
-    ## cardinality = 0..1
-    ### Modifies how a trait affects an AI's tendencies to make kind decisions and their empathy for others. [Default: 0]
-    ai_compassion = int_value_field
-    ## cardinality = 0..1
-    ai_compassion = enum[ai_value]
-
-    ## cardinality = 0..1
-    ### Modifies how a trait affects an AI's tendencies to try to get revenge when wronged. [Default : 0]
-    ai_vengefulness = int_value_field
-    ## cardinality = 0..1
-    ai_vengefulness = enum[ai_value]
-
-    ## cardinality = 0..1
-    ### Modifies how a trait affects an AI's tendencies to socialize and make friends.
-    ai_sociability = int_value_field
-    ## cardinality = 0..1
-    ai_sociability = enum[ai_value]
-
-    ## cardinality = 0..1
-    ### Modifies how active an AI tends to be? Maybe ambition. [Default : 0]
-    ai_energy = int_value_field
-    ## cardinality = 0..1
-    ai_energy = enum[ai_value]
-
-    ## cardinality = 0..1
-    ai_war_chance = float
-
-    ## cardinality = 0..1
-    ai_war_cooldown = float
-
+  
     ###########################
     ######Categorization#######
     ###########################

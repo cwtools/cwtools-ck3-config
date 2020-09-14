@@ -9,7 +9,6 @@ event_theme = {
     ### An icon that can be shown when the event pops up. In case that there are multiples the first one that fits the trigger will be the one selected.
     icon = {
         ## cardinality = 0..1
-        ## push_scope = event
         ### Receives the event scope to check if it's valid.
         trigger = single_alias_right[trigger_clause]
         reference = scalar
@@ -18,7 +17,6 @@ event_theme = {
     ### A sound that can be played when the event pops up. In case that there are multiples the first one that fits the trigger will be the one selected.
     sound = {
         ## cardinality = 0..1
-        ## push_scope = event
         ### Receives the event scope to check if it's valid.
         trigger = single_alias_right[trigger_clause]
         reference = scalar
@@ -27,7 +25,6 @@ event_theme = {
     ### A background that can be shown when the event pops up. In case that there are multiples the first one that fits the trigger will be the one selected.
     background = {
         ## cardinality = 0..1
-        ## push_scope = event
         ### Receives the event scope to check if it's valid.
         trigger = single_alias_right[trigger_clause]
         ### Key to event backgrounds database

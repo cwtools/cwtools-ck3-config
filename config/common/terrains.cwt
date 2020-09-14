@@ -5,6 +5,12 @@ types = {
     }
 }
 
+alias[modifier:<terrain>_advantage] = int_value_field
+alias[modifier:<terrain>_attrition_mult] = value_field
+alias[modifier:<terrain>_cancel_negative_supply] = bool
+alias[modifier:<terrain>_min_combat_roll] = int_value_field
+alias[modifier:<terrain>_max_combat_roll] = int_value_field
+
 terrain = {
     ### HSV color as a series of floats.
     color = single_alias_right[hsv_color]
