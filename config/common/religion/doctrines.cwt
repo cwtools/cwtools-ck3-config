@@ -2,10 +2,11 @@ types = {
     type[doctrine_group] = {
         path = "game/common/religion/doctrines"
     }
-    
+
+    ## type_key_filter <> is_available_on_create
     type[doctrine] = {
         path = "game/common/religion/doctrines"
-        skip_root_key = any 
+        skip_root_key = any
     }
 }
 
@@ -36,7 +37,7 @@ doctrine_group = {
         ## cardinality = 0..1
         ### Should be shown on the religion interface
         visible = bool
-        
+
         # parameters = {
         #     ## cardinality = 0..inf
         #     scalar = scalar
@@ -68,7 +69,7 @@ doctrine_group = {
         ### The traits that should be considered sins and virtues for this faith.
         traits = single_alias_right[sins_and_virtues]
     }
-    
+
     ## cardinality = 0..1
     ### When should this doctrine group be shown when choosing doctrines? If not shown, the group will go away entirely on create if present on the old faith
     is_available_on_create = single_alias_right[trigger_clause]
@@ -82,7 +83,7 @@ doctrine_group = {
 # enums
 
 # Effects are localized based on the parameter name. "doctrine_parameter_" plus the name. If the value is "no", that
-# plus "_disabled" will be used. If an integer is used, the game will try to append that integer (E.G., "_1"), 
+# plus "_disabled" will be used. If an integer is used, the game will try to append that integer (E.G., "_1"),
 # and use that loc key. If the key doesn't exist, then the int does not get appended.
 single_alias[doctrine_param] = {
     ## cardinality = 0..inf

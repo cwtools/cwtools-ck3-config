@@ -8,7 +8,7 @@ holy_site = {
     ### County location of the holy site
     county = scope[county]
 
-    ##cardinality 0..inf
+    ##cardinality = 0..inf
     flag = flag
 
     ### A modifier applied to all followers of the faith that holds this holy site.
