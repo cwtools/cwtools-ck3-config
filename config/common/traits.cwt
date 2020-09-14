@@ -40,10 +40,12 @@ single_alias[complex_desc] = {
 
 ## replace_scope = { this = character }
 trait = {
-    ## cardinality 0..1
+    ## cardinality = 0..1
     ### Trait localization name
     name = localisation
-    ## cardinality 1..1
+    ## cardinality = 0..1
+    name = single_alias_right[complex_desc]
+    ## cardinality = 1..1
     ### Trait index. Must be unique.
     index = int
     ## cardinality = 0..1
@@ -51,17 +53,59 @@ trait = {
     ## cardinality = 0..inf
     desc = single_alias_right[complex_desc]
 
-    ## cardinality = 0..1
-    ### Health Modifier
-    health = float
+    ###########################
+    ######Generic Effects######
+    ###########################
 
+    # TODO: It might make sense to move many of these fields into a full alias for character_modifier. They are re-used in many places.
+    # TODO: Many of these seem like they're possibly soft-coded.
+    # TODO: Can some of these be replaced with keyed templates?
+
+    ### A permanent effect applied to the trait holder
+    ## replace_scope = { ROOT = character THIS = character }
+    ## cardinality = 0..inf
+    alias_name[modifier] = alias_match_left[modifier]
     ## cardinality = 0..1
-    ### Fertility Modifier
-    fertility = float
+    same_opinion_if_same_faith = int_value_field
+    
+    ## cardinality = 0..1
+    add_commander_trait = bool
+    # Work around for bad expected type on this modifier
+    ## cardinality = 0..1
+    no_water_crossing_penalty = bool
+    # Work around for bad expected type on this modifier
+    ## cardinality = 0..1
+    ignore_negative_culture_opinion = bool
+    ## cardinality = 0..1
+    disables_combat_leadership = bool
+    ## cardinality = 0..1
+    incapacitating = bool
+    ## cardinality = 0..1
+    can_have_children = bool
+    ## cardinality = 0..1
+    can_inherit = bool
+    ## cardinality = 0..1
+    can_inherit_from_dynasty = bool
+    #TODO: Make these mutually exclusive
+    ## cardinality = 0..1
+    illegitimate_bastard = bool
+    ## cardinality = 0..1
+    legitimate_bastard = bool
+    ## cardinality = 0..1
+    ### Will stop visual aging, and make the character immune to natural death. Can still be killed by script. Fertility will match visual age. You can use set_immortal_age to change the visual age
+    immortal = bool
+
+    ###################################################
+    ######Genetics, Inheritance, and Elligabilty#######
+    ###################################################
 
     ## cardinality = 0..1
     ### Chance of being inherited if genetic
     inherit_chance = int[0..100]
+
+    ## cardinality = 0..1
+    ### Chance of being inherited if both parents hold trait
+    both_parent_has_trait_inherit_chance = int[0..100]
 
     ## cardinality = 0..1
     ### How many characters out of 100 are born with this trait (when not inherited). Can have decimals
@@ -69,7 +113,7 @@ trait = {
 
     ## cardinality = 0..1
     ### How many characters out of 100 are created with this trait? (As opposed to actually being born; this is for things like generated characters, script characters, etc.)
-    random_creation = int[0..100]
+    random_creation = float[0..100]
 
     ## cardinality = 0..1
     ### Which parent can the trait be inherited from
@@ -92,8 +136,31 @@ trait = {
     enables_inbred = bool
 
     ## cardinality = 0..1
+    potential = single_alias_right[trigger_clause]
+
+    ## cardinality = 0..1
     ### Is this trait considered good [Default: no]
     good = bool
+
+    # TODO: Implement dna_modifiers. Probably as an alias.
+    ## cardinality = 0..1
+    dna_modifiers = {
+        ## cardinality = 0..inf
+        morph = {
+            ## cardinality = 1..inf
+            scalar = scalar
+        }
+        ## cardinality = 0..inf
+        color = {
+            ## cardinality = 1..inf
+            scalar = scalar
+        }
+        ## cardinality = 0..inf
+        accessory = {
+            ## cardinality = 1..inf
+            scalar = scalar
+        }
+    }
 
     ## cardinality = 0..1
     ### Apply this genetic trait to anyone who gains this trait
@@ -114,91 +181,22 @@ trait = {
     ## cardinality = 0..1
     ### When gaining this trait, every single morph gene will be shifted by this percentage towards 0 or 1; whichever it is closest to. E.G., 0.4 will shift 25% towards 0, resulting in 0.3
     portrait_extremity_shift = float[0..1]
+  
+    ###########################
+    ######Categorization#######
+    ###########################
 
-    ## cardinality = 0..1
-    ### Will stop visual aging, and make the character immune to natural death. Can still be killed by script. Fertility will match visual age. You can use set_immortal_age to change the visual age
-    immortal = bool
-
-    ## cardinality = 0..1
-    ### Modifies a character's diplomacy score. [Default: 0]
-    diplomacy = int
-
-    ## cardinality = 0..1
-    ### Modifies a character's martial score. [Default: 0]
-    martial = int
-
-    ## cardinality = 0..1
-    ### Modifies a character's stewardship score. [Default: 0]
-    stewardship = int
-
-    ## cardinality = 0..1
-    ### Modifies a character's learning score. [Default: 0]
-    learning = int
-
-    ## cardinality = 0..1
-    ### Modifies a character's prowess score. [Default: 0]
-    prowess = int
-
-    ## cardinality = 0..1
-    ### Modifies a character's intrigue score. [Default: 0]
-    intrigue = int
-
-    ## cardinality = 0..1
-    ### Modifies the general opinion of characters towards this character that could be sexually attracted to them. [Default: 0]
-    attraction_opinion = int
-
-    #TODO: ai values are used in other types. Can we move these out somewhere?
-    ## cardinality = 0..1
-    ### Modifies how a trait affects an AI's tendencies to make bold decisions. [Default: 0]
-    ai_boldness = int_value_field
-    ## cardinality = 0..1
-    ai_boldness = enum[ai_value]
-
-    ## cardinality = 0..1
-    ### Modifies how a trait affects an AI's tendencies to make decisions in line with their faith. [Default: 0]
-    ai_zeal = int_value_field
-    ## cardinality = 0..1
-    ai_zeal = enum[ai_value]
-
-    ## cardinality = 0..1
-    ### Modifies how a trait affects an AI's tendencies to make decisions that are well reasoned and logical. [Default: 0]
-    ai_rationality = int_value_field
-    ## cardinality = 0..1
-    ai_rationality = enum[ai_value]
-
-    ## cardinality = 0..1
-    ### Modifies how a trait affects an AI's tendencies to make decisions to enrich themselves or keep money. [Default: 0]
-    ai_greed = int_value_field
-    ## cardinality = 0..1
-    ai_greed = enum[ai_value]
-
-    ## cardinality = 0..1
-    ### Modifies how a trait affects an AI's tendencies to make honorable decisions. [Default: 0]
-    ai_honor = int_value_field
-    ## cardinality = 0..1
-    ai_honor = enum[ai_value]
-
-    ## cardinality = 0..1
-    ### Modifies how a trait affects an AI's tendencies to make kind decisions and their empathy for others. [Default: 0]
-    ai_compassion = int_value_field
-    ## cardinality = 0..1
-    ai_compassion = enum[ai_value]
-
-    ## cardinality = 0..1
-    ### Modifies how a trait affects an AI's tendencies to try to get revenge when wronged. [Default : 0]
-    ai_vengefulness = int_value_field
-    ## cardinality = 0..1
-    ai_vengefulness = enum[ai_value]
-
-    ## cardinality = 0..1
-    ### Modifies how active an AI tends to be? Maybe ambition. [Default : 0]
-    ai_energy = int_value_field
-    ## cardinality = 0..1
-    ai_energy = enum[ai_value]
+    ## cardinality  = 0..1
+    ### Mark as educational trait
+    education = bool
 
     ## cardinality = 0..1
     ### Mark as physical [Default: no]
     physical = bool
+
+    ## cardinality = 0..1
+    ### Mark as personality trait [Default: no]
+    personality = bool
 
     ## cardinality = 0..1
     ### Mark as health related [Default: no]
@@ -206,19 +204,41 @@ trait = {
 
     ## cardinality = 0..1
     ### Mark as fame related [Default: no]
-    fame = yes
+    fame = bool
+
+    ## cardinality = 0..1
+    lifestyle = bool
+
+    ## cardinality = 0..1
+    commander = bool
 
     ## cardinality = 0..1
     flag = value_set[trait_flag]
 
+    # TODO: Anything that can refer to a trait can refer to a group. Is there some way we can use this to mark a type name too?
     ## cardinality = 0..1
     group = value_set[trait_group]
 
+    #TODO: Does this require group? Test with error log to confirm.
+    ## cardinality = 0..1
+    level = int
+
+    ## cardinality = 0..1
+    childhood = bool
+
+    ## cardinality = 0..1
+    shown_in_encyclopedia = bool
+
+
+    ##################
+    ######Misc.#######
+    ##################
+    
     ## cardinality = 0..1
     ### A list of terrain types that are taken into consideration when commander traits are randomly assigned to commanders. These traits are only assigned/considered if the commander's culture contains a province that has one of the terrain types specified in the list
     trait_exclusive_if_realm_contains = {
         ## cardinality = 0..inf
-        scalar
+        <terrain>
     }
 
     ## cardinality = 0..1
@@ -228,16 +248,40 @@ trait = {
         <trait> = int
     }
 
+    # TODO: Require at least one trait or trait group
     ## cardinality = 0..1
+    opposites = {
+        ## cardinality = 0..inf
+        <trait>
+        ## cardinality = 0..inf
+        value[trait_group]
+    }
+
+    ## cardinality = 0..1
+    minimum_age = int
+    ## cardinality = 0..1
+    maximum_age = int
+
+    ## cardinality = 0..1
+    same_opinion = int_value_field
+
+    ## cardinality = 0..1
+    opposite_opinion = int_value_field
+
+    ## cardinality = 0..inf
     ### Applied if the associated conditions are fulfilled
     triggered_opinion = {
         ## cardinality = 1..1
         ### What opinion modifier to apply if the conditions are fulfilled
-        opinion_modifier = int
+        opinion_modifier = <opinion_modifier>
+        opinion_modifier = single_alias_right[opinion_chance_modifier]
 
+        #TODO: These are supposed to be linked to the parameters in doctrines. This means parameters in doctrines should probably be refactored to a type.
         ## cardinality = 0..1
+        ##push_scope = faith
         ### What boolean doctrine parameter to check for
         parameter = scalar
+        #parameter = <parameter>
 
         ## cardinality = 0..1
         ### Check that the parameter is *not* set (or set to false), rather than set to true
