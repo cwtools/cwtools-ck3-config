@@ -39,9 +39,17 @@ single_alias[holy_order_names] = {
     }
 }
 
-single_alias[color] = {
+single_alias[rgb_color] = {
     ## cardinality 3..3
-    float[0..1.0]
+    int[0..255]
+}
+
+# Not sure about this one. Seen some mixed usages of this
+# some with hsv prefixing it, some with <1 for first number,
+# some with degrees, etc.
+single_alias[hsv_color] = {
+    ## cardinality 3..4
+    float
 }
 
 #TODO: Script check to make sure gfx/ui stuff is present in either the family, religion, or faith.
@@ -70,8 +78,10 @@ religion = {
     faiths = {
         ## cardinality = ~1..inf
         <faith> = {
-            ### RGB color as a series of floats.
-            color = single_alias_right[color] # r g b
+            ### HSV color as a series of floats.
+            color = single_alias_right[hsv_color]
+            ### RGB color as a series of ints
+            color = single_alias_right[rgb_color]
             ## cardinality = 0..1
             icon = replace_me
             ## cardinality = 0..1

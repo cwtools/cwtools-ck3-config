@@ -171,25 +171,3 @@ single_alias[event_portrait] = {
 
 }
 
-enums = {
-    enum[event_option_skills] = {
-        learning
-    }
-    complex_enum[event_themes] = {
-        path ="game/common/event_themes"
-        start_from_root = yes
-        name = {
-                enum_name = {
-                    icon = {
-                        reference = scalar
-                    }
-                    sound = {
-                        reference = scalar
-                    }
-                    background = {
-                        reference = scalar
-                    }
-                }
-        }
-    }
-}
