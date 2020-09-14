@@ -260,7 +260,7 @@ links = {
     great_holy_war = {
         desc = " Unknown, add something in code registration"
         input_scopes = faith
-        output_scope = great holy war
+        output_scope = great_holy_war
     }
     religious_head = {
         desc = " Unknown, add something in code registration"
@@ -294,17 +294,17 @@ links = {
     }
     holy_order_patron = {
         desc = " Unknown, add something in code registration"
-        input_scopes = holy order
+        input_scopes = holy_order
         output_scope = character
     }
     leader = {
         desc = " Unknown, add something in code registration"
-        input_scopes = holy order
+        input_scopes = holy_order
         output_scope = character
     }
     title = {
         desc = " Unknown, add something in code registration"
-        input_scopes = holy order
+        input_scopes = holy_order
         output_scope = landed_title
     }
     army_commander = {
@@ -349,52 +349,52 @@ links = {
     }
     combat = {
         desc = " Unknown, add something in code registration"
-        input_scopes = combat side
+        input_scopes = combat_side
         output_scope = combat
     }
     enemy_side = {
         desc = " Unknown, add something in code registration"
-        input_scopes = combat side
-        output_scope = combat side
+        input_scopes = combat_side
+        output_scope = combat_side
     }
     side_commander = {
         desc = " Unknown, add something in code registration"
-        input_scopes = combat side
+        input_scopes = combat_side
         output_scope = character
     }
     side_primary_participant = {
         desc = " Unknown, add something in code registration"
-        input_scopes = combat side
+        input_scopes = combat_side
         output_scope = character
     }
     ghw_designated_winner = {
         desc = " Unknown, add something in code registration"
-        input_scopes = great holy war
+        input_scopes = great_holy_war
         output_scope = character
     }
     ghw_target_character = {
         desc = " Unknown, add something in code registration"
-        input_scopes = great holy war
+        input_scopes = great_holy_war
         output_scope = character
     }
     ghw_target_title = {
         desc = " Unknown, add something in code registration"
-        input_scopes = great holy war
+        input_scopes = great_holy_war
         output_scope = landed_title
     }
     ghw_title_recipient = {
         desc = " Unknown, add something in code registration"
-        input_scopes = great holy war
+        input_scopes = great_holy_war
         output_scope = character
     }
     ghw_war = {
         desc = " Unknown, add something in code registration"
-        input_scopes = great holy war
+        input_scopes = great_holy_war
         output_scope = war
     }
     ghw_war_declarer = {
         desc = " Unknown, add something in code registration"
-        input_scopes = great holy war
+        input_scopes = great_holy_war
         output_scope = character
     }
     dynast = {
@@ -435,12 +435,12 @@ links = {
     combat_attacker = {
         desc = " Unknown, add something in code registration"
         input_scopes = combat
-        output_scope = combat side
+        output_scope = combat_side
     }
     combat_defender = {
         desc = " Unknown, add something in code registration"
         input_scopes = combat
-        output_scope = combat side
+        output_scope = combat_side
     }
     combat_war = {
         desc = " Unknown, add something in code registration"
@@ -459,7 +459,7 @@ links = {
     }
     story_owner = {
         desc = " Unknown, add something in code registration"
-        input_scopes = story cycle
+        input_scopes = story_cycle
         output_scope = character
     }
     faction_leader = {
@@ -594,14 +594,10 @@ links = {
     }
     dummy_female = {
         desc = " Unknown, add something in code registration"
-        from_data = yes
-        data_source = <dummy_female>
         output_scope = character
     }
     dummy_male = {
         desc = " Unknown, add something in code registration"
-        from_data = yes
-        data_source = <dummy_male>
         output_scope = character
     }
     dynasty = {
@@ -645,15 +641,6 @@ links = {
         desc = " A script value that will calculate and returns its value in the context it is used"
         output_scope = value
     }
-    no = {
-        desc = " Boolean literal for false values"
-        from_data = yes
-        data_source = <no>
-        output_scope = bool
-    }
-    prev = {
-        desc = " The previous scope"
-    }
     province = {
         desc = " Directly scope to a specific province by its ID"
         from_data = yes
@@ -669,33 +656,19 @@ links = {
         prefix = religion:
         output_scope = religion
     }
-    root = {
-        desc = " The head of the current top scope eg: reciever of an event, taker of a decision"
-        from_data = yes
-        data_source = <root>
-    }
     scope = {
         desc = " Reference a previously saved scope via its name eg: scope:target"
         from_data = yes
         data_source = value[event_target]
         prefix = scope:
     }
-    this = {
-        desc = " The current scope"
-    }
     title = {
         desc = " Unknown, add something in code registration"
         from_data = yes
         type = scope
-        data_source = <title>
+        data_source = <landed_title>
         prefix = title:
         output_scope = landed_title
-    }
-    value = {
-        desc = " A numeric literal value eg: 1, 5.2, -6"
-        from_data = yes
-        data_source = <value>
-        output_scope = value
     }
     var = {
         desc = " Reference a previous set variable via its name eg: var:mortal_enemy"
@@ -703,11 +676,5 @@ links = {
 		type = both
         prefix = var:
         data_source = value[variable]
-    }
-    yes = {
-        desc = " Boolean literal for true values"
-        from_data = yes
-        data_source = <yes>
-        output_scope = bool
     }
 }
