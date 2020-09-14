@@ -18,3 +18,10 @@ single_alias[cost] = {
     ## cardinality = 0..1
     prestige = int_value_field
 }
+
+## scope = character
+alias[modifier:ignore_negative_culture_opinion] = bool
+## scope = character
+alias[modifier:ignore_different_faith_opinion] = bool
+## scope = { character combat }
+alias[modifier:no_water_crossing_penalty] = bool
