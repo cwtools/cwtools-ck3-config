@@ -1,0 +1,144 @@
+types = {
+    ## type_key_filter <> mercenary_names
+    type[culture] = {
+        path = "game/common/culture/cultures"
+        skip_root_key = any
+    }
+    type[culture_group] = {
+        path = "game/common/culture/cultures"
+    }
+}
+culture_group = {
+    # TODO: Make graphical cultures somehow matter.
+    ## cardinality = 0..1
+    graphical_cultures = single_alias_right[scalar_list]
+    ## cardinality = 0..1
+    mercenary_names = single_alias_right[mercenary_list]
+    ## cardinality = 1..inf
+    <culture> = {
+        color = Color
+
+        ## cardinality = 0..1
+        graphical_cultures = single_alias_right[scalar_list]
+        ## cardinality = 0..1
+        mercenary_names = single_alias_right[mercenary_list]
+        
+        ## cardinality = 0..1
+        cadet_dynasty_names = single_alias_right[dynasty_name_list]
+        ## cardinality = 1
+        dynasty_names = single_alias_right[dynasty_name_list]
+
+        ## cardinality = 0..1
+        ### When generating a dynasty name based on a title, add this prefix
+        dynasty_of_location_prefix = localisation
+        ## cardinality = 0..1
+        bastard_dynasty_prefix = localisation
+
+        ## cardinality = 0..1
+        founder_named_dynasties = bool
+        ## cardinality = 0..1
+        dynasty_title_names = bool
+        ## cardinality = 0..1
+        dynasty_name_first = bool
+
+        male_names = single_alias_right[first_name_list]
+        male_names = single_alias_right[first_name_weighted_list]
+
+        female_names = single_alias_right[first_name_list]
+        female_names = single_alias_right[first_name_weighted_list]
+
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+        ## cardinality = 0..1
+		pat_grf_name_chance = int
+        ## cardinality = 0..1
+		mat_grf_name_chance = int
+        ## cardinality = 0..1
+		father_name_chance = int
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+        ## cardinality = 0..1
+        pat_grm_name_chance = int
+        ## cardinality = 0..1
+		mat_grm_name_chance = int
+        ## cardinality = 0..1
+		mother_name_chance = int
+
+        # Patronyms. Names after the primary parent. Can use both prefix and suffix together ("McDavidson"). _vowel is used for when the parent's name starts with a vowel.
+        ## cardinality = 0..1
+		patronym_prefix_male = localisation
+        ## cardinality = 0..1
+		patronym_prefix_male_vowel = localisation
+        ## cardinality = 0..1
+		patronym_prefix_female = localisation
+        ## cardinality = 0..1
+        patronym_prefix_female_vowel = localisation
+        
+        ## cardinality = 0..1
+        grammar_transform = enum[grammar_transform]
+		
+        ## cardinality = 0..1
+		patronym_suffix_male = localisation
+        ## cardinality = 0..1
+		patronym_suffix_female = localisation
+
+        ## cardinality = 0..1
+        always_use_patronym = bool
+
+        ## cardinality = 0..1
+        character_modifier = single_alias_right[character_modifier]
+
+        ## cardinality = 0..1
+        used_for_random = bool
+
+        # Probably leftovers from CK2
+        ## cardinality = 0..1
+        secondary_event_pictures = <culture>
+        ## cardinality = 0..1
+        prefix = bool
+        ## cardinality = 0..1
+        dukes_called_kings = bool
+
+        ethnicities = single_alias_right[ethnicity_list]
+    }
+}
+
+single_alias[mercenary_list] = {
+    ## cardinality = 0..inf
+    {
+        name = localisation
+        ## cardinality = 0..1
+        coat_of_arms = <coat_of_arms>
+    }
+}
+
+single_alias[dynasty_name_list] = {
+    ## cardinality = 0..inf
+    localisation
+    ## cardinality = 0..inf
+    {
+        ## cardinality = 1..2
+        localisation
+    }
+}
+
+single_alias[first_name_weighted_list] = {
+    ## cardinality = 1..inf
+    int = single_alias_right[first_name_list]
+}
+
+single_alias[first_name_list] = {
+    ## cardinality = 1..inf
+    localisation
+}
+
+single_alias[ethnicity_list] = {
+    ## cardinality = 0..inf
+    int = <ethnicity>
+}
+
+enums = {
+    # TODO: Is there any other?
+    enum[grammar_transform] = {
+        french
+    }
+}

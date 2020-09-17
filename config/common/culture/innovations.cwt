@@ -2,22 +2,15 @@ types = {
     type[innovation] = {
         path = "game/common/culture/innovations"
     }
-    type[era] = {
-        path = "game/common/culture/eras"
-    }
-    ## type_key_filter <> mercenary_names
-    type[culture] = {
-        path = "game/common/culture/cultures"
-        skip_root_key = any
-    }
-    type[culture_group] = {
-        path = "game/common/culture/cultures"
-    }
 }
 
 innovation = {
+    ## cardinality = 1
     culture_era = <era>
-    group = enum[culture_group]
+    ## cardinality = 1
+    group = enum[innovation_group]
+    ## cardinality = 1
+    icon = filepath[gfx/interface/icons/culture_innovations]
 
     ## cardinality = 0..1
     region = <region>
@@ -26,18 +19,18 @@ innovation = {
     ## cardinality = 0..1
     can_progress = single_alias_right[trigger_clause]
 
-    ## cardinality = 0..1
+    ## cardinality = 0..inf
     unlock_building = <building>
-    ## cardinality = 0..1
+    ## cardinality = 0..inf
     unlock_decision = <decision>
-    ## cardinality = 0..1
+    ## cardinality = 0..inf
     unlock_casus_belli = <casus_belli>
-    ## cardinality = 0..1
+    ## cardinality = 0..inf
     unlock_maa = <regiment_type>
-    ## cardinality = 0..1
+    ## cardinality = 0..inf
     unlock_law = <law>
 
-    ## cardinality = 0..1
+    ## cardinality = 0..inf
     custom = localisation
 
     ## cardinality = 0..1
@@ -45,10 +38,13 @@ innovation = {
         ## cardinality = 0..inf
         alias_name[modifier] = alias_match_left[modifier]
     }
+
+    ## cardinality = 0..inf
+    flag = scalar
 }
 
 enums = {
-    enum[culture_group] = {
+    enum[innovation_group] = {
         culture_group_military
         culture_group_civic
         culture_group_regional
