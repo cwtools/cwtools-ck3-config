@@ -11,27 +11,35 @@ types = {
 culture_group = {
     # TODO: Make graphical cultures somehow matter.
     ## cardinality = 0..1
+    ### List of graphical cultures used for coat of arms, buildings, clothings and units. It's possible to give more than one from each type, then all of them will be used.
     graphical_cultures = single_alias_right[scalar_list]
     ## cardinality = 0..1
+    ### List of possible mercenary names and optionally coats of arms.
     mercenary_names = single_alias_right[mercenary_list]
     ## cardinality = 1..inf
     <culture> = {
+        ### The color of the culture, used e.g. on the map.
         color = Color
 
         ## cardinality = 0..1
+        ### List of graphical cultures used for coat of arms, buildings, clothings and units. It's possible to give more than one from each type, then all of them will be used.
         graphical_cultures = single_alias_right[scalar_list]
         ## cardinality = 0..1
+        ### List of possible mercenary names and optionally coats of arms.
         mercenary_names = single_alias_right[mercenary_list]
         
         ## cardinality = 0..1
+        ### List of possible cadet dynasty names.
         cadet_dynasty_names = single_alias_right[dynasty_name_list]
         ## cardinality = 1
+        ### List of possible dynasty names.
         dynasty_names = single_alias_right[dynasty_name_list]
 
         ## cardinality = 0..1
-        ### When generating a dynasty name based on a title, add this prefix
+        ### When generating a dynasty name based on a title, add this prefix.
         dynasty_of_location_prefix = localisation
         ## cardinality = 0..1
+        ### When generating a dynasty name for a bastard, add this prefix.
         bastard_dynasty_prefix = localisation
 
         ## cardinality = 0..1
@@ -47,20 +55,24 @@ culture_group = {
         female_names = single_alias_right[first_name_list]
         female_names = single_alias_right[first_name_weighted_list]
 
-		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
         ## cardinality = 0..1
+        ### Chance of male children being named after their paternal grandfather. Sum of these three values must not exceed 100.
 		pat_grf_name_chance = int
         ## cardinality = 0..1
+        ### Chance of male children being named after their maternal grandfather. Sum of these three values must not exceed 100.
 		mat_grf_name_chance = int
         ## cardinality = 0..1
+        ### Chance of male children being named after their father. Sum of these three values must not exceed 100.
 		father_name_chance = int
 		
-		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
         ## cardinality = 0..1
+        ### Chance of female children being named after their paternal grandmother. Sum of these three values must not exceed 100.
         pat_grm_name_chance = int
         ## cardinality = 0..1
+        ### Chance of female children being named after their maternal grandmother. Sum of these three values must not exceed 100.
 		mat_grm_name_chance = int
         ## cardinality = 0..1
+        ### Chance of female children being named after their mother. Sum of these three values must not exceed 100.
 		mother_name_chance = int
 
         # Patronyms. Names after the primary parent. Can use both prefix and suffix together ("McDavidson"). _vowel is used for when the parent's name starts with a vowel.
@@ -82,22 +94,29 @@ culture_group = {
 		patronym_suffix_female = localisation
 
         ## cardinality = 0..1
+        ### Makes characters from this culture use patronyms in their names. It can be also allowed by the government type. Defaults to no.
         always_use_patronym = bool
 
         ## cardinality = 0..1
+        ### Modifier effects on all characters of the culture.
         character_modifier = single_alias_right[character_modifier]
 
         ## cardinality = 0..1
+        ### Allows generating character who should have random culture from this culture. Defaults to true.
         used_for_random = bool
 
         # Probably leftovers from CK2
         ## cardinality = 0..1
+        ### Probably leftover from CK2
         secondary_event_pictures = <culture>
         ## cardinality = 0..1
+        ### Probably leftover from CK2
         prefix = bool
         ## cardinality = 0..1
+        ### Probably leftover from CK2
         dukes_called_kings = bool
 
+        ### Weighted list of ethnicities for newly generated characters.
         ethnicities = single_alias_right[ethnicity_list]
     }
 }
