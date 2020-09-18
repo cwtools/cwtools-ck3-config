@@ -52,4 +52,11 @@ enums = {
         very_high_ai_values_divergence #  350 #About 85% (46-98%) of characters will be at or below this value for the avarage character
         #Percentages in parentheses are the observed spans
     }
+    enum[attributes] = {
+        diplomacy
+        martial
+        stewardship
+        learning
+        intrigue
+    }
 }

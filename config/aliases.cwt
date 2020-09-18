@@ -20,6 +20,7 @@ single_alias[cost] = {
 }
 
 single_alias[character_modifier] = {
+    ## push_scope = character
     alias_name[modifier] = alias_match_left[modifier]
 }
 
