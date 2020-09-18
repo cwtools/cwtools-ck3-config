@@ -62,7 +62,7 @@ innovation = {
 
 single_alias[maa_upgrade] = {
     ### The base MaA type to upgrade
-    type = <regiment_type>
+    type = scalar
     ## cardinality = 0..1
     damage = float
     ## cardinality = 0..1
