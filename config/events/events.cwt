@@ -128,7 +128,7 @@ event = {
         ai_chance = single_alias_right[ai_chance_block]
 
         ## cardinality = 0..1
-        skill = enum[event_option_skills]
+        skill = enum[attributes]
 
         ## cardinality = 0..inf
         trait = <trait>

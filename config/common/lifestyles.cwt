@@ -102,7 +102,7 @@ lifestyle_perk = {
     ## cardinality = 0..1
     ## push_scope = character
     ### Script value for weight for auto-selection. Scope is the character. If omitted, default weight is 1000.
-    auto_selection_weight = single_alias_right[weight_block]
+    auto_selection_weight = int_value_field
 }
 
 single_alias[position] = {

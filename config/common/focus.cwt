@@ -37,7 +37,7 @@ focus = {
     ## cardinality = 0..1
     ## push_scope = character
     ### Script value for selection weight. Scope is the character. If omitted, default weight is 1000.
-    auto_selection_weight = single_alias_right[weight_block]
+    auto_selection_weight = int_value_field
     ## cardinality = 0..1
     ### Modifiers applied to the charcter who picks the focus.
     modifier = single_alias_right[character_modifier]
