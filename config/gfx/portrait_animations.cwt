@@ -4,9 +4,10 @@ types = {
     }
 }
 
-portrait_animation = {
-    male = scalar
-    boy = scalar
-    female = scalar
-    girl = scalar
-}
+# Remove placeholder until we do properly
+#portrait_animation = {
+#    male = scalar
+#    boy = scalar
+#    female = scalar
+#    girl = scalar
+#}
