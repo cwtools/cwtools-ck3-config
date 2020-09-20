@@ -9,8 +9,10 @@ event_background = {
     background = {
         ## cardinality = 0..1
         trigger = single_alias_right[trigger_clause]
+		# TODO: Filepath
 		reference = scalar
 		environment = <portrait_environment>
+		# TODO: Audio reference
 		ambience = scalar
 	}
 }
