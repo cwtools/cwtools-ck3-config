@@ -313,4 +313,11 @@ enums = {
         war_over_win
         worry
     }
+    enum[attributes] = {
+        diplomacy
+        martial
+        stewardship
+        learning
+        intrigue
+    }
 }

@@ -19,6 +19,11 @@ single_alias[cost] = {
     prestige = int_value_field
 }
 
+single_alias[character_modifier] = {
+    ## push_scope = character
+    alias_name[modifier] = alias_match_left[modifier]
+}
+
 ## scope = character
 alias[modifier:ignore_negative_culture_opinion] = bool
 ## scope = character
