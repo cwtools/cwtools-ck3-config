@@ -1,0 +1,8 @@
+types = {
+    type[culture_name] = {
+        path = "game/common/culture/culture_names"
+    }
+}
+# TODO: Filter _male and _female and actually check if the names exist
+### Ties names from different cultures to one another.
+culture_name = single_alias_right[first_name_list]
