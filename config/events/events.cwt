@@ -166,22 +166,35 @@ event = {
 	lower_right_portrait = single_alias_right[event_portrait]
 
     ## cardinality = 0..1
-    theme = enum[event_themes]
-    ## cardinality = 0..1
+    theme = <event_theme>
+    ## cardinality = 0..inf
     override_background = {
         ## cardinality = 0..1
-        event_background = enum[event_backgrounds]
+        trigger = single_alias_right[trigger_clause]
+        event_background = <event_background>
+    }
+    ## cardinality = 0..inf
+    override_icon = {
+        ## cardinality = 0..1
+        trigger = single_alias_right[trigger_clause]
+        reference = scalar
+    }
+    ## cardinality = 0..inf
+    override_environment = {
+        ## cardinality = 0..1
+        trigger = single_alias_right[trigger_clause]
+        reference = <portrait_environment>
     }
 }
 
 single_alias[event_portrait] = {
     character = scope[character]
     ## cardinality = 0..1
-    animation = enum[animations]
-    ## cardinality = 0..1
+    animation = <portrait_animation>
+    ## cardinality = 0..inf
     triggered_animation = {
         trigger = single_alias_right[trigger_clause]
-        animation = enum[animations]
+        animation = <portrait_animation>
     }
 }
 

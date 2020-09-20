@@ -1,0 +1,12 @@
+types = {
+    type[portrait_animation] = {
+        path = "gfx/portraits/portrait_animations"
+    }
+}
+
+portrait_animation = {
+    male = scalar
+    boy = scalar
+    female = scalar
+    girl = scalar
+}
