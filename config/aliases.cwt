@@ -24,6 +24,16 @@ single_alias[character_modifier] = {
     alias_name[modifier] = alias_match_left[modifier]
 }
 
+single_alias[weighted_localisation_list] = {
+    ## cardinality = 1..inf
+    int = single_alias_right[localisation_list]
+}
+
+single_alias[localisation_list] = {
+    ## cardinality = 1..inf
+    localisation
+}
+
 ## scope = character
 alias[modifier:ignore_negative_culture_opinion] = bool
 ## scope = character
