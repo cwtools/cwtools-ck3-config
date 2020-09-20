@@ -34,6 +34,12 @@ single_alias[localisation_list] = {
     localisation
 }
 
+single_alias[doctrine_character_modifier] = {
+    doctrine = <doctrine>
+    ## push_scope = character
+    alias_name[modifier] = alias_match_left[modifier]
+}
+
 ## scope = character
 alias[modifier:ignore_negative_culture_opinion] = bool
 ## scope = character

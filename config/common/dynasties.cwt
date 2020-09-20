@@ -1,5 +1,0 @@
-types = {
-	type[dynasty_perk] = {
-		path = "game/common/dynasty_perks"
-	}
-}

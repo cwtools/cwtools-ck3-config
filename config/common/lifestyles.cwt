@@ -94,11 +94,7 @@ lifestyle_perk = {
     character_modifier = single_alias_right[character_modifier]
     ## cardinality = 0..inf
     ### Additional modifier applied to characters with the perk and their faith having the specified doctrine. Multiple ones can be defined.
-    doctrine_character_modifier = {
-        doctrine = <doctrine>
-        ## push_scope = character
-        alias_name[modifier] = alias_match_left[modifier]
-    }
+    doctrine_character_modifier = single_alias_right[doctrine_character_modifier]
     ## cardinality = 0..1
     ## push_scope = character
     ### Script value for weight for auto-selection. Scope is the character. If omitted, default weight is 1000.
