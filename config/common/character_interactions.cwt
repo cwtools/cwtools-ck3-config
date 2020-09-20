@@ -4,7 +4,107 @@ types = {
     }
 }
 
+enums = {
+    enum[ai_targets] = {
+        known_secrets
+        hooked_characters
+        neighboring_rulers
+        peer_vassals
+        guests
+        dynasty
+        courtiers
+        prisoners
+        sub_realm_characters
+        realm_characters
+        vassals
+        liege
+        self
+        head_of_faith
+        spouses
+        family
+        children
+        primary_war_enemies
+        war_enemies
+        war_allies
+        scripted_relations
+    }
+
+    enum[greeting] = {
+        positive
+        negative
+    }
+
+    enum[target_type] = {
+        title
+    }
+
+    enum[target_filter] = {
+        actor_domain_titles
+        recipient_domain_titles
+        secondary_actor_domain_titles
+        secondary_recipient_domain_titles
+        actor_domain_titles_including_leases
+        recipient_domain_titles_including_leases
+        secondary_actor_domain_titles_including_leases
+        secondary_recipient_domain_titles_including_leases
+        actor_de_jure_titles
+        recipient_de_jure_titles
+        secondary_actor_de_jure_titles
+        secondary_recipient_de_jure_titles
+    }
+
+    enum[character_interaction_category] = {
+        interaction_category_diplomacy
+        interaction_category_friendly
+        interaction_category_hostile
+        interaction_category_vassal
+        interaction_category_prison
+        interaction_category_religion
+        interaction_category_uncategorized
+        interaction_debug_main
+    }
+}
+
 character_interaction = {
+    ## cardinality = 0..1
+    category = enum[character_interaction_category]
+    ## cardinality = 0..1
+    special_interaction = scalar
+    ## cardinality = 0..1
+    force_notification = bool
+    ## cardinality = 0..1
+    interface = scalar
+    ## cardinality = 0..1
+    interface_priority = int_value_field
+    ## cardinality = 0..1
+    common_interaction = bool
+    ## cardinality = 0..1
+    use_diplomatic_range = bool
+    ## cardinality = 0..1
+    target_type = enum[target_type]
+    ## cardinality = 0..1
+    target_filter = enum[target_filter]
+    ## cardinality = 0..1
+    greeting = enum[greeting]
+    ## cardinality = 0..1
+	notification_text = localisation
+    ## cardinality = 0..1
+	answer_accept_key = localisation
+    ## cardinality = 0..1
+	answer_reject_key = localisation
+    ## cardinality = 0..1
+	send_name = localisation
+    ## cardinality = 0..1
+	prompt = localisation
+    ## cardinality = 0..1
+    desc = localisation
+    ## cardinality = 0..1
+    desc = single_alias_right[complex_event_desc]
+    ## cardinality = 0..1
+    cooldown = {
+        enum[duration] = int
+    }
+
     ## cardinality = 0..1
     is_shown = single_alias_right[trigger_clause]
     ## cardinality = 0..1
@@ -19,6 +119,8 @@ character_interaction = {
     can_be_picked = single_alias_right[trigger_clause]
     ## cardinality = 0..1
     is_highlighted = single_alias_right[trigger_clause]
+    ## cardinality = 0..1
+    highlighted_reason = localisation
 
     ## cardinality = 0..1
     on_send = single_alias_right[effect_clause]
@@ -27,7 +129,27 @@ character_interaction = {
     ## cardinality = 0..1
     on_decline = single_alias_right[effect_clause]
     ## cardinality = 0..1
-    on_auto_accept = single_alias_right[effect_clause]
+    auto_accept = bool
     ## cardinality = 0..1
-    ai_accept = single_alias_right[weight_block]
+    on_auto_accept = single_alias_right[effect_clause]
+
+    ## cardinality = 0..1
+    populate_recipient_list = single_alias_right[effect_clause]
+    ## cardinality = 0..1
+    populate_actor_list = single_alias_right[effect_clause]
+
+    ## cardinality = 0..1
+    ai_accept = single_alias_right[ai_chance_block]
+    ## cardinality = 0..1
+    ai_targets = {
+        ai_recipients = enum[ai_targets]
+        ## cardinality = 0..1
+        max = int_value_field
+    }
+	## cardinality = 0..1
+	ai_frequency = int_value_field
+	## cardinality = 0..1
+    ai_potential = single_alias_right[trigger_clause]
+    ## cardinality = 0..1
+	ai_will_do = single_alias_right[ai_chance_block]
 }

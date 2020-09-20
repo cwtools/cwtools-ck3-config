@@ -45,6 +45,9 @@ single_alias[ai_chance_block] = {
         ## cardinality = 0..inf
         enum[ai_values] = int_value_field
     }
+
+    ## cardinality = 0..inf
+    opinion_modifier = single_alias_right[opinion_chance_modifier]
 }
 
 single_alias[weight_block] = {
@@ -80,6 +83,7 @@ single_alias[weight_chance_modifier] = {
 single_alias[opinion_chance_modifier] = {
     ## cardinality = 0..1
     trigger = single_alias_right[trigger_clause]
+    ## cardinality = 0..1
     who = scope[character]
     opinion_target = scope[character]
     multiplier = value_field
