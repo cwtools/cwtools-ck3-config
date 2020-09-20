@@ -1844,7 +1844,7 @@ alias[trigger:is_titular] = replace_me_bool
 alias[trigger:has_all_innovations] = replace_me
 
 ### Does the culture (or its culture group) have this graphical culture? <culture> = { has_graphical_culture = celticgfx }
-alias[trigger:has_graphical_culture] = replace_me
+alias[trigger:has_graphical_culture] = value[graphical_culture]
 
 ### AI sociability
 alias[trigger:ai_sociability] == replace_me_comparison
