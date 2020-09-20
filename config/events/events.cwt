@@ -134,6 +134,9 @@ event = {
         trait = <trait>
         ## cardinality = 0..inf
         trait = enum[trait_group]
+
+        ## cardinality = 0..1
+        highlight_portrait = scope[character]
     }
     ## cardinality = 0..inf
     after = single_alias_right[effect_clause]
@@ -164,10 +167,21 @@ event = {
 
     ## cardinality = 0..1
     theme = enum[event_themes]
-
+    ## cardinality = 0..1
+    override_background = {
+        ## cardinality = 0..1
+        event_background = enum[event_backgrounds]
+    }
 }
 
 single_alias[event_portrait] = {
-
+    character = scope[character]
+    ## cardinality = 0..1
+    animation = enum[animations]
+    ## cardinality = 0..1
+    triggered_animation = {
+        trigger = single_alias_right[trigger_clause]
+        animation = enum[animations]
+    }
 }
 
