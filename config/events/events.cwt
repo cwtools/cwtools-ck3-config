@@ -134,6 +134,9 @@ event = {
         trait = <trait>
         ## cardinality = 0..inf
         trait = enum[trait_group]
+
+        ## cardinality = 0..1
+        highlight_portrait = scope[character]
     }
     ## cardinality = 0..inf
     after = single_alias_right[effect_clause]
@@ -163,11 +166,36 @@ event = {
 	lower_right_portrait = single_alias_right[event_portrait]
 
     ## cardinality = 0..1
-    theme = enum[event_themes]
-
+    theme = <event_theme>
+    ## cardinality = 0..inf
+    override_background = {
+        ## cardinality = 0..1
+        trigger = single_alias_right[trigger_clause]
+        event_background = <event_background>
+    }
+    ## cardinality = 0..inf
+    override_icon = {
+        ## cardinality = 0..1
+        trigger = single_alias_right[trigger_clause]
+	# TODO: Add filepath
+        reference = scalar
+    }
+    ## cardinality = 0..inf
+    override_environment = {
+        ## cardinality = 0..1
+        trigger = single_alias_right[trigger_clause]
+        reference = <portrait_environment>
+    }
 }
 
 single_alias[event_portrait] = {
-
+    character = scope[character]
+    ## cardinality = 0..1
+    animation = <portrait_animation>
+    ## cardinality = 0..inf
+    triggered_animation = {
+        trigger = single_alias_right[trigger_clause]
+        animation = <portrait_animation>
+    }
 }
 
