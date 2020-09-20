@@ -922,6 +922,12 @@ alias[trigger:can_start_scheme] = {
 ### Wraps triggers that get a custom description instead of the auto-generated one custom_description = { 	text = <trigger_localization_key> 	subject = <optional subject scope> #defaults to current scope 	object = <optional object scope> 	value = <optional script value> 	... triggers ... }
 alias[trigger:custom_description] = {
     text = <trigger_localization>
+    ## cardinality = 0..1
+    subject = scope[character]
+    ## cardinality = 0..1
+    object = scope[character]
+    ## cardinality = 0..1
+    value = scalar
     alias_name[trigger] = alias_match_left[trigger]
 }
 

@@ -78,6 +78,9 @@ single_alias[weight_chance_modifier] = {
 
     ## cardinality = 0..inf
     alias_name[trigger] = alias_match_left[trigger]
+
+    ## cardinality = 0..1
+    desc = localisation
 }
 
 single_alias[opinion_chance_modifier] = {
