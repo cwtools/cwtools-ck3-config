@@ -177,6 +177,7 @@ event = {
     override_icon = {
         ## cardinality = 0..1
         trigger = single_alias_right[trigger_clause]
+	# TODO: Add filepath
         reference = scalar
     }
     ## cardinality = 0..inf
