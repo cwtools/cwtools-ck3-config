@@ -12,7 +12,7 @@ culture_group = {
     # TODO: Make graphical cultures somehow matter.
     ## cardinality = 0..1
     ### List of graphical cultures used for coat of arms, buildings, clothings and units. It's possible to give more than one from each type, then all of them will be used.
-    graphical_cultures = single_alias_right[scalar_list]
+    graphical_cultures = single_alias_right[graphical_culture_list]
     ## cardinality = 0..1
     ### List of possible mercenary names and optionally coats of arms.
     mercenary_names = single_alias_right[mercenary_list]
@@ -23,7 +23,7 @@ culture_group = {
 
         ## cardinality = 0..1
         ### List of graphical cultures used for coat of arms, buildings, clothings and units. It's possible to give more than one from each type, then all of them will be used.
-        graphical_cultures = single_alias_right[scalar_list]
+        graphical_cultures = single_alias_right[graphical_culture_list]
         ## cardinality = 0..1
         ### List of possible mercenary names and optionally coats of arms.
         mercenary_names = single_alias_right[mercenary_list]
@@ -54,14 +54,14 @@ culture_group = {
         dynasty_name_first = bool
 
         ### List of possible names for male children and randomly generated characters.
-        male_names = single_alias_right[first_name_list]
+        male_names = single_alias_right[localisation_list]
         ### List of possible names for male children and randomly generated characters.
-        male_names = single_alias_right[first_name_weighted_list]
+        male_names = single_alias_right[weighted_localisation_list]
 
         ### List of possible names for female children and randomly generated characters.
-        female_names = single_alias_right[first_name_list]
+        female_names = single_alias_right[localisation_list]
         ### List of possible names for female children and randomly generated characters.
-        female_names = single_alias_right[first_name_weighted_list]
+        female_names = single_alias_right[weighted_localisation_list]
 
         ## cardinality = 0..1
         ### Chance of male children being named after their paternal grandfather. Sum of these three values must not exceed 100.
@@ -149,14 +149,9 @@ single_alias[dynasty_name_list] = {
     }
 }
 
-single_alias[first_name_weighted_list] = {
+single_alias[graphical_culture_list] = {
     ## cardinality = 1..inf
-    int = single_alias_right[first_name_list]
-}
-
-single_alias[first_name_list] = {
-    ## cardinality = 1..inf
-    localisation
+    value_set[graphical_culture]
 }
 
 single_alias[ethnicity_list] = {
@@ -168,5 +163,27 @@ enums = {
     # TODO: Is there any other?
     enum[grammar_transform] = {
         french
+    }
+    complex_enum[male_names] = {
+        path = "game/common/culture/cultures"
+        name = {
+            scalar = {
+                male_names = {
+                    enum_name
+                    scalar = { enum_name }
+                }
+            }
+        }
+    }
+    complex_enum[female_names] = {
+        path = "game/common/culture/cultures"
+        name = {
+            scalar = {
+                female_names = {
+                    enum_name
+                    scalar = { enum_name }
+                }
+            }
+        }
     }
 }

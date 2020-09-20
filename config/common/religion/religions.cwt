@@ -52,6 +52,25 @@ single_alias[hsv_color] = {
     float
 }
 
+enums = {
+    complex_enum[male_names] = {
+        path = "game/common/religion/religions"
+        name = {
+            reserved_male_names = {
+                enum_name
+            }
+        }
+    }
+    complex_enum[female_names] = {
+        path = "game/common/religion/religions"
+        name = {
+            reserved_female_names = {
+                enum_name
+            }
+        }
+    }
+}
+
 #TODO: Script check to make sure gfx/ui stuff is present in either the family, religion, or faith.
 religion = {
 
@@ -113,9 +132,9 @@ religion = {
     traits = single_alias_right[sins_and_virtues]
 
     ### Names listed here will be applied to all faiths that don't define reserved_male_names themselves.
-    reserved_male_names = single_alias_right[scalar_list]
+    reserved_male_names = single_alias_right[localisation_list]
     ### Names listed here will be applied to all faiths that don't define reserved_female_names themselves.
-    reserved_female_names = single_alias_right[scalar_list]
+    reserved_female_names = single_alias_right[localisation_list]
     ### When creating a custom faith, these will be the available icons. Path is  "gfx/interface/icons/religion/%s.dds", where %s is the name. Also needs a text icon
     custom_faith_icons = single_alias_right[scalar_list]
 

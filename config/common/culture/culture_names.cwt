@@ -3,6 +3,12 @@ types = {
         path = "game/common/culture/culture_names"
     }
 }
-# TODO: Filter _male and _female and actually check if the names exist
+# TODO: Filter _male and _female
+## severity = information
 ### Ties names from different cultures to one another.
-culture_name = single_alias_right[first_name_list]
+culture_name = {
+    ## cardinality = 0..inf
+    enum[male_names]
+    ## cardinality = 0..inf
+    enum[female_names]
+}
