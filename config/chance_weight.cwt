@@ -43,6 +43,8 @@ single_alias[ai_chance_block] = {
     ## cardinality = 0..1
     ai_value_modifier = {
         ## cardinality = 0..inf
+        trigger = single_alias_right[trigger_clause]
+        ## cardinality = 0..inf
         enum[ai_values] = int_value_field
     }
 
