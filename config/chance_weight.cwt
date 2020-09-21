@@ -45,6 +45,11 @@ single_alias[ai_chance_block] = {
         ## cardinality = 0..inf
         enum[ai_values] = int_value_field
     }
+
+    ## cardinality = 0..inf
+    <scripted_modifier.ai_target_modifier> = {
+        VALUE = int_value_field
+    }
 }
 
 single_alias[weight_block] = {
