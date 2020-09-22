@@ -53,7 +53,7 @@ enums = {
         secondary_recipient_de_jure_titles
     }
 }
-
+# TODO: Check if of the int_value_fields accept values or just ints
 character_interaction = {
     ## cardinality = 0..1
     hidden = bool
