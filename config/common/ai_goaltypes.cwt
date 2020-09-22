@@ -8,6 +8,7 @@ types = {
 }
 
 types = {
+    ## type_key_filter = { attacker_offensive attacker_defensive defender_offensive defender_defensive }
     type[ai_war_stance] = {
         path = "game/common/ai_war_stances"
     }
