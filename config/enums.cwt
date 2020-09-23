@@ -67,6 +67,13 @@ enums = {
         learning
         intrigue
     }
+    enum[title_tiers] = {
+        barony
+        county
+        duchy
+        kingdom
+        empire
+    }
 }
 
 # Duration alias for LHS use:
