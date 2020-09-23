@@ -19,6 +19,14 @@ enums = {
         male
         female
     }
+    enum[event_option_skills] = {
+        diplomacy
+        intrigue
+        learning
+        martial
+        prowess
+        stewardship
+    }
     enum[ai_value] = {
         very_low_positive_ai_value # 10
         low_positive_ai_value # 20
@@ -60,3 +68,8 @@ enums = {
         intrigue
     }
 }
+
+# Duration alias for LHS use:
+alias[duration:days] = int_value_field
+alias[duration:months] = int_value_field
+alias[duration:years] = int_value_field

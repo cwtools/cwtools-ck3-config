@@ -12,32 +12,6 @@ types = {
     }
 }
 
-single_alias[complex_desc] = {
-    ## cardinality = 0..inf
-    desc = localisation
-
-    ## cardinality = 0..inf
-    random_valid = {
-        ## cardinality = 2..inf
-        desc = localisation
-    }
-
-    ## cardinality = 0..inf
-    first_valid = {
-        ## cardinality = 1..inf
-        triggered_desc = {
-            desc = localisation
-            trigger = {
-                ## cardinality = 1..inf
-                alias_name[trigger] = alias_match_left[trigger]
-            }
-        }
-        # This should probably be recursive in some way
-        ## cardinality = 0..inf
-        desc = localisation
-    }
-}
-
 ## replace_scope = { this = character }
 trait = {
     ## cardinality = 0..1
