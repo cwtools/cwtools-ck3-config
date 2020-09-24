@@ -1,5 +1,5 @@
 types = {
-    ## type_key_filter <> mercenary_names
+    ## type_key_filter <> { mercenary_names graphical_cultures }
     type[culture] = {
         path = "game/common/culture/cultures"
         skip_root_key = any

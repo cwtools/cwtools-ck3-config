@@ -11,7 +11,7 @@ decision = {
     title = localisation
     ## cardinality = 0..1
     ###override title, default: "<key>"; supports dynamic descriptions like in events (first_valid, ...); scope: character
-    title = single_alias_right[complex_event_desc]
+    title = single_alias_right[complex_desc]
 
     # cardinality = 1..1
     ### set decision image
