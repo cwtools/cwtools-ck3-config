@@ -3,6 +3,10 @@ alias[weight:<scripted_modifier>] = yes
 types = {
     type[scripted_modifier] = {
         path = "game/common/scripted_modifiers"
+
+        subtype[ai_target_modifier] = {
+            ai_target_modifier = <scripted_modifier>
+        }
     }
 }
 
