@@ -37,30 +37,6 @@ enums = {
     }
 }
 
-single_alias[complex_event_desc] = {
-    ## cardinality = 0..inf
-    desc = localisation
-
-    ## cardinality = 0..inf
-    random_valid = {
-        ## cardinality = 2..inf
-        desc = localisation
-    }
-
-    ## cardinality = 0..inf
-    first_valid = {
-        ## cardinality = 1..inf
-        triggered_desc = {
-            desc = localisation
-            trigger = {
-                ## cardinality = 1..inf
-                alias_name[trigger] = alias_match_left[trigger]
-            }
-        }
-    }
-}
-
-
 event = {
     ## cardinality = 0..1
     type = enum[event_types]
@@ -73,10 +49,10 @@ event = {
 
     subtype[visible] = {
         title = localisation
-        title = single_alias_right[complex_event_desc]
+        title = single_alias_right[complex_desc]
         picture = <event_picture>
         desc = localisation
-        desc = single_alias_right[complex_event_desc]
+        desc = single_alias_right[complex_desc]
     }
     subtype[!visible] = {
         # So that things don't yell at you if you make an event hidden for a lil while
@@ -87,7 +63,7 @@ event = {
         ## cardinality = 0..1
         desc = localisation
         ## cardinality = 0..1
-        desc = single_alias_right[complex_event_desc]
+        desc = single_alias_right[complex_desc]
     }
 
     ## cardinality = 0..inf
@@ -104,12 +80,16 @@ event = {
         ## cardinality = 0..1
         name = localisation
         ## cardinality = 0..1
-        name = single_alias_right[complex_event_desc]
+        name = single_alias_right[complex_desc]
         ## cardinality = 0..1
         name = {
             trigger = single_alias_right[trigger_clause]
             text = localisation
         }
+        ## cardinality = 0..1
+        flavor = single_alias_right[complex_desc]
+        ## cardinality = 0..1
+        flavor = localisation
 
         ## cardinality = 0..1
         highlight = bool
@@ -137,6 +117,8 @@ event = {
 
         ## cardinality = 0..1
         highlight_portrait = scope[character]
+        ## cardinality = 0..1
+        fallback = bool
     }
     ## cardinality = 0..inf
     after = single_alias_right[effect_clause]
@@ -186,6 +168,7 @@ event = {
         trigger = single_alias_right[trigger_clause]
         reference = <portrait_environment>
     }
+
 }
 
 single_alias[event_portrait] = {
@@ -197,5 +180,6 @@ single_alias[event_portrait] = {
         trigger = single_alias_right[trigger_clause]
         animation = <portrait_animation>
     }
+    animation = <animation>
 }
 

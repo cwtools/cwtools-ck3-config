@@ -11,7 +11,7 @@ types = {
 		name_field = "name"
 	}
 
-	## type_key_filter = animation
+	## type_key_filter = model_animation
 	type[model_animation] = {
 		path = "game/gfx"
 		name_field = "name"
