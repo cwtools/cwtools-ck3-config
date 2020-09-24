@@ -30,12 +30,6 @@ alias[weight:compatibility_modifier] = {
         ## cardinality = 0..inf
         enum[ai_values] = int_value_field
     }
-
-    ## cardinality = 0..inf
-    <scripted_modifier.ai_target_modifier> = {
-        VALUE = int_value_field
-    }
-
     ## cardinality = 0..inf
     opinion_modifier = single_alias_right[opinion_chance_modifier]
 }
@@ -57,6 +51,11 @@ single_alias[weight_block] = {
 
     ## cardinality = 0..inf
     compatibility_modifier = single_alias_right[compatibility_chance_modifier]
+
+    ## cardinality = 0..inf
+    <scripted_modifier.ai_target_modifier> = {
+        VALUE = int_value_field
+    }
 
     ## cardinality = 0..inf
     <scripted_modifier> = yes
