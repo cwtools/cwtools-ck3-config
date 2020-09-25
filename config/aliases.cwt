@@ -38,6 +38,8 @@ single_alias[doctrine_character_modifier] = {
     doctrine = <doctrine>
     ## push_scope = character
     alias_name[modifier] = alias_match_left[modifier]
+}
+
 single_alias[complex_desc] = {
     ## cardinality = 0..inf
     desc = localisation

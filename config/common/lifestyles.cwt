@@ -62,7 +62,7 @@ lifestyle_perk = {
     ## cardinality = 0..1
     ## push_scope = character
     ### Dynamic description. If not set, generated loc key will be used. Character scope.
-    name = single_alias_right[complex_event_desc]
+    name = single_alias_right[complex_desc]
 
     # TODO: Connect it.
     ### Key of the tree it belongs to. Only used for GUI layout.

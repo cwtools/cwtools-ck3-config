@@ -6,7 +6,7 @@ types = {
 
 council_task = {
 	## cardinality = 0..1
-	### Is the defualt task for the specified position (no by default, only applicable on task_type_general with task_progress_infinite)
+	### Is the default task for the specified position (no by default, only applicable on task_type_general with task_progress_infinite)
 	default_task = bool
 	### Position that can perform this task (positions can be found in common/council_positions)
 	position = <council_position> 
@@ -141,7 +141,7 @@ council_task = {
     progress = int_value_field
     ## cardinality = 0..1
     ### Dynamic description for effect description. Scopes based on task type. To add the modifier effects, you can do stuff like this [councillor.GetModifierDescForTask('task_foreign_affairs')].
-    effect_desc = single_alias_right[complex_event_desc]
+    effect_desc = single_alias_right[complex_desc]
 }
 
 enums = {

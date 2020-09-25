@@ -19,10 +19,10 @@ regiment_type = {
     allowed_in_hired_troops = bool
     # TODO: IDK what these can do exactly.
     ## cardinality = 0..1
-    ### Whether mercenaries should use this regiment type as a fallback. Defaults to no.
+    ### Whether mercenaries are allowed to be select this regiment type if there are no valid options defined for them after filtering out regiments that haven't been unlocked. Defaults to no.
     mercenary_fallback = bool
     ## cardinality = 0..1
-    ### Whether holy orders should use this regiment type as a fallback. Defaults to no.
+    ### Whether holy orders are allowed to be select this regiment type if there are no valid options defined for them after filtering out regiments that haven't been unlocked. Defaults to no.
     holy_order_fallback = bool
 
     ## cardinality = 0..1
