@@ -7,13 +7,14 @@ types = {
 council_position = {
     ## cardinality = 0..1
     skill = enum[attributes]
+    
     ## cardinality = 0..1
     ### What name to use. Be aware that when a position is unfilled, name_of_the_position is used instead.
     name = localisation
     ## cardinality = 0..1
     ## push_scope = character
     ### What name to use. SCOPE is the character, event target 'councillor_liege' is the council owner. If no character is provided, we fall back to the key of the position rather than going through triggered loc.
-    name = single_alias_right[complex_event_desc]
+    name = single_alias_right[complex_desc]
 
     ## cardinality = 0..1
     ### What tooltip to display..
@@ -21,12 +22,13 @@ council_position = {
     ## cardinality = 0..1
     ## push_scope = character
     ### What tooltip to display. SCOPE is the character, event target 'councillor_liege' is the council owner.
-    tooltip = single_alias_right[complex_event_desc]
+    tooltip = single_alias_right[complex_desc]
 
     ## push_scope = character
     ## cardinality = 0..1
     ### Can be held in addition to regular council positions. E.G., the Spouse council position.
     special_council_position = bool
+
     ### Will automatically be filled, without the player being able to select who takes the position. Trigger scope: council owner character. Default: no. An empty trigger is treated as 'no'.
     ## cardinality = 0..1
     auto_fill = bool
@@ -34,6 +36,7 @@ council_position = {
     ## push_scope = character
     ## cardinality = 0..1
     auto_fill = single_alias_right[trigger_clause]
+
     ### Position will be inherited by the primary heir if that character is valid to hold the position. Trigger scope: council owner character. Default: no. An empty trigger is treated as 'no'.
     ## cardinality = 0..1
     inherit = bool
@@ -41,6 +44,7 @@ council_position = {
     ## push_scope = character
     ## cardinality = 0..1
     inherit = single_alias_right[trigger_clause]
+
     ### The councillor can be fired. Trigger scope: council owner character. Default: yes. An empty trigger is treated as 'yes'.
     ## cardinality = 0..1
     can_fire = bool
@@ -48,6 +52,7 @@ council_position = {
     ## push_scope = character
     ## cardinality = 0..1
     can_fire = single_alias_right[trigger_clause]
+
     ### The councillor can be reassigned. Trigger scope: council owner character. Default: yes. An empty trigger is treated as 'yes'.
     ## cardinality = 0..1
     can_reassign = bool
@@ -55,6 +60,7 @@ council_position = {
     ## push_scope = character
     ## cardinality = 0..1
     can_reassign = single_alias_right[trigger_clause]
+
     ### The councillor can be assigned, but not reassigned/fired in their lifetime after the assignment. Trigger scope: council owner character. Default: no. An empty trigger is treated as 'no'.
     ## cardinality = 0..1
     can_change_once = bool
@@ -103,7 +109,7 @@ council_position = {
 
     ## push_scope = character
     ## cardinality = 0..1
-    ### The number of days until the councillor can't be changed. Defaults to 0.
+    ### The number of days after which the councillor can be changed. Defaults to 0.
     councillor_cooldown_days = int_value_field
     ## cardinality = 0..1
     ### Max number of positions for this type. Default 1. Infinite 0 or negative.

@@ -21,7 +21,7 @@ focus = {
     desc = localisation
     ## push_scope = character
     ### Description of the focus.
-    desc = single_alias_right[complex_event_desc]
+    desc = single_alias_right[complex_desc]
     ## cardinality = 0..1
     ### What key to use for the icon; if not defined, will use the key of the focus.
     icon = scalar
