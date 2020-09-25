@@ -37,9 +37,6 @@ alias[trigger:fervor] == replace_me_comparison
 ### what place in line of succession does the character hold?
 alias[trigger:place_in_line_of_succession] = replace_me
 
-### Compares the number of scripted relations a character has of the type
-alias[trigger:num_of_relation_ward] == replace_me_comparison
-
 ### Does the character have a commander trait that the scope does not?
 alias[trigger:character_has_commander_trait_scope_does_not] = scope[character]
 
@@ -73,9 +70,6 @@ alias[trigger:is_ruler] = bool
 ### Is the scheme currently affected by the specified modifier? has_scheme_modifier = X
 alias[trigger:has_scheme_modifier] = replace_me
 
-### Checks for a scripted relationship with a target character
-alias[trigger:has_relation_mentor] = scope[character]
-
 ### Check if the scoped color is the same as another color. The right hand side can be either a hex, rgb, or hsv color,  or a named color, or another color scope.
 alias[trigger:is_color] = replace_me
 
@@ -91,9 +85,6 @@ alias[trigger:realm_size] == replace_me_comparison
 ### does the character have the required health?
 alias[trigger:health] == replace_me_comparison
 
-### Checks for a scripted relationship with a target character
-alias[trigger:has_relation_potential_friend] = scope[character]
-
 ### is the title de jure liege or above the target title?
 alias[trigger:is_de_jure_liege_or_above_target] = scope[landed_title]
 
@@ -108,9 +99,6 @@ alias[trigger:is_defender_in_war] = replace_me
 
 ### is the target title de jure liege or above?
 alias[trigger:target_is_de_jure_liege_or_above] = scope[landed_title]
-
-### Checks for a scripted relationship with a target character
-alias[trigger:has_relation_oaf] = scope[character]
 
 ### Switch on a trigger for the evaluation of another trigger with an optional fallback trigger. switch = { 	trigger = simple_assign_trigger 	case_1 = { <triggers> } 	case_2 = { <triggers> } 	case_n = { <triggers> } 	fallback = { <triggers> }
 alias[trigger:switch] = replace_me
@@ -156,9 +144,6 @@ alias[trigger:monthly_character_balance] == replace_me_comparison
 
 ### Is the character a guest from the pool, visiting the target character's court? In contrast to is_foreign_court_guest_of the character has no liege
 alias[trigger:is_pool_guest_of] = scope[character]
-
-### Compares the number of scripted relations a character has of the type
-alias[trigger:num_of_relation_intrigue_mentor] == replace_me_comparison
 
 ### Is the scheme exposed?
 alias[trigger:is_scheme_exposed] = bool
@@ -208,14 +193,8 @@ alias[trigger:war_chest_gold] == replace_me_comparison
 ### Is the character a sibling of the target character?
 alias[trigger:is_sibling_of] = scope[character]
 
-### Compares the number of scripted relations a character has of the type
-alias[trigger:num_of_relation_potential_lover] == replace_me_comparison
-
 ### is the target character a vassal or below of the scope character?
 alias[trigger:target_is_vassal_or_below] = scope[character]
-
-### Checks for a secret scripted relationship with a target character
-alias[trigger:has_secret_relation_potential_rival] = scope[character]
 
 ### Is the character a spouse of the target character, and are both alive?
 alias[trigger:is_spouse_of] = scope[character]
@@ -250,9 +229,6 @@ alias[trigger:number_of_knights] == replace_me_comparison
 ### Does the character have the non-interference reason towards the target?
 alias[trigger:has_non_interference] = scope[character]
 
-### Checks for a scripted relationship with a target character
-alias[trigger:has_relation_intrigue_mentor] = scope[character]
-
 ### does the character and the target have a number of opposing personality traits? number_of_opposing_personality_traits = { target = X value >/</>=/<= Y }
 alias[trigger:number_of_opposing_personality_traits] = replace_me
 
@@ -264,9 +240,6 @@ alias[trigger:has_usable_hook] = replace_me_character
 
 ### Check if the chance to create a faction against a target of the scope landed title is is true against the scripted value title_create_faction_type_chance = {     type = faction_type #An ongoing faction     target = target_character     value <|<=|>=|> 0 }
 alias[trigger:title_create_faction_type_chance] = replace_me
-
-### Checks for a secret scripted relationship with a target character
-alias[trigger:has_secret_relation_soulmate] = scope[character]
 
 ### Is the scoped title leased out to any holy order?
 alias[trigger:is_under_holy_order_lease] = bool
@@ -304,17 +277,11 @@ alias[trigger:scheme_type] = <scheme>
 ### is the scope character in the target war as an attacker?
 alias[trigger:is_attacker_in_war] = replace_me
 
-### Checks for a scripted relationship with a target character
-alias[trigger:has_relation_intrigue_student] = scope[character]
-
 ### is the scope character participating in the target activity?
 alias[trigger:is_in_target_activity] = replace_me
 
 ### has the scope secret been spent by the target character? is_spent_by = target
 alias[trigger:is_spent_by] = scope[character]
-
-### Checks for a scripted relationship with a target character
-alias[trigger:has_relation_crush] = scope[character]
 
 ### Compare the current computer date.
 alias[trigger:current_computer_date] == replace_me_date
@@ -331,14 +298,8 @@ alias[trigger:is_normal_councillor] = bool
 ### Is the scope character landed (holds a county or barony)?
 alias[trigger:is_landed] = bool
 
-### Compares the number of scripted relations a character has of the type
-alias[trigger:num_of_relation_potential_rival] == replace_me_comparison
-
 ### is the character imprisoned in a prison of the specified type?  Accepts "dungeon" or "house_arrest"
 alias[trigger:is_in_prison_type] = replace_me
-
-### Checks for a scripted relationship with a target character
-alias[trigger:has_relation_lover] = scope[character]
 
 ### does the character have the required stress level?
 alias[trigger:stress_level] == replace_me_comparison
@@ -364,9 +325,6 @@ alias[trigger:is_hostile] = bool
 ### Scheme success chance
 alias[trigger:scheme_success_chance] == replace_me_comparison
 
-### Checks for a secret scripted relationship with a target character
-alias[trigger:has_secret_relation_lover] = scope[character]
-
 ### How many perks from this lifestyle does the character have?
 alias[trigger:stewardship_lifestyle_perks] == replace_me_comparison
 
@@ -385,17 +343,11 @@ alias[trigger:is_foreign_court_guest] = bool
 ### Is the character a great grandparent of the target character?
 alias[trigger:is_great_grandparent_of] = scope[character]
 
-### Checks for a secret scripted relationship with a target character
-alias[trigger:has_secret_relation_crush] = scope[character]
-
 ### can the scope secret be exposed by the target character? can_be_exposed_by = target
 alias[trigger:can_be_exposed_by] = scope[character]
 
 ### Is the character away from the court?
 alias[trigger:is_away_from_court] = bool
-
-### Checks for a secret scripted relationship with a target character
-alias[trigger:has_secret_relation_potential_lover] = scope[character]
 
 ### Is the scoped character's yearly expenses this big?
 alias[trigger:yearly_character_expenses] == replace_me_comparison
@@ -408,12 +360,6 @@ alias[trigger:has_dynasty_perk] = <dynasty_perk>
 
 ### Is the character a cousin of the target character?
 alias[trigger:is_cousin_of] = scope[character]
-
-### Compares the number of scripted relations a character has of the type
-alias[trigger:num_of_relation_soldier_friend] == replace_me_comparison
-
-### Compares the number of scripted relations a character has of the type
-alias[trigger:num_of_relation_bully] == replace_me_comparison
 
 ### is the tooltip with the specified name open?  - An interface trigger, can only be used in specific places
 alias[trigger:is_tooltip_with_name_open] = replace_me
@@ -443,9 +389,6 @@ alias[trigger:stress] == replace_me_comparison
 
 ### Can the scoped title be leased out?
 alias[trigger:can_be_leased_out] = bool
-
-### Checks for a scripted relationship with a target character
-alias[trigger:has_relation_rival] = scope[character]
 
 ### does the character have a Pressed Claim on the target title?
 alias[trigger:has_strong_claim_on] = scope[landed_title]
@@ -482,9 +425,6 @@ alias[trigger:is_nibling_of] = scope[character]
 ### what is the ransom cost of the character?
 alias[trigger:ransom_cost] == replace_me_comparison
 
-### Checks for a scripted relationship with a target character
-alias[trigger:has_relation_nemesis] = scope[character]
-
 ### Has the target character nominated a successor for the scoped title
 alias[trigger:has_character_nominiated] = scope[character]
 
@@ -502,9 +442,6 @@ alias[trigger:has_wrong_holding_type] = bool
 
 ### Does the county have a holy site with the given flag? has_holy_site_flag = some flag
 alias[trigger:has_holy_site_flag] = replace_me
-
-### Checks for a scripted relationship with a target character
-alias[trigger:has_relation_best_friend] = scope[character]
 
 ### Evaluates the enclosed triggers if the display_triggers of the preceding `trigger_if` or `trigger_else_if` is not met and its own display_trigger of the limit is mettrigger_if = { limit = { <display_triggers> } <triggers> } trigger_else_if = { limit = { <display_triggers> } <triggers> }
 alias[trigger:trigger_else_if] = {
@@ -581,9 +518,6 @@ alias[trigger:in_color_list] = replace_me
 ### for how long has the character been imprisoned? time_in_prison = { days/months/years =,>,< X }
 alias[trigger:time_in_prison] = replace_me
 
-### Compares the number of scripted relations a character has of the type
-alias[trigger:num_of_relation_soulmate] == replace_me_comparison
-
 ### does the character have the specified opinion modifier on the target? (optional *value <|<=|=|>=|> X* or *value = { MIN MAX }* inclusive)
 alias[trigger:has_opinion_modifier] = {
     modifier = <opinion_modifier>
@@ -629,14 +563,8 @@ alias[trigger:days_until_ghw_launch] == replace_me_comparison
 ### Does the character have this lifestyle?
 alias[trigger:has_lifestyle] = <lifestyle>
 
-### Checks for a scripted relationship with a target character
-alias[trigger:has_relation_ward] = scope[character]
-
 ### Is the character currently in the target province?
 alias[trigger:is_at_location] = scope[province]
-
-### Compares the number of scripted relations a character has of the type
-alias[trigger:num_of_relation_lover] == replace_me_comparison
 
 ### Does the scoped character have this number of virtous traits? num_virtous_traits > 5 ORnum_virtous_traits = { value > 5 faith = scope:faith }, to base it on what a specific faith considers virtuous
 alias[trigger:num_virtuous_traits] == replace_me_comparison
@@ -715,9 +643,6 @@ alias[trigger:is_at_war_with] = scope[character]
 
 ### How many perks in the lifestyle does this dynasty have?
 alias[trigger:glory_legacy_track_perks] == replace_me_comparison
-
-### Compares the number of scripted relations a character has of the type
-alias[trigger:num_of_relation_student] == replace_me_comparison
 
 ### Does the character have this culture group? has_culture_group = culture_group:east_slavic_group
 alias[trigger:has_culture_group] = scope[culture_group]
@@ -829,9 +754,6 @@ alias[trigger:is_contested] = bool
 ### Does the character have the revoke title reason towards the target?
 alias[trigger:has_revoke_title_reason] = scope[character]
 
-### Compares the number of scripted relations a character has of the type
-alias[trigger:num_of_relation_intrigue_student] == replace_me_comparison
-
 ### Is the character in the same court as the target character (they have the same court owner or one is a courtier of the other)? Includes guests in the court.
 alias[trigger:is_in_the_same_court_as_or_guest] = scope[character]
 
@@ -843,9 +765,6 @@ alias[trigger:diplomacy_lifestyle_perks] == replace_me_comparison
 
 ### is the character a claimant to any landed titles?
 alias[trigger:is_claimant] = bool
-
-### Checks for a secret scripted relationship with a target character
-alias[trigger:has_secret_relation_rival] = scope[character]
 
 ### does the character have the required stewardship skill level?
 alias[trigger:stewardship] == replace_me_comparison
@@ -907,12 +826,6 @@ alias[trigger:army_max_size] == replace_me_comparison
 ### Is the character obedient towards the target?
 alias[trigger:is_obedient] = scope[character]
 
-### Checks for a scripted relationship with a target character
-alias[trigger:has_relation_potential_lover] = scope[character]
-
-### Checks for a scripted relationship with a target character
-alias[trigger:has_relation_bully] = scope[character]
-
 ### can the character start the scheme? can_start_scheme = { type = X target = Y }
 alias[trigger:can_start_scheme] = {
     type = <scheme>
@@ -934,17 +847,11 @@ alias[trigger:custom_description] = {
 ### Has the scope character any nickname?
 alias[trigger:has_any_nickname] = bool
 
-### Compares the number of scripted relations a character has of the type
-alias[trigger:num_of_relation_rival] == replace_me_comparison
-
 ### Does the character have a pending interaction of the type? Only works if the scope is player-controlled. Example: has_pending_interaction = interaction_key
 alias[trigger:has_pending_interaction_of_type] = replace_me
 
 ### is the war overview open at a specified tab (victory, defeat, white_peace)?  - An interface trigger, can only be used in specific places
 alias[trigger:is_war_overview_tab_open] = replace_me
-
-### Checks for a scripted relationship with a target character
-alias[trigger:has_relation_student] = scope[character]
 
 ### Monthly scheme progress in % (i.e. 50 equals 50%)
 alias[trigger:scheme_monthly_progress] == replace_me_comparison
@@ -954,9 +861,6 @@ alias[trigger:has_same_culture_group_as] = scope[character]
 
 ### Is the character a powerful vassal?
 alias[trigger:is_powerful_vassal] = bool
-
-### Checks for a secret scripted relationship with a target character
-alias[trigger:has_secret_relation_guardian] = scope[character]
 
 ### checks if the character has a specific government type
 alias[trigger:has_government] = <government>
@@ -973,20 +877,11 @@ alias[trigger:completely_controls] = scope[landed_title]_scope
 ### Returns true if the specified number of sub-triggers return true calc_true_if = { amount = 2 <trigger> <trigger> <trigger> }
 alias[trigger:calc_true_if] = replace_me
 
-### Checks for a secret scripted relationship with a target character
-alias[trigger:has_secret_relation_intrigue_student] = scope[character]
-
-### Compares the number of scripted relations a character has of the type
-alias[trigger:num_of_relation_best_friend] == replace_me_comparison
-
 ### Is the character a close or extended family [parents, children, siblings, grandparents, grandchildren, cousins, uncles, aunts, nephews, nieces] of the target character?
 alias[trigger:is_close_or_extended_family_of] = scope[character]
 
 ### Does the scoped character have the duration remaining on a given modifier has_character_modifier_duration_remaining = name
 alias[trigger:has_character_modifier_duration_remaining] = replace_me
-
-### Checks for a secret scripted relationship with a target character
-alias[trigger:has_secret_relation_potential_friend] = scope[character]
 
 ### Does the character have the same culture as the target?
 alias[trigger:has_same_culture_as] = scope[character]
@@ -1036,9 +931,6 @@ alias[trigger:ai_vengefulness] == replace_me_comparison
 ### checks whether the scope character is the owner of any currently active activity
 alias[trigger:owns_an_activity] = bool
 
-### Checks for a scripted relationship with a target character
-alias[trigger:has_relation_victim] = scope[character]
-
 ### Can the scope owner have concubines?
 alias[trigger:allowed_concubines] = bool
 
@@ -1084,12 +976,6 @@ alias[trigger:domain_size] == replace_me_comparison
 ### does the character have the specified tax income?
 alias[trigger:scriptedtests_gold_income] == replace_me_comparison
 
-### Checks for a secret scripted relationship with a target character
-alias[trigger:has_secret_relation_oaf] = scope[character]
-
-### Checks for a secret scripted relationship with a target character
-alias[trigger:has_secret_relation_friend] = scope[character]
-
 ### Does the character have disabled non-agression pacts with the target?
 alias[trigger:has_disable_non_aggression_pacts] = scope[character]
 
@@ -1101,9 +987,6 @@ alias[trigger:has_character_modifier] = <modifier_container>
 
 ### is the character at war as an attacker?
 alias[trigger:is_at_war_as_attacker] = bool
-
-### Checks for a secret scripted relationship with a target character
-alias[trigger:has_secret_relation_victim] = scope[character]
 
 ### Is the county currently affected by the specified council task? Needs to be in a county title scope
 alias[trigger:is_target_of_council_task] = replace_me
@@ -1146,9 +1029,6 @@ alias[trigger:is_target_in_local_variable_list] = replace_me
 
 ### negates content of trigger
 alias[trigger:not] = replace_me
-
-### Compares the number of scripted relations a character has of the type
-alias[trigger:num_of_relation_friend] == replace_me_comparison
 
 ### is the character old/young enough?
 alias[trigger:age] == replace_me_comparison
@@ -1279,14 +1159,8 @@ alias[trigger:has_pledged_attacker] = replace_me_character
 ### Scheme progress (0 - 10 (defined))
 alias[trigger:scheme_progress] == replace_me_comparison
 
-### Compares the number of scripted relations a character has of the type
-alias[trigger:num_of_relation_oaf] == replace_me_comparison
-
 ### Does the scope character have an opposite relationship of the relation value with the target character? target = , relation =
 alias[trigger:has_opposite_relation] = replace_me
-
-### Checks for a secret scripted relationship with a target character
-alias[trigger:has_secret_relation_intrigue_mentor] = scope[character]
 
 ### Is the target character a courtier of the scope character?
 alias[trigger:is_employer_of] = scope[character]
@@ -1357,9 +1231,6 @@ alias[trigger:max_military_strength] == replace_me_comparison
 ### Compare the current ingame date.
 alias[trigger:current_date] == replace_me_date
 
-### Checks for a secret scripted relationship with a target character
-alias[trigger:has_secret_relation_mentor] = scope[character]
-
 ### How many perks from this lifestyle does the character have?
 alias[trigger:martial_lifestyle_perks] == replace_me_comparison
 
@@ -1393,14 +1264,8 @@ alias[trigger:is_lowborn] = bool
 ### task_current_value = scope:county.active_de_jure_drift_progress
 alias[trigger:active_de_jure_drift_progress] == replace_me_comparison
 
-### Does the scope character have a specific flag on a relation with the target character? target = , relation = , flag =
-alias[trigger:has_relation_flag] = replace_me
-
 ### Is the county a holy site of the given faith? is_holy_site_of = some faith
 alias[trigger:is_holy_site_of] = replace_me
-
-### Checks for a secret scripted relationship with a target character
-alias[trigger:has_secret_relation_nemesis] = scope[character]
 
 ### Does the faith have the given icon has_icon = some_cool_custom_icon
 alias[trigger:has_icon] = replace_me
@@ -1417,12 +1282,6 @@ alias[trigger:is_bad_nickname] = replace_me
 ### How many perk points available does the character have?
 alias[trigger:martial_lifestyle_xp] == replace_me_comparison
 
-### Compares the number of scripted relations a character has of the type
-alias[trigger:num_of_relation_mentor] == replace_me_comparison
-
-### Checks for a scripted relationship with a target character
-alias[trigger:has_relation_soulmate] = scope[character]
-
 ### does the character and the target have a number of commander traits in common? number_of_personality_traits_in_common = { target = X value >/</>=/<= Y }
 alias[trigger:number_of_commander_traits_in_common] = replace_me
 
@@ -1437,12 +1296,6 @@ alias[trigger:dynasty_prestige_level] == replace_me_comparison
 
 ### Is the character interaction specified shown for the target character? is_character_interaction_shown = {     recipient = character     interaction = interaction_name }
 alias[trigger:is_character_interaction_shown] = replace_me
-
-### Checks for a scripted relationship with a target character
-alias[trigger:has_relation_friend] = scope[character]
-
-### Checks for a secret scripted relationship with a target character
-alias[trigger:has_secret_relation_best_friend] = scope[character]
 
 ### Is the scope landed title a holy order?
 alias[trigger:is_holy_order] = bool
@@ -1480,9 +1333,6 @@ alias[trigger:is_grandparent_of] = scope[character]
 ### does the character have the required prestige level?
 alias[trigger:prestige_level] == replace_me_comparison
 
-### Compares the number of scripted relations a character has of the type
-alias[trigger:num_of_relation_crush] == replace_me_comparison
-
 ### is the character a commanding an army?
 alias[trigger:is_commanding_army] = bool
 
@@ -1500,9 +1350,6 @@ alias[trigger:secret_type] = <secret_type>
 
 ### Compare the current computer year.
 alias[trigger:current_computer_date_year] == replace_me_comparison
-
-### Checks for a scripted relationship with a target character
-alias[trigger:has_relation_soldier_friend] = scope[character]
 
 ### How many perk points available does the character have?
 alias[trigger:stewardship_lifestyle_xp] == replace_me_comparison
@@ -1542,9 +1389,6 @@ alias[trigger:has_construction_with_flag] = replace_me
 
 ### Does the faith control a holy site with the given flag? controls_holy_site_with_flag = some flag
 alias[trigger:controls_holy_site_with_flag] = replace_me
-
-### Checks for a secret scripted relationship with a target character
-alias[trigger:has_secret_relation_ward] = scope[character]
 
 ### Compares the fort level of a province
 alias[trigger:fort_level] == replace_me_comparison
@@ -1611,9 +1455,6 @@ alias[trigger:has_holding_type] = replace_me
 
 ### Is the scoped character a councillor?
 alias[trigger:is_councillor] = bool
-
-### Checks for a secret scripted relationship with a target character
-alias[trigger:has_secret_relation_soldier_friend] = scope[character]
 
 ### AI rationality
 alias[trigger:ai_rationality] == replace_me_comparison
@@ -1693,9 +1534,6 @@ alias[trigger:number_of_election_votes] == replace_me_comparison
 ### Is the scoped character a special councillor?
 alias[trigger:is_special_councillor] = bool
 
-### Compares the number of scripted relations a character has of the type
-alias[trigger:num_of_relation_nemesis] == replace_me_comparison
-
 ### How much prestige is in the great holy war's war chest?
 alias[trigger:war_chest_prestige] == replace_me_comparison
 
@@ -1708,9 +1546,6 @@ alias[trigger:is_civil_war] = bool
 ### Checks the size of a variable list variable_list_size = { name = X target >= Y } Where X is the name of the variable Where Y is a script value or number
 alias[trigger:local_variable_list_size] = replace_me
 
-### Compares the number of scripted relations a character has of the type
-alias[trigger:num_of_relation_guardian] == replace_me_comparison
-
 ### Checks whether the current scope has the specified variable list set has_variable_list = name
 alias[trigger:has_local_variable_list] = replace_me
 
@@ -1719,9 +1554,6 @@ alias[trigger:can_join_faction] = replace_me
 
 ### What is the max (if all levies were fully reinforced) military strength of the pledged attackers in the given Great Holy War?
 alias[trigger:ghw_attackers_strength] == replace_me_comparison
-
-### Checks for a scripted relationship with a target character
-alias[trigger:has_relation_potential_rival] = scope[character]
 
 ### Checks how much a character has contributed to the scoped war war_contribution = { target = some character value > 5 }
 alias[trigger:war_contribution] = replace_me
@@ -1732,20 +1564,11 @@ alias[trigger:is_married] = bool
 ### The number of agents in a scheme
 alias[trigger:scheme_number_of_agents] == replace_me_comparison
 
-### Checks for a scripted relationship with a target character
-alias[trigger:has_relation_guardian] = scope[character]
-
 ### How many perks in the lifestyle does this dynasty have?
 alias[trigger:guile_legacy_track_perks] == replace_me_comparison
 
 ### Check if the chance to create a faction against a target of the scope character is is true against the scripted value create_faction_type_chance = {     type = faction_type #An ongoing faction     target = target_character     value <|<=|>=|> 0 }
 alias[trigger:create_faction_type_chance] = replace_me
-
-### Checks for a secret scripted relationship with a target character
-alias[trigger:has_secret_relation_bully] = scope[character]
-
-### Compares the number of scripted relations a character has of the type
-alias[trigger:num_of_relation_victim] == replace_me_comparison
 
 ### Does the scoped dynasty have the duration remaining on a given modifier has_dynasty_modifier_duration_remaining = name
 alias[trigger:has_dynasty_modifier_duration_remaining] = replace_me
@@ -1798,14 +1621,8 @@ alias[trigger:has_religion] = scope[religion]
 ### does the scope province have a free building slot? has_free_building_slot = yes
 alias[trigger:has_free_building_slot] = bool
 
-### Checks for a secret scripted relationship with a target character
-alias[trigger:has_secret_relation_student] = scope[character]
-
 ### Current discontent of the faction
 alias[trigger:faction_discontent] == replace_me_comparison
-
-### Compares the number of scripted relations a character has of the type
-alias[trigger:num_of_relation_potential_friend] == replace_me_comparison
 
 ### is the target character in the scope war as a defender?
 alias[trigger:is_defender] = scope[character]
@@ -1903,12 +1720,6 @@ alias[trigger:has_inactive_trait] = replace_me
 ### Is the scoped character's (top-liege) realm immune to raiding by the target due to having defeated their raid army? has_raid_immunity_against = scope:character
 alias[trigger:has_raid_immunity_against] = replace_me_character
 
-### Checks for a scripted relationship with a target character
-alias[trigger:has_relation_court_physician] = replace_me_character_target
-
-### Checks for a secret scripted relationship with a target character
-alias[trigger:has_secret_relation_court_physician] = replace_me_character_target
-
 ### does the character have the required intrigue skill level difference against target? intrigue = { target = character value <= script_value abs = yes/no(optional, default no) }
 alias[trigger:intrigue_diff] == replace_me_comparison
 
@@ -1986,9 +1797,6 @@ alias[trigger:max_number_of_concubines] == replace_me_comparison
 
 ### The amount of missing unique ancestors from the characters real father and mother Traverses the family tree for NDefines::NChildbirth::INBREEDING_ANCESTOR_GENERATIONS amount of generations. By default this means that we're traversing 62 ancestors and report the amount of duplicates we find. calc_missing_unique_ancestors > 10
 alias[trigger:missing_unique_ancestors] == replace_me_comparison
-
-### Compares the number of scripted relations a character has of the type
-alias[trigger:num_of_relation_court_physician] == replace_me_comparison
 
 ### Does the scope character have value amount of MaA of the base type?
 alias[trigger:number_maa_regiments_of_base_type] == replace_me_comparison
@@ -2185,3 +1993,13 @@ alias[trigger:pregnancy_days] == replace_me_comparison
 ### Number of days since the war score has been at max (+100 or -100). Returns -1 if the war score is not +100 or -100
 alias[trigger:days_since_max_war_score] == replace_me_comparison
 
+### Check if has a relation flag in a particular relation with the target character.
+alias[effect:has_relation_flag] = single_alias_right[relation_flag_clause]
+
+##### Custom effects (dynamic ones) ######
+### Checks for a scripted relationship with a target character.
+alias[trigger:has_relation_<scripted_relation>] = scope[character]
+### Checks for a secret scripted relationship with a target character.
+alias[trigger:has_relation_<scripted_relation>] = scope[character]
+### Compares the number of scripted relations a character has of the type.
+alias[trigger:num_of_relation_<scripted_relation>] == replace_me_comparison

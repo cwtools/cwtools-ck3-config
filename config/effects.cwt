@@ -1,7 +1,3 @@
-
-### Sets scripted relationship
-alias[effect:set_relation_soldier_friend] = replace_me
-
 ### Adds a character as an agent to the scheme and forces them to stay {     scheme = target_Scheme     days/months/years = duration }
 alias[effect:force_add_to_scheme] = replace_me
 
@@ -16,9 +12,6 @@ alias[effect:accept_invitation_for_character] = replace_me
 
 ### Sets the task of the scope councillor { type = council_position_type_key target = for_targeted_tasks  }
 alias[effect:set_council_task] = replace_me
-
-### Sets scripted relationship
-alias[effect:set_relation_lover] = replace_me
 
 ### kills a character, death = { killer = X death_reason = Y }, where X is a character and Y is one of the death reason keys. Or death = natural which will pick a natural death reason to kill the character from.
 alias[effect:death] = {
@@ -61,9 +54,6 @@ alias[effect:vassal_contract_set_obligation_level] = replace_me
 ### Sets the truce against the specified character 'character' specifies the target character 'override' says whether it should replace the previous truce even if shorter 'years / months / days' sets the duration of the truce 'result' specifies the result from the scope character's point of view ('white_peace' by default) 'casus_belli_type' sets the casus belli type the truce is for, mutually exclusive with 'war' 'casus_belli' sets the casus belli scope that caused the truce, mutually exclusive with 'casus_belli_type' add_truce_one_way = { character = X years/months/days = Y override = yes/no result = victory/defeat/white_peace casus_belli/war = Z }
 alias[effect:add_truce_one_way] = replace_me
 
-### Sets scripted relationship
-alias[effect:set_relation_oaf] = replace_me
-
 ### Exposes the scope secret
 alias[effect:expose_secret] = scope[character]
 
@@ -79,8 +69,6 @@ alias[effect:remove_province_modifier] = replace_me
 ### Sets the capital county of the title to the target county set_capital_county = <some county title>
 alias[effect:set_capital_county] = replace_me
 
-### Removes scripted relationship
-alias[effect:remove_relation_oaf] = replace_me
 ### Tries to create an important action notification. Will keep the current one if already exists. important_action_type = important_action_type_key - the important action object key to create. Must be defined. actor = character_actor - optional, can be used by the important action effect recipient = character_actor - optional, can be used by the important action effect secondary_actor = character_secontary_actor - optional, can be used by the important action effect secondary_recipient = character_secondary_recipient - optional, can be used by the important action effect landed_title = landed_title - optional, can be used by the important action effect
 alias[effect:try_create_important_action] = replace_me
 
@@ -89,9 +77,6 @@ alias[effect:add_focus_progress] = replace_me
 
 ### 'Consume' all imprisonment reasons that the scoped character has on the target character. Until they get a new reason, they cannot imprison the target again.
 alias[effect:consume_imprisonment_reasons] = replace_me
-
-### Sets scripted relationship
-alias[effect:set_relation_guardian] = replace_me
 
 ### 'Consume' all execute reasons that the scoped character has on the target character. Until they get a new reason, they cannot execute the target again.
 alias[effect:consume_execute_reasons] = replace_me
@@ -104,9 +89,6 @@ alias[effect:make_story_owner] = replace_me
 
 ### = { liege = 'Character that should become the new liege' change = 'previously created title_and_vassal_change', adds a liege change
 alias[effect:change_liege] = replace_me
-
-### Removes scripted relationship
-alias[effect:remove_relation_victim] = replace_me
 
 ### Adds a trait to a character (if the add_trait effect would not add the trait - i.e. when already having the trait, having an opposing trait, not fulfilling the trait's is_potential trigger or being outside of the trait's range - a tooltip will be shown but the trait will not be added)
 alias[effect:add_trait_force_tooltip] = replace_me
@@ -126,12 +108,6 @@ alias[effect:reset_coa] = replace_me
 ### increases (or decreases) stress of a character
 alias[effect:add_stress] = replace_me
 
-### Sets scripted relationship
-alias[effect:set_relation_soulmate] = replace_me
-
-### Sets scripted relationship
-alias[effect:set_relation_potential_rival] = scope[character]
-
 ### makes a claim weak (character adds the claim if not having it already)
 alias[effect:make_claim_weak] = replace_me
 
@@ -149,9 +125,6 @@ alias[effect:create_story] = replace_me
 
 ### add law to scoped title, overriding any current law from the same group add_title_law = princely_elective_succession_law
 alias[effect:add_title_law] = replace_me
-
-### Sets scripted relationship
-alias[effect:set_relation_nemesis] = replace_me
 
 ### Adds lifestyle XP to the given character
 alias[effect:add_diplomacy_lifestyle_xp] = replace_me
@@ -172,7 +145,7 @@ alias[effect:disable_exposure_by] = replace_me
 alias[effect:allow_alliance] = replace_me
 
 ### Removed a flag from an existing relation flag = flag_name (declared in scripted_relation) target = other_character relation = scripted_relation
-alias[effect:remove_relation_flag] = replace_me
+alias[effect:remove_relation_flag] = single_alias_right[relation_flag_clause]
 
 ### the character in the scope joins the assigned faction skiping the can_character_join trigger
 alias[effect:join_faction_skip_check] = replace_me
@@ -261,9 +234,6 @@ alias[effect:set_county_faith] = replace_me
 ### Sets if the title should always go to the primary heir in partition succession set_always_follows_primary_heir = yes
 alias[effect:set_always_follows_primary_heir] = replace_me
 
-### Sets scripted relationship
-alias[effect:set_relation_intrigue_student] = replace_me
-
 ### 'Consume' 1 revoke title reason that the scoped character has on the target character.
 alias[effect:consume_revoke_title_reason] = replace_me
 
@@ -318,9 +288,6 @@ alias[effect:add_truce_both_ways] = replace_me
 ### Force the Councillor to revert to the default task. Any relevant percentage progress will be lost (even if the councillor was performing the default task already).
 alias[effect:start_default_task] = replace_me
 
-### Removes scripted relationship
-alias[effect:remove_relation_nemesis] = replace_me
-
 ### Removes the target from a variable list remove_list_variable = { name = X target = Y } Where X is the name of the variable Where Y is an event target
 alias[effect:remove_list_local_variable] = replace_me
 
@@ -329,9 +296,6 @@ alias[effect:join_faction] = replace_me
 
 ### Sets the coat of arms of a landed title, dynasty, or house to the right hand side coat of arms or that of an object of the same type set_coa = k_england set_coa = scope:new_coa
 alias[effect:set_coa] = replace_me
-
-### Removes scripted relationship
-alias[effect:remove_relation_potential_rival] = replace_me
 
 ### duel effect that selects an effect based on comparing specified skill of a character to a value or another character's skill. Alternatively, the compare value can be scripted completely duel = { 	skill = X 	target = Y 	value = Z 	localization = W ... random list body } Where X is the skill to compare, Y is the target character (requires skill to be set) or integer value Z (works with or without the skill), the rest of the effect is the same as random_list If the skill is unspecified, the effect needs a value Z (which can use scripted math) which it will then use as the duel vlue directly If localization = W is specified, the effect localization W will be used (entry in effect_localization database, not a localization key directly) The skill difference (or scripted duel value) is available as scope:duel_value inside the outcome entries, the duel target is accessible as scope:duel_target Valid skill, target, combinations: skill + target, skill + value, only value  Since there is now no automatic weighting, we should be using weight numbers in a comparable range to the scope:duel_value value. Since that will always be between -20 and 20 (unless you do something very unusual), and typically in a more narrow range than that, we should stick to those ranges.  Only use larger weights if you want the duel_value to have a smaller impact on the weighting, and only use smaller weights if you want the duel_value to have a huge impact on the weighting.  In addition, it is fully possible for the compare_modifier to reduce the weight to 0, which would mean that it will not be possible to happen at all. I've requested code support to make it so that we can define min and max values for weights, but until further notice we should use ranges that are guaranteed to not hit 0, or include min values in the compare_modifier itself.  Lastly, remember that if you want the outcome of a duel to scale linearly from (almost) 0% to (almost) 100%, the duel_value should be applied 50% to the good outcome, and -50% to the bad outcome. If you only apply it on one side, you will retain a (presumably significant) chunk of chance for the other outcome.
 alias[effect:duel] = {
@@ -361,9 +325,6 @@ alias[effect:debug_log_date] = replace_me
 
 ### Recalculates the line of succession of the scoped character
 alias[effect:scriptedtests_recalculate_succession] = replace_me
-
-### Removes scripted relationship
-alias[effect:remove_relation_crush] = replace_me
 
 ### Sets a variable set_variable = { name = X value = Y days = Z } Where X is the name of the variable used to then access it Where Y is any event target, bool, value, script value or flag (flag:W) An optional days where Z is the number of days or script value This variable will be accessible with <type_>var:X. With type being in a scope object or in a top scope
 alias[effect:set_global_variable] = {
@@ -419,12 +380,6 @@ alias[effect:unpledge_defender] = replace_me
 
 ### Add a modifier to a house add_house_modifier = name add_house_modifier = { modifier = name days/weeks/months/years = int }
 alias[effect:add_house_modifier] = replace_me
-
-### Sets scripted relationship
-alias[effect:set_relation_student] = replace_me
-
-### Sets scripted relationship
-alias[effect:set_relation_potential_friend] = scope[character]
 
 ### The target character pledges themselves as an attacker in the GHW. Must be of the same faith as the GHW declarer. pledge_attacker = some character
 alias[effect:pledge_attacker] = replace_me
@@ -493,9 +448,6 @@ alias[effect:change_first_name] = replace_me
 ### The target character becomes the designated winner of the GHW. set_designated_winner = some character
 alias[effect:set_designated_winner] = replace_me
 
-### Removes scripted relationship
-alias[effect:remove_relation_lover] = replace_me
-
 ### Executes enclosed effects if limit criteria of preceding 'if' or 'else_if' is not met if = { limit = { <triggers> } <effects> } else = { <effects> }
 alias[effect:else] = {
     ## cardinality = 1..inf
@@ -505,26 +457,17 @@ alias[effect:else] = {
 ### ends the combat as the winning side (doesn't end the combat if evaluated to false)
 alias[effect:win_combat] = replace_me
 
-### Sets scripted relationship
-alias[effect:set_relation_rival] = replace_me
-
 ### starts a war  = { casus_belli/cb = X target = Y claimant = Z target_title = W1 target_title = W2 ... } where X is a casus belli type, Y is the target character, Z i the (optional) claimant, W1, W2.... are targeted titles. If there are no title targets, the effect will pick one of possible title targets.
 alias[effect:start_war] = replace_me
 
 ### Add a modifier to a dynasty add_dynasty_modifier = name add_dynasty_modifier = { modifier = name days/weeks/months/years = int }
 alias[effect:add_dynasty_modifier] = replace_me
 
-### Removes scripted relationship
-alias[effect:remove_relation_ward] = replace_me
-
 ### Creates a dynamic title The title will be saved to scope:new_titleusage: create_dynamic_title = { 	tier = <tier> 	name = key/dynamic description	adjective = key/dynamic description (optional; name used if not specified)}
 alias[effect:create_dynamic_title] = replace_me
 
 ### Tries to create an suggestuib notification. Will keep the current one if already exists. suggestion_type = suggestion_type_key - the suggestion action object key to create. Must be defined. actor = character_actor - optional, can be used by the suggestion effect recipient = character_actor - optional, can be used by the suggestion effect secondary_actor = character_secontary_actor - optional, can be used by the suggestion effect secondary_recipient = character_secondary_recipient - optional, can be used by the suggestion effect landed_title = landed_title - optional, can be used by the suggestion effect
 alias[effect:try_create_suggestion] = replace_me
-
-### Sets scripted relationship
-alias[effect:set_relation_mentor] = replace_me
 
 ### Changes the value or a numeric variable change_variable = { name = X operation = Y } Where X is the name of the numeric variable to modify Where the valid operations are add, subtract, multiply, divide and modulo Where Y is a fixed point value, script value or event target of a value type
 alias[effect:change_local_variable] = {
@@ -546,9 +489,6 @@ alias[effect:add_piety_level] = replace_me
 
 ### 'Consume' all divorce reason that the scoped character has on the target character. Until they get a new reason, they cannot divorce the target again.
 alias[effect:consume_divorce_reasons] = replace_me
-
-### Removes scripted relationship
-alias[effect:remove_relation_intrigue_mentor] = replace_me
 
 ### add_faction_discontent = X adds (or subtracts) discontent to the scope faction
 alias[effect:add_faction_discontent] = replace_me
@@ -574,14 +514,8 @@ alias[effect:set_designated_heir] = replace_me
 ### Allow the character to join the scheme as an agent
 alias[effect:allow_in_scheme] = replace_me
 
-### Sets scripted relationship
-alias[effect:set_relation_victim] = replace_me
-
 ### Log a string to the debug log when this effect executes, debug_log = message, the message can be a localization string with ROOT, SCOPE and PREV available
 alias[effect:debug_log] = replace_me
-
-### Removes scripted relationship
-alias[effect:remove_relation_bully] = replace_me
 
 ### Adds lifestyle per points to the given character
 alias[effect:add_diplomacy_lifestyle_perk_points] = replace_me
@@ -589,17 +523,11 @@ alias[effect:add_diplomacy_lifestyle_perk_points] = replace_me
 ### Sets if this character has absolute country control, unlock_character_movement = yes/no/boolean event target
 alias[effect:set_absolute_country_control] = replace_me
 
-### Removes scripted relationship
-alias[effect:remove_relation_potential_lover] = replace_me
-
 ### Add the scope character as the target character's guest
 alias[effect:visit_court_of] = replace_me
 
 ### Sets if the title should be destroyed on succession. set_destroy_on_succession = yes
 alias[effect:set_destroy_on_succession] = replace_me
-
-### Removes scripted relationship
-alias[effect:remove_relation_student] = replace_me
 
 ### Sets the sexuality of the character
 alias[effect:set_sexuality] = <game_concept.sexuality>
@@ -662,12 +590,6 @@ alias[effect:add_defender] = replace_me
 
 ### Changes the fervor of the faith by the given value. change_fervor = script value
 alias[effect:change_fervor] = replace_me
-
-### Removes scripted relationship
-alias[effect:remove_relation_soldier_friend] = replace_me
-
-### Sets scripted relationship
-alias[effect:set_relation_bully] = replace_me
 
 ### The scope character creates a cadet branch of the house he is in [yes|no]
 alias[effect:create_cadet_branch] = replace_me
@@ -742,9 +664,6 @@ alias[effect:set_variable] = value_set[variable]
 ### Add random available innovation<culture> = { add_random_innovation = culture_group_military/culture_group_civic/culture_group_regional/yes }
 alias[effect:add_random_innovation] = replace_me
 
-### Removes scripted relationship
-alias[effect:remove_relation_guardian] = replace_me
-
 ### 'Consume' all banish reasons that the scoped character has on the target character. Until they get a new reason, they cannot banish the target again.
 alias[effect:consume_banish_reasons] = replace_me
 
@@ -757,14 +676,8 @@ alias[effect:remove_special_character] = replace_me
 ### Adds lifestyle per points to the given character
 alias[effect:add_intrigue_lifestyle_perk_points] = replace_me
 
-### Removes scripted relationship
-alias[effect:remove_relation_rival] = replace_me
-
 ### the charcter in the scope leaves the assigned faction
 alias[effect:leave_faction] = replace_me
-
-### Sets scripted relationship
-alias[effect:set_relation_ward] = replace_me
 
 ### Adds lifestyle per points to the given character
 alias[effect:add_martial_lifestyle_perk_points] = replace_me
@@ -811,9 +724,6 @@ alias[effect:add_dynasty_perk] = replace_me
 ### Remove a modifier from a dynasty remove_dynasty_modifier = name
 alias[effect:remove_dynasty_modifier] = replace_me
 
-### Sets scripted relationship
-alias[effect:set_relation_crush] = replace_me
-
 ### Revoke the lease of the scoped title revoke_lease = yes
 alias[effect:revoke_lease] = replace_me
 
@@ -834,9 +744,6 @@ alias[effect:create_holy_order] = {
 
 ### Adds intrigue skill
 alias[effect:add_intrigue_skill] = replace_me
-
-### Sets scripted relationship
-alias[effect:set_relation_best_friend] = replace_me
 
 ### Saves a numerical or bool value as an arbitrarily-named target to be referenced later in the (unbroken) event chain save_scope_value_as = { name = <string> value = x }
 alias[effect:save_scope_value_as] = {
@@ -913,7 +820,7 @@ alias[effect:end_war] = replace_me
 alias[effect:marry] = replace_me
 
 ### Adds a flag to an existing relation flag = flag_name (declared in scripted_relation) target = other_character relation = scripted_relation  Flags must be defined in the scripted relation before they can be used.  There is a limited number of possible relation flags, set in code. They cannot have a timeout, because they are only possible due to being extremely undemanding of resources.
-alias[effect:add_relation_flag] = replace_me
+alias[effect:add_relation_flag] = single_alias_right[relation_flag_clause]
 
 ### The target character becomes the character that should declare war instead of the religious head. set_war_declarer = some character
 alias[effect:set_war_declarer] = replace_me
@@ -952,9 +859,6 @@ alias[effect:add_stewardship_lifestyle_perk_points] = replace_me
 
 ### Removes the target from a variable list remove_list_variable = { name = X target = Y } Where X is the name of the variable Where Y is an event target
 alias[effect:remove_list_global_variable] = replace_me
-
-### Removes scripted relationship
-alias[effect:remove_relation_potential_friend] = scope[character]
 
 ### Betroth the scope character to the target character, create_betrothal = target (at least one of the characters need to not be adult)
 alias[effect:create_betrothal] = replace_me
@@ -1018,20 +922,11 @@ alias[effect:set_destroy_if_invalid_heir] = replace_me
 ### completes the activity, complete_activity = yes ends the activity and runs the on_complete effect, complete_activity = no ends the activity without running the effect
 alias[effect:complete_activity] = replace_me
 
-### Removes scripted relationship
-alias[effect:remove_relation_best_friend] = replace_me
-
-### Removes scripted relationship
-alias[effect:remove_relation_intrigue_student] = replace_me
-
 ### Copy title history from another title copy_title_history = source_title
 alias[effect:copy_title_history] = replace_me
 
 ### Adds the event target to a variable list add_to_variable_list = { name = X target = Y } Where X is the name of the variable Where Y is an event target
 alias[effect:add_to_local_variable_list] = replace_me
-
-### Removes scripted relationship
-alias[effect:remove_relation_mentor] = replace_me
 
 ### sets the father of a character
 alias[effect:set_father] = replace_me
@@ -1080,9 +975,6 @@ alias[effect:add_learning_lifestyle_perk_points] = replace_me
 
 ### the title in the scope leaves the assigned faction
 alias[effect:title_leave_faction] = replace_me
-
-### Sets scripted relationship
-alias[effect:set_relation_potential_lover] = replace_me
 
 ### the scoped landed title creates a faction of the specified type against the specified target, title_create_faction = { type = X target = Y }
 alias[effect:title_create_faction] = replace_me
@@ -1141,9 +1033,6 @@ alias[effect:return_to_court] = replace_me
 ### Removes a trait from a character. Tooltip will be shown even if the character doesn't has the trait.
 alias[effect:remove_trait_force_tooltip] = replace_me
 
-### Sets scripted relationship
-alias[effect:set_relation_intrigue_mentor] = replace_me
-
 ### Conditionally cause an assert during run time assert_if = { limit = { X } text = Y }, where X is a trigger and Y is an optional string
 alias[effect:assert_if] = replace_me
 
@@ -1194,9 +1083,6 @@ alias[effect:remove_scheme_modifier] = replace_me
 
 ### the landed title in the scope joins the assigned faction
 alias[effect:title_join_faction] = replace_me
-
-### Removes scripted relationship
-alias[effect:remove_relation_friend] = scope[character]
 
 ### adds the specified scheme modifier, add_scheme_modifier = { type = X days = Y } (days are optional, the modifier will expire in Y days if specified)
 alias[effect:add_scheme_modifier] = replace_me
@@ -1260,17 +1146,11 @@ alias[effect:custom_tooltip] = localisation
 ### Sets the child to a known or unknown bastard during pregnancy
 alias[effect:set_known_bastard_on_pregnancy] = replace_me
 
-### Removes scripted relationship
-alias[effect:remove_relation_soulmate] = replace_me
-
 ### Sets if the title should be deleted from the gamestate completely when it is destroyed. set_delete_on_destroy = yes
 alias[effect:set_delete_on_destroy] = replace_me
 
 ### Remove a modifier from a character remove_character_modifier = name
 alias[effect:remove_character_modifier] = replace_me
-
-### Sets scripted relationship
-alias[effect:set_relation_friend] = scope[character]
 
 ### becomes and independent ruler. becomes_independent = { change = 'previously created title_and_vassal_change'
 alias[effect:becomes_independent] = replace_me
@@ -1371,9 +1251,6 @@ alias[effect:remove_nickname] = replace_me
 ### Removes the given law from the scoped character. This will leave the law group empty, so only do this if you're getting rid of a law group
 alias[effect:remove_realm_law] = replace_me
 
-### Removes scripted relationship
-alias[effect:remove_relation_court_physician] = replace_me
-
 ### Remove the cooldown on using a scheme against the target character for the scoped character remove_scheme_cooldown_against = { scheme = scheme_name target = character }
 alias[effect:remove_scheme_cooldown_against] = replace_me
 
@@ -1397,9 +1274,6 @@ alias[effect:set_num_pregnancy_children] = replace_me
 
 ### Set the assumed father of the pregnancy
 alias[effect:set_pregnancy_assumed_father] = replace_me
-
-### Sets scripted relationship
-alias[effect:set_relation_court_physician] = replace_me
 
 ### Blocks the vassal contract from being modified with regards to being checked by 'vassal_contract_is_blocked_from_modification'
 alias[effect:set_vassal_contract_modification_blocked] = replace_me
@@ -1465,6 +1339,7 @@ alias[effect:set_generated_homosexuality_chance] = replace_me
 alias[effect:start_tutorial_lesson] = replace_me
 
 ##### Custom effects (dynamic ones) ######
-### Sets scripted relationship
+### Sets scripted relationship.
 alias[effect:set_relation_<scripted_relation>] = scope[character]
+### Removes scripted relationship.
 alias[effect:remove_relation_<scripted_relation>] = scope[character]

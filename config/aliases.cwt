@@ -79,6 +79,15 @@ single_alias[scaled_modifier] = {
     alias_name[modifier] = alias_match_left[modifier]
 }
 
+single_alias[relation_flag_clause] = {
+    ### Flag to interact with.
+	flag = value[relation_flag]
+    ### Target to interact with.
+	target = scope[character]
+    ### Relation to interact with.
+	relation = <scripted_relation>
+}
+
 ## scope = character
 alias[modifier:ignore_negative_culture_opinion] = bool
 ## scope = character
