@@ -3,10 +3,16 @@
 # Whitespace settings
 * whitespace=indent-with-non-tab,trailing-space,space-before-tab,tabwidth=4
 
+# F# stuff explicitly is text
+*.fs       text
+*.fsi      text
+*.fsx      text
+*.fsscript text
+
+# CWTools config files are explicitly text
+*.cwt      text
+
 # Setup better diffs
-*.py       text diff=python
-*.py3      text diff=python
-*.pl       text diff=perl
 *.html     text diff=html
 *.xhtml    text diff=html
 *.css      text diff=css
@@ -21,11 +27,7 @@
 *.PDF      text diff=astextplain
 *.rtf      text diff=astextplain
 *.RTF      text diff=astextplain
-*.bibtex   text diff=bibtex
 *.md       text diff=markdown
-*.tex      text diff=tex
-*.rb       text diff=ruby
-*.php      text diff=php
 
 # Scripts
 # These are explicitly linux files and should use lf
@@ -58,4 +60,3 @@
 .gitattributes export-ignore
 .gitignore     export-ignore
 .gitkeep       export-ignore
-
