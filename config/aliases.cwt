@@ -88,6 +88,16 @@ single_alias[relation_flag_clause] = {
 	relation = <scripted_relation>
 }
 
+single_alias[regular_building_list] = {
+    ## cardinality = 1..inf
+    <building.regular>
+}
+
+single_alias[title_list] = {
+    ## cardinality = 1..inf
+    <title>
+}
+
 ## scope = character
 alias[modifier:ignore_negative_culture_opinion] = bool
 ## scope = character

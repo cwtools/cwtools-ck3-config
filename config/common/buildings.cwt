@@ -1,6 +1,15 @@
 types = {
     type[building] = {
         path = "game/common/buildings"
+        subtype[duchy_capital] = {
+            type = duchy_capital
+        }
+        subtype[special] = {
+            type = special
+        }
+        subtype[regular] = {
+
+        }
     }
 }
 
