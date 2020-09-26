@@ -6,7 +6,7 @@ types = {
 }
 title_history = {
     ## cardinality = 1..inf
-    scalar = {
+    <title> = {
         ## cardinality = 1..inf
         date_field = {
             ## cardinality = 1..inf
