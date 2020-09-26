@@ -9,6 +9,8 @@ types = {
     }
 }
 
+# TODO: According to _history.info the possible keys are the same for the base entry and the date fields. But I'm sceptical, I don't believe changing the gender of characters are possible for example.
+
 ## replace_scope = { this = character }
 character = {
     ### The character's first name.
@@ -159,7 +161,7 @@ alias[character_history_effect:remove_trait] = <trait>
 alias[character_history_effect:capital] = <title>
 
 ### Changes the character's primary title to the given one.
-alias[character_history_effect:set_primary_title_to] = <title>
+alias[character_history_effect:set_primary_title_to] = scope[title]
 
 ### Changes the character's dynasty to the given one.
 alias[character_history_effect:dynasty] = <dynasty>
@@ -167,6 +169,7 @@ alias[character_history_effect:dynasty] = <dynasty>
 ### Changes the character's house to the given one.
 alias[character_history_effect:dynasty_house] = <house> 
 
+# TODO: Is this the same for CK3? (copied from CK2)
 ### Effects not covered by the other effects to execute on the character if they're not dead. Note that this is only executed after game start, so might cause some discrepancies in the lobby.
 ## push_scope = character
 alias[character_history_effect:effect] = single_alias_right[effect_clause]
@@ -186,7 +189,7 @@ alias[character_history_effect:set_character_faith_history] = <faith>
 ### Changes the character's culture to this.
 alias[character_history_effect:culture] = <culture>
 
-### Adds a strong claim on the given title.
+### Changes the character's name to this.
 alias[character_history_effect:name] = localisation
 
 ##### Custom effects (dynamic ones) ######

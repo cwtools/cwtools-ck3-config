@@ -2,6 +2,9 @@ types = {
     type[law] = {
         path = "game/common/laws"
         skip_root_key = any
+        subtype[title_specific] = {
+            can_title_have = single_alias_right[trigger_clause]
+        }
     }
     type[law_group] = {
         path = "game/common/laws"
