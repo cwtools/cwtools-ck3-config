@@ -1,5 +1,0 @@
-types = {
-    type[trigger_localization] = {
-        path = "game/common/trigger_localization"
-    }
-}
