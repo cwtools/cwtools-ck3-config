@@ -1,5 +1,0 @@
-types = {
-    type[effect_localization] = {
-        path = "game/common/effect_localization"
-    }
-}
