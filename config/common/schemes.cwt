@@ -43,15 +43,15 @@ scheme = {
     valid_agent = single_alias_right[trigger_clause]
 
     ## cardinality = 0..1
-    agent_join_chance = single_alias_right[weight_block]
+    agent_join_chance = single_alias_right[chance_block]
 
     ## cardinality = 0..1
     ### Uses `agent` as `root`.
-    agent_success_chance = single_alias_right[weight_block]
+    agent_success_chance = single_alias_right[chance_block]
 
     ## cardinality = 0..1
     ### Uses `scheme` as `root`.
-    base_success_chance = single_alias_right[weight_block]
+    base_success_chance = single_alias_right[chance_block]
 
     # All fields here only use integers in vanilla files, but perhaps values could be used?
     # Badly documented as `maximum_success_chance`.
