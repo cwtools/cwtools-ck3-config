@@ -548,6 +548,11 @@ Tag: holy_order_government_tax_contribution_add, Categories: character
 Tag: holy_order_government_tax_contribution_mult, Categories: character
 Tag: holy_order_government_levy_contribution_add, Categories: character
 Tag: holy_order_government_levy_contribution_mult, Categories: character
+Tag: max_rp_slander_schemes_add, Categories: character
+Tag: rp_slander_scheme_power_add, Categories: character
+Tag: rp_slander_scheme_power_mult, Categories: character
+Tag: rp_slander_scheme_resistance_add, Categories: character
+Tag: rp_slander_scheme_resistance_mult, Categories: character
 Tag: max_abduct_schemes_add, Categories: character
 Tag: abduct_scheme_power_add, Categories: character
 Tag: abduct_scheme_power_mult, Categories: character

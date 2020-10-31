@@ -836,6 +836,12 @@ Expected Scope: combat side
 
 --------------------
 
+on_concubinage_end:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 on_concubinage:
 From Code: Yes
 Expected Scope: none
@@ -958,7 +964,13 @@ Expected Scope: character
 
 quarterly_playable_pulse:
 From Code: Yes
-Expected Scope: none
+Expected Scope: character
+
+--------------------
+
+RP_slander_succeeded:
+From Code: No
+Expected Scope: character
 
 --------------------
 
@@ -1334,6 +1346,12 @@ Expected Scope: character
 
 --------------------
 
+RP_slander_failed:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 stewardship_duty_special_2000_mediation_stage_1:
 From Code: No
 Expected Scope: character
@@ -1544,6 +1562,12 @@ Expected Scope: none
 
 --------------------
 
+RP_slander_ongoing:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 stress_loss_drunkard:
 From Code: No
 Expected Scope: character
@@ -1696,6 +1720,12 @@ Expected Scope: character
 
 on_birth_mother:
 From Code: Yes
+Expected Scope: character
+
+--------------------
+
+RP_slander_setup:
+From Code: No
 Expected Scope: character
 
 --------------------
@@ -1856,6 +1886,12 @@ Expected Scope: none
 
 --------------------
 
+relation_upgrade_quarterly_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 hindu_destination_events:
 From Code: No
 Expected Scope: character
@@ -1973,6 +2009,12 @@ Expected Scope: character
 on_county_culture_change:
 From Code: Yes
 Expected Scope: none
+
+--------------------
+
+on_vassal_gained:
+From Code: Yes
+Expected Scope: character
 
 --------------------
 

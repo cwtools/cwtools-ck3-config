@@ -2,7 +2,19 @@ Event Target Documentation:
 
 --------------------
 
+house_founder - Unknown, add something in code registration
+Input Scopes: dynasty house
+Output Scopes: character
+
+--------------------
+
 house_head - Unknown, add something in code registration
+Input Scopes: dynasty house
+Output Scopes: character
+
+--------------------
+
+last_house_head - Unknown, add something in code registration
 Input Scopes: dynasty house
 Output Scopes: character
 
@@ -77,6 +89,12 @@ Output Scopes: province
 culture_head - Unknown, add something in code registration
 Input Scopes: culture
 Output Scopes: character
+
+--------------------
+
+activity - Unknown, add something in code registration
+Input Scopes: character
+Output Scopes: activity
 
 --------------------
 
@@ -885,6 +903,7 @@ barony
 councillor
 councillor_liege
 liege
+old_liege
 courtier
 host
 guest
@@ -952,3 +971,22 @@ script
 reason
 death
 timeout
+conquest
+conquest_holy_war
+conquest_claim
+conquest_populist
+inheritance
+abdication
+destroyed
+created
+usurped
+granted
+revoked
+election
+independency
+returned
+leased_out
+lease_revoked
+faction_demand
+swear_fealty
+transfer_type

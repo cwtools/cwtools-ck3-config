@@ -989,6 +989,11 @@ Supported Scopes: landed title
 
 --------------------
 
+set_can_be_named_after_dynasty - Sets if the title can be named after it's holder's dynasty. set_can_be_named_after_dynasty_effect = no
+Supported Scopes: landed title
+
+--------------------
+
 set_capital_county - Sets the capital county of the title to the target county
 set_capital_county = <some county title>
 Supported Scopes: landed title
@@ -1241,6 +1246,11 @@ Supported Scopes: character
 
 --------------------
 
+add_piety_no_experience - gives (or takes) piety without experience to a character
+Supported Scopes: character
+
+--------------------
+
 add_pressed_claim - gives a pressed claim to a character
 Supported Scopes: character
 Supported Targets: landed title
@@ -1258,6 +1268,11 @@ Supported Scopes: character
 --------------------
 
 add_prestige_level - increases (or decreases) the prestige level of a character
+Supported Scopes: character
+
+--------------------
+
+add_prestige_no_experience - gives (or takes) prestige without experience to a character
 Supported Scopes: character
 
 --------------------
@@ -1513,6 +1528,12 @@ Supported Targets: character
 
 --------------------
 
+copy_localized_text - Copies a piece of localized text from the target character for the given key.
+copy_localized_text = { key = key target = character }
+Supported Scopes: character
+
+--------------------
+
 create_alliance - Create an alliance between the scoped character and the target. The allied through characters determine who gets checked against for if the alliance should persist or not.
 create_alliance = {
 	target = scope
@@ -1600,13 +1621,6 @@ Supported Targets: army
 
 --------------------
 
-every_character_to_title_neighboring_and_across_water_barony - Scopes from a character to a neighboring barony (incl. across water, looking trough the de Jure lieges)
-every_character_to_title_neighboring_and_across_water_barony = { limit = { <triggers> } <effects> }
-Supported Scopes: character
-Supported Targets: landed title
-
---------------------
-
 every_character_to_title_neighboring_and_across_water_county - Scopes from a character to a neighboring county (incl. across water, looking trough the de Jure lieges)
 every_character_to_title_neighboring_and_across_water_county = { limit = { <triggers> } <effects> }
 Supported Scopes: character
@@ -1630,13 +1644,6 @@ Supported Targets: landed title
 
 every_character_to_title_neighboring_and_across_water_kingdom - Scopes from a character to a neighboring kingdom (incl. across water, looking trough the de Jure lieges)
 every_character_to_title_neighboring_and_across_water_kingdom = { limit = { <triggers> } <effects> }
-Supported Scopes: character
-Supported Targets: landed title
-
---------------------
-
-every_character_to_title_neighboring_barony - Scopes from a character to a neighboring barony (looking trough the de Jure lieges)
-every_character_to_title_neighboring_barony = { limit = { <triggers> } <effects> }
 Supported Scopes: character
 Supported Targets: landed title
 
@@ -2473,20 +2480,6 @@ Supported Targets: army
 
 --------------------
 
-ordered_character_to_title_neighboring_and_across_water_barony - Scopes from a character to a neighboring barony (incl. across water, looking trough the de Jure lieges)
-ordered_character_to_title_neighboring_and_across_water_barony = {
-limit = { <triggers> }
-order_by = script_value
-position = int
-min = int
-max = script_value
-check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
-<effects> }
-Supported Scopes: character
-Supported Targets: landed title
-
---------------------
-
 ordered_character_to_title_neighboring_and_across_water_county - Scopes from a character to a neighboring county (incl. across water, looking trough the de Jure lieges)
 ordered_character_to_title_neighboring_and_across_water_county = {
 limit = { <triggers> }
@@ -2531,20 +2524,6 @@ Supported Targets: landed title
 
 ordered_character_to_title_neighboring_and_across_water_kingdom - Scopes from a character to a neighboring kingdom (incl. across water, looking trough the de Jure lieges)
 ordered_character_to_title_neighboring_and_across_water_kingdom = {
-limit = { <triggers> }
-order_by = script_value
-position = int
-min = int
-max = script_value
-check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
-<effects> }
-Supported Scopes: character
-Supported Targets: landed title
-
---------------------
-
-ordered_character_to_title_neighboring_barony - Scopes from a character to a neighboring barony (looking trough the de Jure lieges)
-ordered_character_to_title_neighboring_barony = {
 limit = { <triggers> }
 order_by = script_value
 position = int
@@ -3825,13 +3804,6 @@ Supported Targets: army
 
 --------------------
 
-random_character_to_title_neighboring_and_across_water_barony - Scopes from a character to a neighboring barony (incl. across water, looking trough the de Jure lieges)
-random_character_to_title_neighboring_and_across_water_barony = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-Supported Scopes: character
-Supported Targets: landed title
-
---------------------
-
 random_character_to_title_neighboring_and_across_water_county - Scopes from a character to a neighboring county (incl. across water, looking trough the de Jure lieges)
 random_character_to_title_neighboring_and_across_water_county = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: character
@@ -3855,13 +3827,6 @@ Supported Targets: landed title
 
 random_character_to_title_neighboring_and_across_water_kingdom - Scopes from a character to a neighboring kingdom (incl. across water, looking trough the de Jure lieges)
 random_character_to_title_neighboring_and_across_water_kingdom = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-Supported Scopes: character
-Supported Targets: landed title
-
---------------------
-
-random_character_to_title_neighboring_barony - Scopes from a character to a neighboring barony (looking trough the de Jure lieges)
-random_character_to_title_neighboring_barony = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: character
 Supported Targets: landed title
 
@@ -4565,6 +4530,12 @@ Supported Scopes: character
 
 --------------------
 
+remove_localized_text - Removes a piece of localized text from being stored on the character with a given key, you should do this whenever you are done with the custom text so as to not bloat saves
+remove_localized_text = key
+Supported Scopes: character
+
+--------------------
+
 remove_long_term_gold - removes gold from a character (AI's long term budget)
 Supported Scopes: character
 
@@ -4912,6 +4883,12 @@ Supported Scopes: character
 
 set_known_bastard_on_pregnancy - Sets the child to a known or unknown bastard during pregnancy
 Supported Scopes: character
+
+--------------------
+
+set_mother - Sets the mother of a character
+Supported Scopes: character
+Supported Targets: character
 
 --------------------
 
@@ -5518,18 +5495,6 @@ Supported Scopes: faith
 
 --------------------
 
-set_add_claim_on_loss - if set, any title losses will result in claims being added to the previous holder
-Supported Scopes: title and vassal change
-
---------------------
-
-set_title_and_vassal_change_type - sets the type of change
-
-Valid types: conquest, conquest_holy_war, conquest_claim, conquest_populist, inheritance, abdication, destroyed, created, usurped, granted, revoked, election, independency, returned, leased_out, lease_revoked, faction_demand, 
-Supported Scopes: title and vassal change
-
---------------------
-
 add_secret_participant - Adds an participant to the secret
 Supported Scopes: secret
 Supported Targets: character
@@ -5669,6 +5634,11 @@ Supported Scopes: province
 --------------------
 
 add_special_building_slot - Add a special building slot to the province<province> = { add_special_building_slot = <building_name> }
+Supported Scopes: province
+
+--------------------
+
+generate_building - Adds a random building to the province, using the AI's construction logic<province> = { generate_building = yes }
 Supported Scopes: province
 
 --------------------
@@ -5993,11 +5963,6 @@ Supported Targets: character
 
 --------------------
 
-break_if - conditionally break execution of effects, break_if = { X }, where X is a trigger
-Supported Scopes: none
-
---------------------
-
 change_global_variable - Changes the value or a numeric variable
 change_variable = { name = X operation = Y }
 Where X is the name of the numeric variable to modify
@@ -6179,6 +6144,11 @@ Supported Scopes: none
 --------------------
 
 create_title_and_vassal_change - starts a title and vassal change and saves it as a temporary event target
+create_title_and_vassal_change = {
+type = conquest (or other type)
+save_scope_as = change (name of resulting saved scope)
+add_claim_on_loss = yes (optional)
+}
 Supported Scopes: none
 
 --------------------
@@ -6758,7 +6728,7 @@ Supported Targets: character
 
 --------------------
 
-random_log_scopes - Log the current scope to the random log when this effect executes. Only use temprorarily for debugging purposes as it can introduce localized strings into the random log. yes = full scope info, no=only current scope
+random_log_scopes - Log the current scope to the random log when this effect executes. Only use temprorarily for debugging purposes as it can introduce localized strings into the Scopes._Random log. yes = full scope info, no=only current scope
 Supported Scopes: none
 
 --------------------
@@ -7020,10 +6990,11 @@ Supported Scopes: none
 --------------------
 
 trigger_event - triggers an event or on_action
-trigger_event = { id = X days/months/years = Y } (for events)
+trigger_event = { id = X days/months/years = Y delayed = yes/no } (for events)
 or
-trigger_event = { on_action = X days/months/years = Y } (for on_actions)
-Days/months/years are optional and equal to 0 if not specified. If specified, Y can be a value or an inclusive interval "{ A B }" from which the duration will be picked randomly.
+trigger_event = { on_action = X days/months/years = Y delayed = yes/no } (for on_actions)
+Days/months/years are optional and equal to 0 if not specified. If specified, Y can be a value or an inclusive interval "{ A B }" from which the duration will be picked Scopes._Randomly.
+delayed = yes will delay the event/on_action to the next event tick even when there's no explicit time interval set (delay, but fire ASAP). By default, delayed = no
 Supported Scopes: none
 
 --------------------
@@ -7158,7 +7129,7 @@ Supported Scopes: great holy war
 
 --------------------
 
-do_ghw_title_handout - Hands out titles in the target kingdom to the GHW attacker beneficiaries. do_ghw_title_handout = scope:title_and_vassal_change
+do_ghw_title_handout - Hands out titles in the target kingdom to the GHW attacker beneficiaries. Will vassalize people based on dejure liege within the taken kingdom. Will refill county garrisons and levies. do_ghw_title_handout = scope:title_and_vassal_change
 Supported Scopes: great holy war
 Supported Targets: title and vassal change
 
