@@ -17,9 +17,11 @@ scheme = {
     ### Defaults to `no`. Hostile schemes are affected my hostile scheme modifiers, other schemes are personal and thus affected by personal scheme modifiers.
     hostile = bool
 
+    ## replace_scope = { root = character this = character }
     ### Can be started or not.
     allow = single_alias_right[trigger_clause]
 
+    ## replace_scope = { root = character this = character }
     ### If the conditions become invalid, scheme ends.
     valid = single_alias_right[trigger_clause]
 
@@ -40,16 +42,23 @@ scheme = {
     uses_resistance = bool
 
     ## cardinality = 0..1
+    ## replace_scope = {root = character this = character }
+    ### Trigger to check if an agent is valid to be part of the scheme (some basic checks already apply, use sparingly as this is checked frequently)
     valid_agent = single_alias_right[trigger_clause]
 
+    # Looks like this replaces root with scheme owner character.
     ## cardinality = 0..1
+    ## replace_scope = { root = character this = character }
+    ### How much does the AI want to join.
     agent_join_chance = single_alias_right[chance_block]
 
     ## cardinality = 0..1
-    ### Uses `agent` as `root`.
+    ## replace_scope = { root = character this = character}
+    ### Each agent adds this to the success chance of the scheme uses the same scopes as the join chance. Uses `agent` as `root`.
     agent_success_chance = single_alias_right[chance_block]
 
     ## cardinality = 0..1
+    ## replace_scope = { root = scheme this = scheme }
     ### Uses `scheme` as `root`.
     base_success_chance = single_alias_right[chance_block]
 
@@ -81,6 +90,7 @@ scheme = {
 
     # Vanilla seduce scheme has this commented out, so probably optional.
     ## cardinality = 0..1
+    ### After the scheme ends, how many days minimum before the same type of scheme can be used by the owner on the target.
     cooldown = {
         enum[duration] = int
     }
@@ -90,6 +100,7 @@ scheme = {
     is_secret = bool
 
     ## cardinality = 0..1
+    ## replace_scope = { root = scheme this = scheme }
     ### Some schemes do not have to always be a secret, for example seduction of consorts...
     use_secrecy = single_alias_right[trigger_clause]
 
@@ -97,13 +108,16 @@ scheme = {
     ### Used for monthly expose checks, chance is based on `base_secrecy + success_chance + scheme_modifiers` clamped between 0-100.
     base_secrecy = int
 
+    ## replace_scope = { root = scheme this = scheme }
     ### What happens when scheme reaches full progress.
     on_ready = single_alias_right[effect_clause]
 
     # Potentially optional? All vanilla schemes have this.
+    ## replace_scope = { root = scheme this = scheme }
     ### What happens every month the scheme is active.
     on_monthly = single_alias_right[effect_clause]
 
+    ## replace_scope = { root = scheme this = scheme }
     ### What happens when scheme is invalidated (based on `valid` trigger).
     on_invalidated = single_alias_right[effect_clause]
 
@@ -116,14 +130,16 @@ scheme = {
     resistance_per_skill_point = float
 
     ## cardinality = 0..1
+    ### How much does each agent skill point adds to scheme power. Defaults to `1`.
     power_per_agent_skill_point = float
 
     # Vanilla murder scheme does not have the following two, so optional.
     ## cardinality = 0..1
-    ### Defaults to `1`. Schemes not using this should set to `0`.
+    ### How much does each spymaster skill point adds to scheme power. Defaults to `1`. Schemes not using spymaster should set to `0`.
     spymaster_power_per_skill_point = float
 
     ## cardinality = 0..1
+    ### How much does each spymaster skill point adds to scheme resistance. Defaults to `1`. Schemes not using spymaster should set to `0`.
     spymaster_resistance_per_skill_point = float
 
     # Never used in vanilla.
