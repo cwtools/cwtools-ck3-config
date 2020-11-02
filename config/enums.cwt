@@ -74,6 +74,30 @@ enums = {
         kingdom
         empire
     }
+    enum[war_ender] = {
+        attacker
+        defender
+        white_peace
+    }
+    enum[war_result] = {
+        victory
+        defeat
+        white_peace
+    }
+    enum[cb] = {
+        casus_belli
+        cb
+    }
+    enum[dynasty_inheritance] = {
+        generate
+        inherit
+        none
+    }
+    enum[battle_event_type] = {
+        wound
+        imprison
+        death
+    }
 }
 
 # Duration alias for LHS use:

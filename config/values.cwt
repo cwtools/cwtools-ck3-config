@@ -121,5 +121,24 @@ values = {
         reason
         death
         timeout
+        conquest
+        conquest_holy_war
+        conquest_claim
+        conquest_populist
+        inheritance
+        abdication
+        destroyed
+        created
+        usurped
+        granted
+        revoked
+        election
+        independency
+        returned
+        leased_out
+        lease_revoked
+        faction_demand
+        swear_fealty
+        transfer_type
     }
 }
