@@ -1342,4 +1342,102 @@ alias[effect:start_tutorial_lesson] = replace_me
 ### Sets scripted relationship.
 alias[effect:set_relation_<scripted_relation>] = scope[character]
 ### Removes scripted relationship.
-alias[effect:remove_relation_<scripted_relation>] = scope[character]
+alias[effect:remove_relation_<scripted_relation>] = scope[character]### Sets if the title can be named after it's holder's dynasty. set_can_be_named_after_dynasty_effect = no
+alias[effect:set_can_be_named_after_dynasty] = replace_me
+### gives (or takes) piety without experience to a character
+alias[effect:add_piety_no_experience] = replace_me
+### gives (or takes) prestige without experience to a character
+alias[effect:add_prestige_no_experience] = replace_me
+### Copies a piece of localized text from the target character for the given key. copy_localized_text = { key = key target = character }
+alias[effect:copy_localized_text] = replace_me
+### Removes a piece of localized text from being stored on the character with a given key, you should do this whenever you are done with the custom text so as to not bloat saves remove_localized_text = key
+alias[effect:remove_localized_text] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_best_friend] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_bully] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_court_physician] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_crush] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_friend] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_guardian] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_intrigue_mentor] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_intrigue_student] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_lover] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_mentor] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_nemesis] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_oaf] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_potential_friend] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_potential_lover] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_potential_rival] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_rival] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_soldier_friend] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_soulmate] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_student] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_victim] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_ward] = replace_me
+### Sets the mother of a character
+alias[effect:set_mother] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_best_friend] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_bully] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_court_physician] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_crush] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_friend] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_guardian] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_intrigue_mentor] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_intrigue_student] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_lover] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_mentor] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_nemesis] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_oaf] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_potential_friend] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_potential_lover] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_potential_rival] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_rival] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_soldier_friend] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_soulmate] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_student] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_victim] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_ward] = replace_me
+### Adds a random building to the province, using the AI's construction logic<province> = { generate_building = yes }
+alias[effect:generate_building] = replace_me
+

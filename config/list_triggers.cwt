@@ -1760,3 +1760,14 @@ alias[trigger:any_side_commander] = {
     alias_name[trigger] = alias_match_left[trigger]
 }
 
+### Iterate through all dynasty members any_dynasty_member = { <count=num/all> / <percent=fixed_point> <triggers> }
+alias[trigger:any_dynasty_member] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_value_field
+    ## cardinality = 0..1
+    count = all
+    alias_name[trigger] = alias_match_left[trigger]
+}
+

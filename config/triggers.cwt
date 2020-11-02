@@ -2002,4 +2002,150 @@ alias[trigger:has_relation_<scripted_relation>] = scope[character]
 ### Checks for a secret scripted relationship with a target character.
 alias[trigger:has_relation_<scripted_relation>] = scope[character]
 ### Compares the number of scripted relations a character has of the type.
-alias[trigger:num_of_relation_<scripted_relation>] == replace_me_comparison
+alias[trigger:num_of_relation_<scripted_relation>] == replace_me_comparison### Is this title a head of faith title
+alias[trigger:is_head_of_faith] = replace_me_subject_type
+### does the character have the required gold? (AI category reserved)
+alias[trigger:ai_reserved_gold] == replace_me_comparison
+### does the character have the required gold? (AI category war chest)
+alias[trigger:ai_war_chest] == replace_me_comparison
+### Can the scoped character declare war on the defender with the specified casus bellis on the defender character for the target titles with an optional claimant. can_declare_war = { defender = X casus_belli = Y target_titles = { Z } claimant = A }
+alias[trigger:can_declare_war] = replace_me
+### Is the scoped character's debt level this value? -1 if not meeting any debt level threshold. 0 for the first one, and so on. Note that this might not match exactly with the modifier in effect as it calculates what the modifier will be now, and the character's actual modifier can lag behind
+alias[trigger:debt_level] == replace_me_comparison
+### Is the scoped character's domain this big? Does not count titles currently in the grace period
+alias[trigger:domain_size_excluding_grace_period] == replace_me_comparison
+### Checks for a scripted relationship with a target character
+alias[trigger:has_relation_best_friend] = replace_me_subject_type
+### Checks for a scripted relationship with a target character
+alias[trigger:has_relation_bully] = replace_me_subject_type
+### Checks for a scripted relationship with a target character
+alias[trigger:has_relation_court_physician] = replace_me_subject_type
+### Checks for a scripted relationship with a target character
+alias[trigger:has_relation_crush] = replace_me_subject_type
+### Does the scope character have a specific flag on a relation with the target character? target = , relation = , flag = 
+alias[trigger:has_relation_flag] = replace_me
+### Checks for a scripted relationship with a target character
+alias[trigger:has_relation_friend] = replace_me_subject_type
+### Checks for a scripted relationship with a target character
+alias[trigger:has_relation_guardian] = replace_me_subject_type
+### Checks for a scripted relationship with a target character
+alias[trigger:has_relation_intrigue_mentor] = replace_me_subject_type
+### Checks for a scripted relationship with a target character
+alias[trigger:has_relation_intrigue_student] = replace_me_subject_type
+### Checks for a scripted relationship with a target character
+alias[trigger:has_relation_lover] = replace_me_subject_type
+### Checks for a scripted relationship with a target character
+alias[trigger:has_relation_mentor] = replace_me_subject_type
+### Checks for a scripted relationship with a target character
+alias[trigger:has_relation_nemesis] = replace_me_subject_type
+### Checks for a scripted relationship with a target character
+alias[trigger:has_relation_oaf] = replace_me_subject_type
+### Checks for a scripted relationship with a target character
+alias[trigger:has_relation_potential_friend] = replace_me_subject_type
+### Checks for a scripted relationship with a target character
+alias[trigger:has_relation_potential_lover] = replace_me_subject_type
+### Checks for a scripted relationship with a target character
+alias[trigger:has_relation_potential_rival] = replace_me_subject_type
+### Checks for a scripted relationship with a target character
+alias[trigger:has_relation_rival] = replace_me_subject_type
+### Checks for a scripted relationship with a target character
+alias[trigger:has_relation_soldier_friend] = replace_me_subject_type
+### Checks for a scripted relationship with a target character
+alias[trigger:has_relation_soulmate] = replace_me_subject_type
+### Checks for a scripted relationship with a target character
+alias[trigger:has_relation_student] = replace_me_subject_type
+### does the character have a relation to the target? Matches the logic of the data system function HasRelationTo, has_relation_to = <character>
+alias[trigger:has_relation_to] = replace_me_character
+### Checks for a scripted relationship with a target character
+alias[trigger:has_relation_victim] = replace_me_subject_type
+### Checks for a scripted relationship with a target character
+alias[trigger:has_relation_ward] = replace_me_subject_type
+### Checks for a secret scripted relationship with a target character
+alias[trigger:has_secret_relation_best_friend] = replace_me_subject_type
+### Checks for a secret scripted relationship with a target character
+alias[trigger:has_secret_relation_bully] = replace_me_subject_type
+### Checks for a secret scripted relationship with a target character
+alias[trigger:has_secret_relation_court_physician] = replace_me_subject_type
+### Checks for a secret scripted relationship with a target character
+alias[trigger:has_secret_relation_crush] = replace_me_subject_type
+### Checks for a secret scripted relationship with a target character
+alias[trigger:has_secret_relation_friend] = replace_me_subject_type
+### Checks for a secret scripted relationship with a target character
+alias[trigger:has_secret_relation_guardian] = replace_me_subject_type
+### Checks for a secret scripted relationship with a target character
+alias[trigger:has_secret_relation_intrigue_mentor] = replace_me_subject_type
+### Checks for a secret scripted relationship with a target character
+alias[trigger:has_secret_relation_intrigue_student] = replace_me_subject_type
+### Checks for a secret scripted relationship with a target character
+alias[trigger:has_secret_relation_lover] = replace_me_subject_type
+### Checks for a secret scripted relationship with a target character
+alias[trigger:has_secret_relation_mentor] = replace_me_subject_type
+### Checks for a secret scripted relationship with a target character
+alias[trigger:has_secret_relation_nemesis] = replace_me_subject_type
+### Checks for a secret scripted relationship with a target character
+alias[trigger:has_secret_relation_oaf] = replace_me_subject_type
+### Checks for a secret scripted relationship with a target character
+alias[trigger:has_secret_relation_potential_friend] = replace_me_subject_type
+### Checks for a secret scripted relationship with a target character
+alias[trigger:has_secret_relation_potential_lover] = replace_me_subject_type
+### Checks for a secret scripted relationship with a target character
+alias[trigger:has_secret_relation_potential_rival] = replace_me_subject_type
+### Checks for a secret scripted relationship with a target character
+alias[trigger:has_secret_relation_rival] = replace_me_subject_type
+### Checks for a secret scripted relationship with a target character
+alias[trigger:has_secret_relation_soldier_friend] = replace_me_subject_type
+### Checks for a secret scripted relationship with a target character
+alias[trigger:has_secret_relation_soulmate] = replace_me_subject_type
+### Checks for a secret scripted relationship with a target character
+alias[trigger:has_secret_relation_student] = replace_me_subject_type
+### Checks for a secret scripted relationship with a target character
+alias[trigger:has_secret_relation_victim] = replace_me_subject_type
+### Checks for a secret scripted relationship with a target character
+alias[trigger:has_secret_relation_ward] = replace_me_subject_type
+### Compares the number of scripted relations a character has of the type
+alias[trigger:num_of_relation_best_friend] == replace_me_comparison
+### Compares the number of scripted relations a character has of the type
+alias[trigger:num_of_relation_bully] == replace_me_comparison
+### Compares the number of scripted relations a character has of the type
+alias[trigger:num_of_relation_court_physician] == replace_me_comparison
+### Compares the number of scripted relations a character has of the type
+alias[trigger:num_of_relation_crush] == replace_me_comparison
+### Compares the number of scripted relations a character has of the type
+alias[trigger:num_of_relation_friend] == replace_me_comparison
+### Compares the number of scripted relations a character has of the type
+alias[trigger:num_of_relation_guardian] == replace_me_comparison
+### Compares the number of scripted relations a character has of the type
+alias[trigger:num_of_relation_intrigue_mentor] == replace_me_comparison
+### Compares the number of scripted relations a character has of the type
+alias[trigger:num_of_relation_intrigue_student] == replace_me_comparison
+### Compares the number of scripted relations a character has of the type
+alias[trigger:num_of_relation_lover] == replace_me_comparison
+### Compares the number of scripted relations a character has of the type
+alias[trigger:num_of_relation_mentor] == replace_me_comparison
+### Compares the number of scripted relations a character has of the type
+alias[trigger:num_of_relation_nemesis] == replace_me_comparison
+### Compares the number of scripted relations a character has of the type
+alias[trigger:num_of_relation_oaf] == replace_me_comparison
+### Compares the number of scripted relations a character has of the type
+alias[trigger:num_of_relation_potential_friend] == replace_me_comparison
+### Compares the number of scripted relations a character has of the type
+alias[trigger:num_of_relation_potential_lover] == replace_me_comparison
+### Compares the number of scripted relations a character has of the type
+alias[trigger:num_of_relation_potential_rival] == replace_me_comparison
+### Compares the number of scripted relations a character has of the type
+alias[trigger:num_of_relation_rival] == replace_me_comparison
+### Compares the number of scripted relations a character has of the type
+alias[trigger:num_of_relation_soldier_friend] == replace_me_comparison
+### Compares the number of scripted relations a character has of the type
+alias[trigger:num_of_relation_soulmate] == replace_me_comparison
+### Compares the number of scripted relations a character has of the type
+alias[trigger:num_of_relation_student] == replace_me_comparison
+### Compares the number of scripted relations a character has of the type
+alias[trigger:num_of_relation_victim] == replace_me_comparison
+### Compares the number of scripted relations a character has of the type
+alias[trigger:num_of_relation_ward] == replace_me_comparison
+### Compare the current ingame day [1, 31]
+alias[trigger:current_day] == replace_me_comparison
+### Compare the current ingame year
+alias[trigger:current_year] == replace_me_comparison
+
