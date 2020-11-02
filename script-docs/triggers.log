@@ -2,11 +2,6 @@ Trigger Documentation:
 
 --------------------
 
-debug_log - yes - Outputs to the game log when this trigger is hit
-debug_log_details = yes - Outputs full trigger content when this trigger is hit
-
---------------------
-
 any_dynasty_member - Iterate through all dynasty members
 any_dynasty_member = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: dynasty
@@ -21,7 +16,7 @@ Supported Scopes: dynasty
 --------------------
 
 dynasty_can_unlock_relevant_perk - Can the scoped dynasty unlock a 'relevant' perk? Relevant meaning one that isn't the first in its track unless the dynasty has no partially filled tracks
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: dynasty
 
 --------------------
@@ -143,19 +138,19 @@ Supported Scopes: scheme
 
 is_hostile - Is the scoped scheme a hostile scheme?
 is_hostile = bool
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: scheme
 
 --------------------
 
 is_scheme_agent_exposed - Is the target character an exposed agent in the scope scheme?
-Traits: character target
+Traits: character target 
 Supported Scopes: scheme
 
 --------------------
 
 is_scheme_exposed - Is the scheme exposed?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: scheme
 
 --------------------
@@ -167,7 +162,7 @@ Supported Scopes: scheme
 --------------------
 
 scheme_is_character_agent - Is the target character part of this scheme?
-Traits: character target
+Traits: character target 
 Supported Scopes: scheme
 
 --------------------
@@ -424,7 +419,7 @@ Supported Targets: landed title
 --------------------
 
 can_be_leased_out - Can the scoped title be leased out?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: landed title
 
 --------------------
@@ -470,7 +465,7 @@ Supported Scopes: landed title
 
 --------------------
 
-county_opinion_target - compares the county's opinion of the target character to the specified value, county_opinion_target = { target = X value >/</= Y }
+county_opinion_target - compares the county's opinion of the target character to the specified value, county_opinion_target = { target = X value >/</= Y } 
 Supported Scopes: landed title
 
 --------------------
@@ -512,7 +507,7 @@ Supported Scopes: landed title
 --------------------
 
 has_character_nominiated - Has the target character nominated a successor for the scoped title
-Traits: character target
+Traits: character target 
 Supported Scopes: landed title
 
 --------------------
@@ -530,7 +525,7 @@ Supported Scopes: landed title
 --------------------
 
 has_disabled_building - Is the scope landed title connected to a holding that contains at least one disabled building?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: landed title
 
 --------------------
@@ -547,7 +542,7 @@ Supported Scopes: landed title
 --------------------
 
 has_revokable_lease - Is the title under a lease that can be revoked manually?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: landed title
 
 --------------------
@@ -563,19 +558,19 @@ Supported Scopes: landed title
 --------------------
 
 has_wrong_holding_type - Is the scope landed title connected to a holding that cannot be governed by the current lessee or holder?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: landed title
 
 --------------------
 
 is_capital_barony - Is title in the scope a capital barony?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: landed title
 
 --------------------
 
 is_coastal_county - is the county coastal?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: landed title
 
 --------------------
@@ -591,31 +586,37 @@ Supported Scopes: landed title
 --------------------
 
 is_contested - Is the scope landed title contested in any war?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: landed title
 
 --------------------
 
 is_de_facto_liege_or_above_target - is the title de facto liege or above the target title?
-Traits: landed title target
+Traits: landed title target 
 Supported Scopes: landed title
 
 --------------------
 
 is_de_jure_liege_or_above_target - is the title de jure liege or above the target title?
-Traits: landed title target
+Traits: landed title target 
+Supported Scopes: landed title
+
+--------------------
+
+is_head_of_faith - Is this title a head of faith title
+Traits: yes/no 
 Supported Scopes: landed title
 
 --------------------
 
 is_holy_order - Is the scope landed title a holy order?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: landed title
 
 --------------------
 
 is_holy_site - Is the barony a holy site of any faith? is_holy_site = yes
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: landed title
 
 --------------------
@@ -634,19 +635,19 @@ Supported Scopes: landed title
 --------------------
 
 is_landless_type_title - Is this title considered a landless type title?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: landed title
 
 --------------------
 
 is_leased_out - Is the scoped title leased out?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: landed title
 
 --------------------
 
 is_mercenary_company - Is the scope landed title a mercenary company?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: landed title
 
 --------------------
@@ -665,19 +666,19 @@ Supported Scopes: landed title
 --------------------
 
 is_title_created - Is title in the scope created?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: landed title
 
 --------------------
 
 is_titular - Is this title titular (has no dejure counties in it, and is not a barony/county)?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: landed title
 
 --------------------
 
 is_under_holy_order_lease - Is the scoped title leased out to any holy order?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: landed title
 
 --------------------
@@ -708,18 +709,19 @@ Possible types:
 	lease_revoked
 	returned
 	faction_demand
+	swear_fealty
 Supported Scopes: landed title
 
 --------------------
 
 target_is_de_facto_liege_or_above - is the target title de facto liege or above?
-Traits: landed title target
+Traits: landed title target 
 Supported Scopes: landed title
 
 --------------------
 
 target_is_de_jure_liege_or_above - is the target title de jure liege or above?
-Traits: landed title target
+Traits: landed title target 
 Supported Scopes: landed title
 
 --------------------
@@ -731,7 +733,7 @@ Supported Scopes: landed title
 --------------------
 
 title_create_faction_type_chance - Check if the chance to create a faction against a target of the scope landed title is is true against the scripted value
-title_create_faction_type_chance = {
+title_create_faction_type_chance = { 
     type = faction_type #An ongoing faction
     target = target_character
     value <|<=|>=|> 0
@@ -741,13 +743,13 @@ Supported Scopes: landed title
 --------------------
 
 title_is_a_faction_member - Is the scope title a member of a faction?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: landed title
 
 --------------------
 
 title_join_faction_chance - Check if the chance of the scope landed title to join the faction against the scripted value
-title_join_faction_chance = {
+title_join_faction_chance = { 
     faction = faction_target #An ongoing faction
     value <|<=|>=|> 0
 }
@@ -756,7 +758,7 @@ Supported Scopes: landed title
 --------------------
 
 title_will_leave_sub_realm_on_succession - Will the title leave the sub-realm of the character on the right-hand-side upon succession? That is, is the first heir in someone outside the sub-realm, and the highest tier title they'll inherit from the person holding the title is not higher than their current tier
-Traits: character target
+Traits: character target 
 Supported Scopes: landed title
 
 --------------------
@@ -854,6 +856,12 @@ Supported Scopes: character
 
 --------------------
 
+ai_reserved_gold - does the character have the required gold? (AI category reserved)
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
 ai_sociability - AI sociability
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
@@ -871,6 +879,12 @@ Supported Scopes: character
 
 --------------------
 
+ai_war_chest - does the character have the required gold? (AI category war chest)
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
 ai_zeal - AI zeal
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
@@ -878,19 +892,19 @@ Supported Scopes: character
 --------------------
 
 allowed_concubines - Can the scope owner have concubines?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 allowed_more_concubines - Can the scope owner have more concubines?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 allowed_more_spouses - Can the scope owner have more spouses?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -930,13 +944,6 @@ Supported Targets: army
 
 --------------------
 
-any_character_to_title_neighboring_and_across_water_barony - Scopes from a character to a neighboring barony (incl. across water, looking trough the de Jure lieges)
-any_character_to_title_neighboring_and_across_water_barony = { <count=num/all> / <percent=fixed_point> <triggers> }
-Supported Scopes: character
-Supported Targets: landed title
-
---------------------
-
 any_character_to_title_neighboring_and_across_water_county - Scopes from a character to a neighboring county (incl. across water, looking trough the de Jure lieges)
 any_character_to_title_neighboring_and_across_water_county = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: character
@@ -960,13 +967,6 @@ Supported Targets: landed title
 
 any_character_to_title_neighboring_and_across_water_kingdom - Scopes from a character to a neighboring kingdom (incl. across water, looking trough the de Jure lieges)
 any_character_to_title_neighboring_and_across_water_kingdom = { <count=num/all> / <percent=fixed_point> <triggers> }
-Supported Scopes: character
-Supported Targets: landed title
-
---------------------
-
-any_character_to_title_neighboring_barony - Scopes from a character to a neighboring barony (looking trough the de Jure lieges)
-any_character_to_title_neighboring_barony = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: character
 Supported Targets: landed title
 
@@ -1602,25 +1602,30 @@ Supported Scopes: character
 --------------------
 
 can_attack_in_hierarchy - can the scope target be attacking the defender based on their liege-vassal relations?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 can_be_child_of - Would the target character have been able to have children at the time of the scoped character's birth? Only age is taken into account
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 can_be_parent_of - Would the scoped character have been able to have children at the time of the target character's birth? Only age is taken into account
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 can_create_faction - can the character create the faction of the specified type against the specified character?
 can_create_faction = { type = X target = Y }
+Supported Scopes: character
+
+--------------------
+
+can_declare_war - Can the scoped character declare war on the defender with the specified casus bellis on the defender character for the target titles with an optional claimant. can_declare_war = { defender = X casus_belli = Y target_titles = { Z } claimant = A }
 Supported Scopes: character
 
 --------------------
@@ -1632,13 +1637,13 @@ Supported Scopes: character
 
 can_have_children - can the character have children? Only checks hard blocks from traits, not fertility
 can_have_children = yes/no
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 can_join_activities - can the character join activities?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -1655,7 +1660,7 @@ can_join_or_create_faction_against = {
 	faction = faction_key # optional
 	check_in_a_faction = no # default: yes
 }
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
@@ -1667,19 +1672,19 @@ Supported Scopes: character
 --------------------
 
 character_has_commander_trait_scope_does_not - Does the character have a commander trait that the scope does not?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 character_is_land_realm_neighbor - Is the scoped character a realm neighbor of the target? Meaning they're independent or has the same liege, and border your realm.
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 character_is_realm_neighbor - Is the scoped character a realm neighbor of the target? Meaning they're independent or has the same liege, and border your realm. Including across two sea zones
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
@@ -1703,7 +1708,7 @@ Supported Scopes: character
 --------------------
 
 create_faction_type_chance - Check if the chance to create a faction against a target of the scope character is is true against the scripted value
-create_faction_type_chance = {
+create_faction_type_chance = { 
     type = faction_type #An ongoing faction
     target = target_character
     value <|<=|>=|> 0
@@ -1750,6 +1755,14 @@ Supported Scopes: character
 
 --------------------
 
+debt_level - Is the scoped character's debt level this value? -1 if not meeting any debt level threshold.
+0 for the first one, and so on.
+Note that this might not match exactly with the modifier in effect as it calculates what the modifier will be now, and the character's actual modifier can lag behind
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
 diplomacy - does the character have the required diplomacy skill level?
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
@@ -1788,13 +1801,13 @@ Supported Scopes: character
 --------------------
 
 does_ai_liege_in_vassal_contract_desire_obligation_change - Does the AI liege in a vassal contract desire changing an obligation level
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 does_ai_vassal_in_vassal_contract_desire_obligation_change - Does the AI vassal in a vassal contract desire changing an obligation level
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -1818,6 +1831,12 @@ Supported Scopes: character
 --------------------
 
 domain_size - Is the scoped character's domain this big?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
+domain_size_excluding_grace_period - Is the scoped character's domain this big? Does not count titles currently in the grace period
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
 
@@ -1878,55 +1897,55 @@ Supported Scopes: character
 --------------------
 
 has_any_cb_on - does the scope character have any casus bellis on the taget character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_any_display_cb_on - does the scope character have any casus bellis on the taget character that should be displayed? (Allowed to fail valid_to_start_display_regardless)
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_any_focus - Does the character have any focus set?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 has_any_nickname - Has the scope character any nickname?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 has_any_scripted_relation - does the scope character have any scripted relation with the taget character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_any_secret_relation - does the scope character have any secret relation with the taget character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_any_secrets - Does the character have any secrets?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 has_bad_nickname - Has the scope character a bad nickname?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 has_banish_reason - Does the character have the banish reason towards the target?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
@@ -1954,7 +1973,7 @@ Supported Scopes: character
 --------------------
 
 has_claim_on - does the character have a claim on the target title?
-Traits: landed title target
+Traits: landed title target 
 Supported Scopes: character
 
 --------------------
@@ -1984,34 +2003,34 @@ Supported Targets: culture group
 --------------------
 
 has_de_jure_claim_on - does the scope character have a dejure claim against the target?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_disable_non_aggression_pacts - Does the character have disabled non-agression pacts with the target?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_divorce_reason - Does the character have the divorce reason towards the target?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
-has_dread_level_towards - How much is scared the scope character agains the target. 0 = not intimidated, 1 = intimidated, 2 = cowed.
-has_dread_level_towards = {
-target = X
-level >/</>=/<=/= Y
+has_dread_level_towards - How much is scared the scope character agains the target. 0 = not intimidated, 1 = intimidated, 2 = cowed. 
+has_dread_level_towards = { 
+target = X 
+level >/</>=/<=/= Y 
  }
 Supported Scopes: character
 
 --------------------
 
 has_dynasty - does the character have a valid dynasty?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -2023,7 +2042,7 @@ Supported Scopes: character
 --------------------
 
 has_execute_reason - Does the character have the execute reason towards the target?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
@@ -2037,7 +2056,7 @@ Supported Targets: faith
 --------------------
 
 has_father - does the character have a valid living father?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -2048,7 +2067,7 @@ Supported Scopes: character
 --------------------
 
 has_free_council_slot - Does the scope character have a council position to fill? (ignoring automatically filled positions)
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -2088,7 +2107,7 @@ Supported Scopes: character
 --------------------
 
 has_imprisonment_reason - Does the character have the imprisonment reason towards the target?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
@@ -2104,7 +2123,7 @@ Supported Scopes: character
 --------------------
 
 has_mother - does the character have a valid living mother?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -2115,13 +2134,13 @@ Supported Scopes: character
 --------------------
 
 has_non_aggression_pact - Does the character have the non-agression pact with the target?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_non_interference - Does the character have the non-interference reason towards the target?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
@@ -2131,13 +2150,13 @@ Supported Scopes: character
 
 --------------------
 
-has_opposite_relation - Does the scope character have an opposite relationship of the relation value with the target character? target = , relation =
+has_opposite_relation - Does the scope character have an opposite relationship of the relation value with the target character? target = , relation = 
 Supported Scopes: character
 
 --------------------
 
 has_owned_scheme - Does this character own a scheme?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -2169,7 +2188,7 @@ Supported Targets: character
 --------------------
 
 has_raised_armies - does the character have raised or gathering armies?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -2185,132 +2204,139 @@ Supported Scopes: character
 --------------------
 
 has_relation_best_friend - Checks for a scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_relation_bully - Checks for a scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_relation_court_physician - Checks for a scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_relation_crush - Checks for a scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
-has_relation_flag - Does the scope character have a specific flag on a relation with the target character? target = , relation = , flag =
+has_relation_flag - Does the scope character have a specific flag on a relation with the target character? target = , relation = , flag = 
 Supported Scopes: character
 
 --------------------
 
 has_relation_friend - Checks for a scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_relation_guardian - Checks for a scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_relation_intrigue_mentor - Checks for a scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_relation_intrigue_student - Checks for a scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_relation_lover - Checks for a scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_relation_mentor - Checks for a scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_relation_nemesis - Checks for a scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_relation_oaf - Checks for a scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_relation_potential_friend - Checks for a scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_relation_potential_lover - Checks for a scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_relation_potential_rival - Checks for a scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_relation_rival - Checks for a scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_relation_soldier_friend - Checks for a scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_relation_soulmate - Checks for a scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_relation_student - Checks for a scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
+has_relation_to - does the character have a relation to the target? Matches the logic of the data system function HasRelationTo, has_relation_to = <character>
+Traits: character scope
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
 has_relation_victim - Checks for a scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_relation_ward - Checks for a scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
@@ -2324,157 +2350,157 @@ Supported Targets: religion
 --------------------
 
 has_revoke_title_reason - Does the character have the revoke title reason towards the target?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_same_culture_as - Does the character have the same culture as the target?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_same_culture_group_as - Does the character have the same culture group as the target?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_same_focus_as - Does the character have the same focus as the other?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_same_government - checks if the character has the same government type as another character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_secret_relation_best_friend - Checks for a secret scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_secret_relation_bully - Checks for a secret scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_secret_relation_court_physician - Checks for a secret scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_secret_relation_crush - Checks for a secret scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_secret_relation_friend - Checks for a secret scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_secret_relation_guardian - Checks for a secret scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_secret_relation_intrigue_mentor - Checks for a secret scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_secret_relation_intrigue_student - Checks for a secret scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_secret_relation_lover - Checks for a secret scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_secret_relation_mentor - Checks for a secret scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_secret_relation_nemesis - Checks for a secret scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_secret_relation_oaf - Checks for a secret scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_secret_relation_potential_friend - Checks for a secret scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_secret_relation_potential_lover - Checks for a secret scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_secret_relation_potential_rival - Checks for a secret scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_secret_relation_rival - Checks for a secret scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_secret_relation_soldier_friend - Checks for a secret scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_secret_relation_soulmate - Checks for a secret scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_secret_relation_student - Checks for a secret scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_secret_relation_victim - Checks for a secret scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 has_secret_relation_ward - Checks for a secret scripted relationship with a target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
@@ -2485,7 +2511,7 @@ Supported Scopes: character
 --------------------
 
 has_strong_claim_on - does the character have a Pressed Claim on the target title?
-Traits: landed title target
+Traits: landed title target 
 Supported Scopes: character
 
 --------------------
@@ -2505,7 +2531,7 @@ Supported Targets: character
 --------------------
 
 has_targeting_faction - Has the scope character a faction targeting him/her?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -2540,7 +2566,7 @@ Supported Scopes: character
 --------------------
 
 has_truce - Does the scope character have a truce with the target character? Truces are one way, which means we ask if the scope character can't attack the target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
@@ -2553,7 +2579,7 @@ Supported Targets: character
 --------------------
 
 has_weak_claim_on - does the character have an Unpressed Claim on the target title?
-Traits: landed title target
+Traits: landed title target 
 Supported Scopes: character
 
 --------------------
@@ -2583,7 +2609,7 @@ Supported Scopes: character
 --------------------
 
 holds_landed_title - Is the scope character landed (holds a county or barony)?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -2606,13 +2632,13 @@ Supported Scopes: character
 --------------------
 
 in_activity_with - is the character in the same activity?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 in_diplomatic_range - Is the scope character and the target character within each others diplomatic range?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
@@ -2655,19 +2681,19 @@ Supported Scopes: character
 --------------------
 
 is_a_faction_leader - Is the scope character a leader of a faction?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_a_faction_member - Is the scope character a member of a faction?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_adult - Is the scope character adult?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -2678,73 +2704,73 @@ Supported Scopes: character
 --------------------
 
 is_ai - is the character played by AI?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_alive - is the character alive or dead?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_allied_in_war - Is the scope character allied to the target character in a war?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_allied_to - Is the scope character allied to the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_at_home - is the character at home?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_at_location - Is the character currently in the target province?
-Traits: province target
+Traits: province target 
 Supported Scopes: character
 
 --------------------
 
 is_at_same_location - Is the character currently in the same province as the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_at_war - is the character at war? Does not consider your lieges' wars
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_at_war_as_attacker - is the character at war as an attacker? Does not consider your lieges' wars
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_at_war_as_defender - is the character at war as a defender? Does not consider your lieges' wars
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_at_war_with - Is the character at war with the target? Does not consider your lieges' wars
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_at_war_with_liege - is the character at war with their liege?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -2755,31 +2781,31 @@ Supported Scopes: character
 --------------------
 
 is_attracted_to_gender_of - does the sexuality of the scope character make them attracted to the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_attracted_to_men - Is the character attracted to men?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_attracted_to_women - Is the character attracted to women?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_away_from_court - Is the character away from the court?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_betrothed - Is the scope character betrothed?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -2821,91 +2847,91 @@ Supported Scopes: character
 
 is_character_window_main_character - Does the local player have knowledge about the secret?
 An interface trigger, can only be used in specific places
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_child_of - Is the character a child of the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_claimant - is the character a claimant to any landed titles?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_clergy - Is the scoped character a clergy?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_close_family_of - Is the character a close family [parents, children, siblings, grandparents, grandchildren] of the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_close_or_extended_family_of - Is the character a close or extended family [parents, children, siblings, grandparents, grandchildren, cousins, uncles, aunts, nephews, nieces] of the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_commanding_army - is the character a commanding an army?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_concubine - Is the scope character a concubine?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_concubine_of - Is the target character a concubine of the scope character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_consort_of - Is the character a spouse or concubine of the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_councillor - Is the scoped character a councillor?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_councillor_of - Is the scoped character a councillor for the specified character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_courtier - Is the scope character a courtier?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_courtier_of - Is the scope character a courtier of the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_cousin_of - Is the character a cousin of the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
@@ -2916,19 +2942,19 @@ Supported Scopes: character
 --------------------
 
 is_employer_of - Is the target character a courtier of the scope character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_extended_family_of - Is the character a extended family [cousins, uncles, aunts, nephews, nieces] of the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_female - Is the scope character female?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -2939,7 +2965,7 @@ Supported Scopes: character
 --------------------
 
 is_forced_into_faction - Is the scope character forced to be part of a faction?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -2950,103 +2976,103 @@ Supported Scopes: character
 --------------------
 
 is_foreign_court_guest - Is the character a guest from another a court? In contrast to is_pool_guest the character has a liege
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_foreign_court_guest_of - Is the character a guest from another a court, visiting the target character's court? In contrast to is_pool_guest_of the character has a liege
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_foreign_court_or_pool_guest - Is the character a guest? (is_pool_guest or is_foreign_court_guest)
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_foreign_court_or_pool_guest_of - Is the character a guest? (is_pool_guest_of or is_foreign_court_guest_of)
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_grandchild_of - Is the character a grandchild of the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_grandparent_of - Is the character a grandparent of the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_great_grandchild_of - Is the character a great grandchild of the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_great_grandparent_of - Is the character a great grandparent of the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_heir_of - Is the character an heir of the target [placeholder]?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_immortal - Is the character immortal?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_imprisoned - is the character imprisoned?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_imprisoned_by - Is the scope character imprisoned by the target character? is_imprisoned_by = TARGET
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_in_an_activity - checks whether the character is currently in, or has joined an activity
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_in_army - is the character in an army (a commander or a knight)?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_in_civil_war - is the character at war with their liege, or one or more of their vassals?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_in_ongoing_great_holy_war - is the character in an ongoing (i.e. the war has started) great holy war?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_in_pool_at - Is the character in the pool the target province is a part of
-Traits: province target
+Traits: province target 
 Supported Scopes: character
 
 --------------------
@@ -3063,43 +3089,43 @@ Supported Scopes: character
 --------------------
 
 is_in_the_same_court_as - Is the character in the same court as the target character (they have the same court owner or one is a courtier of the other)?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_in_the_same_court_as_or_guest - Is the character in the same court as the target character (they have the same court owner or one is a courtier of the other)? Includes guests in the court.
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_incapable - is the character incapable?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_independent_ruler - is the character an independent ruler?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_knight - Is the scoped character a knight
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_knight_of - Is the scoped character a knight of the target character
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_landed - Is the scope character landed (holds a county or barony)?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -3115,62 +3141,62 @@ Supported Scopes: character
 --------------------
 
 is_liege_or_above_of - is the scope character a liege or above of the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_local_player - is the character the local player?
 An interface trigger, can only be used in specific places
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_lowborn - Is the character a lowborn?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_male - Is the scope character male?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_married - Is the scope character married?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_nibling_of - Is the character a nibling (niece/nephew) of the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_normal_councillor - Is the scoped character a regular councillor?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_obedient - Is the character obedient towards the target?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_overriding_designated_winner - Is the scoped character overriding the winner in the GHW they're pledged to (will put their beneficiary on the throne if they're top participant)?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_parent_of - Is the character a parent of the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
@@ -3186,61 +3212,61 @@ Supported Scopes: character
 --------------------
 
 is_player_heir_of - Is the scope character the player heir of the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_pledged_ghw_attacker - Is the scoped character a pledged attacker in the current GHW (it's an error to check this if there's no GHW around)
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_pool_character - Is the character in the pool? (not a ruler, courtier or guest at any court)
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_pool_guest - Is the character a guest from the pool? In contrast to is_foreign_court_guest the character has no liege
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_pool_guest_of - Is the character a guest from the pool, visiting the target character's court? In contrast to is_foreign_court_guest_of the character has no liege
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_powerful_vassal - Is the character a powerful vassal?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_powerful_vassal_of - Is the character a powerful vassal of the target?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_pregnant - is the character pregnant?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_primary_heir_of - Is the character the heir of the target's primary title?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_ruler - Is the scope character a ruler (holds any title)?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -3254,55 +3280,55 @@ Supported Scopes: character
 --------------------
 
 is_sibling_of - Is the character a sibling of the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_special_councillor - Is the scoped character a special councillor?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_spouse_of - Is the character a spouse of the target character, and are both alive?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_spouse_of_even_if_dead - Is the character a spouse of the target character, even if one or both are dead?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_theocratic_lessee - Is the scope character a theocratic lessee (bishop)?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_twin_of - Is the character a twin of the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_unborn_child_of_concubine - Is the unborn a child of a concubine?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_unborn_known_bastard - Is the unborn a known bastard?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 is_uncle_or_aunt_of - Is the character an uncle or aunt of the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
@@ -3313,25 +3339,25 @@ Supported Scopes: character
 --------------------
 
 is_vassal_of - Is the character a direct vassal of the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_vassal_or_below_of - is the scope character a vassal or below of the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 is_visibly_fertile - Is the scoped character visibly fertile, that is: not too old if a woman, not too young and has no traits blocking having children
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 join_faction_chance - Check if the chance of the scope character to join the faction against the scripted value
-join_faction_chance = {
+join_faction_chance = { 
     faction = faction_target #An ongoing faction
     value <|<=|>=|> 0
 }
@@ -3340,7 +3366,7 @@ Supported Scopes: character
 --------------------
 
 join_scheme_chance - Check if the change of the scope character is between the given range (being min and max exclusive)
-join_scheme_chance = {
+join_scheme_chance = { 
     scheme = scheme_target #An ongoing scheme
     max = 0
     min = -10
@@ -3430,13 +3456,13 @@ Supported Scopes: character
 --------------------
 
 matrilinear_betrothal - Is this character's betrothal matrilinear? False if there's no betrothal.
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 matrilinear_marriage - Is the marriage with the spouse matrilinear?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -3682,7 +3708,7 @@ Supported Scopes: character
 
 --------------------
 
-number_of_commander_traits_in_common - does the character and the target have a number of commander traits in common?
+number_of_commander_traits_in_common - does the character and the target have a number of commander traits in common? 
 number_of_personality_traits_in_common = { target = X value >/</>=/<= Y }
 Supported Scopes: character
 
@@ -3734,13 +3760,13 @@ Supported Scopes: character
 
 --------------------
 
-number_of_opposing_personality_traits - does the character and the target have a number of opposing personality traits?
+number_of_opposing_personality_traits - does the character and the target have a number of opposing personality traits? 
 number_of_opposing_personality_traits = { target = X value >/</>=/<= Y }
 Supported Scopes: character
 
 --------------------
 
-number_of_opposing_traits - does the character and the target have a number of opposing traits?
+number_of_opposing_traits - does the character and the target have a number of opposing traits? 
 number_of_opposing_traits = { target = X value >/</>=/<= Y }
 Supported Scopes: character
 
@@ -3752,7 +3778,7 @@ Supported Scopes: character
 
 --------------------
 
-number_of_personality_traits_in_common - does the character and the target have a number of personality traits in common?
+number_of_personality_traits_in_common - does the character and the target have a number of personality traits in common? 
 number_of_personality_traits_in_common = { target = X value >/</>=/<= Y }
 Supported Scopes: character
 
@@ -3770,7 +3796,7 @@ Supported Scopes: character
 
 --------------------
 
-number_of_traits_in_common - does the character and the target have a number of traits in common?
+number_of_traits_in_common - does the character and the target have a number of traits in common? 
 number_of_traits_in_common = { target = X value >/</>=/<= Y }
 Supported Scopes: character
 
@@ -3782,13 +3808,13 @@ Supported Scopes: character
 --------------------
 
 owns_a_story - checks whether the scope character is the owner of any currently active story
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 owns_an_activity - checks whether the scope character is the owner of any currently active activity
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -3799,13 +3825,13 @@ Supported Scopes: character
 --------------------
 
 patrilinear_betrothal - Is this character's betrothal patrilinear? False if there's no betrothal.
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 patrilinear_marriage - Is the marriage with the spouse patrilinear?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -3913,7 +3939,7 @@ Supported Scopes: character
 --------------------
 
 scriptedtests_can_marry_character - can the character marry the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
@@ -3937,13 +3963,13 @@ Supported Scopes: character
 --------------------
 
 sex_opposite_of - Are the scope character the target character of the opposite sex?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 sex_same_as - Are the scope character the target character of the same sex?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
@@ -3956,7 +3982,7 @@ Supported Scopes: character
 
 should_show_disturbing_portrait_modifiers - is the character the local player?
 An interface trigger, can only be used in specific places
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -4017,19 +4043,19 @@ Supported Scopes: character
 --------------------
 
 target_is_liege_or_above - is the target character the liege or above the scope character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 target_is_same_character_or_above - is the target character the the same character or above (in the vassal hierarchy) the scope character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
 
 target_is_vassal_or_below - is the target character a vassal or below of the scope character?
-Traits: character target
+Traits: character target 
 Supported Scopes: character
 
 --------------------
@@ -4080,13 +4106,13 @@ Supported Scopes: character
 --------------------
 
 vassal_contract_has_modifiable_obligations - Can the scoepd character's contract be modified at all, that is: they have one, they use obligation levels, and are count or above
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
 
 vassal_contract_is_blocked_from_modification - Has the scoepd character's contract been blocked from modification by script via 'set_vassal_contract_modification_blocked'
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -4181,7 +4207,7 @@ Supported Scopes: faction
 --------------------
 
 faction_can_press_demands - Can the scope faction press demands?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: faction
 
 --------------------
@@ -4193,7 +4219,7 @@ Supported Scopes: faction
 --------------------
 
 faction_is_at_war - Is the scope faction at war?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: faction
 
 --------------------
@@ -4216,13 +4242,13 @@ Supported Scopes: faction
 --------------------
 
 has_special_character - Has the faction a special character assigned?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: faction
 
 --------------------
 
 has_special_title - Has the faction a special title assigned?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: faction
 
 --------------------
@@ -4273,43 +4299,43 @@ Supported Scopes: war
 --------------------
 
 has_valid_casus_belli - does the war interaction still have a valid casus belli (those should be automatically removed on daily tick, but can exist for a tick)
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: war
 
 --------------------
 
 is_attacker - is the target character in the scope war as an attacker?
-Traits: character target
+Traits: character target 
 Supported Scopes: war
 
 --------------------
 
 is_civil_war - Check if the scope war is a civil war or not
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: war
 
 --------------------
 
 is_defender - is the target character in the scope war as a defender?
-Traits: character target
+Traits: character target 
 Supported Scopes: war
 
 --------------------
 
 is_participant - is the target character participating in the scope war as an attacker or defender?
-Traits: character target
+Traits: character target 
 Supported Scopes: war
 
 --------------------
 
 is_war_leader - is the target character leading one of the sides in the scope war?
-Traits: character target
+Traits: character target 
 Supported Scopes: war
 
 --------------------
 
 is_white_peace_possible - Check if the scoped war's CB has is_white_peace_possible = yes
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: war
 
 --------------------
@@ -4335,7 +4361,7 @@ Supported Scopes: war
 --------------------
 
 was_called - has the target character been called to the scope war already?
-Traits: character target
+Traits: character target 
 Supported Scopes: war
 
 --------------------
@@ -4395,7 +4421,7 @@ Supported Scopes: faith
 --------------------
 
 has_allowed_gender_for_clergy - Is the target character of the allowed gender to be clergy of the faith?
-Traits: character target
+Traits: character target 
 Supported Scopes: faith
 
 --------------------
@@ -4411,7 +4437,7 @@ Supported Scopes: faith
 --------------------
 
 has_dominant_ruling_gender - Is the target character's gender a dominant ruling gender of the faith? Also evaluates to true if there's no dominant ruling gender
-Traits: character target
+Traits: character target 
 Supported Scopes: faith
 
 --------------------
@@ -4429,7 +4455,7 @@ Supported Scopes: faith
 --------------------
 
 has_preferred_gender_for_clergy - Is the target character of the preferred gender to be clergy of the faith?
-Traits: character target
+Traits: character target 
 Supported Scopes: faith
 
 --------------------
@@ -4486,7 +4512,7 @@ Supported Targets: character
 --------------------
 
 can_be_exposed_by - can the scope secret be exposed by the target character? can_be_exposed_by = target
-Traits: character target
+Traits: character target 
 Supported Scopes: secret
 
 --------------------
@@ -4499,7 +4525,7 @@ Supported Targets: character
 --------------------
 
 is_known_by - is the scope secret known by the target character?
-Traits: character target
+Traits: character target 
 Supported Scopes: secret
 
 --------------------
@@ -4519,14 +4545,14 @@ Supported Targets: character
 --------------------
 
 is_spent_by - has the scope secret been spent by the target character? is_spent_by = target
-Traits: character target
+Traits: character target 
 Supported Scopes: secret
 
 --------------------
 
 local_player_knows_this_secret - Does the local player have knowledge about the secret?
 An interface trigger, can only be used in specific places
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: secret
 
 --------------------
@@ -4607,7 +4633,7 @@ Supported Scopes: province
 --------------------
 
 has_free_building_slot - does the scope province have a free building slot? has_free_building_slot = yes
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: province
 
 --------------------
@@ -4620,7 +4646,7 @@ Supported Scopes: province
 
 has_ongoing_construction - does the scope province have a construction ongoing?
 	has_ongoing_construction = yes
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: province
 
 --------------------
@@ -4638,25 +4664,25 @@ Supported Scopes: province
 --------------------
 
 has_special_building - Does the province (holding) have a special buidling?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: province
 
 --------------------
 
 has_special_building_slot - Does the province (holding) have a special buidling slot?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: province
 
 --------------------
 
 is_coastal - is the province a coastal province?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: province
 
 --------------------
 
 is_county_capital - is the province the county capital?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: province
 
 --------------------
@@ -4700,7 +4726,7 @@ Supported Scopes: holy order
 --------------------
 
 activity_has_been_activated - Is the activity activated?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: activity
 
 --------------------
@@ -4727,7 +4753,7 @@ Supported Targets: character
 --------------------
 
 is_target_participating - is the target character participating in the scope activity?
-Traits: character target
+Traits: character target 
 Supported Scopes: activity
 
 --------------------
@@ -4746,7 +4772,7 @@ Supported Targets: landed title
 --------------------
 
 army_is_moving - is this army moving?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: army
 
 --------------------
@@ -4764,19 +4790,19 @@ Supported Scopes: army
 --------------------
 
 is_army_in_combat - Is the scoped army in combat?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: army
 
 --------------------
 
 is_army_in_raid - Is the scoped army in a raid (this includes a raid interrupted by combat)?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: army
 
 --------------------
 
 is_army_in_siege - Is the scoped army in a siege (this includes a siege interrupted by combat)?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: army
 
 --------------------
@@ -4790,7 +4816,7 @@ Supported Targets: character
 --------------------
 
 is_raid_army - Is the scoped army a raid army?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: army
 
 --------------------
@@ -4835,7 +4861,7 @@ Supported Scopes: none
 --------------------
 
 always - Always the same value
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: none
 
 --------------------
@@ -5018,7 +5044,13 @@ Supported Scopes: none
 
 --------------------
 
-current_month - Compare the current ingame month (1..12)
+current_day - Compare the current ingame day [1, 31]
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: none
+
+--------------------
+
+current_month - Compare the current ingame month [1..12]
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: none
 
@@ -5026,6 +5058,12 @@ Supported Scopes: none
 
 current_tooltip_depth - What is number of tooltips open rigth now?
 An interface trigger, can only be used in specific places
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: none
+
+--------------------
+
+current_year - Compare the current ingame year
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: none
 
@@ -5053,7 +5091,7 @@ Supported Scopes: none
 --------------------
 
 debug_only - Checks if the game is in debug mode or not.
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: none
 
 --------------------
@@ -5121,7 +5159,7 @@ Supported Scopes: none
 --------------------
 
 has_multiple_players - Does the game have at least two players currently connected?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: none
 
 --------------------
@@ -5164,7 +5202,7 @@ Supported Scopes: none
 
 is_gamestate_tutorial_active - Is the gamestate tutorial active? See save_progress_in_gamestate in tutorial_lesson_chains documentation.
 An interface trigger, can only be used in specific places
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: none
 
 --------------------
@@ -5176,7 +5214,7 @@ Supported Scopes: none
 
 is_player_selected - is the player playing a character?
 An interface trigger, can only be used in specific places
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: none
 
 --------------------
@@ -5213,7 +5251,7 @@ Supported Scopes: none
 
 is_tutorial_active - Is the tutorial active?
 An interface trigger, can only be used in specific places
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: none
 
 --------------------
@@ -5274,7 +5312,7 @@ Supported Scopes: none
 
 --------------------
 
-monarchs_journey_unlock -
+monarchs_journey_unlock - 
 An interface trigger, can only be used in specific places
 Supported Scopes: none
 
@@ -5301,7 +5339,7 @@ Supported Scopes: none
 --------------------
 
 release_only - Checks if the game is in release mode or not.
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: none
 
 --------------------
@@ -5318,7 +5356,7 @@ Supported Scopes: none
 --------------------
 
 scripted_tests - Checks if the game is currently running scripted tests.
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: none
 
 --------------------
@@ -5415,19 +5453,19 @@ Supported Scopes: combat side
 --------------------
 
 is_combat_side_attacker - whether the combat side was the attacker or not
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: combat side
 
 --------------------
 
 is_combat_side_pursuing - is this side the winner of the combat
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: combat side
 
 --------------------
 
 is_combat_side_retreating - is this side defeated in the combat
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: combat side
 
 --------------------
@@ -5498,7 +5536,7 @@ Supported Targets: character
 --------------------
 
 is_directed_ghw - Is the scoped GHW a directed GHW?
-Traits: yes/no
+Traits: yes/no 
 Supported Scopes: great holy war
 
 --------------------
