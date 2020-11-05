@@ -9,7 +9,7 @@ holy_site = {
     county = scope[county]
 
     ##cardinality = 0..inf
-    flag = flag
+    flag = value_set[holy_site_flag]
 
     ### A modifier applied to all followers of the faith that holds this holy site.
     ## replace_scope = { ROOT = character THIS = character }

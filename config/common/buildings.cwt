@@ -139,7 +139,7 @@ building = {
     ### Building flags
     # TODO: more detailed flags
     ## cardinality = 0..1
-	flag = value_set[flag]
+	flag = value_set[building_flag]
 
     ### How desirable is the building for the AI
     ## cardinality = 0..1

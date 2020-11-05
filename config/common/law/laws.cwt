@@ -21,7 +21,7 @@ law_group = {
     # TODO: List special flags found in _laws.info.
     ## cardinality = 0..1
     ### Can be checked in the data/GUI system with LawGroup.HasFlag('some_arbitrary_flag').
-    flag = scalar
+    flag = value_set[law_flag]
     ## cardinality = 1..inf
     <law> = {
         ## cardinality = 0..1
@@ -59,7 +59,7 @@ law_group = {
         # TODO: List special flags found in _laws.info.
         ## cardinality = 0..inf
         ### Can be checked in script with has_realm_law_flag = some_arbitrary_flag.
-        flag = scalar
+        flag = value_set[law_flag]
         
         ## cardinality = 0..1
         ## push_scope = character

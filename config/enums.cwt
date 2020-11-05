@@ -83,6 +83,7 @@ enums = {
         victory
         defeat
         white_peace
+        invalidated
     }
     enum[cb] = {
         casus_belli
@@ -97,6 +98,12 @@ enums = {
         wound
         imprison
         death
+    }
+    enum[ai_stance] = {
+        enemy
+        friend
+        threat
+        neutral
     }
 }
 
