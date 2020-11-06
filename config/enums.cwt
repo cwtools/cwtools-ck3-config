@@ -27,6 +27,19 @@ enums = {
         prowess
         stewardship
     }
+    enum[ai_modifiers] = {
+        ai_boldness
+        ai_compassion
+        ai_sociability
+        ai_greed
+        ai_energy
+        ai_honor
+        ai_rationality
+        ai_vengefulness
+        ai_zeal
+        ai_war_chance
+        ai_war_cooldown
+    }
     enum[ai_value] = {
         very_low_positive_ai_value # 10
         low_positive_ai_value # 20

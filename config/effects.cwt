@@ -1,7 +1,7 @@
 ﻿### Adds a character as an agent to the scheme and forces them to stay {     scheme = target_Scheme     days/months/years = duration }
 alias[effect:force_add_to_scheme] = {
     scheme = scope[scheme]
-    enum[duration] = int
+    enum[duration] = int_value_field
 }
 
 ### Sets the religious head title of the faith to the given title. set_religious_head_title = scope
@@ -177,7 +177,7 @@ alias[effect:create_story] = {
     ## cardinality = 0..1
     save_scope_as = value_set[event_target]
     ## cardinality = 0..1
-    save_temporary_scope_as = value_set[temporary_scope]
+    save_temporary_scope_as = value_set[event_target]
 }
 
 ### add law to scoped title, overriding any current law from the same group add_title_law = princely_elective_succession_law
@@ -214,7 +214,7 @@ alias[effect:add_dynasty_prestige_level] = int_value_field # TODO: Test out if v
 alias[effect:join_faction_forced] = {
     faction = scope[faction]
     forced_by = scope[character]
-    enum[duration] = int
+    enum[duration] = int_value_field
 }
 
 ### Lease out the scoped title lease_out_to = scope:a_holy_order
@@ -519,7 +519,7 @@ alias[effect:set_global_variable] = {
     name = value_set[global_variable]
 
     ## cardinality = 0..1
-    enum[duration] = int
+    enum[duration] = int_value_field
 
     ## cardinality = 0..1
     value = value_field
@@ -611,7 +611,7 @@ alias[effect:set_local_variable] = {
     name = value_set[local_variable]
 
     ## cardinality = 0..1
-    enum[duration] = int
+    enum[duration] = int_value_field
 
     ## cardinality = 0..1
     value = value_field
@@ -661,7 +661,7 @@ alias[effect:set_casus_belli] = <casus_belli_type>
 alias[effect:add_scheme_cooldown] = {
     target = scope[character]
     type = <scheme>
-    enum[duration] = int
+    enum[duration] = int_value_field
 }
 
 ### increase the obligation level of the scoped character's vassal contract
@@ -781,7 +781,7 @@ alias[effect:set_destroy_on_succession] = yes
 alias[effect:set_sexuality] = <game_concept.sexuality>
 
 ### Saves the current scope as an arbitrarily-named temporary target to be referenced later in the same effect save_temporary_event_target_as = <string>
-alias[effect:save_temporary_scope_as] = value_set[temporary_scope]
+alias[effect:save_temporary_scope_as] = value_set[event_target]
 
 ### Adds a temporary reverse opinion modifier, reverse_add_opinion = { modifier = X days/months/years = Y target = Z } X is a scripted modifier name. Y can be a value or a range "{ A B }" If no timeout are specified, the modifier's scripted default timeout will be used.
 alias[effect:reverse_add_opinion] = {
@@ -921,7 +921,7 @@ alias[effect:set_variable] = {
     name = value_set[variable]
 
     ## cardinality = 0..1
-    enum[duration] = int
+    enum[duration] = int_value_field
 
     ## cardinality = 0..1
     value = value_field
@@ -1089,7 +1089,7 @@ alias[effect:invite_character_to_activity] = scope[character]
 alias[effect:add_character_flag] = {
     flag = value_set[character_flag]
     ## cardinality = 0..1
-    enum[duration] = int
+    enum[duration] = int_value_field
 }
 
 ### adds a character flag usage: add_character_flag = X add_character_flag = { flag = X days/weeks/years = Y } where X is the name of the flag and Y is a value or value interval "{ min max }"
@@ -1126,7 +1126,7 @@ alias[effect:create_character] = {
     ## cardinality = 0..1
     save_scope_as = value_set[event_target]
     ## cardinality = 0..1
-    save_temporary_scope_value_as = value_set[temporary_scope]
+    save_temporary_scope_value_as = value_set[event_target]
     ## cardinality = 0..1
     name = localisation
     ## cardinality = 0..1
@@ -1222,7 +1222,7 @@ alias[effect:create_character] = {
 
 ### Saves a numerical or bool value as an arbitrarily-named temporary target to be referenced later in the same effect save_temporary_scope_value_as = { name = <string> value = x }
 alias[effect:save_temporary_scope_value_as] = {
-    name = value_set[temporary_scope]
+    name = value_set[event_target]
     value = value_field
 }
 
@@ -1329,7 +1329,7 @@ alias[effect:spawn_army] = {
     save_scope_as = value_set[event_target]
     ## cardinality = 0..1
     ### Cannot be set if army cannot be spawned (eg. char not at war).
-    save_temporary_scope_as = value_set[temporary_scope]
+    save_temporary_scope_as = value_set[event_target]
 }
 
 ### Assigns the target character to the first available council position of the type available assign_council_task = {     council_task = council_task_scope     target = character_taking_the_position    fire_on_actions = [yes] }
@@ -1662,7 +1662,7 @@ alias[effect:trigger_event] = <event>
 alias[effect:trigger_event] = {
     id = <event>
     ## cardinality = 0..1
-    enum[duration] = int
+    enum[duration] = int_value_field
     ## cardinality = 0..1
     enum[duration] = {
         ## cardinality = 1..inf
@@ -1674,7 +1674,7 @@ alias[effect:trigger_event] = {
 alias[effect:trigger_event] = {
     on_action = <on_action>
     ## cardinality = 0..1
-    enum[duration] = int
+    enum[duration] = int_value_field
     ## cardinality = 0..1
     enum[duration] = {
         ## cardinality = 1..inf
@@ -1748,7 +1748,7 @@ alias[effect:add_hook_no_toast] = {
     type = <hook_types>
     target = scope[character]
     secret = <secret_type>
-    enum[duration] = int
+    enum[duration] = int_value_field
 }
 
 ### Adds the right hand side character as knowing of the killer of the scoped object dead_person = { add_knows_of_killer = root }
@@ -1775,7 +1775,7 @@ alias[effect:copy_inheritable_appearance_from] = scope[character]
 ### Forces the character to vote the same as the target force_vote_as = { target = someone days/months/years = x }
 alias[effect:force_vote_as] = {
     target = scope[character]
-    enum[duration] = int
+    enum[duration] = int_value_field
 }
 
 ### Activates an inactive trait. Tooltip will not be shown if the character cannot have the trait.
@@ -1794,24 +1794,28 @@ alias[effect:make_trait_inactive_force_tooltip] = <trait>
 alias[effect:pay_long_term_gold] = {
     target = scope[character]
     gold = int_value_field
+    ## cardinality = 0..1
+    yearly_income = bool
 }
 
 ### the scope character immediately pays gold corresponding to their income to the target character, pay_income = { target = X days/months/years = Y } (AI budget long term)
 alias[effect:pay_long_term_income] = {
     target = scope[character]
-    enum[duration] = int
+    enum[duration] = int_value_field
 }
 
 ### the scope character pays gold to the target character, pay_gold = { target = X gold = Y } (AI budget category short term)
 alias[effect:pay_short_term_gold] = {
     target = scope[character]
-    enum[duration] = int
+    gold = int_value_field
+    ## cardinality = 0..1
+    yearly_income = bool
 }
 
 ### the scope character immediately pays gold corresponding to their income to the target character, pay_income = { target = X days/months/years = Y } (AI budget short term)
 alias[effect:pay_short_term_income] = {
     target = scope[character]
-    enum[duration] = int
+    enum[duration] = int_value_field
 }
 
 ### Remove the cooldown on taking a decision for the scoped character remove_decision_cooldown = decision_name

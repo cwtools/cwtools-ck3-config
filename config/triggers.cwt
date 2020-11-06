@@ -554,7 +554,7 @@ alias[trigger:in_color_list] = replace_me # TODO: Colors again.
 
 ### for how long has the character been imprisoned? time_in_prison = { days/months/years =,>,< X }
 alias[trigger:time_in_prison] = {
-    enum[duration] == int
+    enum[duration] == int_value_field
 }
 
 ### does the character have the specified opinion modifier on the target? (optional *value <|<=|=|>=|> X* or *value = { MIN MAX }* inclusive)
@@ -658,7 +658,7 @@ alias[trigger:can_add_hook] = {
     target = scope[character]
     type = <hook_types>
     ## cardinality = 0..1
-    enum[duration] = int
+    enum[duration] = int_value_field
 }
 
 ### how much development progress is the county gaining each month?
@@ -855,7 +855,7 @@ alias[trigger:is_claimant] = bool
 alias[trigger:stewardship] == int_value_field
 
 ### Saves a temporary target for use during the trigger execution
-alias[trigger:save_temporary_scope_as] = value_set[temporary_scope]
+alias[trigger:save_temporary_scope_as] = value_set[event_target]
 
 ### does the character have the required intrigue skill level?
 alias[trigger:intrigue] == int_value_field
@@ -1304,7 +1304,7 @@ alias[trigger:monthly_income] == int_value_field
 
 ### Saves a numerical or bool value as an arbitrarily-named temporary target to be referenced later in the same effect save_temporary_scope_value_as = { name = <string> value = x }
 alias[trigger:save_temporary_scope_value_as] = {
-    name = value_set[temporary_scope]
+    name = value_set[event_target]
     value = value_field
 }
 
@@ -1385,7 +1385,10 @@ alias[trigger:current_date] == date_field
 ### How many perks from this lifestyle does the character have?
 alias[trigger:martial_lifestyle_perks] == int_value_field
 
-### Always the same value
+### Always the same value, False for `always = no`, otherwise True.
+alias[trigger:always] = scope_field
+
+### Always the same value, False for `always = no`, otherwise True.
 alias[trigger:always] = bool
 
 ### Does the character have this culture?
@@ -1393,7 +1396,7 @@ alias[trigger:has_culture] = scope[culture]
 
 ### for how long has the character been imprisoned with the current type? time_in_prison_type = { days/months/years =,>,< X }
 alias[trigger:time_in_prison_type] = {
-    enum[duration] == int
+    enum[duration] == int_value_field
 }
 
 ### Checks whether the current scope has the specified variable list set has_variable_list = name
@@ -1409,7 +1412,7 @@ alias[trigger:is_courtier_of] = scope[character]
 alias[trigger:recent_history] = {
     ## cardinality = 0..1
     type = scalar # TODO: Not sure how to handle this.
-    enum[duration] = int
+    enum[duration] = int_value_field
 }
 
 ### Is the scope character allied to the target character?
@@ -2232,7 +2235,7 @@ alias[trigger:has_relation_<scripted_relation>] = scope[character]
 ### Checks for a secret scripted relationship with a target character.
 alias[trigger:has_relation_<scripted_relation>] = scope[character]
 ### Compares the number of scripted relations a character has of the type.
-alias[trigger:num_of_relation_<scripted_relation>] == replace_me_comparison
+alias[trigger:num_of_relation_<scripted_relation>] == int_value_field
 
 ### Is this title a head of faith title
 alias[trigger:is_head_of_faith] = bool

@@ -147,7 +147,7 @@ character_interaction = {
     populate_actor_list = single_alias_right[effect_clause]
     
     ## cardinality = 0..1
-    ai_accept = single_alias_right[ai_chance_block]
+    ai_accept = single_alias_right[weight_block]
     ## cardinality = 0..1
     ai_targets = {
         ai_recipients = enum[ai_targets]
@@ -159,7 +159,7 @@ character_interaction = {
     ## cardinality = 0..1
     ai_potential = single_alias_right[trigger_clause]
     ## cardinality = 0..1
-    ai_will_do = single_alias_right[ai_chance_block]
+    ai_will_do = single_alias_right[weight_block]
     ## cardinality = 0..1
     ai_min_reply_days = int_value_field
     ## cardinality = 0..1
