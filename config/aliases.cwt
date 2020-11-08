@@ -49,6 +49,10 @@ alias[desc_part:triggered_desc] = {
     # For some reason this is sometimes ommited.
     ## cardinality = 0..inf
     desc = localisation
+    ## cardinality = 0..inf
+    desc = {
+        alias_name[desc_part] = alias_match_left[desc_part]
+    }
     # We can omit the trigger. Common as the 'else' block in a first_valid block.
     ## cardinality = 0..inf
     trigger = {

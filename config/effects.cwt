@@ -500,6 +500,8 @@ alias[effect:add_opinion] = {
     modifier = <opinion_modifier>
     ## cardinality = 0..1
     opinion = int_value_field
+    ## cardinality = 0..1
+    enum[duration] = int
 }
 
 ### gives (or takes) piety experience to a character
@@ -1021,7 +1023,9 @@ alias[effect:send_interface_message] = {
     ## cardinality = 0..1
     title = localisation
     ## cardinality = 0..1
-	desc = localisation
+    desc = localisation
+    ## cardinality = 0..1
+    desc = single_alias_right[complex_desc]
     ## cardinality = 0..1
     tooltip = localisation
     ## cardinality = 0..1
@@ -1446,7 +1450,7 @@ alias[effect:add_pressed_claim] = scope[landed_title]
 alias[effect:add_pressed_claim] = <title> # TODO: Doesn't seem to work correctly atm, probably some bad typing with titles.
 
 ### Adds the current scope to an arbitrarily-named list (or creates the list if not already present) to be referenced later in the same effect add_to_temporary_list = <string> NOTE, if adding a temporary target to a permanent list, the list will stay permanent  This is used to build lists in triggers. If used within an any-trigger, placement within the trigger is quite important. The game will iterate through every instance of the any-trigger until it finds a single instance that fulfills the requirements, and then it will stop. In order to add every instance of a scope that fulfills certain conditions, use "count = all" while also placing this "effect" at the very end of the any-trigger (so that every condition is evaluated for every iteration).
-alias[effect:add_to_temporary_list] = value_set[temporary_list]
+alias[effect:add_to_temporary_list] = value_set[list]
 
 ### Adds a hook on a character add_hook = { type = X, target = Y, secret = Z, days/months/years = W  } (days/months/years optional (taken from hook type otherwise) and can be a value or an interval, secret required for hook types that require it)
 alias[effect:add_hook] = {

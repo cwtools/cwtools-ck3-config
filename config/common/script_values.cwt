@@ -52,3 +52,28 @@ alias[arithmetic_operation:integer_range] = {
     min = int_value_field
     max = int_value_field
 }
+
+# If/else_if/else stuff.
+alias[arithmetic_operation:if] = {
+    limit = {
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+    alias_name[arithmetic_operation] = alias_match_left[arithmetic_operation]
+}
+
+alias[arithmetic_operation:else_if] = {
+    limit = {
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+    alias_name[arithmetic_operation] = alias_match_left[arithmetic_operation]
+}
+
+alias[arithmetic_operation:if] = {
+    ## cardinality = 1..inf
+    alias_name[arithmetic_operation] = alias_match_left[arithmetic_operation]
+}
+
+# Links.
+alias[arithmetic_operation:scope_field] = {
+    alias_name[arithmetic_operation] = alias_match_left[arithmetic_operation]
+}

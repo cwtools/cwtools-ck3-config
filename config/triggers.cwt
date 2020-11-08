@@ -1,3 +1,6 @@
+### Debug log.
+alias[trigger:debug_log_details] = scalar
+
 ### is the character at war with their liege?
 alias[trigger:is_at_war_with_liege] = bool
 
@@ -65,7 +68,7 @@ alias[trigger:number_of_lifestyle_traits] == int
 alias[trigger:tier] == int_value_field
 
 ### Does the given faith have the given doctrine parameter? Can only check for bool parameters. has_doctrine_parameter = parameter_key
-alias[trigger:has_doctrine_parameter] = <doctrine>
+alias[trigger:has_doctrine_parameter] = enum[doctrine_parameter]
 
 ### Is the scope character a ruler (holds any title)?
 alias[trigger:is_ruler] = bool
@@ -1530,7 +1533,7 @@ alias[trigger:and] = {
 }
 
 ### Saves a temporary target for use during the trigger execution  This is used to build lists in triggers. If used within an any-trigger, placement within the trigger is quite important. The game will iterate through every instance of the any-trigger until it finds a single instance that fulfills the requirements, and then it will stop. In order to add every instance of a scope that fulfills certain conditions, use "count = all" while also placing this "effect" at the very end of the any-trigger (so that every condition is evaluated for every iteration).
-alias[trigger:add_to_temporary_list] = value_set[temporary_list]
+alias[trigger:add_to_temporary_list] = value_set[list]
 
 ### does the character have this many commander traits?
 alias[trigger:number_of_commander_traits] == int_value_field
