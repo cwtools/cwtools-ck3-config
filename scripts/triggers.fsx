@@ -207,8 +207,7 @@ let traitToRHS (x : Trait) =
 
 let tscope = true
 
-let anytemplate =
-        """{
+let any_alias = """single_alias[iteration_any] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
     ## cardinality = 0..1
@@ -216,10 +215,12 @@ let anytemplate =
     ## cardinality = 0..1
     count = all
     alias_name[trigger] = alias_match_left[trigger]
-}"""
+}
 
-let everytemplate =
-        """{
+"""
+let any_alias_arith = any_alias.Replace("iteration_any", "iteration_any_arith").Replace("trigger", "arithmetic_operation")
+
+let every_alias = """single_alias[iteration_every] = {
     ## cardinality = 0..1
     limit = {
         alias_name[trigger] = alias_match_left[trigger]
@@ -229,10 +230,12 @@ let everytemplate =
         alias_name[trigger] = alias_match_left[trigger]
     }
     alias_name[effect] = alias_match_left[effect]
-}"""
+}
 
-let randomtemplate =
-        """{
+"""
+let every_alias_arith = every_alias.Replace("iteration_every", "iteration_every_arith").Replace("effect", "arithmetic_operation")
+
+let random_alias = """single_alias[iteration_random] = {
     ## cardinality = 0..1
     limit = {
         alias_name[trigger] = alias_match_left[trigger]
@@ -244,10 +247,12 @@ let randomtemplate =
     ## cardinality = 0..1
     weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
-}"""
+}
 
-let orderedtemplate =
-        """{
+"""
+let random_alias_arith = random_alias.Replace("iteration_random", "iteration_random_arith").Replace("effect", "arithmetic_operation")
+
+let ordered_alias = """single_alias[iteration_ordered] = {
     ## cardinality = 0..1
     limit = {
         alias_name[trigger] = alias_match_left[trigger]
@@ -264,12 +269,28 @@ let orderedtemplate =
     ## cardinality = 0..1
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
-}"""
+}
+
+"""
+let ordered_alias_arith = ordered_alias.Replace("iteration_ordered", "iteration_ordered_arith").Replace("effect", "arithmetic_operation")
+
+let trigger_aliases = ["single_alias[iteration_any]", any_alias] |> Map.ofList
+let effect_aliases = 
+    [ "single_alias[iteration_every]", every_alias;
+    "single_alias[iteration_random]", random_alias;
+    "single_alias[iteration_ordered]", ordered_alias ] |> Map.ofList
+let arith_aliases = 
+    [ "single_alias[iteration_any_arith]", any_alias_arith;
+    "single_alias[iteration_every_arith]", every_alias_arith;
+    "single_alias[iteration_random_arith]", random_alias_arith;
+    "single_alias[iteration_ordered_arith]", ordered_alias_arith ] |> Map.ofList
+
 let tinner =
             """{
 	alias_name[trigger] = alias_match_left[trigger]
 }
 """
+
 let anytriggers = triggers |> List.filter (fun (t : RawEffect) -> t.name.StartsWith("any_"))
 let othertriggers = triggers |> List.filter (fun (t : RawEffect) -> t.name.StartsWith("any_") |> not)
 let tout =  (fun (t : RawEffect) ->
@@ -285,7 +306,7 @@ let tout =  (fun (t : RawEffect) ->
                         let traitEq, traitRHSs =  t.traits |> Option.map (traitParse >> traitToRHS) |> Option.defaultValue ("=", ["replace_me"])
                         let rhs =
                             if any
-                            then [anytemplate]
+                            then ["single_alias_right[iteration_any]"]
                             else traitRHSs
                         let desc = t.desc.Replace("\n", " ")
                         // sprintf "###%s\n%salias[trigger:%s] = %s\n\r" desc scopes t.name rhs)
@@ -307,14 +328,39 @@ let efun = (fun (t : RawEffect) ->
         let scopes = if tscope then scopes else ""
         let rhs =
             match t.name with
-            | x when x.StartsWith "every_" -> everytemplate
-            | x when x.StartsWith "random_" -> randomtemplate
-            | x when x.StartsWith "ordered_" -> orderedtemplate
+            | x when x.StartsWith "every_" -> "single_alias_right[iteration_every]"
+            | x when x.StartsWith "random_" -> "single_alias_right[iteration_random]"
+            | x when x.StartsWith "ordered_" -> "single_alias_right[iteration_ordered]"
             | _ -> "replace_me"
         let desc = t.desc.Replace("\n", " ")
         // sprintf "###%s\n%salias[effect:%s] = %s\n\r" desc scopes t.name rhs)
         sprintf "### %s\nalias[effect:%s] = %s\n\r" desc t.name rhs)
                 // |> String.concat("")
+
+let arithfun = (fun (t: RawEffect) ->
+        let scopes =
+            match t.scopes with
+            | [] -> ""
+            | ["none"] -> ""
+            | [x] -> "## scope = " + x + "\n"
+            | xs ->
+                let scopes = xs |> List.map (fun s -> s.ToString()) |> String.concat " "
+                "## scope = { " + scopes + " }\n"
+        let scopes = if tscope then scopes else ""
+        let push_scopes =
+            match t.targets with
+            | [] -> ""
+            | [x] -> "## push_scope = " + x + "\n"
+            | xs -> ""
+        let rhs =
+            match t.name with
+            | x when x.StartsWith "any_" -> "single_alias_right[iteration_any_arith]"
+            | x when x.StartsWith "every_" -> "single_alias_right[iteration_every_arith]"
+            | x when x.StartsWith "random_" -> "single_alias_right[iteration_random_arith]"
+            | x when x.StartsWith "ordered_" -> "single_alias_right[iteration_ordered_arith]"
+            | _ -> "replace_me"
+        let desc = t.desc.Replace("\n", " ")
+        sprintf "%s%s### %s\nalias[arithmetic_operation:%s] = %s\n\r" scopes push_scopes desc t.name rhs)
 
 let rulesFiles =
     [
@@ -322,6 +368,7 @@ let rulesFiles =
         @"../config/list_triggers.cwt"
         @"../config/effects.cwt"
         @"../config/list_effects.cwt"
+        @"../config/common/script_values_iterators.cwt"
     ] |> List.map (fun fn -> fn, (System.IO.File.ReadAllText fn))
 
 open CWTools.Rules
@@ -330,6 +377,27 @@ open CWTools.Utilities
 let rules, types, enums, complexenums, values =
             rulesFiles
                 |> CWTools.Rules.RulesParser.parseConfigs (scopeManager.ParseScope()) (scopeManager.AllScopes) (scopeManager.AnyScope) Map.empty
+
+// Check for aliases existance.
+let aliasesTriggers = rules |> List.choose (function
+                                        |SingleAliasRule ("iteration_any", (NodeRule(SpecificField (SpecificValue(x)),_), _)) -> Some (StringResource.stringManager.GetStringForIDs x)
+                                        |_ -> None)
+let aliasesEffects = rules |> List.choose (function
+                                        |SingleAliasRule ("iteration_every", (NodeRule(SpecificField (SpecificValue(x)),_), _)) -> Some (StringResource.stringManager.GetStringForIDs x)
+                                        |SingleAliasRule ("iteration_random", (NodeRule(SpecificField (SpecificValue(x)),_), _)) -> Some (StringResource.stringManager.GetStringForIDs x)
+                                        |SingleAliasRule ("iteration_ordered", (NodeRule(SpecificField (SpecificValue(x)),_), _)) -> Some (StringResource.stringManager.GetStringForIDs x)
+                                        |_ -> None)
+let aliasesArith = rules |> List.choose (function
+                                        |SingleAliasRule ("iteration_any_arith", (NodeRule(SpecificField (SpecificValue(x)),_), _)) -> Some (StringResource.stringManager.GetStringForIDs x)
+                                        |SingleAliasRule ("iteration_every_arith", (NodeRule(SpecificField (SpecificValue(x)),_), _)) -> Some (StringResource.stringManager.GetStringForIDs x)
+                                        |SingleAliasRule ("iteration_random_arith", (NodeRule(SpecificField (SpecificValue(x)),_), _)) -> Some (StringResource.stringManager.GetStringForIDs x)
+                                        |SingleAliasRule ("iteration_ordered_arith", (NodeRule(SpecificField (SpecificValue(x)),_), _)) -> Some (StringResource.stringManager.GetStringForIDs x)
+                                        |_ -> None)
+
+let alias_trigger_out = trigger_aliases |> Map.filter (fun name _ -> aliasesTriggers |> List.contains name |> not) |> Map.toSeq |> Seq.map snd |> String.concat("")
+let alias_effect_out = effect_aliases |> Map.filter (fun name _ -> aliasesEffects |> List.contains name |> not) |> Map.toSeq |> Seq.map snd |> String.concat("")
+let alias_arith_out = arith_aliases |> Map.filter (fun name _ -> aliasesArith |> List.contains name |> not) |> Map.toSeq |> Seq.map snd |> String.concat("")
+
 let oldTriggers = rules |> List.choose (function
                                         |AliasRule ("trigger", (LeafRule(SpecificField (SpecificValue(x)),_), _)) -> Some (StringResource.stringManager.GetStringForIDs x)
                                         |AliasRule ("trigger", (NodeRule(SpecificField (SpecificValue(x)),_), _)) -> Some (StringResource.stringManager.GetStringForIDs x)
@@ -338,24 +406,33 @@ let oldEffects = rules |> List.choose (function
                                         |AliasRule ("effect", (LeafRule(SpecificField (SpecificValue(x)),_), _)) -> Some (StringResource.stringManager.GetStringForIDs x)
                                         |AliasRule ("effect", (NodeRule(SpecificField (SpecificValue(x)),_), _)) -> Some (StringResource.stringManager.GetStringForIDs x)
                                         |_ -> None)
+let oldArith = rules |> List.choose (function
+                                        |AliasRule ("arithmetic_operation", (LeafRule(SpecificField (SpecificValue(x)),_), _)) -> Some (StringResource.stringManager.GetStringForIDs x)
+                                        |AliasRule ("arithmetic_operation", (NodeRule(SpecificField (SpecificValue(x)),_), _)) -> Some (StringResource.stringManager.GetStringForIDs x)
+                                        |_ -> None)
 
-let atout = anytriggers |>  List.filter (fun e -> oldTriggers |> List.contains e.name |> not) |> List.collect tout |> String.concat("")
+let atout = alias_trigger_out + (anytriggers |>  List.filter (fun e -> oldTriggers |> List.contains e.name |> not) |> List.collect tout |> String.concat(""))
 let otout = othertriggers |>  List.filter (fun e -> oldTriggers |> List.contains e.name |> not) |> List.collect tout |> String.concat("")
 
 oldTriggers |> List.filter (fun e -> anytriggers |> List.exists (fun t -> t.name = e) |> not)
             |> List.filter (fun e -> othertriggers |> List.exists (fun t -> t.name = e) |> not)
             |> List.iter (fun e -> eprintfn "removed: %s" e)
 
-let ieout = itereffects |>  List.filter (fun e -> oldEffects |> List.contains e.name |> not) |> List.map efun |> String.concat("")
+let ieout = alias_effect_out + (itereffects |>  List.filter (fun e -> oldEffects |> List.contains e.name |> not) |> List.map efun |> String.concat(""))
 let oeout = othereffects |>  List.filter (fun e -> oldEffects |> List.contains e.name |> not) |> List.map efun |> String.concat("")
 
 oldEffects |> List.filter (fun e -> itereffects |> List.exists (fun t -> t.name = e) |> not)
             |> List.filter (fun e -> othereffects |> List.exists (fun t -> t.name = e) |> not)
             |> List.iter (fun e -> eprintfn "removed: %s" e)
 
+let alliterators = itereffects @ anytriggers
+
+let arithout = alias_arith_out + (alliterators |> List.filter (fun e -> oldArith |> List.contains e.name |> not) |> List.map arithfun |> String.concat(""))
+
 File.AppendAllText("../config/triggers.cwt", otout)
 File.AppendAllText("../config/list_triggers.cwt", atout)
 File.AppendAllText("../config/effects.cwt", oeout)
 File.AppendAllText("../config/list_effects.cwt", ieout)
+File.AppendAllText("../config/common/script_values_iterators.cwt", arithout)
 
 // File.WriteAllText("test.test", triggers |> List.choose (fun t -> t.traits) |> List.distinct |> String.concat("\n"))

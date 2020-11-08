@@ -614,8 +614,9 @@ links = {
     }
     flag = {
         desc = " Flag literals eg: flag:the_boss"
+        type = both
         from_data = yes
-        data_source = <flag>
+        data_source = <flag> # I don't think flags are taken from data. This should be rethought, as flags can be basically any string.
         prefix = flag:
         output_scope = flag
     }
