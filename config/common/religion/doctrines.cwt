@@ -10,6 +10,19 @@ types = {
     }
 }
 
+enums = {
+    complex_enum[doctrine_parameter] = {
+        path = "game/common/religion/doctrines"
+        name = {
+            scalar = {
+                parameters = {
+                    enum_name = scalar
+                }
+            }
+        }
+    }
+}
+
 doctrine_group = {
     ## cardinality = 0..1
     ### Optional. If not specified, the loc key "doctrine_group_key_name" will be used
@@ -42,7 +55,15 @@ doctrine_group = {
         #     ## cardinality = 0..inf
         #     scalar = scalar
         # }
-        parameters = single_alias_right[doctrine_param]
+        ### Doctrine paramaters. Each doctrine parameter is defined by its name. Values can be integers, floats, and bools. There are several hardcoded doctrine parameters you can find in `_doctrines.info`. Need to provide localisation `doctrine_parameter_<name>`. If ` = no` need to provide localisation `doctrine_parameter_<name>_disabled`. For integers you can also append `_<int value>` to the localisation key.
+        parameters = {
+            ## cardinality = 0..inf
+            enum[doctrine_parameter] = int
+            ## cardinality = 0..inf
+            enum[doctrine_parameter] = float
+            ## cardinality = 0..inf
+            enum[doctrine_parameter] = bool
+        }
 
         ## cardinality = 0..1
         ### How much piety will it cost?

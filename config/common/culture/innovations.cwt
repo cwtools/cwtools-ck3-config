@@ -57,7 +57,7 @@ innovation = {
 
     ## cardinality = 0..inf
     ### Optional flag, relevant for the has_all_innovations trigger. Can list any number of flags for each innovation.
-    flag = scalar
+    flag = value_set[innovation_flag]
 }
 
 single_alias[maa_upgrade] = {

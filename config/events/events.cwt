@@ -24,7 +24,14 @@ types = {
             ## cardinality = 1..1
             scope = faith
         }
-
+        
+        ## push_scope = character
+        ## display_name = Letter event
+        ## abbreviation = LE
+        subtype[letter] = {
+            ## cardinality = 1..1
+            type = letter_event
+        }
 	}
 }
 enums = {
@@ -34,6 +41,10 @@ enums = {
     }
     enum[event_scope_types] = {
         faith
+    }
+    enum[missing_animations] = {
+        prison_dungeon
+        scadenfreude
     }
 }
 
@@ -66,6 +77,12 @@ event = {
         desc = single_alias_right[complex_desc]
     }
 
+    subtype[letter] = {
+        opening = localisation
+        opening = single_alias_right[complex_desc]
+        sender = scope[character]
+    }
+
     ## cardinality = 0..inf
     immediate = single_alias_right[effect_clause]
 
@@ -83,6 +100,7 @@ event = {
         name = single_alias_right[complex_desc]
         ## cardinality = 0..1
         name = {
+            ## cardinality = 0..inf
             trigger = single_alias_right[trigger_clause]
             text = localisation
         }
@@ -105,7 +123,7 @@ event = {
         trigger = single_alias_right[trigger_clause]
 
         ## cardinality = 0..1
-        ai_chance = single_alias_right[ai_chance_block]
+        ai_chance = single_alias_right[weight_block]
 
         ## cardinality = 0..1
         skill = enum[attributes]
@@ -119,6 +137,11 @@ event = {
         highlight_portrait = scope[character]
         ## cardinality = 0..1
         fallback = bool
+
+        ## cardinality = 0..1
+        show_as_unavailable = {
+            alias_name[trigger] = alias_match_left[trigger]
+        }
     }
     ## cardinality = 0..inf
     after = single_alias_right[effect_clause]
@@ -175,11 +198,15 @@ single_alias[event_portrait] = {
     character = scope[character]
     ## cardinality = 0..1
     animation = <portrait_animation>
+    ## cardinality = 0..1
+    animation = enum[missing_animations] # For some reason these does not exist in game files.
     ## cardinality = 0..inf
     triggered_animation = {
         trigger = single_alias_right[trigger_clause]
+        ## cardinality = 0..1
         animation = <portrait_animation>
+        ## cardinality = 0..1
+        animation = enum[missing_animations]
     }
-    animation = <animation>
 }
 
