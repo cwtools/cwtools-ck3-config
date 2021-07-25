@@ -3465,3 +3465,49 @@ alias[arithmetic_operation:any_pledged_attacker] = single_alias_right[iteration_
 ### Iterate through all pledged defenders within a great holy war any_pledged_defender = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[arithmetic_operation:any_pledged_defender] = single_alias_right[iteration_any_arith]
 
+## scope = faith
+## push_scope = character
+### Iterate through characters of the scoped faith every_faith_character = { limit = { <triggers> } <effects> }
+alias[arithmetic_operation:every_faith_character] = single_alias_right[iteration_every_arith]
+## scope = faith
+## push_scope = character
+### Iterate through playable rulers of the scoped faith every_faith_playable_ruler = { limit = { <triggers> } <effects> }
+alias[arithmetic_operation:every_faith_playable_ruler] = single_alias_right[iteration_every_arith]
+## scope = faith
+## push_scope = character
+### Iterate through rulers of the scoped faith every_faith_ruler = { limit = { <triggers> } <effects> }
+alias[arithmetic_operation:every_faith_ruler] = single_alias_right[iteration_every_arith]
+## scope = faith
+## push_scope = character
+### Iterate through characters of the scoped faith ordered_faith_character = { limit = { <triggers> } order_by = script_value position = int min = int max = script_value check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max <effects> }
+alias[arithmetic_operation:ordered_faith_character] = single_alias_right[iteration_ordered_arith]
+## scope = faith
+## push_scope = character
+### Iterate through playable rulers of the scoped faith ordered_faith_playable_ruler = { limit = { <triggers> } order_by = script_value position = int min = int max = script_value check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max <effects> }
+alias[arithmetic_operation:ordered_faith_playable_ruler] = single_alias_right[iteration_ordered_arith]
+## scope = faith
+## push_scope = character
+### Iterate through rulers of the scoped faith ordered_faith_ruler = { limit = { <triggers> } order_by = script_value position = int min = int max = script_value check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max <effects> }
+alias[arithmetic_operation:ordered_faith_ruler] = single_alias_right[iteration_ordered_arith]
+## scope = faith
+## push_scope = character
+### Iterate through characters of the scoped faith random_faith_character = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+alias[arithmetic_operation:random_faith_character] = single_alias_right[iteration_random_arith]
+## scope = faith
+## push_scope = character
+### Iterate through playable rulers of the scoped faith random_faith_playable_ruler = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+alias[arithmetic_operation:random_faith_playable_ruler] = single_alias_right[iteration_random_arith]
+## scope = faith
+## push_scope = character
+### Iterate through rulers of the scoped faith random_faith_ruler = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+alias[arithmetic_operation:random_faith_ruler] = single_alias_right[iteration_random_arith]
+## push_scope = culture
+### Iterate through all cultures in the game every_culture_global = { limit = { <triggers> } <effects> }
+alias[arithmetic_operation:every_culture_global] = single_alias_right[iteration_every_arith]
+## push_scope = culture
+### Iterate through all cultures in the game ordered_culture_global = { limit = { <triggers> } order_by = script_value position = int min = int max = script_value check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max <effects> }
+alias[arithmetic_operation:ordered_culture_global] = single_alias_right[iteration_ordered_arith]
+## push_scope = culture
+### Iterate through all cultures in the game random_culture_global = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+alias[arithmetic_operation:random_culture_global] = single_alias_right[iteration_random_arith]
+

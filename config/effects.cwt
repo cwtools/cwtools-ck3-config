@@ -1962,3 +1962,118 @@ alias[effect:set_mother] = scope[character]
 
 ### Adds a random building to the province, using the AI's construction logic<province> = { generate_building = yes }
 alias[effect:generate_building] = yes
+### Removes dynasty perk. remove_dynasty_perk = key
+alias[effect:remove_dynasty_perk] = replace_me
+### Remove innovation from a culture. remove_innovation = innovation_key
+alias[effect:remove_innovation] = replace_me
+### Changes the character's age by the given amount. Sets age to 0 if it'd end up below 0. Note that this will completely bypass birthday on-actions, age-related health, and so on, just like the console command    Usage: change_age = script value
+alias[effect:change_age] = replace_me
+### Forces a character's skills to be recalculated immediately, bypassing the wait for the daily tick. NOTE: Only use this when *absolutely* necessary, as it will impact performance negatively if misused    Usage: force_character_skill_recalculation = yes/no
+alias[effect:force_character_skill_recalculation] = replace_me
+### makes a character pregnant. Doesn't error on things like celibacy   father= 'the real father'  number_of_children= X  known_bastard=yes/no
+alias[effect:make_pregnant_no_checks] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_best_friend] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_bully] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_court_physician] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_crush] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_friend] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_guardian] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_intrigue_mentor] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_intrigue_student] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_lover] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_mentor] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_nemesis] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_oaf] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_potential_friend] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_potential_lover] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_potential_rival] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_rival] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_soldier_friend] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_soulmate] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_student] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_victim] = replace_me
+### Removes scripted relationship
+alias[effect:remove_relation_ward] = replace_me
+### Sets the character's age. Note that this will completely bypass birthday on-actions, age-related health, and so on, just like the console command    Usage: set_age = script value
+alias[effect:set_age] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_best_friend] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_bully] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_court_physician] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_crush] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_friend] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_guardian] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_intrigue_mentor] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_intrigue_student] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_lover] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_mentor] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_nemesis] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_oaf] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_potential_friend] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_potential_lover] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_potential_rival] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_rival] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_soldier_friend] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_soulmate] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_student] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_victim] = replace_me
+### Sets scripted relationship
+alias[effect:set_relation_ward] = replace_me
+### Deactivate an active holy site<faith_scope> = { deactivate_holy_site = <holy_site_name> }
+alias[effect:deactivate_holy_site] = replace_me
+### Adds loot to the currently scoped raiding army. Usage: 	add_loot = VALUE
+alias[effect:add_loot] = replace_me
+### Teleports the army to the given location. Cannot be done while in combat. Will cause combat to happen with this army as the attacker if there's hostiles in the target set_army_location = scope:province
+alias[effect:set_army_location] = replace_me
+### Removes all traits for the character. clear_traits = yes
+alias[effect:clear_traits] = replace_me
+### Adds all traits of the target to the character. Skips any traits that the character isn't allowed to have. Will not remove the character's existing traits. copy_traits = scope:character
+alias[effect:copy_traits] = replace_me
+### Like trigger_event, except it'll print the trigger fulfillment and immediate effects of the event too
+alias[effect:debug_trigger_event] = replace_me
+### Saves the scoped character's opinion of the target character as an arbitrarily-named target to be referenced later in the (unbroken) event chain save_opinion_value_as = { name = <string> target = x }
+alias[effect:save_opinion_value_as] = replace_me
+### Saves the scoped character's opinion of the target character as an arbitrarily-named target to be referenced later in the in the same effect save_temporary_opinion_value_as = { name = <string> target = x 
+alias[effect:save_temporary_opinion_value_as] = replace_me
+### Set the gender of the unborn child set_pregnancy_gender = female/male/random
+alias[effect:set_pregnancy_gender] = replace_me
+

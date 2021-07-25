@@ -1686,3 +1686,28 @@ alias[effect:random_pledged_attacker] = single_alias_right[iteration_random]
 
 ### Iterate through all pledged defenders within a great holy war random_pledged_defender = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_pledged_defender] = single_alias_right[iteration_random]
+### Iterate through characters of the scoped faith every_faith_character = { limit = { <triggers> } <effects> }
+alias[effect:every_faith_character] = single_alias_right[iteration_every]
+### Iterate through playable rulers of the scoped faith every_faith_playable_ruler = { limit = { <triggers> } <effects> }
+alias[effect:every_faith_playable_ruler] = single_alias_right[iteration_every]
+### Iterate through rulers of the scoped faith every_faith_ruler = { limit = { <triggers> } <effects> }
+alias[effect:every_faith_ruler] = single_alias_right[iteration_every]
+### Iterate through characters of the scoped faith ordered_faith_character = { limit = { <triggers> } order_by = script_value position = int min = int max = script_value check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max <effects> }
+alias[effect:ordered_faith_character] = single_alias_right[iteration_ordered]
+### Iterate through playable rulers of the scoped faith ordered_faith_playable_ruler = { limit = { <triggers> } order_by = script_value position = int min = int max = script_value check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max <effects> }
+alias[effect:ordered_faith_playable_ruler] = single_alias_right[iteration_ordered]
+### Iterate through rulers of the scoped faith ordered_faith_ruler = { limit = { <triggers> } order_by = script_value position = int min = int max = script_value check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max <effects> }
+alias[effect:ordered_faith_ruler] = single_alias_right[iteration_ordered]
+### Iterate through characters of the scoped faith random_faith_character = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+alias[effect:random_faith_character] = single_alias_right[iteration_random]
+### Iterate through playable rulers of the scoped faith random_faith_playable_ruler = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+alias[effect:random_faith_playable_ruler] = single_alias_right[iteration_random]
+### Iterate through rulers of the scoped faith random_faith_ruler = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+alias[effect:random_faith_ruler] = single_alias_right[iteration_random]
+### Iterate through all cultures in the game every_culture_global = { limit = { <triggers> } <effects> }
+alias[effect:every_culture_global] = single_alias_right[iteration_every]
+### Iterate through all cultures in the game ordered_culture_global = { limit = { <triggers> } order_by = script_value position = int min = int max = script_value check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max <effects> }
+alias[effect:ordered_culture_global] = single_alias_right[iteration_ordered]
+### Iterate through all cultures in the game random_culture_global = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+alias[effect:random_culture_global] = single_alias_right[iteration_random]
+
