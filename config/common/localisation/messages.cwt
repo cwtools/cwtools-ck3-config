@@ -1,14 +1,10 @@
 types = {
     type[message] = {
         path = "game/common/messages"
-
-        localisation = {
-            Name = "$"
-        }
     }
 }
 
-my_message = {
+message = {
     ## cardinality = 0..1
     ### Where to display the message; default: feed
     display = enum[message_displays]
