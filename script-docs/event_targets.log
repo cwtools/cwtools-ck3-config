@@ -746,6 +746,12 @@ Output Scopes: dynasty
 
 --------------------
 
+event_id - Unknown, add something in code registration
+Global Link: yes
+Output Scopes: flag
+
+--------------------
+
 faith - Unknown, add something in code registration
 Requires Data: yes
 Global Link: yes
@@ -956,6 +962,7 @@ is_child_of_concubine
 concubine
 character
 court_physician
+culture
 old_culture
 special
 dangerous
@@ -990,3 +997,10 @@ lease_revoked
 faction_demand
 swear_fealty
 transfer_type
+female
+ally
+ruler_designer
+current_weight
+weight_for_portrait
+prowess
+will_override_government

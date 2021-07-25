@@ -5,6 +5,7 @@ Effect Documentation:
 add_dynasty_modifier - Add a modifier to a dynasty
 add_dynasty_modifier = name
 add_dynasty_modifier = { modifier = name days/weeks/months/years = int }
+You can also add an optional 'desc' field. This is a dynamic description that'll be used for your timed modifier
 Supported Scopes: dynasty
 
 --------------------
@@ -64,9 +65,15 @@ Supported Scopes: dynasty
 
 --------------------
 
+remove_dynasty_perk - Removes dynasty perk. remove_dynasty_perk = key
+Supported Scopes: dynasty
+
+--------------------
+
 add_house_modifier - Add a modifier to a house
 add_house_modifier = name
 add_house_modifier = { modifier = name days/weeks/months/years = int }
+You can also add an optional 'desc' field. This is a dynamic description that'll be used for your timed modifier
 Supported Scopes: dynasty house
 
 --------------------
@@ -206,6 +213,7 @@ Supported Scopes: scheme
 add_county_modifier - Add a modifier to a county
 add_county_modifier = name
 add_county_modifier = { modifier = name days/weeks/months/years = int }
+You can also add an optional 'desc' field. This is a dynamic description that'll be used for your timed modifier
 Supported Scopes: landed title
 
 --------------------
@@ -1098,7 +1106,7 @@ Supported Targets: character
 
 --------------------
 
-add_innovation - Add innovation to a culture
+add_innovation - Add innovation to a culture. add_innovation = innovation_key
 Supported Scopes: culture
 
 --------------------
@@ -1120,6 +1128,11 @@ Supported Scopes: culture
 
 --------------------
 
+remove_innovation - Remove innovation from a culture. remove_innovation = innovation_key
+Supported Scopes: culture
+
+--------------------
+
 add_character_flag - adds a character flag
 usage:
 add_character_flag = X
@@ -1132,6 +1145,7 @@ Supported Scopes: character
 add_character_modifier - Add a modifier to a character
 add_character_modifier = name
 add_character_modifier = { modifier = name days/weeks/months/years = int }
+You can also add an optional 'desc' field. This is a dynamic description that'll be used for your timed modifier
 Supported Scopes: character
 
 --------------------
@@ -1450,6 +1464,12 @@ Supported Targets: character
 
 --------------------
 
+change_age - Changes the character's age by the given amount. Sets age to 0 if it'd end up below 0. Note that this will completely bypass birthday on-actions, age-related health, and so on, just like the console command
+   Usage: change_age = script value
+Supported Scopes: character
+
+--------------------
+
 change_current_weight - Change the current weight of the scoped character
 change_current_weight = 20
 Supported Scopes: character
@@ -1482,6 +1502,11 @@ Supported Scopes: character
 
 change_target_weight - Change the target weight of the scoped character
 change_target_weight = 20
+Supported Scopes: character
+
+--------------------
+
+change_trait_rank - Changes the trait rank = { trait = trait_group rank = change max = maximum new rank }
 Supported Scopes: character
 
 --------------------
@@ -2285,6 +2310,13 @@ Supported Scopes: character
 
 --------------------
 
+force_character_skill_recalculation - Forces a character's skills to be recalculated immediately, bypassing the wait for the daily tick.
+NOTE: Only use this when *absolutely* necessary, as it will impact performance negatively if misused
+   Usage: force_character_skill_recalculation = yes/no
+Supported Scopes: character
+
+--------------------
+
 force_vote_as - Forces the character to vote the same as the target
 force_vote_as = { target = someone days/months/years = x }
 Supported Scopes: character
@@ -2351,6 +2383,14 @@ Supported Targets: character
 --------------------
 
 make_pregnant - makes a character pregnant 
+ father= 'the real father'
+ number_of_children= X
+ known_bastard=yes/no
+Supported Scopes: character
+
+--------------------
+
+make_pregnant_no_checks - makes a character pregnant. Doesn't error on things like celibacy 
  father= 'the real father'
  number_of_children= X
  known_bastard=yes/no
@@ -4784,6 +4824,12 @@ Supported Scopes: character
 
 --------------------
 
+set_age - Sets the character's age. Note that this will completely bypass birthday on-actions, age-related health, and so on, just like the console command
+   Usage: set_age = script value
+Supported Scopes: character
+
+--------------------
+
 set_beneficiary - The target character becomes the beneficiary of the scoped character. set_beneficiary = some character
 Supported Scopes: character
 Supported Targets: character
@@ -5077,6 +5123,11 @@ Supported Scopes: character
 
 --------------------
 
+set_trait_rank - Sets the trait rank = { trait = trait_group rank = new rank }
+Supported Scopes: character
+
+--------------------
+
 set_vassal_contract_modification_blocked - Blocks the vassal contract from being modified with regards to being checked by 'vassal_contract_is_blocked_from_modification'
 Supported Scopes: character
 
@@ -5093,6 +5144,7 @@ spawn_army = {
 	 location = province
 	 origin = province # optional, location used if not set. This is used for where to base bonuses and the like on
 	 war = war # optional. If set, the stack will disband after the war ends
+	 war_keep_on_attacker_victory = yes/no # Default: no. Tied to a war. Normally the stack will disband upon victory (if a war is specified), but this parameter prevents that from happening upon attacker victory
 	 inheritable = yes/no # Default: yes
 	 uses_supply = yes/no # Default: yes
 	 army = army # optional. If set, the stack will merge into this army
@@ -5158,7 +5210,7 @@ Supported Scopes: faction
 
 --------------------
 
-destroy_faction - the scope faction is destoryed [yes|no]
+destroy_faction - the scoped faction is destroyed [yes|no]
 Supported Scopes: faction
 
 --------------------
@@ -5388,6 +5440,11 @@ Supported Scopes: faith
 
 --------------------
 
+deactivate_holy_site - Deactivate an active holy site<faith_scope> = { deactivate_holy_site = <holy_site_name> }
+Supported Scopes: faith
+
+--------------------
+
 every_defensive_great_holy_wars - Iterate through all great holy wars this faith is defending against
 every_defensive_great_holy_wars = { limit = { <triggers> } <effects> }
 Supported Scopes: faith
@@ -5395,10 +5452,31 @@ Supported Targets: great holy war
 
 --------------------
 
+every_faith_character - Iterate through characters of the scoped faith
+every_faith_character = { limit = { <triggers> } <effects> }
+Supported Scopes: faith
+Supported Targets: character
+
+--------------------
+
 every_faith_holy_order - Iterate through all holy orders of the faith
 every_faith_holy_order = { limit = { <triggers> } <effects> }
 Supported Scopes: faith
 Supported Targets: holy order
+
+--------------------
+
+every_faith_playable_ruler - Iterate through playable rulers of the scoped faith
+every_faith_playable_ruler = { limit = { <triggers> } <effects> }
+Supported Scopes: faith
+Supported Targets: character
+
+--------------------
+
+every_faith_ruler - Iterate through rulers of the scoped faith
+every_faith_ruler = { limit = { <triggers> } <effects> }
+Supported Scopes: faith
+Supported Targets: character
 
 --------------------
 
@@ -5423,6 +5501,20 @@ Supported Targets: great holy war
 
 --------------------
 
+ordered_faith_character - Iterate through characters of the scoped faith
+ordered_faith_character = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: faith
+Supported Targets: character
+
+--------------------
+
 ordered_faith_holy_order - Iterate through all holy orders of the faith
 ordered_faith_holy_order = {
 limit = { <triggers> }
@@ -5434,6 +5526,34 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 Supported Scopes: faith
 Supported Targets: holy order
+
+--------------------
+
+ordered_faith_playable_ruler - Iterate through playable rulers of the scoped faith
+ordered_faith_playable_ruler = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: faith
+Supported Targets: character
+
+--------------------
+
+ordered_faith_ruler - Iterate through rulers of the scoped faith
+ordered_faith_ruler = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: faith
+Supported Targets: character
 
 --------------------
 
@@ -5458,10 +5578,31 @@ Supported Targets: great holy war
 
 --------------------
 
+random_faith_character - Iterate through characters of the scoped faith
+random_faith_character = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: faith
+Supported Targets: character
+
+--------------------
+
 random_faith_holy_order - Iterate through all holy orders of the faith
 random_faith_holy_order = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: faith
 Supported Targets: holy order
+
+--------------------
+
+random_faith_playable_ruler - Iterate through playable rulers of the scoped faith
+random_faith_playable_ruler = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: faith
+Supported Targets: character
+
+--------------------
+
+random_faith_ruler - Iterate through rulers of the scoped faith
+random_faith_ruler = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: faith
+Supported Targets: character
 
 --------------------
 
@@ -5624,6 +5765,7 @@ Supported Scopes: province
 add_province_modifier - Add a modifier to a province
 add_province_modifier = name
 add_province_modifier = { modifier = name days/weeks/months/years = int }
+You can also add an optional 'desc' field. This is a dynamic description that'll be used for your timed modifier
 Supported Scopes: province
 
 --------------------
@@ -5844,6 +5986,13 @@ Supported Targets: landed title
 
 --------------------
 
+add_loot - Adds loot to the currently scoped raiding army.
+Usage:
+	add_loot = VALUE
+Supported Scopes: army
+
+--------------------
+
 assign_commander - Assign a commander for the scoped army
 set_commander = scope:a_character
 Supported Scopes: army
@@ -5854,6 +6003,13 @@ Supported Targets: character
 remove_commander - Removes the currently assigned commander from the scoped army
 remove_commander = yes
 Supported Scopes: army
+
+--------------------
+
+set_army_location - Teleports the army to the given location. Cannot be done while in combat. Will cause combat to happen with this army as the attacker if there's hostiles in the target
+set_army_location = scope:province
+Supported Scopes: army
+Supported Targets: province
 
 --------------------
 
@@ -5995,11 +6151,6 @@ Supported Scopes: none
 
 --------------------
 
-change_trait_rank - Changes the trait rank = { trait = trait_group rank = change max = maximum new rank }
-Supported Scopes: none
-
---------------------
-
 change_variable - Changes the value or a numeric variable
 change_variable = { name = X operation = Y }
 Where X is the name of the numeric variable to modify
@@ -6051,6 +6202,11 @@ Supported Scopes: none
 
 --------------------
 
+clear_traits - Removes all traits for the character. clear_traits = yes
+Supported Scopes: none
+
+--------------------
+
 clear_variable_list - Empties the list
 clear_variable_list = variable_name
 Supported Scopes: none
@@ -6074,6 +6230,12 @@ Supported Scopes: none
 
 complete_activity - completes the activity, complete_activity = yes ends the activity and runs the on_complete effect, complete_activity = no ends the activity without running the effect
 Supported Scopes: none
+
+--------------------
+
+copy_traits - Adds all traits of the target to the character. Skips any traits that the character isn't allowed to have. Will not remove the character's existing traits. copy_traits = scope:character
+Supported Scopes: none
+Supported Targets: character
 
 --------------------
 
@@ -6202,6 +6364,11 @@ Supported Scopes: none
 
 --------------------
 
+debug_trigger_event - Like trigger_event, except it'll print the trigger fulfillment and immediate effects of the event too
+Supported Scopes: none
+
+--------------------
+
 divorce - Divorces the scope character from the target character. divorce = target
 Supported Scopes: none
 Supported Targets: character
@@ -6262,6 +6429,13 @@ every_county_in_region - Iterate through all counties in the region. Put 'region
 every_county_in_region = { limit = { <triggers> } <effects> }
 Supported Scopes: none
 Supported Targets: landed title
+
+--------------------
+
+every_culture_global - Iterate through all cultures in the game
+every_culture_global = { limit = { <triggers> } <effects> }
+Supported Scopes: none
+Supported Targets: culture
 
 --------------------
 
@@ -6444,6 +6618,20 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 Supported Scopes: none
 Supported Targets: landed title
+
+--------------------
+
+ordered_culture_global - Iterate through all cultures in the game
+ordered_culture_global = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: none
+Supported Targets: culture
 
 --------------------
 
@@ -6667,6 +6855,13 @@ Supported Targets: landed title
 
 --------------------
 
+random_culture_global - Iterate through all cultures in the game
+random_culture_global = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: none
+Supported Targets: culture
+
+--------------------
+
 random_duchy - Iterate through all duchies in the game
 random_duchy = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: none
@@ -6858,6 +7053,12 @@ Supported Scopes: none
 
 --------------------
 
+save_opinion_value_as - Saves the scoped character's opinion of the target character as an arbitrarily-named target to be referenced later in the (unbroken) event chain
+save_opinion_value_as = { name = <string> target = x }
+Supported Scopes: none
+
+--------------------
+
 save_scope_as - Saves the current scope as an arbitrarily-named target to be referenced later in the (unbroken) event chain
 save_event_target_as = <string>
 Supported Scopes: none
@@ -6866,6 +7067,12 @@ Supported Scopes: none
 
 save_scope_value_as - Saves a numerical or bool value as an arbitrarily-named target to be referenced later in the (unbroken) event chain
 save_scope_value_as = { name = <string> value = x }
+Supported Scopes: none
+
+--------------------
+
+save_temporary_opinion_value_as - Saves the scoped character's opinion of the target character as an arbitrarily-named target to be referenced later in the in the same effect
+save_temporary_opinion_value_as = { name = <string> target = x 
 Supported Scopes: none
 
 --------------------
@@ -6911,6 +7118,7 @@ Where X is the name of the variable used to then access it
 Where Y is any event target, bool, value, script value or flag (flag:W)
 An optional days where Z is the number of days or script value
 This variable will be accessible with <type_>var:X. With type being in a scope object or in a top scope
+Can also be used as set_variable = X (equivalent to set_variable = { name = X value = yes })
 Supported Scopes: none
 
 --------------------
@@ -6921,11 +7129,13 @@ Where X is the name of the variable used to then access it
 Where Y is any event target, bool, value, script value or flag (flag:W)
 An optional days where Z is the number of days or script value
 This variable will be accessible with <type_>var:X. With type being in a scope object or in a top scope
+Can also be used as set_variable = X (equivalent to set_variable = { name = X value = yes })
 Supported Scopes: none
 
 --------------------
 
-set_trait_rank - Sets the trait rank = { trait = trait_group rank = new rank }
+set_pregnancy_gender - Set the gender of the unborn child
+set_pregnancy_gender = female/male/random
 Supported Scopes: none
 
 --------------------
@@ -6936,6 +7146,7 @@ Where X is the name of the variable used to then access it
 Where Y is any event target, bool, value, script value or flag (flag:W)
 An optional days where Z is the number of days or script value
 This variable will be accessible with <type_>var:X. With type being in a scope object or in a top scope
+Can also be used as set_variable = X (equivalent to set_variable = { name = X value = yes })
 Supported Scopes: none
 
 --------------------

@@ -54,6 +54,7 @@ Global Promotes = {
 	GetFocus -> FocusType
 	GetGameRules -> JominiGameRules
 	GetGeographicalRegion -> GeographicalRegion
+	GetGlobalVariable -> Scope
 	GetGovernment -> GovernmentType
 	GetIllustration -> Illustration
 	GetLaw -> Law
@@ -70,6 +71,7 @@ Global Promotes = {
 	GetServerInfo -> ServerInformation
 	GetTrait -> Trait
 	GetTraitForIndex -> Trait
+	GetTraitGroup -> TraitGroup
 	GetTutorial -> Tutorial
 	GetVariableSystem -> VariableSystem
 	GetVassalContractType -> VassalContractType
@@ -86,14 +88,15 @@ Global Promotes = {
 	LEFT_CHARACTER -> Character
 	LEFT_TITLE -> Title
 	LIFESTYLE -> Lifestyle
+	MEN_AT_ARMS_TYPE -> MenAtArmsType
+	MEN_AT_ARMS_TYPE_2 -> MenAtArmsType
 	MERCENARY -> MercenaryCompany
+	MODIFIER_ITEM -> ModifierItem
 	PERK -> Perk
 	PREV -> Scope
 	PROVINCE -> Province
 	RECIPIENT -> Character
 	REGIMENT -> Regiment
-	REGIMENT_TYPE -> RegimentType
-	REGIMENT_TYPE_2 -> RegimentType
 	RELATION -> ScriptedRelation
 	RELIGION -> Religion
 	RIGHT_CHARACTER -> Character
@@ -106,6 +109,7 @@ Global Promotes = {
 	SECONDARY_RECIPIENT -> Character
 	SECRET -> Secret
 	SIEGE -> Siege
+	TARGET_ARMY -> Army
 	TARGET_CHARACTER -> Character
 	TARGET_CHARACTER_2 -> Character
 	TARGET_CULTURE -> Culture
@@ -130,9 +134,11 @@ Global Functions = {
 	Abs_float -> float
 	Abs_int32 -> int32
 	AccessSuggestionItems -> [unregistered]
+	AddTextIf -> CString
 	AddWatchWindow -> void
 	Add_CFixedPoint -> CFixedPoint
 	Add_CFixedPoint64 -> [unregistered]
+	Add_CVector2f -> CVector2f
 	Add_float -> float
 	Add_int32 -> int32
 	Add_uint32 -> uint32
@@ -146,13 +152,17 @@ Global Functions = {
 	CanChangeMapMode -> bool
 	CanDecreaseGameSpeed -> bool
 	CanEditSettingsAfterHost -> bool
+	CanGetAchievements -> bool
 	CanIncreaseGameSpeed -> bool
 	CanOpenLobby -> bool
+	ClearErrorLog -> void
 	ClearExploringRealms -> void
 	ClearHostError -> void
 	ClearObserver -> void
 	ClearResetReactiveTutorialPopup -> void
 	CloseAllTooltips -> void
+	CloseGameView -> void
+	ConcatIfNeitherEmpty -> CString
 	Concatenate -> CString
 	Concept -> CString
 	CopyBuildVersionInfoToClipboard -> void
@@ -174,6 +184,7 @@ Global Functions = {
 	DefaultOnSiegeClick -> void
 	EqualTo_CFixedPoint -> bool
 	EqualTo_CFixedPoint64 -> bool
+	EqualTo_CVector2f -> bool
 	EqualTo_float -> bool
 	EqualTo_int32 -> bool
 	EqualTo_string -> bool
@@ -214,8 +225,10 @@ Global Functions = {
 	GetDynastyPrestigeLevelEffect -> CString
 	GetDynastyPrestigeLevelName -> CString
 	GetDynastyPrestigeLevelNext -> CString
+	GetEducationTraits -> [unregistered]
 	GetEnumIndex -> CVector2i
 	GetErrorHoofFrame -> int32
+	GetEthnicities -> [unregistered]
 	GetFertility -> CFixedPoint
 	GetFertilityLevel -> CString
 	GetGameTimeDifferenceForDiffDays -> CString
@@ -225,6 +238,8 @@ Global Functions = {
 	GetGameVersionDisplay -> CString
 	GetGameVersionInfo -> CString
 	GetGameVersionInfoShort -> CString
+	GetGlobalList -> [unregistered]
+	GetGlobalVariable -> [unregistered]
 	GetGovernment -> [unregistered]
 	GetGuiPositionFromPercentCoordinates -> [unregistered]
 	GetHighlightTint -> CVector4f
@@ -254,13 +269,16 @@ Global Functions = {
 	GetNullCharacterDataModel -> [unregistered]
 	GetNumberAbove_int32 -> int32
 	GetOpenLobbyTooltip -> CString
+	GetOtherRulerDesignerTraits -> [unregistered]
 	GetPausedBy -> CString
+	GetPersonalityTraits -> [unregistered]
 	GetPietyLevelDesc -> CString
 	GetPietyLevelIcon -> [unregistered]
 	GetPietyLevelName -> CString
 	GetPlayer -> [unregistered]
 	GetPlayerArmyComposition -> [unregistered]
 	GetPlayerBalance -> CFixedPoint
+	GetPlayerRaiseAllMenAtArmsTooltip -> CString
 	GetPlayerRaiseAllRaidersTooltip -> CString
 	GetPlayerRaiseAllTooltip -> CString
 	GetPlayersCount -> int32
@@ -282,6 +300,10 @@ Global Functions = {
 	GetStringSettingText -> CString
 	GetTimeAnyoneUnpause -> int32
 	GetTimeDifferenceWithDays -> CString
+	GetTraitGroup -> [unregistered]
+	GetTraits -> [unregistered]
+	GetTraitsWithFlag -> [unregistered]
+	GetTraitsWithoutFlag -> [unregistered]
 	GetVarTimeRemaining -> int32
 	GetVassalContractType -> [unregistered]
 	GetViewHistoryTooltip -> CString
@@ -312,8 +334,11 @@ Global Functions = {
 	IntToFloat -> float
 	IntToFrameIndex -> int32
 	IsAutoSaving -> bool
+	IsBottomLeftWindowOpen -> bool
+	IsBottomWindowOpen -> bool
 	IsBuildDebug -> bool
 	IsCameraRestrictionsEnabled -> bool
+	IsCenterWindowOpen -> bool
 	IsContractBlockedFromBeingModified -> bool
 	IsContractBlockedFromBeingModifiedText -> CString
 	IsDataModelEmpty -> bool
@@ -327,17 +352,25 @@ Global Functions = {
 	IsHolyOrderDetailViewShown -> bool
 	IsHost -> bool
 	IsInGame -> bool
+	IsInteractionConfirmationWindowOpen -> bool
 	IsInteractionMenuOpenForCharacter -> bool
 	IsIronmanEnabled -> bool
+	IsLeftWindowOpen -> bool
+	IsMachineRulerDesigning -> bool
 	IsManuallyPaused -> bool
 	IsMapMode -> bool
 	IsMercenaryCompanyDetailViewShown -> bool
 	IsObserver -> bool
+	IsOverviewWindowOpen -> bool
 	IsPauseMenuShown -> bool
 	IsPausedByEvent -> bool
 	IsPausedByMe -> bool
 	IsPreparationLobby -> bool
+	IsRightSubwindowOpen -> bool
+	IsRightWindowNoSidebarOpen -> bool
+	IsRightWindowOpen -> bool
 	IsTutorialTagOpen -> bool
+	JoinText -> CString
 	JominiAccessPlayerJoinRequests -> [unregistered]
 	JominiAreAchievementsAvailable -> bool
 	JominiGetAchievementsNotAvailableString -> CString
@@ -359,6 +392,9 @@ Global Functions = {
 	LessThan_int32 -> bool
 	LessThan_uint32 -> bool
 	Localize -> CString
+	MakeScopeBool -> Scope
+	MakeScopeFlag -> Scope
+	MakeScopeValue -> Scope
 	MapEditorHasGameMapMode -> bool
 	Max_CFixedPoint -> CFixedPoint
 	Max_CFixedPoint64 -> [unregistered]
@@ -372,6 +408,7 @@ Global Functions = {
 	Min_uint32 -> uint32
 	Multiply_CFixedPoint -> CFixedPoint
 	Multiply_CFixedPoint64 -> [unregistered]
+	Multiply_CVector2f -> CVector2f
 	Multiply_float -> float
 	Multiply_int32 -> int32
 	Multiply_uint32 -> uint32
@@ -382,6 +419,7 @@ Global Functions = {
 	Not -> bool
 	NotEqualTo_CFixedPoint -> bool
 	NotEqualTo_CFixedPoint64 -> bool
+	NotEqualTo_CVector2f -> bool
 	NotEqualTo_float -> bool
 	NotEqualTo_int32 -> bool
 	NotEqualTo_uint32 -> bool
@@ -449,11 +487,14 @@ Global Functions = {
 	PdxProfilerSelectThread -> void
 	PdxProfilerSetFrame -> void
 	PdxProfilerToggleRecording -> void
+	PlaySfxEvent -> void
 	PlayerCanDisbandAll -> bool
+	PlayerCanRaiseAnyMenAtArmsRallyPoint -> bool
 	PlayerCanRaiseAnyRaiderRallyPoint -> bool
 	PlayerCanRaiseAnyRallyPoint -> bool
 	PlayerDisbandAll -> void
 	PlayerIsHost -> bool
+	PlayerRaiseAllMenAtArmsRegiments -> void
 	PlayerRaiseAllRaidRegiments -> void
 	PlayerRaiseAllRegiments -> void
 	PlayerShouldDisbandAll -> bool
@@ -477,6 +518,7 @@ Global Functions = {
 	SetIronmanEnabledStatus -> void
 	SetMapMode -> void
 	SetRandomPlayableObserverCharacter -> void
+	ShouldPromptForRulerDesigner -> bool
 	ShouldShowCharacterDebugInfo -> bool
 	ShouldShowCharacterTooltips -> bool
 	ShouldShowSegmentedControlForSetting -> bool
@@ -486,6 +528,7 @@ Global Functions = {
 	StringIsEmpty -> bool
 	Subtract_CFixedPoint -> CFixedPoint
 	Subtract_CFixedPoint64 -> [unregistered]
+	Subtract_CVector2f -> CVector2f
 	Subtract_float -> float
 	Subtract_int32 -> int32
 	Subtract_uint32 -> uint32
@@ -502,10 +545,12 @@ Global Functions = {
 	ToggleMapEditorGameMapModeActive -> void
 	ToggleMercenaryCompanyDetailView -> void
 	ToggleOnCoatOfArmsClick -> void
+	TryStartRulerDesigning -> void
 	UsesTimerLocking -> bool
 	WatchWindowsEnabled -> bool
 	abandon_celibacy -> [unregistered]
 	abandon_celibacy_decision -> [unregistered]
+	abandon_hook_interaction -> [unregistered]
 	abduct -> [unregistered]
 	abduct_scheme -> [unregistered]
 	abduct_schemes -> [unregistered]
@@ -600,7 +645,6 @@ Global Functions = {
 	cadet_branch -> [unregistered]
 	cadet_branches -> [unregistered]
 	cadet_branching -> [unregistered]
-	camera -> [unregistered]
 	capital -> [unregistered]
 	capital_duchy -> [unregistered]
 	castle -> [unregistered]
@@ -643,6 +687,7 @@ Global Functions = {
 	claim_throne_interaction -> [unregistered]
 	claimant -> [unregistered]
 	claimant_faction -> [unregistered]
+	claimant_factions -> [unregistered]
 	claimants -> [unregistered]
 	claimed -> [unregistered]
 	claims -> [unregistered]
@@ -754,8 +799,13 @@ Global Functions = {
 	de_jure -> [unregistered]
 	de_jure_capital -> [unregistered]
 	de_jure_drift -> [unregistered]
+	de_jure_drift_drift -> [unregistered]
+	de_jure_drift_drifted -> [unregistered]
+	de_jure_partition -> [unregistered]
+	de_jure_partitioned -> [unregistered]
 	dead_soldiers -> [unregistered]
 	debt -> [unregistered]
+	deceitful_progress_hostile_schemes_decision -> [unregistered]
 	decide -> [unregistered]
 	decision -> [unregistered]
 	decisions -> [unregistered]
@@ -767,11 +817,16 @@ Global Functions = {
 	denouncement -> [unregistered]
 	depose -> [unregistered]
 	deposed -> [unregistered]
+	designate_chief_sacrifice -> [unregistered]
+	designate_chief_sacrifice_article -> [unregistered]
+	designate_chief_sacrifice_chief_sacrifice -> [unregistered]
+	designate_chief_sacrifice_or_who -> [unregistered]
 	designated_heir -> [unregistered]
 	detail_zoom -> [unregistered]
 	develop_county -> [unregistered]
 	development -> [unregistered]
 	development_growth -> [unregistered]
+	diligent_development_focus_decision -> [unregistered]
 	diplomacy -> [unregistered]
 	diplomacy_i -> [unregistered]
 	diplomacy_lifestyle -> [unregistered]
@@ -785,6 +840,7 @@ Global Functions = {
 	diseases -> [unregistered]
 	disinherit -> [unregistered]
 	disinherited -> [unregistered]
+	dismiss_strong_hook_interaction -> [unregistered]
 	disparate_tribes -> [unregistered]
 	disparate_tribes_tribal_authority -> [unregistered]
 	disrupt_schemes -> [unregistered]
@@ -845,6 +901,9 @@ Global Functions = {
 	electors -> [unregistered]
 	eligible_child -> [unregistered]
 	eligible_children -> [unregistered]
+	elope -> [unregistered]
+	elope_scheme -> [unregistered]
+	elope_schemes -> [unregistered]
 	embark -> [unregistered]
 	embarkation -> [unregistered]
 	embarked -> [unregistered]
@@ -926,6 +985,8 @@ Global Functions = {
 	flowery_wars -> [unregistered]
 	focus -> [unregistered]
 	focuses -> [unregistered]
+	force_duel_anyone_interaction -> [unregistered]
+	force_duel_criminals_interaction -> [unregistered]
 	foreign_affairs -> [unregistered]
 	fort_level -> [unregistered]
 	fort_level_i -> [unregistered]
@@ -938,6 +999,7 @@ Global Functions = {
 	friends -> [unregistered]
 	friends_possessive -> [unregistered]
 	garrison -> [unregistered]
+	garrison_reinforcement -> [unregistered]
 	gender_doctrines -> [unregistered]
 	gender_law -> [unregistered]
 	gender_laws -> [unregistered]
@@ -1001,6 +1063,8 @@ Global Functions = {
 	hooked -> [unregistered]
 	hooks -> [unregistered]
 	host -> [unregistered]
+	hostage -> [unregistered]
+	hostages -> [unregistered]
 	hostile_army -> [unregistered]
 	hostile_scheme -> [unregistered]
 	hostile_scheme_resistance -> [unregistered]
@@ -1018,6 +1082,7 @@ Global Functions = {
 	ill -> [unregistered]
 	illness -> [unregistered]
 	illnesses -> [unregistered]
+	impatient_rushing_all_schemes_decision -> [unregistered]
 	implicit_claim -> [unregistered]
 	implicit_claim_i -> [unregistered]
 	implicit_claims -> [unregistered]
@@ -1085,6 +1150,7 @@ Global Functions = {
 	levies -> [unregistered]
 	levy -> [unregistered]
 	liberty_faction -> [unregistered]
+	liberty_factions -> [unregistered]
 	liege -> [unregistered]
 	liege_taxes -> [unregistered]
 	lieges -> [unregistered]
@@ -1211,7 +1277,9 @@ Global Functions = {
 	piety_level -> [unregistered]
 	piety_levels -> [unregistered]
 	pilgrimage -> [unregistered]
+	pilgrimages -> [unregistered]
 	pious -> [unregistered]
+	playdate -> [unregistered]
 	player_heir -> [unregistered]
 	political_zoom -> [unregistered]
 	popular_faction -> [unregistered]
@@ -1237,7 +1305,9 @@ Global Functions = {
 	primary_titles -> [unregistered]
 	prison -> [unregistered]
 	prisoner -> [unregistered]
+	prisoner_of_war -> [unregistered]
 	prisoners -> [unregistered]
+	prisoners_of_war -> [unregistered]
 	prisons -> [unregistered]
 	promote_culture -> [unregistered]
 	prowess -> [unregistered]
@@ -1347,6 +1417,7 @@ Global Functions = {
 	seduction -> [unregistered]
 	sell_titles -> [unregistered]
 	sell_titles_decision -> [unregistered]
+	send_gift -> [unregistered]
 	sexuality -> [unregistered]
 	short_reign -> [unregistered]
 	shunned -> [unregistered]
@@ -1359,6 +1430,18 @@ Global Functions = {
 	sieges -> [unregistered]
 	sin -> [unregistered]
 	sinful -> [unregistered]
+	single_combat_duel -> [unregistered]
+	single_combat_duel_plural -> [unregistered]
+	single_combat_fight -> [unregistered]
+	single_combat_fight_plural -> [unregistered]
+	single_combat_fight_sudden_death -> [unregistered]
+	single_combat_injury_chance -> [unregistered]
+	single_combat_injury_chance_injure -> [unregistered]
+	single_combat_injury_chance_injury_risk -> [unregistered]
+	single_combat_prowess_bonus -> [unregistered]
+	single_combat_prowess_malus -> [unregistered]
+	single_combat_success_chance -> [unregistered]
+	single_combat_success_chance_skill -> [unregistered]
 	sins -> [unregistered]
 	skill -> [unregistered]
 	skills -> [unregistered]
@@ -1462,11 +1545,17 @@ Global Functions = {
 	transfer -> [unregistered]
 	transferred -> [unregistered]
 	transferring -> [unregistered]
+	trial_by_combat -> [unregistered]
+	trial_by_combat_combat -> [unregistered]
+	trial_by_combat_trial -> [unregistered]
+	trials_by_combat -> [unregistered]
 	tribal -> [unregistered]
 	tribal_authority -> [unregistered]
 	tribal_government -> [unregistered]
 	tribal_holding -> [unregistered]
+	tribal_holdings -> [unregistered]
 	tribe -> [unregistered]
+	tribes -> [unregistered]
 	troop_quality -> [unregistered]
 	truce -> [unregistered]
 	truces -> [unregistered]
@@ -1490,6 +1579,10 @@ Global Functions = {
 	usurp_title -> [unregistered]
 	usurpation -> [unregistered]
 	usurped -> [unregistered]
+	varangian_adventure -> [unregistered]
+	varangian_adventure_adventure -> [unregistered]
+	varangian_adventures -> [unregistered]
+	varangian_adventuring -> [unregistered]
 	vassal -> [unregistered]
 	vassal_limit -> [unregistered]
 	vassal_obligations -> [unregistered]
@@ -1535,7 +1628,10 @@ Global Functions = {
 	win -> [unregistered]
 	winning -> [unregistered]
 	wins -> [unregistered]
-	world_realms_zoom -> [unregistered]
+	winter -> [unregistered]
+	winter_severity_harsh -> [unregistered]
+	winter_severity_mild -> [unregistered]
+	winter_severity_normal -> [unregistered]
 }
 
 Types = {
@@ -1621,9 +1717,10 @@ Types = {
 		ActionsWentUp -> bool
 		GetGuiActionItems -> [unregistered]
 		GetNumberOfActions -> int32
+		GetNumberOfUnreadActions -> int32
 		GetSuggestionsDebugTooltip -> CString
 		HasAvailableActions -> bool
-		HasDangerousAction -> bool
+		HasVisibleDangerousAction -> bool
 		IsListVisible -> bool
 		MarkAllItemsAsRead -> void
 		ResetAllDismissed -> void
@@ -1768,6 +1865,20 @@ Types = {
 		SetCurrentFilterFromIndex -> void
 	}
 
+	AnchorItem = {
+		AccessSelf -> [unregistered]
+		GetAnchorIdAsString -> CString
+		GetDisplayString -> CString
+		GetIdValidator -> [unregistered]
+		GetTooltip -> CString
+		IsExpanded -> bool
+		IsLocked -> bool
+		Self -> [unregistered]
+		SetAnchorIdCallback -> void
+		ToggleExpanded -> void
+		ToggleLock -> void
+	}
+
 	Application = {
 		AccessSelf -> [unregistered]
 		Quit -> void
@@ -1815,21 +1926,26 @@ Types = {
 		GetSpecialArmyStatus -> CString
 		GetSupplyDesc -> CString
 		GetSupplyInfoForTooltip -> CString
+		GetSupplyStateTooltip -> CString
 		GetUnitId -> int32
 		HasEventTroops -> bool
 		HasLooterStance -> bool
 		IsEmbarked -> bool
 		IsEnemyOrHostileToPlayer -> bool
 		IsGathering -> bool
+		IsHovered -> bool
 		IsMoving -> bool
 		IsNeutralToPlayer -> bool
 		IsRaidArmy -> bool
 		IsRaidLootCapped -> bool
 		IsRecentlyDisembarked -> bool
 		IsRetreating -> bool
+		IsSelected -> bool
 		IsSieging -> bool
 		IsTakingRaidAction -> bool
 		MakeScope -> Scope
+		OnMouseEnter -> void
+		OnMouseLeave -> void
 		Self -> [unregistered]
 	}
 
@@ -1899,9 +2015,13 @@ Types = {
 
 	ArmyWindow = {
 		GetArmy -> Army
+		GetAttachedToArmy -> Army
 		GetCommanderMartialSkill -> SkillItem
 		GetUnitItem -> UnitItem
 		AccessSelf -> [unregistered]
+		AttachToLocalUnit -> void
+		BuildAttachToUnitTooltip -> CString
+		BuildDetachFromUnitTooltip -> CString
 		BuildDisbandTooltip -> CString
 		BuildEventTroopList -> CString
 		BuildMergeTooltip -> CString
@@ -1911,6 +2031,9 @@ Types = {
 		BuildSplitHalfTooltip -> CString
 		BuildSplitHiredAndEventTroopsTooltip -> CString
 		BuildToggleRaidingTooltip -> CString
+		CanAttachToAnyLocalUnit -> bool
+		CanAttachToMultipleLocalUnits -> bool
+		CanDetachFromUnit -> bool
 		CanDisband -> bool
 		CanMerge -> bool
 		CanReorgSelected -> bool
@@ -1923,9 +2046,11 @@ Types = {
 		CanToggleRaiding -> bool
 		Close -> void
 		CloseAndDeselect -> void
+		DetachFromUnit -> void
 		DisbandSelected -> void
 		GetAllArmiesCompositionString -> CString
 		GetArmyCompositionString -> CString
+		GetAttachedToArmy -> [unregistered]
 		GetCommanderTraits -> [unregistered]
 		GetCurrentNumberOfSoldiers -> int32
 		GetCurrentSupply -> int32
@@ -1946,9 +2071,9 @@ Types = {
 		GetShowCommandersTooltip -> CString
 		GetSoldierCountString -> CString
 		GetSupplyStateFrame -> int32
-		GetSupplyStateTooltip -> CString
 		GetTotalSoldierCountString -> CString
 		GetTroopItems -> [unregistered]
+		IsAttachedToAnyUnit -> bool
 		MergeSelected -> void
 		NextArmy -> void
 		OnNoCommanderClick -> void
@@ -1962,10 +2087,24 @@ Types = {
 		SplitSelectedForSiege -> void
 		SplitSelectedHiredAndEventTroops -> void
 		StopGathering -> void
+		ToggleAttachToWindow -> void
 		ToggleLooting -> void
 		ToggleRaiding -> void
 		ToggleReorganizationWindow -> void
 		ToggleSplitArmyWindow -> void
+	}
+
+	AttachToArmyWindow = {
+		GetSelectedArmy -> Army
+		AccessLocalUnits -> [unregistered]
+		AccessSelf -> [unregistered]
+		AttachToSelected -> void
+		GetSelectedArmy -> [unregistered]
+		HasSelectedUnit -> bool
+		Hide -> void
+		IsSelectedUnit -> bool
+		SelectUnit -> void
+		Self -> [unregistered]
 	}
 
 	Attribute = {
@@ -2100,6 +2239,14 @@ Types = {
 		Self -> [unregistered]
 	}
 
+	BlurThreshold = {
+		AccessSelf -> [unregistered]
+		GetValue -> float
+		Self -> [unregistered]
+		SetValue -> void
+		SetValueStr -> void
+	}
+
 	Bookmark = {
 		GetDate -> Date
 		AccessSelf -> [unregistered]
@@ -2175,20 +2322,6 @@ Types = {
 		Self -> [unregistered]
 	}
 
-	BrowserWindow = {
-		AccessSelf -> [unregistered]
-		CanGoBack -> bool
-		CanGoForward -> bool
-		Close -> void
-		GetUrl -> CString
-		GoBack -> void
-		GoForward -> void
-		GoHome -> void
-		ReloadPage -> void
-		Self -> [unregistered]
-		SetUrl -> void
-	}
-
 	BrushBool = {
 		AccessSelf -> [unregistered]
 		Get -> bool
@@ -2239,6 +2372,7 @@ Types = {
 	BrushSettingsDropdown = {
 		Settings -> BrushSettings
 		AccessSelf -> [unregistered]
+		GetBrushDiameter -> float
 		Self -> [unregistered]
 		Settings -> [unregistered]
 		Thumbnail -> [unregistered]
@@ -2501,6 +2635,7 @@ Types = {
 		GetFocus -> FocusType
 		GetFocusType -> FocusType
 		GetGovernment -> GovernmentType
+		GetHookOn -> Hook
 		GetHouse -> DynastyHouse
 		GetImprisonedBy -> Character
 		GetKiller -> Character
@@ -2520,6 +2655,7 @@ Types = {
 		GetRelationOfType -> Character
 		GetSealCoA -> CoatOfArms
 		GetTopLiege -> Character
+		GetTraitFromGroup -> Trait
 		GetVassalContract -> VassalContract
 		MakeScope -> Scope
 		AccessSelf -> [unregistered]
@@ -2608,6 +2744,38 @@ Types = {
 		GetConsortOrBetrothed -> [unregistered]
 		GetContextTooltip -> CString
 		GetCouncilTitle -> CString
+		GetCouncilTitleFirstName -> [unregistered]
+		GetCouncilTitleFirstNameNicknamed -> [unregistered]
+		GetCouncilTitleFirstNameNicknamedNoTooltip -> [unregistered]
+		GetCouncilTitleFirstNameNicknamedNoTooltipRegnal -> [unregistered]
+		GetCouncilTitleFirstNameNicknamedOrMe -> [unregistered]
+		GetCouncilTitleFirstNameNicknamedOrMeNoTooltip -> [unregistered]
+		GetCouncilTitleFirstNameNicknamedOrMeNoTooltipRegnal -> [unregistered]
+		GetCouncilTitleFirstNameNicknamedOrMeRegnal -> [unregistered]
+		GetCouncilTitleFirstNameNicknamedPossessive -> [unregistered]
+		GetCouncilTitleFirstNameNicknamedPossessiveNoTooltip -> [unregistered]
+		GetCouncilTitleFirstNameNicknamedPossessiveNoTooltipRegnal -> [unregistered]
+		GetCouncilTitleFirstNameNicknamedPossessiveOrMy -> [unregistered]
+		GetCouncilTitleFirstNameNicknamedPossessiveOrMyNoTooltip -> [unregistered]
+		GetCouncilTitleFirstNameNicknamedPossessiveOrMyNoTooltipRegnal -> [unregistered]
+		GetCouncilTitleFirstNameNicknamedPossessiveOrMyRegnal -> [unregistered]
+		GetCouncilTitleFirstNameNicknamedPossessiveRegnal -> [unregistered]
+		GetCouncilTitleFirstNameNicknamedRegnal -> [unregistered]
+		GetCouncilTitleFirstNameNoTooltip -> [unregistered]
+		GetCouncilTitleFirstNameNoTooltipRegnal -> [unregistered]
+		GetCouncilTitleFirstNameOrMe -> [unregistered]
+		GetCouncilTitleFirstNameOrMeNoTooltip -> [unregistered]
+		GetCouncilTitleFirstNameOrMeNoTooltipRegnal -> [unregistered]
+		GetCouncilTitleFirstNameOrMeRegnal -> [unregistered]
+		GetCouncilTitleFirstNamePossessive -> [unregistered]
+		GetCouncilTitleFirstNamePossessiveNoTooltip -> [unregistered]
+		GetCouncilTitleFirstNamePossessiveNoTooltipRegnal -> [unregistered]
+		GetCouncilTitleFirstNamePossessiveOrMy -> [unregistered]
+		GetCouncilTitleFirstNamePossessiveOrMyNoTooltip -> [unregistered]
+		GetCouncilTitleFirstNamePossessiveOrMyNoTooltipRegnal -> [unregistered]
+		GetCouncilTitleFirstNamePossessiveOrMyRegnal -> [unregistered]
+		GetCouncilTitleFirstNamePossessiveRegnal -> [unregistered]
+		GetCouncilTitleFirstNameRegnal -> [unregistered]
 		GetCouncilTitleForPosition -> CString
 		GetCouncilTitleForPositionPossessive -> CString
 		GetCouncilTitlePossessive -> CString
@@ -2744,6 +2912,7 @@ Types = {
 		GetHerHisMy -> [unregistered]
 		GetHersHis -> [unregistered]
 		GetHerselfHimself -> [unregistered]
+		GetHookOn -> [unregistered]
 		GetHookOrHookableSecretsFrame -> [unregistered]
 		GetHostileRaiders -> [unregistered]
 		GetHouse -> [unregistered]
@@ -2776,6 +2945,7 @@ Types = {
 		GetMaxConsorts -> int32
 		GetMaxIncomeFromTheocraticLease -> CFixedPoint
 		GetMaxLeviesFromTheocraticLease -> int32
+		GetMaxMilitaryStrength -> CFixedPoint
 		GetMaxSpouses -> int32
 		GetMilitaryStrengthPercentGUI -> [unregistered]
 		GetMilitaryStrengthText -> [unregistered]
@@ -2968,6 +3138,8 @@ Types = {
 		GetTitledFirstNameRegnal -> [unregistered]
 		GetTopLiege -> [unregistered]
 		GetTotalPerkPoints -> int32
+		GetTraitFromGroup -> [unregistered]
+		GetTraitGroupLevel -> int32
 		GetTraitIndices -> [unregistered]
 		GetUIName -> [unregistered]
 		GetUINameNoFormat -> [unregistered]
@@ -3005,6 +3177,7 @@ Types = {
 		HasCouncillorWithTaskIn -> [unregistered]
 		HasDifficultyInfo -> [unregistered]
 		HasDynasty -> bool
+		HasKillsKnownTo -> bool
 		HasLandedTitles -> bool
 		HasLiege -> [unregistered]
 		HasLocation -> bool
@@ -3019,6 +3192,8 @@ Types = {
 		HasSealCoA -> bool
 		HasSexuality -> bool
 		HasSpecialCouncilPosition -> bool
+		HasTrait -> bool
+		HasTraitFromGroup -> bool
 		HasUnpressedClaimOnTitle -> [unregistered]
 		HasVassalInfo -> bool
 		HookTooltip -> [unregistered]
@@ -3082,6 +3257,7 @@ Types = {
 		OpenPlayerInteractionWithTargetCharacter -> void
 		OpenPlayerInteractionWithTargetSecret -> void
 		OpenPlayerInteractionWithTargetTitle -> [unregistered]
+		PlayerCanManageFocus -> bool
 		PlayerHasHooksOrHookableSecrets -> [unregistered]
 		PlayerName -> [unregistered]
 		PunishmentTooltip -> CString
@@ -3095,6 +3271,13 @@ Types = {
 		TheocraticLesseeApprovesOfLiege -> bool
 		TheocraticLesseeHasApprovalStatus -> bool
 		ToggleCharacterPinned -> [unregistered]
+	}
+
+	CharacterFilterPreset = {
+		AccessSelf -> [unregistered]
+		GetDescription -> CString
+		GetName -> CString
+		Self -> [unregistered]
 	}
 
 	CharacterFinderWindow = {
@@ -3281,6 +3464,18 @@ Types = {
 		Self -> [unregistered]
 	}
 
+	CharacterItem = {
+		GetCharacter -> Character
+		GetComposition -> ArmyComposition
+		AccessSelf -> [unregistered]
+		GetAllyCount -> int32
+		GetCharacter -> [unregistered]
+		GetComposition -> [unregistered]
+		GetGold -> CFixedPoint
+		Self -> [unregistered]
+		ShowAllyList -> void
+	}
+
 	CharacterLifestyleWindow = {
 		GetCharacter -> Character
 		GetSelectedFocus -> FocusType
@@ -3400,31 +3595,52 @@ Types = {
 		GetCategory -> CharacterListFilterCategory
 		GetFilter -> CharacterListFilter
 		GetFilterWithDefault -> CharacterListFilter
+		GetMatchingFilterPreset -> CharacterFilterPreset
 		AccessSelf -> [unregistered]
+		ApplyFilterPreset -> void
 		ApplyFiltersSort -> void
+		CanSavePreset -> bool
+		CanSavePresetTooltip -> CString
 		ClearPattern -> void
+		DeleteFilterPreset -> void
 		FiltersShown -> bool
 		FinishEdit -> void
+		GetApplyFilterPresetTooltip -> CString
 		GetCategory -> [unregistered]
 		GetFilter -> [unregistered]
 		GetFilterCategories -> [unregistered]
+		GetFilterPresetName -> CString
 		GetFilterWithDefault -> [unregistered]
 		GetList -> [unregistered]
 		GetMatchedPatterns -> [unregistered]
+		GetMatchingFilterPreset -> [unregistered]
+		GetOpenLoadFilterWarning -> CString
+		GetSavePresetWarning -> CString
+		GetSavedFilterPresets -> [unregistered]
 		GetSortOrder -> bool
 		GetTotalNumber -> int32
+		GetUnsaveableFiltersWarning -> CString
+		HasFilterPresets -> bool
 		HasItems -> bool
+		HasMatchingFilterPreset -> bool
+		HasOnlyInapplicableFilters -> bool
 		HasTextInEdit -> bool
+		HideFilterPresets -> void
 		IsAllDefault -> bool
 		IsBuildingList -> bool
+		IsFilterPresetsShown -> bool
+		IsSameNameAsInEditbox -> bool
 		IsSortingBySkill -> bool
 		IsSuggesting -> bool
 		NumberOfShownCharacters -> int32
+		OnFilterPresetNameEdit -> void
 		OnResetFilters -> void
 		OnToggleFilters -> void
 		RevertSortOrder -> void
+		SaveFiltersToPreset -> void
 		Self -> [unregistered]
 		SetPattern -> void
+		ShowFilterPresets -> void
 		SortBySkill -> void
 	}
 
@@ -3621,6 +3837,51 @@ Types = {
 		Self -> [unregistered]
 	}
 
+	CollapsibleCultureList = {
+		AccessItems -> [unregistered]
+		AccessSelf -> [unregistered]
+		HideAllChildren -> void
+		Self -> [unregistered]
+		ShowAllChildren -> void
+	}
+
+	CollapsibleCultureListGroup = {
+		GetItem -> CultureGroup
+		AccessSelf -> [unregistered]
+		AreChildrenVisible -> bool
+		GetItem -> [unregistered]
+		Self -> [unregistered]
+		SetChildrenVisible -> void
+		ToggleChildrenVisible -> void
+	}
+
+	CollapsibleReligionList = {
+		AccessItems -> [unregistered]
+		AccessSelf -> [unregistered]
+		HideAllChildren -> void
+		Self -> [unregistered]
+		ShowAllChildren -> void
+	}
+
+	CollapsibleReligionListGroup = {
+		GetItem -> Religion
+		AccessSelf -> [unregistered]
+		AreChildrenVisible -> bool
+		GetItem -> [unregistered]
+		Self -> [unregistered]
+		SetChildrenVisible -> void
+		ToggleChildrenVisible -> void
+	}
+
+	ColorGenePicker = {
+		AccessSelf -> [unregistered]
+		GetPosition -> CVector2f
+		GetPositionInfo -> CString
+		GetTexture -> [unregistered]
+		OnClick -> void
+		Self -> [unregistered]
+	}
+
 	Combat = {
 		GetAttacker -> CombatSide
 		GetDefender -> CombatSide
@@ -3635,7 +3896,6 @@ Types = {
 		GetAdvantageSlider -> float
 		GetCombatWidth -> CFixedPoint
 		GetCombatWidthBreakdown -> CString
-		GetCurrentBalance -> [unregistered]
 		GetName -> CString
 		GetPhaseDesc -> CString
 		GetPhaseTooltip -> CString
@@ -3652,7 +3912,7 @@ Types = {
 	}
 
 	CombatMaaItem = {
-		GetRegimentType -> RegimentType
+		GetMenAtArmsType -> MenAtArmsType
 		AccessSelf -> [unregistered]
 		GetCountered -> CFixedPoint
 		GetCounteredByMaa -> [unregistered]
@@ -3799,7 +4059,7 @@ Types = {
 		GetAdvantage -> CFixedPoint
 		GetAdvantageDescription -> CString
 		GetAdvantagePosition -> [unregistered]
-		GetBalanceTooltip -> CString
+		GetCurrentPhaseTooltip -> CString
 		GetLeftCommanderTraits -> [unregistered]
 		GetLeftKnightBreakdown -> CString
 		GetLeftKnightCount -> int32
@@ -4033,6 +4293,7 @@ Types = {
 		GetCourt -> [unregistered]
 		GetCourtOwner -> [unregistered]
 		GetGuests -> [unregistered]
+		GetMassPrisonerActionTooltip -> CString
 		GetPrisoners -> [unregistered]
 		IsShowCourt -> bool
 		IsShowPrison -> bool
@@ -4117,6 +4378,7 @@ Types = {
 		GetFascination -> CultureInnovation
 		GetFascinationType -> CultureInnovationType
 		GetGroup -> CultureGroup
+		GetTemplate -> CultureTemplate
 		MakeScope -> Scope
 		AccessSelf -> [unregistered]
 		GetCollectiveNoun -> CString
@@ -4130,6 +4392,7 @@ Types = {
 		GetName -> CString
 		GetNameNoTooltip -> CString
 		GetRelationToPlayer -> [unregistered]
+		GetTemplate -> [unregistered]
 		HasAvailableInnovation -> bool
 		HasCultureHead -> bool
 		HasFascination -> bool
@@ -4175,6 +4438,7 @@ Types = {
 	CultureGroup = {
 		MakeScope -> Scope
 		AccessSelf -> [unregistered]
+		GetCultures -> [unregistered]
 		GetName -> CString
 		MakeScope -> Scope
 		Self -> [unregistered]
@@ -4219,6 +4483,12 @@ Types = {
 		GetProgressDesc -> [unregistered]
 		HasEffects -> bool
 		IsActiveForPlayer -> [unregistered]
+		Self -> [unregistered]
+	}
+
+	CultureTemplate = {
+		AccessSelf -> [unregistered]
+		GetName -> CString
 		Self -> [unregistered]
 	}
 
@@ -4400,19 +4670,21 @@ Types = {
 
 	DeclareWarInteractionWindow = {
 		GetAllyListContext -> AllyListSubview
+		GetAttackerCharacter -> CharacterItem
 		GetCbType -> CasusBelliType
 		GetCharacterInteractionConfirmationWindow -> CharacterInteractionConfirmationWindow
 		GetClaimant -> Character
 		GetCostBreakdown -> ValueBreakdown
+		GetDefenderCharacter -> CharacterItem
 		GetMilitaryStrengthInfo -> GuiMilitaryStrength
-		GetWarGoal -> WarGoalSubview
+		GetSelectedCasusBelliItem -> CasusBelliItem
 		AccessSelf -> [unregistered]
 		CanAffordCosts -> bool
 		CanSend -> bool
 		CanShowWarGoalSubview -> bool
 		Close -> void
-		GetAllyCountForAttacker -> int32
-		GetAllyCountForDefender -> int32
+		GetAttackerCharacter -> [unregistered]
+		GetCasusBelliItems -> [unregistered]
 		GetCbType -> [unregistered]
 		GetCharacterInteractionConfirmationWindow -> [unregistered]
 		GetClaimant -> [unregistered]
@@ -4422,9 +4694,12 @@ Types = {
 		GetCurrentTabEffectsLabel -> CString
 		GetCurrentTabMainOutputDescription -> CString
 		GetDeclareWarButtonTooltip -> CString
+		GetDefenderCharacter -> [unregistered]
 		GetDefenders -> [unregistered]
 		GetHeader -> CString
+		GetMilitaryStrength -> CString
 		GetPickPrompt -> CString
+		GetSelectedCasusBelliItem -> [unregistered]
 		GetSpecificCost -> CFixedPoint
 		GetTitleItems -> [unregistered]
 		GetWarningTooltipDesc -> CString
@@ -4444,7 +4719,6 @@ Types = {
 		SetEffectsTabVictory -> void
 		SetEffectsTabWhitePeace -> void
 		ShouldShowAdditionalWarning -> bool
-		ShowAllyListSubviewForAttacker -> void
 		ToggleWarEffectsExpanded -> void
 		UsesMutuallyExclusiveTitles -> bool
 		WriteAdditionalWarningMessage -> CString
@@ -4579,6 +4853,8 @@ Types = {
 		GetMembersText -> CString
 		GetName -> CString
 		GetNameNoTooltip -> CString
+		GetNextPerkCost -> int32
+		GetNextPerkProgress -> CFixedPoint
 		GetNextPrestigeLevelName -> [unregistered]
 		GetNumberOfLivingMembers -> int32
 		GetNumberOfMembers -> int32
@@ -4593,6 +4869,7 @@ Types = {
 		GetPrestigeLevelProgressTooltip -> [unregistered]
 		GetPrestigeNextLevelText -> [unregistered]
 		GetPrestigeProgress -> CString
+		GetRequiredPowerToReplaceDynast -> CFixedPoint
 		HasDynast -> bool
 		HasPerk -> bool
 		IsMyDynasty -> bool
@@ -4658,7 +4935,10 @@ Types = {
 		GetTopLegacy -> DynastyLegacyItem
 		AccessSelf -> [unregistered]
 		AreMembersShown -> bool
+		CanRenameDynasty -> bool
+		CanRenameHouse -> bool
 		Close -> void
+		CloseMembersWindow -> void
 		GetDynastyHouses -> [unregistered]
 		GetDynastyModifiers -> [unregistered]
 		GetHouseModifiers -> [unregistered]
@@ -4685,6 +4965,8 @@ Types = {
 	DynastyLegacyItem = {
 		GetLegacy -> DynastyLegacy
 		AccessSelf -> [unregistered]
+		GetTooltip -> CString
+		GetTotalPerksCount -> int32
 		GetUnlockedPerksCount -> int32
 		IsTopLegacy -> bool
 		Self -> [unregistered]
@@ -4835,14 +5117,72 @@ Types = {
 		Self -> [unregistered]
 	}
 
-	EntityViewer = {
+	Entity = {
+		State -> EntityState
 		AccessSelf -> [unregistered]
-		EntityNames -> [unregistered]
-		ResetCamera -> void
-		SelectedEntityName -> CString
+		AnimationProgress -> float
+		CurrentFrame -> int32
+		CurrentTime -> float
+		EntityLods -> [unregistered]
+		HasStates -> bool
+		IsLooping -> bool
+		IsPlaying -> bool
+		Name -> CString
+		NumJoints -> int32
+		OnSetCurrentTimeStart -> void
+		Rollback -> void
+		Scale -> float
 		SelectedIndex -> CVector2i
 		Self -> [unregistered]
-		SetSelectedIndex -> void
+		SetCurrentTimeText -> void
+		State -> [unregistered]
+		ToggleLooping -> void
+		TogglePausePlay -> void
+	}
+
+	EntityState = {
+		AccessSelf -> [unregistered]
+		AnimationLength -> float
+		HasAnimation -> bool
+		Name -> CString
+		NumFrames -> int32
+		Self -> [unregistered]
+	}
+
+	EntityViewer = {
+		Entity -> Entity
+		AccessSelf -> [unregistered]
+		DisableUserScrubbing -> void
+		Entities -> [unregistered]
+		Entity -> [unregistered]
+		FitCamera -> void
+		GetLightColor -> CVector4f
+		GetLightIntensity -> float
+		GetLightYawDegrees -> float
+		HasEntities -> bool
+		HasEntity -> bool
+		IsEnvSelected -> bool
+		IsMeshSelected -> bool
+		IsWorldMuted -> bool
+		OnSetLightColorFinish -> void
+		OnSetLightColorStart -> void
+		OnSetLightIntensityFinish -> void
+		OnSetLightIntensityStart -> void
+		OnSetLightYawFinish -> void
+		OnSetLightYawStart -> void
+		Redo -> void
+		ScrubPlayer -> void
+		SelectEnvWindow -> void
+		SelectMeshWindow -> void
+		Self -> [unregistered]
+		SetLightColor -> void
+		SetLightIntensity -> void
+		SetLightIntensityText -> void
+		SetLightYawDegrees -> void
+		SetLightYawText -> void
+		SetSelectedStateIndex -> void
+		ToggleMuteWorld -> void
+		Undo -> void
 	}
 
 	EnumSettingEntry = {
@@ -4862,6 +5202,13 @@ Types = {
 		Hide -> void
 		Self -> [unregistered]
 		Show -> void
+	}
+
+	Ethnicity = {
+		AccessSelf -> [unregistered]
+		GetName -> CString
+		IsVisible -> bool
+		Self -> [unregistered]
 	}
 
 	EthnicityItem = {
@@ -4974,6 +5321,7 @@ Types = {
 		OnEditCurrentName -> void
 		Self -> [unregistered]
 		SetCurrentName -> void
+		SetCurrentNameCultural -> void
 	}
 
 	ExportTool = {
@@ -5000,20 +5348,17 @@ Types = {
 	EyeDropper = {
 		GetHoverSample -> MaterialsSample
 		AccessSelf -> [unregistered]
+		IsEnabled -> bool
 		PackedSamples -> [unregistered]
+		PackedSamplesDynamic -> [unregistered]
 		Self -> [unregistered]
+		SetEnabled -> void
 	}
 
 	EyeDropperPackedSample = {
 		GetSample -> MaterialEntry
 		AccessSelf -> [unregistered]
 		GetChannel -> CString
-		Self -> [unregistered]
-	}
-
-	EyedropperMode = {
-		AccessSelf -> [unregistered]
-		IsSelected -> bool
 		Self -> [unregistered]
 	}
 
@@ -5057,7 +5402,6 @@ Types = {
 		CalcPower -> CFixedPoint
 		GetOpinion -> int32
 		GetOpinionDescription -> CString
-		IsActive -> bool
 		Self -> [unregistered]
 	}
 
@@ -5187,6 +5531,7 @@ Types = {
 		GetDefensiveGreatHolyWars -> [unregistered]
 		GetDesc -> CString
 		GetDoctrineBackgroundIcon -> [unregistered]
+		GetDoctrines -> [unregistered]
 		GetFervor -> CFixedPoint
 		GetFlavorDesc -> CString
 		GetFounder -> [unregistered]
@@ -5524,6 +5869,14 @@ Types = {
 		StartAnimation -> void
 	}
 
+	FilterPresetItem = {
+		GetPreset -> CharacterFilterPreset
+		AccessSelf -> [unregistered]
+		CanBeApplied -> bool
+		GetPreset -> [unregistered]
+		Self -> [unregistered]
+	}
+
 	FindTitleView = {
 		AccessSelf -> [unregistered]
 		Close -> void
@@ -5669,8 +6022,11 @@ Types = {
 		AccessLoadView -> FrontEndLoadView
 		AccessSelf -> [unregistered]
 		GetBackground -> [unregistered]
+		GetHeirCharacterAge -> int32
 		GetHeirCharacterTexture -> [unregistered]
+		GetMainCharacterAge -> int32
 		GetMainCharacterTexture -> [unregistered]
+		GetSecondaryCharacterAge -> int32
 		GetSecondaryCharacterTexture -> [unregistered]
 		OnContent -> void
 		OnContinue -> void
@@ -5812,6 +6168,7 @@ Types = {
 		CanConstructNextBuilding -> bool
 		CanConstructSelectedBuilding -> bool
 		CanReplaceOrCancel -> bool
+		CanShowReplaceOrCancel -> bool
 		GetBuildingTypeText -> CString
 		GetConstructTimeLeft -> CString
 		GetConstructionEndDate -> CString
@@ -5940,6 +6297,7 @@ Types = {
 		GetBookmarks -> [unregistered]
 		GetSelectedBookmarkCharacters -> [unregistered]
 		GetSelectedDate -> [unregistered]
+		HasGameStarted -> bool
 		HasHoveredCharacter -> bool
 		HasSelectedCharacter -> bool
 		IsCurrentBookmarkPlayable -> bool
@@ -5950,11 +6308,28 @@ Types = {
 		OnSkipTutorial -> void
 		OnStart -> void
 		PlayTooltip -> CString
+		ResetView -> void
 		Self -> [unregistered]
 		ShouldShowTutorialPrompt -> bool
+		StartGame -> void
+	}
+
+	GeneCategory = {
+		AccessSelf -> [unregistered]
+		GetName -> CString
+		IsOnlyVisibleFemale -> bool
+		IsType -> bool
+		Self -> [unregistered]
+		ShowMorphGeneSlider -> bool
 	}
 
 	GeneItem = {
+		AccessSelf -> [unregistered]
+		GetName -> CString
+		Self -> [unregistered]
+	}
+
+	GeneTemplate = {
 		AccessSelf -> [unregistered]
 		GetName -> CString
 		Self -> [unregistered]
@@ -6195,11 +6570,14 @@ Types = {
 		GetCombinedTooltip -> CString
 		GetFirstVisibleActionItem -> [unregistered]
 		GetImportantActionItems -> [unregistered]
-		GetNumberOfItems -> int32
+		GetNumberOfVisibleItems -> int32
 		HasAnyActionIsDangerous -> bool
 		HasMultipleActions -> bool
 		IsExpanded -> bool
+		IsRead -> bool
+		IsUnimportant -> bool
 		IsVisible -> bool
+		MarkAsRead -> void
 		OnClick -> void
 		Self -> [unregistered]
 	}
@@ -6276,6 +6654,7 @@ Types = {
 	}
 
 	GuiEditor = {
+		GetTooltip -> GuiEditorTooltip
 		SelectionHistory -> SelectionHistory
 		AccessSelf -> [unregistered]
 		GetSelectedAnchor -> CVector2f
@@ -6294,10 +6673,12 @@ Types = {
 		IsEnableHierarchy -> bool
 		IsEnableOutsideParent -> bool
 		IsRedoable -> bool
+		IsSaveable -> bool
 		IsUndoable -> bool
 		SelectNext -> void
 		SelectPrevious -> void
 		Self -> [unregistered]
+		ShowSettingsMenu -> void
 	}
 
 	GuiEditorCategory = {
@@ -6316,8 +6697,11 @@ Types = {
 	}
 
 	GuiEditorOutliner = {
+		GuiEditor -> GuiEditor
 		AccessSelf -> [unregistered]
 		GetFilterCount -> int32
+		GetSaveAsTooltip -> CString
+		GetSaveTooltip -> CString
 		HasFilterMatches -> bool
 		IsDescTreeFiltered -> bool
 		IsShowOnlyActiveFile -> bool
@@ -6343,6 +6727,16 @@ Types = {
 		IsProperty -> bool
 		OpenDataPropertySelector -> void
 		RemoveProperty -> void
+		Self -> [unregistered]
+	}
+
+	GuiEditorTooltip = {
+		AccessSelf -> [unregistered]
+		GetDescription -> CString
+		GetTitle -> CString
+		HasDescription -> bool
+		HasTitle -> bool
+		IsVisible -> bool
 		Self -> [unregistered]
 	}
 
@@ -6387,6 +6781,16 @@ Types = {
 		GetSetting -> [unregistered]
 		Next -> void
 		Prev -> void
+		Self -> [unregistered]
+	}
+
+	GuiGameRulePreset = {
+		GetSettingForRule -> GameRuleSetting
+		AccessSelf -> [unregistered]
+		GetName -> CString
+		GetSettingForRule -> [unregistered]
+		HasRuleWithFlag -> bool
+		IsIronmanEnabled -> bool
 		Self -> [unregistered]
 	}
 
@@ -6439,6 +6843,7 @@ Types = {
 	GuiMilitaryStrength = {
 		AccessSelf -> [unregistered]
 		GetFrame -> int32
+		GetRatio -> float
 		GetRatioDescription -> CString
 		GetRatioName -> CString
 		GetTargetAlliesCount -> int32
@@ -6524,6 +6929,7 @@ Types = {
 	}
 
 	HiredTroop = {
+		GetHiredBy -> Character
 		GetHolyOrder -> HolyOrder
 		GetHolyOrderPatron -> Character
 		GetMartialSkillItem -> SkillItem
@@ -6538,6 +6944,7 @@ Types = {
 		GetExtendInfo -> CString
 		GetExtendTooltip -> CString
 		GetHireTooltip -> CString
+		GetHiredBy -> [unregistered]
 		GetHolyOrder -> [unregistered]
 		GetHolyOrderLeasedTitles -> [unregistered]
 		GetHolyOrderPatron -> [unregistered]
@@ -6579,13 +6986,13 @@ Types = {
 	}
 
 	HiredTroopRegiment = {
+		GetMenAtArmsType -> MenAtArmsType
 		GetRegiment -> Regiment
-		GetRegimentType -> RegimentType
 		AccessSelf -> [unregistered]
 		GetCurrentSoldiers -> int32
+		GetMenAtArmsType -> [unregistered]
 		GetProgressBarRatio -> float
 		GetRegiment -> [unregistered]
-		GetRegimentType -> [unregistered]
 		GetTotalSoldiers -> int32
 		IsLevies -> bool
 		Self -> [unregistered]
@@ -6605,13 +7012,14 @@ Types = {
 		GetConstructingHoldingType -> [unregistered]
 		GetConstructionProgress -> [unregistered]
 		GetConstructionTimeLeft -> [unregistered]
+		GetCurrentGarrisonSize -> int32
 		GetDuchyBuildingType -> [unregistered]
-		GetGarrisonSize -> int32
 		GetHolder -> [unregistered]
 		GetIllustration -> [unregistered]
 		GetIncome -> CFixedPoint
 		GetLesseeOrHolder -> [unregistered]
 		GetLeviesTooltip -> [unregistered]
+		GetMaxGarrisonSize -> int32
 		GetMaxLevySize -> int32
 		GetName -> CString
 		GetNameNoTooltip -> CString
@@ -6667,6 +7075,7 @@ Types = {
 		AccessSelf -> [unregistered]
 		CanConstructBuilding -> bool
 		GetTooltip -> CString
+		GetWrongHoldingCharacterInfo -> CString
 		IsValidForPlayer -> bool
 		OnClick -> void
 		Self -> [unregistered]
@@ -6687,6 +7096,7 @@ Types = {
 		GetTopLiege -> Character
 		GetTrack -> GUITrackItem
 		AccessSelf -> [unregistered]
+		CanCancelConstruction -> bool
 		CanNewHoldingBeConstructed -> bool
 		CanSetCountyCapital -> bool
 		CanSetRealmCapital -> bool
@@ -6694,7 +7104,6 @@ Types = {
 		Close -> void
 		CloseHoldingConstruction -> void
 		CloseSubwindows -> void
-		CreateHolderForBarony -> void
 		GetAllFactionNames -> CString
 		GetBuildings -> [unregistered]
 		GetConstructionProgressForSlot -> float
@@ -6704,9 +7113,11 @@ Types = {
 		GetCountyOpinion -> int32
 		GetCountyOpinionDesc -> CString
 		GetCountyTitle -> [unregistered]
+		GetCurrentGarrisonSize -> int32
 		GetDeJureLieges -> [unregistered]
 		GetDirectHolder -> [unregistered]
 		GetFaction -> [unregistered]
+		GetGarrisonRatio -> float
 		GetGarrisonTooltip -> CString
 		GetHolder -> [unregistered]
 		GetHolderEffectsFromBuildingsDescription -> CString
@@ -6908,6 +7319,7 @@ Types = {
 		GetTooltip -> CString
 		IsRead -> bool
 		IsSelected -> bool
+		IsUnimportant -> bool
 		IsVisible -> bool
 		MarkAsRead -> void
 		OnClick -> void
@@ -6951,6 +7363,12 @@ Types = {
 		GetPrestigeItem -> [unregistered]
 		Self -> [unregistered]
 		ShouldBeVisible -> bool
+	}
+
+	InspectorPanel = {
+		AccessSelf -> [unregistered]
+		GetAnchorItems -> [unregistered]
+		Self -> [unregistered]
 	}
 
 	InteractionCategoryItem = {
@@ -7193,13 +7611,34 @@ Types = {
 
 	JominiGameRules = {
 		AccessNamedGameRule -> GuiGameRule
+		GetSelectedPreset -> GuiGameRulePreset
 		AccessSelf -> [unregistered]
 		ApplySettings -> void
+		DeletePresetAtIndex -> void
+		DeletePresetWithName -> void
+		GetInvalidPresetNameTooltip -> CString
+		GetPresetSaveName -> CString
+		GetRulePresets -> [unregistered]
+		GetSelectedPreset -> [unregistered]
+		GetSelectedPresetIndex -> int32
 		GetSettings -> [unregistered]
+		HasPresetWithName -> bool
 		HasRuleWithFlag -> bool
+		HasValidPresetSelected -> bool
 		Hide -> void
+		HidePresetWindow -> void
+		IsIronman -> bool
+		IsPresetWindowShown -> bool
+		IsValidPresetName -> bool
+		OnPresetSaveNameChange -> void
+		OnPresetSaveNameEdit -> void
+		OnSelectPreset -> void
 		ResetAllToDefaults -> void
+		SavePreset -> void
 		Self -> [unregistered]
+		SetIronman -> void
+		SetPresetSaveName -> void
+		ShowPresetWindow -> void
 	}
 
 	JominiNotification = {
@@ -7372,11 +7811,15 @@ Types = {
 		GetInstanceCount -> int32
 		GetLayer -> CString
 		IsExpanded -> bool
+		IsHidden -> bool
+		IsLayer -> bool
 		IsLocked -> bool
 		IsSelected -> bool
 		SelectItem -> void
 		Self -> [unregistered]
+		ToggleExclusiveLayerHidden -> void
 		ToggleExclusiveLock -> void
+		ToggleLayerHidden -> void
 		ToggleLock -> void
 	}
 
@@ -7436,7 +7879,7 @@ Types = {
 	}
 
 	LevyView = {
-		GetLevyType -> RegimentType
+		GetLevyType -> MenAtArmsType
 		AccessSelf -> [unregistered]
 		Close -> void
 		GetLevyType -> [unregistered]
@@ -7469,7 +7912,6 @@ Types = {
 		GetSelectedSavegame -> SaveGameItem
 		AccessSelf -> [unregistered]
 		GetSaveGames -> [unregistered]
-		GetSavegames -> [unregistered]
 		HasSelectedSavegame -> bool
 		OnBack -> void
 		OnDelete -> void
@@ -7484,6 +7926,7 @@ Types = {
 		GetPlayable -> Playable
 		AccessSelf -> [unregistered]
 		CanRemovePlayer -> bool
+		GetID -> int32
 		GetLoadingString -> CString
 		GetName -> CString
 		GetTransferProgress -> float
@@ -7509,6 +7952,7 @@ Types = {
 		CanGoBack -> bool
 		CanReady -> bool
 		CanStart -> bool
+		CanTryStartRulerDesigning -> bool
 		ClearSelection -> void
 		ControlSelected -> void
 		CopyServerID -> void
@@ -7520,6 +7964,7 @@ Types = {
 		GetOtherPlayersCount -> int32
 		GetReadyToolTip -> CString
 		GetSelectText -> CString
+		GetTryStartRulerDesigningDesc -> CString
 		GoBack -> void
 		HasEnabledDLCs -> bool
 		HasEnabledMods -> bool
@@ -7560,6 +8005,14 @@ Types = {
 		UnReady -> void
 	}
 
+	LodInfo = {
+		AccessSelf -> [unregistered]
+		Lod -> int32
+		NumTriangles -> int32
+		NumVertices -> int32
+		Self -> [unregistered]
+	}
+
 	LogEntry = {
 		AccessSelf -> [unregistered]
 		GetColor -> CVector4f
@@ -7569,18 +8022,18 @@ Types = {
 	}
 
 	MAAItem = {
+		GetMenAtArmsType -> MenAtArmsType
 		GetRegiment -> Regiment
-		GetRegimentType -> RegimentType
 		AccessSelf -> [unregistered]
 		GetCurrentSize -> int32
 		GetMAAString -> CString
 		GetMAATooltip -> CString
 		GetMaxSize -> int32
+		GetMenAtArmsType -> [unregistered]
 		GetName -> CString
 		GetNextSize -> int32
 		GetPreviousSize -> int32
 		GetRegiment -> [unregistered]
-		GetRegimentType -> [unregistered]
 		IsSelected -> bool
 		OnClick -> void
 		Self -> [unregistered]
@@ -7645,9 +8098,12 @@ Types = {
 		CanToggleMaterialVisibility -> bool
 		Exit -> void
 		ExportTool -> void
+		GetReferenceOverlayVisibility -> bool
+		GetTerrainColorMapVisibility -> bool
 		ImportDetailMaks -> void
 		ImportHeightmap -> void
 		ImportTool -> void
+		IsDynamicTerrainMaterialSupported -> bool
 		IsEnabled -> bool
 		IsRedoable -> bool
 		IsSavable -> bool
@@ -7655,19 +8111,20 @@ Types = {
 		Redo -> void
 		ReloadHeightmap -> void
 		Save -> void
+		SaveAll -> void
 		SaveAs -> void
 		Self -> [unregistered]
+		SetReferenceOverlayVisibility -> void
+		ToggleTerrainColorMapVisibility -> void
 		Undo -> void
 	}
 
-	MapEditorTooltip = {
+	MapEditorGui = {
 		AccessSelf -> [unregistered]
-		GetDescription -> CString
-		GetTitle -> CString
-		HasDescription -> bool
-		HasTitle -> bool
-		IsVisible -> bool
+		GetReferenceOverlayOpacity -> float
 		Self -> [unregistered]
+		SetReferenceOverlayOpacity -> void
+		ShowReferenceOverlayOptions -> void
 	}
 
 	MapObjectMask = {
@@ -7705,7 +8162,7 @@ Types = {
 	}
 
 	MapObjectTool = {
-		GetTooltip -> MapEditorTooltip
+		GetTooltip -> GuiEditorTooltip
 		MoveTool -> MoveTool
 		SelectTool -> SelectTool
 		AccessSelf -> [unregistered]
@@ -7814,15 +8271,19 @@ Types = {
 
 	MaskPainterTool = {
 		AccessSelf -> [unregistered]
-		IsEraserSelected -> bool
+		IsEraserMode -> bool
+		IsEyeDropperMode -> bool
 		IsMapContentSelectionMode -> bool
+		IsPaintMode -> bool
 		Self -> [unregistered]
+		SetEraserMode -> void
+		SetEyeDropperMode -> void
 		SetMapContentSelectionMode -> void
-		ToggleEraser -> void
+		SetPaintMode -> void
 	}
 
 	MaskPainterViewport = {
-		GetTooltip -> MapEditorTooltip
+		GetTooltip -> GuiEditorTooltip
 		AccessSelf -> [unregistered]
 		Self -> [unregistered]
 	}
@@ -7834,6 +8295,7 @@ Types = {
 		GetActorPrestige -> CFixedPoint
 		GetActorPrestigeDesc -> CString
 		GetChanceOfChildrenDesc -> CString
+		GetChanceOfChildrenTooltip -> CString
 		GetChildrensHouse -> CString
 		GetInbreedingDesc -> CString
 		GetInheritableTraitItems -> [unregistered]
@@ -7922,6 +8384,7 @@ Types = {
 	MaterialEntry = {
 		GetMaterial -> Material
 		AccessSelf -> [unregistered]
+		GetRawValue -> int32
 		GetValue -> float
 		IsVisible -> bool
 		Self -> [unregistered]
@@ -7972,14 +8435,28 @@ Types = {
 	}
 
 	MaterialPaintingMode = {
+		AccessBlurThresholdCtx -> BlurThreshold
+		AccessBlurThresholdCtx -> [unregistered]
 		AccessSelf -> [unregistered]
 		FocusCameraOnError -> void
+		IsBlurSelected -> bool
+		IsBrushSettingsLock -> bool
 		IsEraserSelected -> bool
+		IsEyeDropperSelected -> bool
 		IsPainterSelected -> bool
+		IsPaintingAllowed -> bool
 		IsSearchingForError -> bool
 		IsSelected -> bool
+		IsTrimWhilePainting -> bool
+		IsTrimmerSelected -> bool
+		SelectBlur -> void
+		SelectEraser -> void
+		SelectEyeDropper -> void
+		SelectPainter -> void
+		SelectTrimmer -> void
 		Self -> [unregistered]
-		ToggleEraser -> void
+		SetBrushSettingsLock -> void
+		SetTrimWhilePainting -> void
 	}
 
 	Materials = {
@@ -8003,25 +8480,54 @@ Types = {
 		Self -> [unregistered]
 	}
 
+	MenAtArmsType = {
+		GetWinterHarshModifier -> RegimentWinterModifier
+		GetWinterNormalModifier -> RegimentWinterModifier
+		AccessSelf -> [unregistered]
+		FightsInMainPhase -> bool
+		GetBaseTypeName -> CString
+		GetCostString -> CString
+		GetCountersString -> CString
+		GetCreationCostString -> CString
+		GetEffectString -> CString
+		GetFlavorString -> CString
+		GetFullStrengthMaintenanceCostForPlayerString -> CString
+		GetHorizontalImage -> [unregistered]
+		GetIcon -> [unregistered]
+		GetMaxFortLevel -> int32
+		GetName -> CString
+		GetNameNoTooltip -> CString
+		GetReinforcementCostString -> CString
+		GetStackSize -> int32
+		GetStackSizeString -> CString
+		GetStat -> CFixedPoint
+		GetStatDesc -> CString
+		GetTerrainModifiers -> [unregistered]
+		GetVerticalImage -> [unregistered]
+		HasWinterHarshModifier -> bool
+		HasWinterNormalModifier -> bool
+		Self -> [unregistered]
+	}
+
 	MenAtArmsTypeView = {
-		GetSelectedRegimentType -> RegimentType
+		GetSelectedMenAtArmsType -> MenAtArmsType
 		AccessSelf -> [unregistered]
 		CanCreate -> bool
 		Close -> void
 		Create -> void
 		GetCostString -> CString
 		GetCreateTooltip -> CString
-		GetRegimentTypes -> [unregistered]
-		IsAnyRegimentTypeSelected -> bool
+		GetMenAtArmsTypes -> [unregistered]
+		IsAnyMenAtArmsTypeSelected -> bool
 		Self -> [unregistered]
 	}
 
 	MenAtArmsTypeViewTypeItem = {
-		GetRegimentType -> RegimentType
+		GetMenAtArmsType -> MenAtArmsType
 		AccessSelf -> [unregistered]
 		CanCreate -> bool
 		GetCreateWarning -> CString
-		GetRegimentType -> [unregistered]
+		GetMenAtArmsType -> [unregistered]
 		IsSelected -> bool
 		OnClick -> void
 		Self -> [unregistered]
@@ -8081,6 +8587,7 @@ Types = {
 		GetItems -> [unregistered]
 		GetNumberOfQueuedMessages -> int32
 		HasQueuedMessages -> bool
+		MarkAllForDelete -> void
 		NextMessage -> void
 		Self -> [unregistered]
 	}
@@ -8329,8 +8836,6 @@ Types = {
 		AccessSelf -> [unregistered]
 		GetCachedLevies -> int32
 		GetCachedLeviesFormatted -> CString
-		GetCachedRelativeLevies -> CFixedPoint
-		GetCachedRelativeTax -> CFixedPoint
 		GetCachedTax -> CFixedPoint
 		GetCharacter -> [unregistered]
 		GetContract -> [unregistered]
@@ -8405,6 +8910,8 @@ Types = {
 		DeleteSelected -> void
 		Deselect -> void
 		FocusCameraOnSelection -> void
+		IsAnyMapObjectExpanded -> bool
+		IsAnyMapObjectHidden -> bool
 		IsAnyMapObjectLocked -> bool
 		IsAnyObjectEntrySelected -> bool
 		IsAnyObjectSelected -> bool
@@ -8413,7 +8920,10 @@ Types = {
 		OnMapObjectSelected -> void
 		SelectAll -> void
 		Self -> [unregistered]
+		SetAllMapObjectsExpanded -> void
+		SetAllMapObjectsHidden -> void
 		SetAllMapObjectsLocked -> void
+		SetMapObjectHidden -> void
 		SetMapObjectLocked -> void
 		SetMapObjectLockedExclusive -> void
 		SetMultiSpawnEnabled -> void
@@ -8474,6 +8984,7 @@ Types = {
 		IsOutputFlattened -> bool
 		IsWaitingForProvider -> bool
 		RequestUpdate -> void
+		SaveDefaults -> void
 		SelectProvider -> void
 		SelectView -> void
 		Self -> [unregistered]
@@ -8919,13 +9430,17 @@ Types = {
 		AccessParent -> [unregistered]
 		AccessSelf -> [unregistered]
 		DisableValueUpdate -> void
+		EnableUserScrubbing -> void
 		EnableValueUpdate -> void
 		FindChild -> [unregistered]
 		GetRawShortcut -> CUTF8String
 		GetShortcut -> CUTF8String
+		GetTooltipLockProgress -> float
 		Hide -> void
 		InterruptAnimation -> void
 		InterruptThenTriggerAnimation -> bool
+		IsNestedTooltip -> bool
+		IsTooltipLocked -> bool
 		Self -> [unregistered]
 		Show -> void
 		StackBottom -> void
@@ -9299,11 +9814,15 @@ Types = {
 		GetTag -> CString
 		GetTerrain -> [unregistered]
 		GetTitle -> [unregistered]
+		GetWinterEffectsDesc -> CString
+		GetWinterSeverityName -> CString
 		HasActiveRaid -> bool
 		HasActiveSiege -> [unregistered]
 		HasCountyCapitalProvince -> bool
 		HasFort -> bool
 		HasSiege -> bool
+		HasWinter -> bool
+		HasWinterLevel -> bool
 		IsOccupied -> bool
 		IsRealmCapital -> [unregistered]
 		IsRecentlyLooted -> bool
@@ -9432,6 +9951,7 @@ Types = {
 		AccessSelf -> [unregistered]
 		CanRaise -> bool
 		CanRaiseAll -> bool
+		CanRaiseMenAtArms -> bool
 		CanRaiseRaid -> bool
 		CanRemove -> bool
 		Close -> void
@@ -9440,6 +9960,7 @@ Types = {
 		GetAllTroopsComposition -> [unregistered]
 		GetRaiseAllButtonTooltip -> CString
 		GetRaiseAllTooltip -> CString
+		GetRaiseMenAtArmsTooltip -> CString
 		GetRaiseRaidTooltip -> CString
 		GetRaiseTooltip -> CString
 		GetRallyPointNumberOfLevies -> CString
@@ -9453,6 +9974,7 @@ Types = {
 		OnMove -> void
 		OnRaise -> void
 		OnRaiseAll -> void
+		OnRaiseMenAtArms -> void
 		OnRaiseRaid -> void
 		OnRemove -> void
 		Self -> [unregistered]
@@ -9471,7 +9993,7 @@ Types = {
 
 	Regiment = {
 		GetArmy -> Army
-		GetMAAType -> RegimentType
+		GetMAAType -> MenAtArmsType
 		GetOwner -> Character
 		AccessSelf -> [unregistered]
 		BuildCurrentRegimentCountString -> CString
@@ -9487,9 +10009,9 @@ Types = {
 		GetArmy -> [unregistered]
 		GetMAAChunkCount -> int32
 		GetMaxCount -> int32
+		GetMenAtArmsTypeNameNoTooltip -> CString
 		GetName -> CString
 		GetNameNoTooltip -> CString
-		GetRegimentTypeNameNoTooltip -> CString
 		GetTotalCostString -> CString
 		GetTotalCostTooltip -> CString
 		HasReinforcementCost -> bool
@@ -9502,18 +10024,18 @@ Types = {
 
 	RegimentCombatStats = {
 		GetKnight -> Character
-		GetRegimentType -> RegimentType
+		GetMenAtArmsType -> MenAtArmsType
 		AccessSelf -> [unregistered]
 		GetFinalCount -> CFixedPoint
 		GetInitialCount -> CFixedPoint
 		GetKnight -> [unregistered]
 		GetMainKills -> CFixedPoint
 		GetMainLosses -> CFixedPoint
+		GetMenAtArmsType -> [unregistered]
 		GetPursuitKills -> CFixedPoint
 		GetPursuitLosses -> CFixedPoint
 		GetPursuitLossesByMaa -> CFixedPoint
 		GetPursuitLossesSelf -> CFixedPoint
-		GetRegimentType -> [unregistered]
 		GetTotalKills -> CFixedPoint
 		GetTotalLosses -> CFixedPoint
 		IsKnight -> bool
@@ -9525,7 +10047,7 @@ Types = {
 	RegimentReorgEntry = {
 		GetCoATitle -> Title
 		GetKnight -> Character
-		GetMaAType -> RegimentType
+		GetMaAType -> MenAtArmsType
 		GetRegiment -> ArmyRegiment
 		AccessSelf -> [unregistered]
 		GetCoATitle -> [unregistered]
@@ -9551,28 +10073,10 @@ Types = {
 		Self -> [unregistered]
 	}
 
-	RegimentType = {
+	RegimentWinterModifier = {
 		AccessSelf -> [unregistered]
-		FightsInMainPhase -> bool
-		GetBaseTypeName -> CString
-		GetCostString -> CString
-		GetCountersString -> CString
-		GetCreationCostString -> CString
 		GetEffectString -> CString
-		GetFlavorString -> CString
-		GetFullStrengthMaintenanceCostForPlayerString -> CString
-		GetHorizontalImage -> [unregistered]
-		GetIcon -> [unregistered]
-		GetMaxFortLevel -> int32
-		GetName -> CString
-		GetNameNoTooltip -> CString
-		GetReinforcementCostString -> CString
-		GetStackSize -> int32
-		GetStackSizeString -> CString
-		GetStat -> CFixedPoint
-		GetStatDesc -> CString
-		GetTerrainModifiers -> [unregistered]
-		GetVerticalImage -> [unregistered]
+		IsPositive -> bool
 		Self -> [unregistered]
 	}
 
@@ -9583,6 +10087,7 @@ Types = {
 		Custom -> CString
 		GetAdjective -> CString
 		GetAdjectiveNoTooltip -> CString
+		GetFaiths -> [unregistered]
 		GetFlavorDesc -> CString
 		GetName -> CString
 		GetNameNoTooltip -> CString
@@ -9669,13 +10174,129 @@ Types = {
 		Send -> void
 	}
 
+	RulerDesignerCoA = {
+		GetCoA -> CoatOfArms
+		AccessSelf -> [unregistered]
+		IsSet -> bool
+		Self -> [unregistered]
+	}
+
+	RulerDesignerPortraitModifier = {
+		AccessSelf -> [unregistered]
+		GetName -> CString
+		Self -> [unregistered]
+	}
+
+	RulerDesignerSkill = {
+		GetModifiedValueBreakdown -> ValueBreakdown
+		AccessSelf -> [unregistered]
+		ChangeValue -> void
+		GetBaseValue -> int32
+		GetFrame -> int32
+		GetLevelDesc -> CString
+		GetModifiedValueBreakdown -> [unregistered]
+		GetName -> CString
+		Self -> [unregistered]
+	}
+
+	RulerDesignerWindow = {
+		AccessColorPicker -> ColorGenePicker
+		AccessCultureList -> CollapsibleCultureList
+		AccessEducationTraitSlot -> TraitSlot
+		AccessOtherTraitSlots -> TraitSlotArray
+		AccessPersonalityTraitSlots -> TraitSlotArray
+		AccessReligionList -> CollapsibleReligionList
+		GetCharacterToOverwrite -> Character
+		GetCulture -> Culture
+		GetDynastyCoatOfArms -> RulerDesignerCoA
+		GetEthnicity -> Ethnicity
+		GetFaith -> Faith
+		GetPointsUsedBreakdown -> ValueBreakdown
+		GetTitleCoatOfArms -> RulerDesignerCoA
+		AccessColorPicker -> [unregistered]
+		AccessCultureList -> [unregistered]
+		AccessEducationTraitSlot -> [unregistered]
+		AccessOtherTraitSlots -> [unregistered]
+		AccessPersonalityTraitSlots -> [unregistered]
+		AccessReligionList -> [unregistered]
+		AccessSelf -> [unregistered]
+		AccessSkills -> [unregistered]
+		CalcMaxNumberOfGeneratedChildren -> int32
+		CanFinalize -> bool
+		CanPickTrait -> bool
+		CanPickTraitDesc -> CString
+		CancelTraitEditing -> void
+		ChangeNumberOfGeneratedDaughters -> void
+		ChangeNumberOfGeneratedSons -> void
+		Close -> void
+		FinalizeOverwrite -> void
+		FinishTraitEditing -> void
+		GetAccessoryModifiers -> [unregistered]
+		GetAge -> int32
+		GetBirthYear -> int32
+		GetCharacterToOverwrite -> [unregistered]
+		GetCulture -> [unregistered]
+		GetDynastyCoatOfArms -> [unregistered]
+		GetDynastyName -> CString
+		GetEthnicity -> [unregistered]
+		GetFaith -> [unregistered]
+		GetFinalizeTooltip -> CString
+		GetFirstName -> CString
+		GetGenesByGroup -> [unregistered]
+		GetHealthFrame -> int32
+		GetHealthText -> CString
+		GetMorphGeneValue -> float
+		GetMorphTemplatesByGene -> [unregistered]
+		GetNumberOfGeneratedChildren -> int32
+		GetNumberOfGeneratedDaughters -> int32
+		GetNumberOfGeneratedSons -> int32
+		GetPointsUsed -> int32
+		GetPointsUsedBreakdown -> [unregistered]
+		GetPortrait -> [unregistered]
+		GetTitleCoatOfArms -> [unregistered]
+		GetTitleTierName -> CString
+		GetWeight -> int32
+		HasMorphTemplateSelected -> bool
+		HasSexuality -> bool
+		HasTrait -> bool
+		IsAdult -> bool
+		IsFemale -> bool
+		IsModifierValid -> bool
+		IsPortraitModifierSelected -> bool
+		LoadDnaFromClipboard -> void
+		OnAgeChange -> void
+		OnEditDynastyName -> void
+		OnEditFirstName -> void
+		OnMorphGeneChange -> void
+		OnMorphTemplateSelected -> void
+		OnPortraitModifierSelected -> void
+		OnWeightChange -> void
+		RandomizeDynastyCoatOfArms -> void
+		RandomizeDynastyName -> void
+		RandomizeEthnicityDnaFromCulture -> void
+		RandomizeEthnicityDnaFromCurrent -> void
+		RandomizeFirstNameCulture -> void
+		RandomizeFirstNameFaith -> void
+		RandomizeTitleCoatOfArms -> void
+		ResetTitleCoatOfArms -> void
+		SaveDnaToClipboard -> void
+		Self -> [unregistered]
+		SetCulture -> void
+		SetEthnicity -> void
+		SetFaith -> void
+		SetIsFemale -> void
+		SetSexuality -> void
+		ShouldGenerateSpouse -> bool
+		ToggleGenerateSpouse -> void
+	}
+
 	SAICBTypeInfo = {
 		GetCBType -> CasusBelliType
 		GetClaimant -> Character
 		GetTarget -> Character
 		AccessSelf -> [unregistered]
-		GetMinScore -> CString
 		GetScore -> CString
+		GetScoreTooltip -> CString
 		OnClickClaimant -> void
 		OnClickTarget -> void
 		Self -> [unregistered]
@@ -10045,10 +10666,12 @@ Types = {
 		GreatHolyWar -> [unregistered]
 		HolyOrder -> [unregistered]
 		House -> [unregistered]
+		IsSet -> bool
 		MercenaryCompany -> [unregistered]
 		Province -> [unregistered]
 		Religion -> [unregistered]
 		Scheme -> [unregistered]
+		ScriptValue -> CFixedPoint
 		Secret -> [unregistered]
 		Self -> [unregistered]
 		Story -> [unregistered]
@@ -10482,12 +11105,16 @@ Types = {
 		IsDebugTooltipVisible -> bool
 		IsDebuggingSinglePoint -> bool
 		IsEraserSelected -> bool
+		IsEyeDropperSelected -> bool
 		IsHeightRangeVisible -> bool
 		IsOpacityMaskTextureLoading -> bool
 		IsPainterSelected -> bool
 		IsPaintingForbidden -> bool
+		IsPaintingForbiddenTooltipActive -> bool
 		IsSelected -> bool
 		IsTopologyPickerEnabled -> bool
+		IsTopologyPickerTooltipActive -> bool
+		IsVisualDebuggingTooltipActive -> bool
 		ReloadPresets -> void
 		RemoveMaterialEntry -> void
 		RenamePreset -> void
@@ -10498,11 +11125,14 @@ Types = {
 		SetAngleAsString -> void
 		SetBleedingAsString -> void
 		SetDensityAsString -> void
+		SetEraserSelected -> void
+		SetEyeDropperSelected -> void
 		SetHeightRangeName -> void
 		SetInterpolationIndex -> void
 		SetOpacityMaskOffsetAsString -> void
 		SetOpacityMaskRotationAsString -> void
 		SetOpacityMaskScaleAsString -> void
+		SetPainterSelected -> void
 		SetPatternIndex -> void
 		SetPatternMode -> void
 		SetPresetIndex -> void
@@ -10512,7 +11142,6 @@ Types = {
 		StartSampleCompositionEdit -> void
 		ToggleAutosave -> void
 		ToggleDebugActiveFor -> void
-		ToggleEraser -> void
 		ToggleHeightRangeVisible -> void
 		ToggleMaterialLock -> void
 		ToggleSampleEntryLock -> void
@@ -10552,13 +11181,25 @@ Types = {
 
 	SplineAdjustmentTool = {
 		AccessSelf -> [unregistered]
+		AddAnchorsToAdjacentSelectedPairs -> void
+		CanAddAnchorsInSelection -> bool
 		CanDeleteSelection -> bool
 		DeleteSelected -> void
+		HasMapContent -> bool
+		HasMergeNotes -> bool
 		IsAnchorCreationSelected -> bool
 		IsAnchorSelectionSelected -> bool
+		IsMapContentSelectionSelected -> bool
+		IsNavMeshVisible -> bool
+		IsShowingAllMergeNotes -> bool
+		IsShowingConflictsMergeNotes -> bool
 		SelectAnchorCreation -> void
 		SelectAnchorSelection -> void
+		SelectMapContentSelection -> void
 		Self -> [unregistered]
+		ToggleNavMeshVisibility -> void
+		ToggleShowingAllMergeNotes -> void
+		ToggleShowingConflictsMergeNotes -> void
 	}
 
 	SplineAdjustmentToolMode = {
@@ -10567,32 +11208,29 @@ Types = {
 		Self -> [unregistered]
 	}
 
-	SplineNetwork = {
-		AccessSelf -> [unregistered]
-		AnchorIsLocked -> bool
-		GetAnchorDisplayString -> CString
-		GetStripDisplayString -> CString
-		SelectedAnchors -> [unregistered]
-		SelectedStrips -> [unregistered]
-		Self -> [unregistered]
-		StripIsLocked -> bool
-		ToggleAnchorLock -> void
-		ToggleStripLock -> void
-	}
-
 	SplineStripTool = {
 		AccessSelf -> [unregistered]
 		CanDeleteSelection -> bool
 		DeleteSelected -> void
+		HasMapContent -> bool
+		HasMergeNotes -> bool
 		IsAnchorCreationSelected -> bool
 		IsAnchorSelectionSelected -> bool
+		IsMapContentSelectionSelected -> bool
+		IsNavMeshVisible -> bool
+		IsShowingAllMergeNotes -> bool
+		IsShowingConflictsMergeNotes -> bool
 		IsStripCreationSelected -> bool
 		IsStripSelectionSelected -> bool
 		SelectAnchorCreation -> void
 		SelectAnchorSelection -> void
+		SelectMapContentSelection -> void
 		SelectStripCreation -> void
 		SelectStripSelection -> void
 		Self -> [unregistered]
+		ToggleNavMeshVisibility -> void
+		ToggleShowingAllMergeNotes -> void
+		ToggleShowingConflictsMergeNotes -> void
 	}
 
 	SplineStripToolMode = {
@@ -10601,9 +11239,26 @@ Types = {
 		Self -> [unregistered]
 	}
 
-	SplineTypesToCreateDropdown = {
+	SplineToolsMapContentPanel = {
 		AccessSelf -> [unregistered]
+		AutoPlaceHubAnchors -> void
+		HasMapContent -> bool
 		Self -> [unregistered]
+	}
+
+	SplineTypeItem = {
+		AccessSelf -> [unregistered]
+		GetId -> uint8
+		GetName -> CString
+		Self -> [unregistered]
+	}
+
+	SplineTypeSelectionDropdown = {
+		AccessSelf -> [unregistered]
+		IsSplineTypeSelected -> bool
+		SelectSplineType -> void
+		Self -> [unregistered]
+		SplineTypes -> [unregistered]
 		Toggle -> void
 	}
 
@@ -10631,6 +11286,7 @@ Types = {
 	Story = {
 		MakeScope -> Scope
 		AccessSelf -> [unregistered]
+		Custom -> CString
 		MakeScope -> Scope
 		Self -> [unregistered]
 	}
@@ -10839,14 +11495,17 @@ Types = {
 
 	TextureImporter = {
 		AccessSelf -> [unregistered]
+		AddCustomResolution -> void
 		Cancel -> void
 		GetLastConversion -> CString
 		GetOutputEntries -> [unregistered]
 		GetTextures -> [unregistered]
 		HasLastConversion -> bool
 		Import -> void
+		IsCustomResolution -> bool
 		IsImporting -> bool
 		Refresh -> void
+		RemoveCustomResolution -> void
 		Self -> [unregistered]
 		SetOutputScale -> void
 		SetResolution -> void
@@ -10855,12 +11514,18 @@ Types = {
 	TextureList = {
 		AccessSelf -> [unregistered]
 		GetAutoUpdate -> bool
+		GetCurrentDirectory -> CString
+		GetDirectories -> [unregistered]
 		GetFilterString -> CUTF8String
 		GetTextures -> [unregistered]
 		GetTotalSize -> uint64
+		GetTotalTextureCount -> int32
+		GoToParentDirectory -> void
+		IsFlatView -> bool
 		Self -> [unregistered]
 		SetAutoUpdate -> void
 		SetFilterString -> void
+		SetFlatView -> void
 		SortByFormat -> void
 		SortByMipMaps -> void
 		SortByName -> void
@@ -10870,11 +11535,22 @@ Types = {
 		UpdateTextureList -> void
 	}
 
+	TextureListDirectory = {
+		AccessSelf -> [unregistered]
+		GetMipMaps -> int32
+		GetName -> [unregistered]
+		GetRefcount -> int32
+		GetSize -> uint64
+		GetSubDirectoryCount -> int32
+		GetTextureCount -> int32
+		Self -> [unregistered]
+	}
+
 	TextureListTexture = {
 		AccessSelf -> [unregistered]
 		GetFormat -> CString
 		GetMipMaps -> int32
-		GetName -> CString
+		GetName -> [unregistered]
 		GetRefcount -> int32
 		GetResolution -> CString
 		GetSize -> uint64
@@ -10966,6 +11642,7 @@ Types = {
 		CanHaveClaim -> bool
 		CanPlayerRenameTitle -> bool
 		CanUseFindVassal -> bool
+		CreateHolderForBarony -> void
 		Custom -> CString
 		GetAdjective -> CString
 		GetAdjectiveNoTooltip -> CString
@@ -11111,6 +11788,7 @@ Types = {
 		ClickOnHolding -> void
 		Close -> void
 		CloseClaimants -> void
+		CloseHistory -> void
 		CreateTitle -> void
 		DestroyTitle -> void
 		GetClearLawsButtonTooltip -> CString
@@ -11353,6 +12031,7 @@ Types = {
 	}
 
 	TopScope = {
+		AddList -> TopScope
 		AddScope -> TopScope
 		GetDecisionFromEventTargetFlag -> Decision
 		GetRootScope -> Scope
@@ -11419,27 +12098,48 @@ Types = {
 	}
 
 	Trait = {
+		GetGroup -> TraitGroup
 		AccessSelf -> [unregistered]
 		GetDescription -> CString
 		GetFullDescription -> CString
+		GetGroup -> [unregistered]
 		GetIcon -> [unregistered]
 		GetIconOverlayForLocalPlayer -> [unregistered]
 		GetKey -> CString
 		GetName -> CString
 		GetNameNoTooltip -> CString
 		GetNameNoTooltipWithDefault -> CString
+		GetRulerDesignerCost -> int32
 		GetTraitCategoryLabel -> CString
 		IsGenetic -> bool
 		IsInheritable -> bool
 		IsPersonality -> bool
 		IsValid -> bool
 		Self -> [unregistered]
+		ShowInRulerDesigner -> bool
 	}
 
 	TraitGroup = {
 		AccessSelf -> [unregistered]
 		GetName -> CString
+		GetTraits -> [unregistered]
 		Self -> [unregistered]
+	}
+
+	TraitSlot = {
+		GetTrait -> Trait
+		AccessSelf -> [unregistered]
+		GetTrait -> [unregistered]
+		Self -> [unregistered]
+		StartEditing -> void
+	}
+
+	TraitSlotArray = {
+		AccessSelf -> [unregistered]
+		AccessSlots -> [unregistered]
+		RemoveTrait -> void
+		Self -> [unregistered]
+		StartEditing -> void
 	}
 
 	TransferVassalWindow = {
@@ -11514,6 +12214,7 @@ Types = {
 		GetLayerIndex -> CVector2i
 		GetMeshIndex -> CVector2i
 		GetTypeIndex -> CVector2i
+		IsHidden -> bool
 		IsLocked -> bool
 		IsSelected -> bool
 		Rename -> [unregistered]
@@ -11703,6 +12404,7 @@ Types = {
 	VariableSystem = {
 		AccessSelf -> [unregistered]
 		Clear -> void
+		ClearIf -> void
 		Exists -> bool
 		Get -> CString
 		HasValue -> bool
@@ -11737,6 +12439,10 @@ Types = {
 	VassalContractType = {
 		AccessSelf -> [unregistered]
 		GetName -> CString
+		GetObligationLevelName -> CString
+		GetObligationLevelNameNoTooltip -> CString
+		GetObligationLevelNameShort -> CString
+		GetObligationLevelNameShortNoTooltip -> CString
 		GetObligationName -> CString
 		GetObligationNameNoTooltip -> CString
 		GetObligationNameShort -> CString
@@ -11791,14 +12497,6 @@ Types = {
 		GetWar -> [unregistered]
 		OpenWarView -> void
 		Self -> [unregistered]
-	}
-
-	WarGoalSubview = {
-		AccessSelf -> [unregistered]
-		Close -> void
-		IsShown -> bool
-		Self -> [unregistered]
-		Toggle -> void
 	}
 
 	WarInfo = {
@@ -11934,6 +12632,7 @@ Types = {
 		GetWarName -> CString
 		HasBeneficiary -> bool
 		HasGWHShare -> bool
+		IsContributionShareSetup -> bool
 		IsEnemyWon -> bool
 		IsInvalidated -> bool
 		IsNoWinner -> bool

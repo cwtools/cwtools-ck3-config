@@ -2,6 +2,11 @@ Trigger Documentation:
 
 --------------------
 
+debug_log = yes - Outputs to the game log when this trigger is hit
+debug_log_details = yes - Outputs full trigger content when this trigger is hit
+
+--------------------
+
 any_dynasty_member - Iterate through all dynasty members
 any_dynasty_member = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: dynasty
@@ -21,6 +26,12 @@ Supported Scopes: dynasty
 
 --------------------
 
+dynasty_num_unlocked_perks - does the dynasty has the required number of unlocked dynasty perks?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: dynasty
+
+--------------------
+
 dynasty_prestige - does the dynasty have the required prestige?
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: dynasty
@@ -34,6 +45,18 @@ Supported Scopes: dynasty
 --------------------
 
 erudition_legacy_track_perks - How many perks in the lifestyle does this dynasty have?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: dynasty
+
+--------------------
+
+fp1_adventure_legacy_track_perks - How many perks in the lifestyle does this dynasty have?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: dynasty
+
+--------------------
+
+fp1_pillage_legacy_track_perks - How many perks in the lifestyle does this dynasty have?
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: dynasty
 
@@ -557,6 +580,12 @@ Supported Scopes: landed title
 
 --------------------
 
+has_user_set_coa - Has the user set a specific coat of arms for this title?
+Traits: yes/no 
+Supported Scopes: landed title
+
+--------------------
+
 has_wrong_holding_type - Is the scope landed title connected to a holding that cannot be governed by the current lessee or holder?
 Traits: yes/no 
 Supported Scopes: landed title
@@ -742,6 +771,12 @@ Supported Scopes: landed title
 
 --------------------
 
+title_held_years - Returns the number of years a title is held if valid (otherwise returns 0)
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: landed title
+
+--------------------
+
 title_is_a_faction_member - Is the scope title a member of a faction?
 Traits: yes/no 
 Supported Scopes: landed title
@@ -795,6 +830,11 @@ Supported Scopes: culture
 --------------------
 
 has_innovation - Have the culture discovered this innovation?
+Supported Scopes: culture
+
+--------------------
+
+has_innovation_flag - Has the culture discovered an innovation with this flag? has_innovation_flag = flag
 Supported Scopes: culture
 
 --------------------
@@ -2906,6 +2946,11 @@ Supported Scopes: character
 
 --------------------
 
+is_council_task_valid - Check if the task of the scope councillor is valid { task_type = council_position_type_key target = for_targeted_tasks }
+Supported Scopes: character
+
+--------------------
+
 is_councillor - Is the scoped character a councillor?
 Traits: yes/no 
 Supported Scopes: character
@@ -2995,6 +3040,12 @@ Supported Scopes: character
 
 is_foreign_court_or_pool_guest_of - Is the character a guest? (is_pool_guest_of or is_foreign_court_guest_of)
 Traits: character target 
+Supported Scopes: character
+
+--------------------
+
+is_from_ruler_designer - Was this character made from the ruler designer
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -3125,6 +3176,12 @@ Supported Scopes: character
 --------------------
 
 is_landed - Is the scope character landed (holds a county or barony)?
+Traits: yes/no 
+Supported Scopes: character
+
+--------------------
+
+is_landless_ruler - Is the scope character a landless ruler (holds any title, but no on-map land)?
 Traits: yes/no 
 Supported Scopes: character
 
@@ -3344,7 +3401,7 @@ Supported Scopes: character
 
 --------------------
 
-is_vassal_or_below_of - is the scope character a vassal or below of the target character?
+is_vassal_or_below_of - is the scope character a vassal or below of the target character? Non-rulers are not considered vassals
 Traits: character target 
 Supported Scopes: character
 
@@ -3980,13 +4037,6 @@ Supported Scopes: character
 
 --------------------
 
-should_show_disturbing_portrait_modifiers - is the character the local player?
-An interface trigger, can only be used in specific places
-Traits: yes/no 
-Supported Scopes: character
-
---------------------
-
 stewardship - does the character have the required stewardship skill level?
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
@@ -4054,7 +4104,7 @@ Supported Scopes: character
 
 --------------------
 
-target_is_vassal_or_below - is the target character a vassal or below of the scope character?
+target_is_vassal_or_below - is the target character a vassal or below of the scope character? Non-rulers are not considered vassals
 Traits: character target 
 Supported Scopes: character
 
@@ -4085,6 +4135,13 @@ Supported Scopes: character
 --------------------
 
 time_in_prison_type - for how long has the character been imprisoned with the current type? time_in_prison_type = { days/months/years =,>,< X }
+Supported Scopes: character
+
+--------------------
+
+time_to_hook_expiry - The # of days until the scoped character's hook on the target expires
+time_to_hook_expiry = { target = someone value > 50 }
+Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
 
 --------------------
@@ -4206,6 +4263,12 @@ Supported Scopes: faction
 
 --------------------
 
+discontent_per_month - How much is the Faction's Discontent increasing each month?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: faction
+
+--------------------
+
 faction_can_press_demands - Can the scope faction press demands?
 Traits: yes/no 
 Supported Scopes: faction
@@ -4249,6 +4312,12 @@ Supported Scopes: faction
 
 has_special_title - Has the faction a special title assigned?
 Traits: yes/no 
+Supported Scopes: faction
+
+--------------------
+
+months_until_max_discontent - How many months until Discontent is max (100)?
+Traits: <, <=, =, !=, >, >=
 Supported Scopes: faction
 
 --------------------
@@ -4373,10 +4442,31 @@ Supported Targets: great holy war
 
 --------------------
 
+any_faith_character - Iterate through characters of the scoped faith
+any_faith_character = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: faith
+Supported Targets: character
+
+--------------------
+
 any_faith_holy_order - Iterate through all holy orders of the faith
 any_faith_holy_order = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: faith
 Supported Targets: holy order
+
+--------------------
+
+any_faith_playable_ruler - Iterate through playable rulers of the scoped faith
+any_faith_playable_ruler = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: faith
+Supported Targets: character
+
+--------------------
+
+any_faith_ruler - Iterate through rulers of the scoped faith
+any_faith_ruler = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: faith
+Supported Targets: character
 
 --------------------
 
@@ -4638,6 +4728,13 @@ Supported Scopes: province
 
 --------------------
 
+has_holding - does the scope province have holding?
+	has_holding = yes
+Traits: yes/no 
+Supported Scopes: province
+
+--------------------
+
 has_holding_type - does the scope province have a holding of particular type?
 	has_holding_type = castle_holding
 Supported Scopes: province
@@ -4827,14 +4924,14 @@ Supported Scopes: army
 
 --------------------
 
-building_garrison - The amount of garrison in a county or province from buildings
+building_levies - The amount of levies in a county or province from buildings
 levies > 100
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: landed title, province
 
 --------------------
 
-building_levies - The amount of levies in a county or province from buildings
+building_max_garrison - The max amount of garrison in a county or province from buildings
 levies > 100
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: landed title, province
@@ -4889,6 +4986,13 @@ any_county_in_region - Iterate through all counties in the region. Put 'region =
 any_county_in_region = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: none
 Supported Targets: landed title
+
+--------------------
+
+any_culture_global - Iterate through all cultures in the game
+any_culture_global = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: none
+Supported Targets: culture
 
 --------------------
 
@@ -5121,6 +5225,11 @@ Supported Scopes: none
 
 --------------------
 
+has_dlc_feature - Does the host have DLC that enables this particular feature
+Supported Scopes: none
+
+--------------------
+
 has_game_rule - Is the given game rule setting enabled?
 has_game_rule = faster_conversion
 Supported Scopes: none
@@ -5338,8 +5447,44 @@ Supported Scopes: none
 
 --------------------
 
+perks_in_diplomacy_lifestyle - How many perks does this lifestyle have?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: none
+
+--------------------
+
+perks_in_intrigue_lifestyle - How many perks does this lifestyle have?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: none
+
+--------------------
+
+perks_in_learning_lifestyle - How many perks does this lifestyle have?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: none
+
+--------------------
+
+perks_in_martial_lifestyle - How many perks does this lifestyle have?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: none
+
+--------------------
+
+perks_in_stewardship_lifestyle - How many perks does this lifestyle have?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: none
+
+--------------------
+
 release_only - Checks if the game is in release mode or not.
 Traits: yes/no 
+Supported Scopes: none
+
+--------------------
+
+save_temporary_opinion_value_as - Saves the scoped character's opinion of the target character as an arbitrarily-named target to be referenced later in the in the same trigger
+save_temporary_opinion_value_as = { name = <string> target = x 
 Supported Scopes: none
 
 --------------------
@@ -5356,6 +5501,20 @@ Supported Scopes: none
 --------------------
 
 scripted_tests - Checks if the game is currently running scripted tests.
+Traits: yes/no 
+Supported Scopes: none
+
+--------------------
+
+should_show_disturbing_portrait_modifiers - can disturbing portrait modifiers be shown?
+An interface trigger, can only be used in specific places
+Traits: yes/no 
+Supported Scopes: none
+
+--------------------
+
+should_show_nudity - can nudity be shown?
+An interface trigger, can only be used in specific places
 Traits: yes/no 
 Supported Scopes: none
 
