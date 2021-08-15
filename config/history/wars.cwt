@@ -17,17 +17,17 @@ war_history = {
     start_date = date_field
     ### End date of the war.
     end_date = date_field
-    
+
     ### The type of the casus belli.
     casus_belli = <casus_belli_type>
-    
+
     ## cardinality = 0..1
     ### The claimant scope. Only needed if the casus belli needs a claimant scope.
     claimant = <character>
     ## cardinality = 0..1
     ### The list of target titles. Only needed if the casus belli targets titles.
     targeted_titles = single_alias_right[title_list]
-    
+
     ### List of attackers. The first one will be the primary attacker.
     attackers = single_alias_right[character_id_list]
     ### List of defenders. The first one will be the primary defender.

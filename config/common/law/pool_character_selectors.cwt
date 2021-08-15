@@ -31,12 +31,12 @@ pool_character_selector = {
     pool = enum[pool_types]
     ## cardinality = 0..1
     ### Whether pool characters should be only selected from the same court.
-	court = bool
+    court = bool
     ### Gender restriction for pool characters.
-	gender = enum[pool_genders]
+    gender = enum[pool_genders]
     ## cardinality = 0..1
     ### Cultural restriction for pool characters.
-	culture = enum[pool_cultures]
+    culture = enum[pool_cultures]
 }
 
 enums = {

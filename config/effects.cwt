@@ -73,7 +73,7 @@ alias[effect:add_truce_one_way] = {
     ## cardinality = 0..1
     override = bool
     enum[duration] = int_value_field
-    
+
     # All three are mutually exclusive, how to handle?
     ## cardinality = 0..1
     casus_belli = scope[casus_belli] # Probably, never used in vanilla files.
@@ -93,10 +93,10 @@ alias[effect:expose_secret] = scope[character]
 alias[effect:switch] = {
     trigger = alias_keys_field[trigger]
     ## cardinality = 0..inf
-	scalar = {
-		## cardinality = 0..inf
-		alias_name[effect] = alias_match_left[effect]
-	}
+    scalar = {
+        ## cardinality = 0..inf
+        alias_name[effect] = alias_match_left[effect]
+    }
 }
 
 ### Recalculates the effect of a scripted relation recalculate_scripted_relation= friend
@@ -251,7 +251,7 @@ alias[effect:end_pregnancy] = scalar
 ### Adds the event target to a variable list add_to_variable_list = { name = X target = Y } Where X is the name of the variable Where Y is an event target
 alias[effect:add_to_variable_list] = {
     name = value_set[variable_list]
-    
+
     ## cardinality = 0..1
     target = value_field
     ## cardinality = 0..1
@@ -365,7 +365,7 @@ alias[effect:add_stewardship_lifestyle_xp] = int_value_field
 ### Adds the event target to a variable list add_to_variable_list = { name = X target = Y } Where X is the name of the variable Where Y is an event target
 alias[effect:add_to_global_variable_list] = {
     name = value_set[global_variable_list]
-    
+
     ## cardinality = 0..1
     target = value_field
     ## cardinality = 0..1
@@ -423,7 +423,7 @@ alias[effect:add_truce_both_ways] = {
     ## cardinality = 0..1
     override = bool
     enum[duration] = int_value_field
-    
+
     # All three are mutually exclusive, how to handle?
     ## cardinality = 0..1
     casus_belli = scope[casus_belli] # Probably, never used in vanilla files.
@@ -486,7 +486,7 @@ alias[effect:duel] = {
 
         ## cardinality = 0..inf
         alias_name[weight] = alias_match_left[weight]
-        
+
         alias_name[effect] = alias_match_left[effect]
     } # TODO: Check this is everything.
 }
@@ -562,7 +562,7 @@ alias[effect:send_interface_toast] = {
     ## cardinality = 0..1
     title = localisation
     ## cardinality = 0..1
-	desc = localisation
+    desc = localisation
     ## cardinality = 0..1
     tooltip = localisation
     ## cardinality = 0..1
@@ -577,7 +577,7 @@ alias[effect:send_interface_toast] = {
     goto = scope[character]
     ## cardinality = 0..1
     goto = scope[landed_title]
-		
+
     ## cardinality = 0..inf
     alias_name[effect] = alias_match_left[effect]
 }
@@ -1021,7 +1021,7 @@ alias[effect:send_interface_message] = {
     ## cardinality = 0..1
     title = localisation
     ## cardinality = 0..1
-	desc = localisation
+    desc = localisation
     ## cardinality = 0..1
     tooltip = localisation
     ## cardinality = 0..1
@@ -1036,7 +1036,7 @@ alias[effect:send_interface_message] = {
     goto = scope[character]
     ## cardinality = 0..1
     goto = scope[landed_title]
-		
+
     ## cardinality = 0..inf
     alias_name[effect] = alias_match_left[effect]
 }
@@ -1215,7 +1215,7 @@ alias[effect:create_character] = {
     enum[event_option_skills] = int_value_field
     ## cardinality = 0..1
     ## push_scope = character
-    after_creation = { 
+    after_creation = {
         alias_name[effect] = alias_match_left[effect]
     }
 }
@@ -1299,7 +1299,7 @@ alias[effect:add_county_modifier] = single_alias_right[added_modifier]
 ### Spawns an army for this character Usage: spawn_army = { levies = int/script value # optional, number of men men_at_arms = { # optional, multiple can be specified. Need either levies or MAA type = key men/stacks = int/script value } location = province origin = province # optional, location used if not set. This is used for where to base bonuses and the like on war = war # optional. If set, the stack will disband after the war ends inheritable = yes/no # Default: yes uses_supply = yes/no # Default: yes army = army # optional. If set, the stack will merge into this army save_scope_as/save_temporary_scope_as = new_army # optional way to get a reference to the new army. Note this might not be set if the army wasn't spawned (e.g. if the character is not at war) name = description # gives the troops a specific name that shows up in interfaces }
 alias[effect:spawn_army] = {
     name = localisation
-    
+
     ## cardinality = 0..1
     levies = int_value_field
     ## cardinality = 0..inf
@@ -1598,9 +1598,9 @@ alias[effect:create_alliance] = scope[character]
 
 ### Create an alliance between the scoped character and the target. The allied through characters determine who gets checked against for if the alliance should persist or not. create_alliance = { 	target = scope 	allied_through_owner = scope 	allied_through_target = scope } OR as a short hand use just the target to use the owner and target as the allied through characters create_alliance = scope
 alias[effect:create_alliance] = {
-	target = scope[character]
-	allied_through_owner = scope[character]
-	allied_through_target = scope[character]
+    target = scope[character]
+    allied_through_owner = scope[character]
+    allied_through_target = scope[character]
 }
 
 ### Changes the development progress of a title. If the title has higher tier than county, the effect will propagate down to all counties below it.

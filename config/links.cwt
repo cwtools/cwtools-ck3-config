@@ -673,7 +673,7 @@ links = {
     var = {
         desc = " Reference a previous set variable via its name eg: var:mortal_enemy"
         from_data = yes
-		type = both
+        type = both
         prefix = var:
         data_source = value[variable]
     }

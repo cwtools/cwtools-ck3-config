@@ -8,13 +8,13 @@ casus_belli_type = {
     ## cardinality = 0..1
     on_declaration = single_alias_right[effect_clause]
     ## cardinality = 0..1
-	on_victory = single_alias_right[effect_clause]
+    on_victory = single_alias_right[effect_clause]
     ## cardinality = 0..1
-	on_white_peace = single_alias_right[effect_clause]
+    on_white_peace = single_alias_right[effect_clause]
     ## cardinality = 0..1
-	on_defeat = single_alias_right[effect_clause]
+    on_defeat = single_alias_right[effect_clause]
     ## cardinality = 0..1
-	on_invalidated = single_alias_right[effect_clause]
+    on_invalidated = single_alias_right[effect_clause]
 
     should_invalidate = single_alias_right[trigger_clause]
     ## cardinality = 0..1

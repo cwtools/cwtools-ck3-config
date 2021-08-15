@@ -26,38 +26,38 @@ regiment_type = {
     holy_order_fallback = bool
 
     ## cardinality = 0..1
-	###  Damage dealt in pursuit phase if on winning side.
-	pursuit = int_value_field
+    ###  Damage dealt in pursuit phase if on winning side.
+    pursuit = int_value_field
     ## cardinality = 0..1
-	###  Damage mitigated in pursuit phase if on losing side.
-	screen = int_value_field
-	###  Damage dealt.
-	damage = int_value_field
-	###  Ability to absorb damage.
-	toughness = int_value_field
+    ###  Damage mitigated in pursuit phase if on losing side.
+    screen = int_value_field
+    ###  Damage dealt.
+    damage = int_value_field
+    ###  Ability to absorb damage.
+    toughness = int_value_field
     ## cardinality = 0..1
-	###  How much it contributes to sieges.
-	siege_value = value_field
+    ###  How much it contributes to sieges.
+    siege_value = value_field
 
-	## cardinality = 0..1
-	###  If set, only affects the pursuit phase. Handy for siege weapons.
-	fights_in_main_phase = bool
-	## cardinality = 0..1
-	###  How good it is at countering forts.
-	siege_tier = int_value_field
+    ## cardinality = 0..1
+    ###  If set, only affects the pursuit phase. Handy for siege weapons.
+    fights_in_main_phase = bool
+    ## cardinality = 0..1
+    ###  How good it is at countering forts.
+    siege_tier = int_value_field
 
-	### Costs. Support gold, prestige, and piety.
-	buy_cost = single_alias_right[cost]
-	###  Maintenance paid when the regiment is unraised and fully reinforced or when reinforcement is disabled.
-	low_maintenance_cost = single_alias_right[cost]
-	###  Maintenance paid when the regiment is raised or not fully reinforced.
-	high_maintenance_cost = single_alias_right[cost]
-	
-	## cardinality = 0..1
-	### Terrain bonuses pursuit, siege_value, etc.
-	terrain_bonus = {
+    ### Costs. Support gold, prestige, and piety.
+    buy_cost = single_alias_right[cost]
+    ###  Maintenance paid when the regiment is unraised and fully reinforced or when reinforcement is disabled.
+    low_maintenance_cost = single_alias_right[cost]
+    ###  Maintenance paid when the regiment is raised or not fully reinforced.
+    high_maintenance_cost = single_alias_right[cost]
+
+    ## cardinality = 0..1
+    ### Terrain bonuses pursuit, siege_value, etc.
+    terrain_bonus = {
         ## cardinality = 1..inf
-		<terrain> = {
+        <terrain> = {
             ## cardinality = 0..1
             ###  Extra damage dealt in pursuit phase if on winning side.
             ## cardinality = 0..1
@@ -76,25 +76,25 @@ regiment_type = {
             ###  How much more it contributes to sieges.
             siege_value = value_field
         }
-	}
-	
-	## cardinality = 0..1
-	### What archetypes it counters, and how much. The number is how many subregiments it counters
-	counters = {
-        ## cardinality = 0..inf
-		value[unit_type] = int_value_field
-	}
+    }
 
-	### Size of one sub-regiment.
+    ## cardinality = 0..1
+    ### What archetypes it counters, and how much. The number is how many subregiments it counters
+    counters = {
+        ## cardinality = 0..inf
+        value[unit_type] = int_value_field
+    }
+
+    ### Size of one sub-regiment.
     stack = int_value_field
     ## cardinality = 0..1
-	### Maximal amount of sub-regiments.
+    ### Maximal amount of sub-regiments.
     max_sub_regiments = int_value_field
 
-	## push_scope = character
+    ## push_scope = character
     ## cardinality = 0..1
-	###  Script value in character scope. Used in addition to a quality calculation (based on TOUGHNESS_SCORE_MULT, etc.) to figure out what the AI should buy/disband.
-	ai_quality = int_value_field
+    ###  Script value in character scope. Used in addition to a quality calculation (based on TOUGHNESS_SCORE_MULT, etc.) to figure out what the AI should buy/disband.
+    ai_quality = int_value_field
 }
 
 alias[modifier:value[unit_type]_max_size_add] = int_value_field

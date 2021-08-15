@@ -23,5 +23,5 @@ death_reason = {
     priority = int
     ### When no natural death reasons can be picked, one of the reasons marked as default will be picked randomly. Default = no
     ## cardinality = 0..1
-	default = bool
+    default = bool
 }

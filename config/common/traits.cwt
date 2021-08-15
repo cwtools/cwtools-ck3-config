@@ -41,7 +41,7 @@ trait = {
     alias_name[modifier] = alias_match_left[modifier]
     ## cardinality = 0..1
     same_opinion_if_same_faith = int_value_field
-    
+
     ## cardinality = 0..1
     add_commander_trait = bool
     # Work around for bad expected type on this modifier
@@ -155,7 +155,7 @@ trait = {
     ## cardinality = 0..1
     ### When gaining this trait, every single morph gene will be shifted by this percentage towards 0 or 1; whichever it is closest to. E.G., 0.4 will shift 25% towards 0, resulting in 0.3
     portrait_extremity_shift = float[0..1]
-  
+
     ###########################
     ######Categorization#######
     ###########################
@@ -207,7 +207,7 @@ trait = {
     ##################
     ######Misc.#######
     ##################
-    
+
     ## cardinality = 0..1
     ### A list of terrain types that are taken into consideration when commander traits are randomly assigned to commanders. These traits are only assigned/considered if the commander's culture contains a province that has one of the terrain types specified in the list
     trait_exclusive_if_realm_contains = {

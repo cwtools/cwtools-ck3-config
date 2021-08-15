@@ -81,11 +81,11 @@ single_alias[scaled_modifier] = {
 
 single_alias[relation_flag_clause] = {
     ### Flag to interact with.
-	flag = value[relation_flag]
+    flag = value[relation_flag]
     ### Target to interact with.
-	target = scope[character]
+    target = scope[character]
     ### Relation to interact with.
-	relation = <scripted_relation>
+    relation = <scripted_relation>
 }
 
 single_alias[regular_building_list] = {

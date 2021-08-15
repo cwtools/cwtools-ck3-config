@@ -10,7 +10,7 @@ types = {
             Description = "$_desc"
 
             HighlightDescription = "$_highlight_desc"
-		}
+        }
     }
 }
 
@@ -21,7 +21,7 @@ types = {
             ## required
             ## primary
             Name = "$_name"
-		}
+        }
     }
 }
 

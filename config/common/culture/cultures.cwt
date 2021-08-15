@@ -27,7 +27,7 @@ culture_group = {
         ## cardinality = 0..1
         ### List of possible mercenary names and optionally coats of arms.
         mercenary_names = single_alias_right[mercenary_list]
-        
+
         ## cardinality = 0..1
         ### List of possible cadet dynasty names.
         cadet_dynasty_names = single_alias_right[dynasty_name_list]
@@ -65,42 +65,42 @@ culture_group = {
 
         ## cardinality = 0..1
         ### Chance of male children being named after their paternal grandfather. Sum of these three values must not exceed 100.
-		pat_grf_name_chance = int
+        pat_grf_name_chance = int
         ## cardinality = 0..1
         ### Chance of male children being named after their maternal grandfather. Sum of these three values must not exceed 100.
-		mat_grf_name_chance = int
+        mat_grf_name_chance = int
         ## cardinality = 0..1
         ### Chance of male children being named after their father. Sum of these three values must not exceed 100.
-		father_name_chance = int
-		
+        father_name_chance = int
+
         ## cardinality = 0..1
         ### Chance of female children being named after their paternal grandmother. Sum of these three values must not exceed 100.
         pat_grm_name_chance = int
         ## cardinality = 0..1
         ### Chance of female children being named after their maternal grandmother. Sum of these three values must not exceed 100.
-		mat_grm_name_chance = int
+        mat_grm_name_chance = int
         ## cardinality = 0..1
         ### Chance of female children being named after their mother. Sum of these three values must not exceed 100.
-		mother_name_chance = int
+        mother_name_chance = int
 
         # TODO: How do these work?
         # Patronyms. Names after the primary parent. Can use both prefix and suffix together ("McDavidson"). _vowel is used for when the parent's name starts with a vowel.
         ## cardinality = 0..1
-		patronym_prefix_male = localisation
+        patronym_prefix_male = localisation
         ## cardinality = 0..1
-		patronym_prefix_male_vowel = localisation
+        patronym_prefix_male_vowel = localisation
         ## cardinality = 0..1
-		patronym_prefix_female = localisation
+        patronym_prefix_female = localisation
         ## cardinality = 0..1
         patronym_prefix_female_vowel = localisation
-        
+
         ## cardinality = 0..1
         grammar_transform = enum[grammar_transform]
-		
+
         ## cardinality = 0..1
-		patronym_suffix_male = localisation
+        patronym_suffix_male = localisation
         ## cardinality = 0..1
-		patronym_suffix_female = localisation
+        patronym_suffix_female = localisation
 
         ## cardinality = 0..1
         ### Makes characters from this culture use patronyms in their names. It can be also allowed by the government type. Defaults to no.

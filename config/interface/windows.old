@@ -1,17 +1,17 @@
 types = {
-	## type_key_filter <> widget
-	## type_key_filter <> template
-	## type_key_filter <> types
-	type[window] = {
+    ## type_key_filter <> widget
+    ## type_key_filter <> template
+    ## type_key_filter <> types
+    type[window] = {
         path = "game/gui"
-		severity = warning
-	}
+        severity = warning
+    }
     ## type_key_filter <> window
     ## type_key_filter <> template
     ## type_key_filter <> types
-	type[widget] = {
+    type[widget] = {
         path = "game/gui"
-		severity = warning
+        severity = warning
     }
     type[gui_type] = {
         skip_root_key = { types }
@@ -125,21 +125,21 @@ single_alias[window] = {
     ## cardinality = 0..1
     widgetid = scalar
     ## cardinality = 0..1
-	size = single_alias_right[coords]
+    size = single_alias_right[coords]
     # datacontext = "[CreateClaimantFactionAgainstWindow.GetCharacterInteractionConfirmationWindow]"
     ## cardinality = 0..inf
-	datacontext = scalar
+    datacontext = scalar
     ## cardinality = 0..1
-	parentanchor = enum[gui_direction]
+    parentanchor = enum[gui_direction]
     ## cardinality = 0..1
-	widgetanchor = enum[gui_direction]
+    widgetanchor = enum[gui_direction]
     ## cardinality = 0..1
-	position = single_alias_right[coords]
+    position = single_alias_right[coords]
     ## cardinality = 0..1
     movable = bool
     ## cardinality = 0..1
     allow_outside = bool
-	layer = enum[gui_layer]
+    layer = enum[gui_layer]
 
     ## cardinality = 0..inf
     using = enum[gui_using]
@@ -450,11 +450,11 @@ single_alias[gui_text] = {
     ## cardinality = 0..1
     max_width = int
     ## cardinality = 0..1
-	parentanchor = enum[gui_direction]
+    parentanchor = enum[gui_direction]
     ## cardinality = 0..1
-	widgetanchor = enum[gui_direction]
+    widgetanchor = enum[gui_direction]
     ## cardinality = 0..1
-	position = single_alias_right[coords]
+    position = single_alias_right[coords]
 
 }
 

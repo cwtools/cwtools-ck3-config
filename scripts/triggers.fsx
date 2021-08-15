@@ -267,7 +267,7 @@ let orderedtemplate =
 }"""
 let tinner =
             """{
-	alias_name[trigger] = alias_match_left[trigger]
+    alias_name[trigger] = alias_match_left[trigger]
 }
 """
 let anytriggers = triggers |> List.filter (fun (t : RawEffect) -> t.name.StartsWith("any_"))

@@ -29,7 +29,7 @@ my_message = {
     icon = scalar
     ## cardinality = 0..1
     ### Affects the look of message items, neutral is default.
-	style = enum[message_styles]
+    style = enum[message_styles]
 }
 
 enums = {

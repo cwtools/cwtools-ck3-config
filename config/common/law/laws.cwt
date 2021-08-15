@@ -60,7 +60,7 @@ law_group = {
         ## cardinality = 0..inf
         ### Can be checked in script with has_realm_law_flag = some_arbitrary_flag.
         flag = scalar
-        
+
         ## cardinality = 0..1
         ## push_scope = character
         ### Effect run on ruler when the law is added. Does *NOT* get run when default laws are initialized, nor when inheriting a law from someone else. If this is done on a title, the title is accessible as scope:title.
@@ -69,16 +69,16 @@ law_group = {
         ## push_scope = character
         ### Effect run on ruler when the law is removed. Does *NOT* get run when law is removed due to inheriting a law from someone else. If this is done on a title, the title is accessible as scope:title.
         on_revoke = single_alias_right[effect_clause]
-        
+
         # TODO: There are some strict restrictions here, might worth checking them.
         ## cardinality = 0..1
         ### Succession rules. Any new law with a rule set will override the previous law's rule.
         succession = {
             ## cardinality = 0..1
-            ### Base order type of the succession. 
+            ### Base order type of the succession.
             order_of_succession = enum[order_of_succession]
 
-			# For inheritance:
+            # For inheritance:
             ## cardinality = 0..1
             ### Whether the title should use partition. Only "traversal_order = children" supports partition. Only for inheritance succession.
             title_division = enum[title_division]

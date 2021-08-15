@@ -1,20 +1,20 @@
 types = {
-	type[legacy] = {
+    type[legacy] = {
         path = "game/common/dynasty_legacies"
         localisation = {
             ## required
             ## primary
             Name = "$_name"
-		}
-	}
-	type[dynasty_perk] = {
-		path = "game/common/dynasty_perks"
+        }
+    }
+    type[dynasty_perk] = {
+        path = "game/common/dynasty_perks"
         localisation = {
             ## required
             ## primary
             Name = "$_name"
-		}
-	}
+        }
+    }
 }
 
 legacy = {

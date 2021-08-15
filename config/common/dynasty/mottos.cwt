@@ -5,7 +5,7 @@ types = {
             ## required
             ## primary
             Name = "motto_$"
-		}
+        }
     }
     type[motto_insert_group] = {
         path = "game/common/dynasty_house_motto_inserts"
@@ -17,7 +17,7 @@ types = {
             ## required
             ## primary
             Name = "motto_$"
-		}
+        }
     }
 }
 

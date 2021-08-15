@@ -28,16 +28,16 @@ enums = {
         war_allies
         scripted_relations
     }
-    
+
     enum[greeting] = {
         positive
         negative
     }
-    
+
     enum[target_type] = {
         title
     }
-    
+
     enum[target_filter] = {
         actor_domain_titles
         recipient_domain_titles
@@ -97,7 +97,7 @@ character_interaction = {
     }
     ## cardinality = 0..1
     redirect = single_alias_right[effect_clause]
-    
+
     ## cardinality = 0..1
     is_shown = single_alias_right[trigger_clause]
     ## cardinality = 0..1
@@ -120,7 +120,7 @@ character_interaction = {
     is_highlighted = single_alias_right[trigger_clause]
     ## cardinality = 0..1
     highlighted_reason = localisation
-    
+
     ## cardinality = 0..1
     on_send = single_alias_right[effect_clause]
     ## cardinality = 0..1
@@ -139,13 +139,13 @@ character_interaction = {
     ## cardinality = 0..1
     popup_on_receive = bool
     ## cardinality = 0..1
-	pause_on_receive = bool
-    
+    pause_on_receive = bool
+
     ## cardinality = 0..1
     populate_recipient_list = single_alias_right[effect_clause]
     ## cardinality = 0..1
     populate_actor_list = single_alias_right[effect_clause]
-    
+
     ## cardinality = 0..1
     ai_accept = single_alias_right[ai_chance_block]
     ## cardinality = 0..1
@@ -164,7 +164,7 @@ character_interaction = {
     ai_min_reply_days = int_value_field
     ## cardinality = 0..1
     ai_max_reply_days = int_value_field
-    
+
     ## cardinality = 0..inf
     send_option = {
         ## cardinality = 0..1
@@ -188,6 +188,6 @@ character_interaction = {
         ## cardinality = 0..1
         extra_icon = scalar
         ## cardinality = 0..1
-	    send_options_exclusive = bool
+        send_options_exclusive = bool
     }
 }

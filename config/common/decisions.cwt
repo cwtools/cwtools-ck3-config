@@ -1,7 +1,7 @@
 types = {
-	type[decision] = {
-		path = "game/common/decisions"
-	}
+    type[decision] = {
+        path = "game/common/decisions"
+    }
 }
 
 ## replace_scope = { root = character this = character }

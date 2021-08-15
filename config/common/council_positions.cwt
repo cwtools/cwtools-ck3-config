@@ -7,7 +7,7 @@ types = {
 council_position = {
     ## cardinality = 0..1
     skill = enum[attributes]
-    
+
     ## cardinality = 0..1
     ### What name to use. Be aware that when a position is unfilled, name_of_the_position is used instead.
     name = localisation
@@ -125,5 +125,5 @@ council_position = {
 
     ## cardinality = 0..1
     ### Which portrait animation should councillors of this type use in the council window
-	portrait_animation = <portrait_animation>
+    portrait_animation = <portrait_animation>
 }

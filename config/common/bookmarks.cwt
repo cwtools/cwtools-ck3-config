@@ -66,7 +66,7 @@ bookmark = {
             culture = <culture>
             religion = <religion>
             history_id = int[1..inf] # TODO: see above
-            
+
             ## cardinality = 0..1
             animation = <animation>
         }

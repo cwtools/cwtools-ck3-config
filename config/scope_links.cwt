@@ -10,8 +10,8 @@ alias[trigger:value_field] = value_field
 alias[trigger:scope_field] = scope_field
 
 alias[trigger:NOT] = {
-	## cardinality = 1..1
-	alias_name[trigger] = alias_match_left[trigger]
+    ## cardinality = 1..1
+    alias_name[trigger] = alias_match_left[trigger]
 }
 
 alias[trigger:NOR] = { alias_name[trigger] = alias_match_left[trigger] }
@@ -20,8 +20,8 @@ alias[trigger:AND] = { alias_name[trigger] = alias_match_left[trigger] }
 alias[trigger:OR] = { alias_name[trigger] = alias_match_left[trigger] }
 
 alias[effect:NOT] = {
-	## cardinality = 1..1
-	alias_name[effect] = alias_match_left[effect]
+    ## cardinality = 1..1
+    alias_name[effect] = alias_match_left[effect]
 }
 
 alias[effect:NOR] = { alias_name[effect] = alias_match_left[effect] }

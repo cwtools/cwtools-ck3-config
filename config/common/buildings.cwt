@@ -76,10 +76,10 @@ building = {
     can_construct_potential = single_alias_right[trigger_clause]
     ## replace_scope = { ROOT = province THIS = province }
     ## cardinality = 0..1
-	can_construct_showing_failures_only = single_alias_right[trigger_clause]
+    can_construct_showing_failures_only = single_alias_right[trigger_clause]
     ## replace_scope = { ROOT = province THIS = province }
     ## cardinality = 0..1
-	can_construct = single_alias_right[trigger_clause]
+    can_construct = single_alias_right[trigger_clause]
 
     ### if set to yes, the building will show in the build menu even if disabled (will still use can_construct_potential). No by default
     ## cardinality = 0..1
@@ -103,49 +103,49 @@ building = {
     ### A modifier applied to the owner of the holding
     ## replace_scope = { ROOT = character THIS = character }
     ## cardinality = 0..1
-	character_modifier = {
+    character_modifier = {
         alias_name[modifier] = alias_match_left[modifier]
-	}
+    }
 
     ### A modifier applied to the province
     ## replace_scope = { ROOT = province THIS = province }
     ## cardinality = 0..1
-	province_modifier = {
+    province_modifier = {
         alias_name[modifier] = alias_match_left[modifier]
-	}
+    }
 
     ### A modifier applied to the county
     ## replace_scope = { ROOT = county THIS = county }
     ## cardinality = 0..1
-	county_modifier = {
+    county_modifier = {
         alias_name[modifier] = alias_match_left[modifier]
-	}
+    }
 
-	### A modifier applied to every de jure county in the duchy (if the county has the same de facto liege as this building's county). Can only be used (and only works) for duchy capital buildings.
+    ### A modifier applied to every de jure county in the duchy (if the county has the same de facto liege as this building's county). Can only be used (and only works) for duchy capital buildings.
     ## replace_scope = { ROOT = county THIS = county }
     ## cardinality = 0..1
     duchy_capital_county_modifier = {
         alias_name[modifier] = alias_match_left[modifier]
-	}
+    }
 
     ### A special modifier applied to every holding of specified type in the county
     ## replace_scope = { ROOT = holding THIS = holding }
     ## cardinality = 0..1
-	county_holding_modifier = {
+    county_holding_modifier = {
         holding = <holding>
         alias_name[modifier] = alias_match_left[modifier]
-	}
+    }
 
     ### Building flags
     # TODO: more detailed flags
     ## cardinality = 0..1
-	flag = value_set[flag]
+    flag = value_set[flag]
 
     ### How desirable is the building for the AI
     ## cardinality = 0..1
-	ai_value = single_alias_right[chance_block]
+    ai_value = single_alias_right[chance_block]
 
-	### If this is set to yes, the building will be used for figuring out which background asset (walls/no walls etc) should be shown
+    ### If this is set to yes, the building will be used for figuring out which background asset (walls/no walls etc) should be shown
     ## cardinality = 0..1
     is_graphical_background = no
 

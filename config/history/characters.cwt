@@ -167,7 +167,7 @@ alias[character_history_effect:set_primary_title_to] = scope[title]
 alias[character_history_effect:dynasty] = <dynasty>
 
 ### Changes the character's house to the given one.
-alias[character_history_effect:dynasty_house] = <house> 
+alias[character_history_effect:dynasty_house] = <house>
 
 # TODO: Is this the same for CK3? (copied from CK2)
 ### Effects not covered by the other effects to execute on the character if they're not dead. Note that this is only executed after game start, so might cause some discrepancies in the lobby.

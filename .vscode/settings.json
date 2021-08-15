@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.cwt": "paradox"
+    },
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+}

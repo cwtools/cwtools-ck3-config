@@ -14,5 +14,5 @@ holding = {
     can_be_inherited = bool
     ## cardinality = 0..inf
     ### Optional flags assigned to the holding type.
-	flag = value_set[holding_flag]
+    flag = value_set[holding_flag]
 }

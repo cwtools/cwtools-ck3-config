@@ -8,5 +8,5 @@ character_interaction_category = {
     index = int_value_field
     ## cardinality = 0..1
     default = bool
-	desc = localisation
+    desc = localisation
 }

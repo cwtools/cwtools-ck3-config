@@ -55,7 +55,7 @@ customisable_localisation = {
     ## cardinality = 0..1
     ### Whether the localisation should selected randomly from the valid options. Otherwise the first valid one will be selected. Defaults to no.
     random_valid = bool
-    
+
     ## cardinality = 1..inf
     text = {
         ### The actual localisation key to display.

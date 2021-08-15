@@ -66,7 +66,7 @@ scheme = {
     ## cardinality = 0..1
     ### Defaults to `100`. (?)
     maximum_secrecy = int[0..100]
-    
+
     ## cardinality = 0..1
     ### Defaults to `0`. (?)
     minimum_secrecy = int[0..100]

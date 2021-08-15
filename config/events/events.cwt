@@ -1,11 +1,11 @@
 types = {
     ## graph_related_types = { on_action story_cycle }
-	type[event] = {
+    type[event] = {
         path = "game/events"
         localisation = {
-			## primary
-			title = title
-		}
+            ## primary
+            title = title
+        }
 
         subtype[visible] = {
             ## cardinality = 0..1
@@ -13,7 +13,7 @@ types = {
         }
         ## push_scope = character
         ## display_name = Character event
-		## abbreviation = CE
+        ## abbreviation = CE
         subtype[character] = {
             ## cardinality = 0..0
             scope = scalar
@@ -25,7 +25,7 @@ types = {
             scope = faith
         }
 
-	}
+    }
 }
 enums = {
     enum[event_types] = {
@@ -131,21 +131,21 @@ event = {
     ## cardinality = 0..1
     left_portrait = single_alias_right[event_portrait]
     ## cardinality = 0..1
-	right_portrait = scope[character]
+    right_portrait = scope[character]
     ## cardinality = 0..1
-	right_portrait = single_alias_right[event_portrait]
+    right_portrait = single_alias_right[event_portrait]
     ## cardinality = 0..1
-	lower_left_portrait = scope[character]
+    lower_left_portrait = scope[character]
     ## cardinality = 0..1
-	lower_left_portrait = single_alias_right[event_portrait]
+    lower_left_portrait = single_alias_right[event_portrait]
     ## cardinality = 0..1
-	lower_center_portrait = scope[character]
+    lower_center_portrait = scope[character]
     ## cardinality = 0..1
-	lower_center_portrait = single_alias_right[event_portrait]
+    lower_center_portrait = single_alias_right[event_portrait]
     ## cardinality = 0..1
-	lower_right_portrait = scope[character]
+    lower_right_portrait = scope[character]
     ## cardinality = 0..1
-	lower_right_portrait = single_alias_right[event_portrait]
+    lower_right_portrait = single_alias_right[event_portrait]
 
     ## cardinality = 0..1
     theme = <event_theme>
@@ -159,7 +159,7 @@ event = {
     override_icon = {
         ## cardinality = 0..1
         trigger = single_alias_right[trigger_clause]
-	# TODO: Add filepath
+    # TODO: Add filepath
         reference = scalar
     }
     ## cardinality = 0..inf

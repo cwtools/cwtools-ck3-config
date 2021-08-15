@@ -43,9 +43,9 @@ enums = {
     enum[ai_objectives] = {
         wargoal_province
         enemy_unit_province
-	    enemy_capital_province
-	    capital_province
-	    enemy_province
+        enemy_capital_province
+        capital_province
+        enemy_province
         province
         enemy_ally_province
     }

@@ -1,9 +1,9 @@
 # Placeholder implementation.
 types = {
-	type[animation] = {
+    type[animation] = {
         path = "game/gfx/portraits/portrait_animations"
         unique = yes
-	}
+    }
 }
 
 animation = {
@@ -21,10 +21,10 @@ animation = {
 single_alias[animation_description] = {
 
     ## cardinality = 0..1
-    default = { 
+    default = {
         head = scalar
-        torso = scalar 
-    } 
+        torso = scalar
+    }
 
     ## cardinality = 0..inf
     scalar = {

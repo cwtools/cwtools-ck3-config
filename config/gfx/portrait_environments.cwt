@@ -49,11 +49,11 @@ portrait_environment = {
     lights = <portrait_environment>
     ## cardinality = 0..1
     shadow_camera = {
-		position = scalar
-		look_at = single_alias_right[look_at]
-		look_at_node = scalar
-		fov = int_value_field
-		camera_near_far = { int_value_field int_value_field }
+        position = scalar
+        look_at = single_alias_right[look_at]
+        look_at_node = scalar
+        fov = int_value_field
+        camera_near_far = { int_value_field int_value_field }
     }
     ## cardinality = 0..1
     shadow_camera = <portrait_environment>
