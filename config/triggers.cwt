@@ -2021,3 +2021,9 @@ alias[trigger:current_day] == replace_me_comparison
 
 ### Compare the current ingame year
 alias[trigger:current_year] == replace_me_comparison
+
+### Is the culture a hybrid culture
+alias[trigger:is_hybrid_culture] = bool
+
+### Is the culture a divergent culture
+alias[trigger:is_divergent_culture] = bool

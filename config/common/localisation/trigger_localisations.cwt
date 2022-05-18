@@ -1,11 +1,11 @@
 types = {
-    type[trigger_localisation] = {
+    type[trigger_localization] = {
         path = "game/common/trigger_localization"
     }
 }
 
 # TODO: If there are no <rule>_not version, then NOT_<localisation_key> is required too.
-trigger_localisation = {
+trigger_localization = {
     ## cardinality = 0..1
     ### Localisation without pronoun or with global pronoun. If global_not isn't defined, then NOT_<localisation_key> is required too.
 	global = localisation
