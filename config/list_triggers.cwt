@@ -792,6 +792,7 @@ alias[trigger:any_close_or_extended_family_member] = {
     alias_name[trigger] = alias_match_left[trigger]
 }
 
+## push_scope = scheme
 ### Iterate through all schemes owned by the character any_scheme = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_scheme] = {
     ## cardinality = 0..1
@@ -1770,4 +1771,4 @@ alias[trigger:any_dynasty_member] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-
+
