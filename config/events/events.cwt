@@ -50,6 +50,12 @@ event = {
     ## cardinality = 0..1
     sender = scope[character]
 
+    ## cardinality = 0..1
+    opening = {
+        desc = localisation
+        desc = single_alias_right[complex_desc]
+    }
+
     subtype[visible] = {
         title = localisation
         title = single_alias_right[complex_desc]
