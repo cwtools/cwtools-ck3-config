@@ -47,6 +47,9 @@ event = {
     ## cardinality = 0..1
     hidden = bool
 
+    ## cardinality = 0..1
+    sender = scope[character]
+
     subtype[visible] = {
         title = localisation
         title = single_alias_right[complex_desc]
