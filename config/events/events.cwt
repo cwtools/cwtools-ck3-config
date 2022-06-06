@@ -47,6 +47,15 @@ event = {
     ## cardinality = 0..1
     hidden = bool
 
+    ## cardinality = 0..1
+    sender = scope[character]
+
+    ## cardinality = 0..1
+    opening = {
+        desc = localisation
+        desc = single_alias_right[complex_desc]
+    }
+
     subtype[visible] = {
         title = localisation
         title = single_alias_right[complex_desc]
@@ -181,5 +190,7 @@ single_alias[event_portrait] = {
         animation = <portrait_animation>
     }
     animation = <animation>
+    ## cardinality = 0..1
+    trigger = single_alias_right[trigger_clause]
 }
 

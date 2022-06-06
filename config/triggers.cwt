@@ -55,8 +55,9 @@ alias[trigger:number_of_lifestyle_traits] == replace_me_comparison
 ### What tier is the scoped title? barony = 1, empire = 5. Use the script values please, not raw numbers
 alias[trigger:tier] == replace_me_comparison
 
+# TODO: define this in some way
 ### Does the given faith have the given doctrine parameter? Can only check for bool parameters. has_doctrine_parameter = parameter_key
-alias[trigger:has_doctrine_parameter] = replace_me
+alias[trigger:has_doctrine_parameter] = <parameter_key>
 
 ### Is the scope character a ruler (holds any title)?
 alias[trigger:is_ruler] = bool
@@ -2021,3 +2022,9 @@ alias[trigger:current_day] == replace_me_comparison
 
 ### Compare the current ingame year
 alias[trigger:current_year] == replace_me_comparison
+
+### Is the culture a hybrid culture
+alias[trigger:is_hybrid_culture] = bool
+
+### Is the culture a divergent culture
+alias[trigger:is_divergent_culture] = bool

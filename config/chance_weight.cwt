@@ -81,6 +81,7 @@ alias[weight:opinion_modifier] = {
     opinion_target = scope[character]
     ## cardinality = 0..1
     target = scope[character]
+    ## cardinality = 0..1
     multiplier = value_field
     ## cardinality = 0..1
     min = value_field
