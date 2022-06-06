@@ -55,8 +55,9 @@ alias[trigger:number_of_lifestyle_traits] == replace_me_comparison
 ### What tier is the scoped title? barony = 1, empire = 5. Use the script values please, not raw numbers
 alias[trigger:tier] == replace_me_comparison
 
+# TODO: define this in some way
 ### Does the given faith have the given doctrine parameter? Can only check for bool parameters. has_doctrine_parameter = parameter_key
-alias[trigger:has_doctrine_parameter] = replace_me
+alias[trigger:has_doctrine_parameter] = <parameter_key>
 
 ### Is the scope character a ruler (holds any title)?
 alias[trigger:is_ruler] = bool
