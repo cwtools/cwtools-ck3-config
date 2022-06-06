@@ -190,5 +190,7 @@ single_alias[event_portrait] = {
         animation = <portrait_animation>
     }
     animation = <animation>
+    ## cardinality = 0..1
+    trigger = single_alias_right[trigger_clause]
 }
 
