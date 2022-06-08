@@ -15,6 +15,9 @@ alias[trigger:ai_boldness] == replace_me_comparison
 ### Check if the chance of the scope landed title to join the faction against the scripted value title_join_faction_chance = {     faction = faction_target #An ongoing faction     value <|<=|>=|> 0 }
 alias[trigger:title_join_faction_chance] = replace_me
 
+### Even if the character is dead, trigger?
+alias[trigger:even_if_dead] = bool
+
 ### Is the character a spouse of the target character, even if one or both are dead?
 alias[trigger:is_spouse_of_even_if_dead] = scope[character]
 
