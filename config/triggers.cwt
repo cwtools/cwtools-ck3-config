@@ -1,3 +1,5 @@
+# TODO: organise this?
+
 ### is the character at war with their liege?
 alias[trigger:is_at_war_with_liege] = bool
 
