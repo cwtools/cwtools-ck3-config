@@ -1259,7 +1259,7 @@ alias[trigger:is_allied_to] = scope[character]
 alias[trigger:is_lowborn] = bool
 
 ### task_current_value = scope:county.active_de_jure_drift_progress
-alias[trigger:active_de_jure_drift_progress] == replace_me_comparison
+alias[trigger:active_de_jure_drift_progress] == scope[landed_title]
 
 ### Is the county a holy site of the given faith? is_holy_site_of = some faith
 alias[trigger:is_holy_site_of] = replace_me
