@@ -47,19 +47,18 @@ single_alias[complex_desc] = {
     triggered_desc = single_alias_right[triggered_desc]
 
     ## cardinality = 0..inf
-    random_valid = {
-        ## cardinality = 2..inf
-        desc = localisation
-    }
+    first_valid = single_alias_right[first_random_valid]
 
     ## cardinality = 0..inf
-    first_valid = {
-        ## cardinality = 1..inf
-        triggered_desc = single_alias_right[triggered_desc]
-        # This should probably be recursive, but referencing an alias in itself causes a parser crash.
-        ## cardinality = 0..inf
-        desc = localisation
-    }
+    random_valid = single_alias_right[first_random_valid]
+}
+
+single_alias[first_random_valid] = {
+    ## cardinality = 1..inf
+    triggered_desc = single_alias_right[triggered_desc]
+    # This should probably be recursive, but referencing an alias in itself causes a parser crash.
+    ## cardinality = 0..inf
+    desc = localisation
 }
 
 single_alias[triggered_desc] = {
