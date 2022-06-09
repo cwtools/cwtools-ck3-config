@@ -86,11 +86,11 @@ event = {
 
     ## cardinality = 0..inf
     option = {
-        ## cardinality = 0..1
+        ## cardinality = 0..inf
         name = localisation
-        ## cardinality = 0..1
+        ## cardinality = 0..inf
         name = single_alias_right[complex_desc]
-        ## cardinality = 0..1
+        ## cardinality = 0..inf
         name = {
             trigger = single_alias_right[trigger_clause]
             text = localisation
