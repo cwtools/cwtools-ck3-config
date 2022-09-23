@@ -1805,7 +1805,7 @@ alias[effect:pay_long_term_income] = {
 ### the scope character pays gold to the target character, pay_gold = { target = X gold = Y } (AI budget category short term)
 alias[effect:pay_short_term_gold] = {
     target = scope[character]
-    enum[duration] = int
+    gold = int_value_field
 }
 
 ### the scope character immediately pays gold corresponding to their income to the target character, pay_income = { target = X days/months/years = Y } (AI budget short term)
