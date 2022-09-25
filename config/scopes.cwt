@@ -1,6 +1,6 @@
 scopes = {
     Value = {
-        aliases = { value }
+        aliases = { value base_value }
     }
     Bool = {
         aliases = { bool }
@@ -12,7 +12,7 @@ scopes = {
         aliases = { color }
     }
     Character = {
-        aliases = { character }
+        aliases = { character employee }
     }
     "Landed title" = {
 		aliases = { landed_title "landed title" }

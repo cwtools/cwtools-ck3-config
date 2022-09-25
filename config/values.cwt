@@ -140,5 +140,6 @@ values = {
         faction_demand
         swear_fealty
         transfer_type
+        employee
     }
 }

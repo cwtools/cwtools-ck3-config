@@ -10,17 +10,31 @@ single_alias[effect_clause] = {
 
 single_alias[cost] = {
     ## cardinality = 0..1
+    gold = single_alias_right[score_formula]
+    ## cardinality = 0..1
     gold = int_value_field
 
+    ## cardinality = 0..1
+    piety = single_alias_right[score_formula]
     ## cardinality = 0..1
     piety = int_value_field
 
     ## cardinality = 0..1
+    prestige = single_alias_right[score_formula]
+    ## cardinality = 0..1
     prestige = int_value_field
+
+    ## cardinality = 0..1
+    round = bool
 }
 
 single_alias[character_modifier] = {
     ## push_scope = character
+    alias_name[modifier] = alias_match_left[modifier]
+}
+
+single_alias[modifier_list] = {
+    ## cardinality = 1..inf
     alias_name[modifier] = alias_match_left[modifier]
 }
 

@@ -52,3 +52,48 @@ alias[arithmetic_operation:integer_range] = {
     min = int_value_field
     max = int_value_field
 }
+
+single_alias[score_formula] = {
+    ## cardinality = 0..inf
+    alias_name[score_operation] = alias_match_left[score_operation]
+    ## cardinality = 1..inf
+    alias_name[arithmetic_operation] = alias_match_left[arithmetic_operation]
+}
+
+alias[score_operation:add] = single_alias_right[score_arithmetic]
+alias[score_operation:subtract] = single_alias_right[score_arithmetic]
+alias[score_operation:multiply] = single_alias_right[score_arithmetic]
+single_alias[score_arithmetic] = {
+    ## cardinality = 1..inf
+    alias_name[arithmetic_operation] = alias_match_left[arithmetic_operation]
+    ## cardinality = 0..1
+    desc = localisation
+    ## cardinality = 0..1
+    format = localisation
+}
+
+alias[score_operation:if] = single_alias_right[score_conditional]
+alias[score_operation:else_if] = single_alias_right[score_conditional]
+alias[score_operation:else] = single_alias_right[score_conditional]
+single_alias[score_conditional] = {
+    limit = {
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+    ## cardinality = 1..inf
+    alias_name[arithmetic_operation] = alias_match_left[arithmetic_operation]
+    ## cardinality = 0..1
+    alias_name[score_operation] = alias_match_left[score_operation]
+}
+
+alias[score_operation:scope:employee] = {
+    ## cardinality = 1..inf
+    alias_name[score_operation] = alias_match_left[score_operation]
+}
+
+alias[score_operation:scope:liege] = {
+    ## cardinality = 1..inf
+    alias_name[score_operation] = alias_match_left[score_operation]
+}
+
+###### Triggers for value calculations #######
+alias[trigger:scope:highest_available_aptitude.compare_value] = value_field
