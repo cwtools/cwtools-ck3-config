@@ -36,17 +36,14 @@ trait = {
     ## replace_scope = { ROOT = character THIS = character }
     ## cardinality = 0..inf
     alias_name[modifier] = alias_match_left[modifier]
-    ## cardinality = 0..1
-    same_opinion_if_same_faith = int_value_field
-    
+
+    ### Modifier that will be applied for characters with a culture with the specified parameter
+    ## replace_scope = { ROOT = character THIS = character }
+    ## cardinality = 0..inf
+    culture_modifier = alias_match_right[culture_modifier]
+
     ## cardinality = 0..1
     add_commander_trait = bool
-    # Work around for bad expected type on this modifier
-    ## cardinality = 0..1
-    no_water_crossing_penalty = bool
-    # Work around for bad expected type on this modifier
-    ## cardinality = 0..1
-    ignore_negative_culture_opinion = bool
     ## cardinality = 0..1
     disables_combat_leadership = bool
     ## cardinality = 0..1
@@ -183,7 +180,7 @@ trait = {
     ## cardinality = 0..1
     commander = bool
 
-    ## cardinality = 0..1
+    ## cardinality = 0..inf
     flag = value_set[trait_flag]
 
     # TODO: Anything that can refer to a trait can refer to a group. Is there some way we can use this to mark a type name too?
