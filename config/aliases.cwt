@@ -124,6 +124,15 @@ single_alias[random_traits_list] = {
     }
 }
 
+single_alias[culture_modifier] = {
+    parameter = bool
+    ## push_scope = character
+    ## cardinality = 1..inf
+    alias_name[modifier] = alias_match_left[modifier]
+}
+
+## scope = character
+alias[modifier:ignore_negative_opinion_of_culture] = bool
 ## scope = character
 alias[modifier:ignore_negative_culture_opinion] = bool
 ## scope = character
