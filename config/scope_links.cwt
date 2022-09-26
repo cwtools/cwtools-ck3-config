@@ -8,6 +8,8 @@ alias[effect:value_field] = { alias_name[effect] = alias_match_left[effect] }
 
 alias[trigger:value_field] = value_field
 alias[trigger:scope_field] = scope_field
+alias[trigger:scope_field] = value_field
+alias[trigger:scope_field] = bool
 
 alias[trigger:NOT] = {
 	## cardinality = 1..1
