@@ -139,7 +139,8 @@ single_alias[random_traits_list] = {
 }
 
 single_alias[culture_modifier] = {
-    parameter = bool
+    ## push_scope = culture
+    parameter = value_set[culture_flag]
     ## push_scope = character
     ## cardinality = 1..inf
     alias_name[modifier] = alias_match_left[modifier]

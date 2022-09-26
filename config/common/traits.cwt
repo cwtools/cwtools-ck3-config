@@ -32,15 +32,14 @@ trait = {
     # TODO: Many of these seem like they're possibly soft-coded.
     # TODO: Can some of these be replaced with keyed templates?
 
+    ### Modifier that will be applied for characters with a culture with the specified parameter
+    ## cardinality = 0..inf
+    culture_modifier = single_alias_right[culture_modifier]
+
     ### A permanent effect applied to the trait holder
     ## replace_scope = { ROOT = character THIS = character }
     ## cardinality = 0..inf
     alias_name[modifier] = alias_match_left[modifier]
-
-    ### Modifier that will be applied for characters with a culture with the specified parameter
-    ## replace_scope = { ROOT = character THIS = character }
-    ## cardinality = 0..inf
-    culture_modifier = alias_match_right[culture_modifier]
 
     ## cardinality = 0..1
     add_commander_trait = bool
