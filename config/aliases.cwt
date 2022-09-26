@@ -25,6 +25,11 @@ single_alias[cost] = {
     prestige = int_value_field
 
     ## cardinality = 0..1
+    renown = single_alias_right[score_formula]
+    ## cardinality = 0..1
+    renown = int_value_field
+
+    ## cardinality = 0..1
     round = bool
 }
 

@@ -688,6 +688,8 @@ alias[effect:set_designated_winner] = scope[character]
 alias[effect:else] = {
     ## cardinality = 1..inf
     alias_name[effect] = alias_match_left[effect]
+    ## cardinality = 0..1
+    alias_name[arithmetic_operation] = alias_match_left[effect]
 }
 
 ### ends the combat as the winning side (doesn't end the combat if evaluated to false)
@@ -1263,6 +1265,8 @@ alias[effect:if] = {
         alias_name[trigger] = alias_match_left[trigger]
     }
     alias_name[effect] = alias_match_left[effect]
+    ## cardinality = 0..1
+    alias_name[arithmetic_operation] = alias_match_left[effect]
 }
 
 ### Sets the special title for the scope faction
@@ -1358,6 +1362,8 @@ alias[effect:else_if] = {
         alias_name[trigger] = alias_match_left[trigger]
     }
     alias_name[effect] = alias_match_left[effect]
+    ## cardinality = 0..1
+    alias_name[arithmetic_operation] = alias_match_left[effect]
 }
 
 ### Adds the given law to the scoped character

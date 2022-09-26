@@ -98,6 +98,10 @@ enums = {
         imprison
         death
     }
+    enum[prison_type] = {
+        dungeon
+        house_arrest
+    }
 }
 
 # Duration alias for LHS use:

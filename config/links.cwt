@@ -127,6 +127,12 @@ links = {
         input_scopes = character
         output_scopes = character
     }
+    court_amenity_category = {
+        desc = " Unknown, add something in code registration"
+        data_source = <court_amenity_category>
+        input_scopes = character
+        output_scopes = court_amenity_category
+    }
     designated_heir = {
         desc = " Unknown, add something in code registration"
         input_scopes = character
@@ -690,5 +696,15 @@ links = {
 		type = both
         prefix = var:
         data_source = value[variable]
+    }
+    inspiration = {
+        desc = " Unknown, add something in code registration"
+        input_scopes = inspiration
+        output_scope = inspiration
+    }
+    inspiration_sponsor = {
+        desc = " Unknown, add something in code registration"
+        input_scopes = inspiration
+        output_scope = character
     }
 }

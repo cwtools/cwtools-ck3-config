@@ -86,4 +86,10 @@ scopes = {
 	"Culture group" = {
 		aliases = { culture_group "culture group" }
 	}
+	Inspiration = {
+		aliases = { inspiration }
+	}
+	"Court Amenity Category" = {
+		aliases = { court_amenity_category "court amenity category" }
+	}
 }

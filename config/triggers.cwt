@@ -1,5 +1,9 @@
 # TODO: organise this?
 
+alias[trigger:trigger] = {
+    alias_name[trigger] = alias_match_left[trigger]
+}
+
 ### is the character at war with their liege?
 alias[trigger:is_at_war_with_liege] = bool
 
@@ -39,9 +43,6 @@ alias[trigger:place_in_line_of_succession] = replace_me
 ### Does the character have a commander trait that the scope does not?
 alias[trigger:character_has_commander_trait_scope_does_not] = scope[character]
 
-### Is the scope character imprisoned by the target character? is_imprisoned_by = TARGET
-alias[trigger:is_imprisoned_by] = scope[character]
-
 ### is the character played by AI?
 alias[trigger:is_ai] = bool
 
@@ -62,7 +63,7 @@ alias[trigger:tier] == replace_me_comparison
 
 # TODO: define this in some way
 ### Does the given faith have the given doctrine parameter? Can only check for bool parameters. has_doctrine_parameter = parameter_key
-alias[trigger:has_doctrine_parameter] = <parameter_key>
+alias[trigger:has_doctrine_parameter] = value_field
 
 ### Is the scope character a ruler (holds any title)?
 alias[trigger:is_ruler] = bool
@@ -157,9 +158,6 @@ alias[trigger:is_concubine] = bool
 ### Is the county a holy site of any faith? is_holy_site = yes
 alias[trigger:is_holy_site] = bool
 
-### number of days the character has been imprisoned for (0 if not imprisoned)
-alias[trigger:days_in_prison] == replace_me_comparison
-
 ### checks whether the scope character is the owner of any currently active story
 alias[trigger:owns_a_story] = bool
 
@@ -236,7 +234,16 @@ alias[trigger:number_of_opposing_personality_traits] = replace_me
 alias[trigger:kin_legacy_track_perks] == replace_me_comparison
 
 ### does the character have a hook on the target that isn't on cooldown, has_usable_hook = <character>
-alias[trigger:has_usable_hook] = replace_me_character
+alias[trigger:has_usable_hook] = scope[character]
+
+### Does the root character have a royal court?
+alias[trigger:has_royal_court] = bool
+
+### Is the amenity level of root's royal court better than the target
+alias[trigger:amenity_level] = {
+    type = <court_amenity_category>
+    value = int
+}
 
 ### Check if the chance to create a faction against a target of the scope landed title is is true against the scripted value title_create_faction_type_chance = {     type = faction_type #An ongoing faction     target = target_character     value <|<=|>=|> 0 }
 alias[trigger:title_create_faction_type_chance] = replace_me
@@ -297,9 +304,6 @@ alias[trigger:is_normal_councillor] = bool
 
 ### Is the scope character landed (holds a county or barony)?
 alias[trigger:is_landed] = bool
-
-### is the character imprisoned in a prison of the specified type?  Accepts "dungeon" or "house_arrest"
-alias[trigger:is_in_prison_type] = replace_me
 
 ### does the character have the required stress level?
 alias[trigger:stress_level] == replace_me_comparison
@@ -501,7 +505,10 @@ alias[trigger:is_betrothed] = bool
 alias[trigger:scripted_tests] = bool
 
 ### How much is scared the scope character agains the target. 0 = not intimidated, 1 = intimidated, 2 = cowed. has_dread_level_towards = { target = X level >/</>=/<=/= Y  }
-alias[trigger:has_dread_level_towards] = replace_me
+alias[trigger:has_dread_level_towards] = {
+    target = scope[character]
+    level = int_value_field
+}
 
 ### Is the marriage with the spouse matrilinear?
 alias[trigger:matrilinear_marriage] = bool
@@ -514,9 +521,6 @@ alias[trigger:is_attacker] = scope[character]
 
 ### Check if the scoped color is part of the given color list
 alias[trigger:in_color_list] = replace_me
-
-### for how long has the character been imprisoned? time_in_prison = { days/months/years =,>,< X }
-alias[trigger:time_in_prison] = replace_me
 
 ### does the character have the specified opinion modifier on the target? (optional *value <|<=|=|>=|> X* or *value = { MIN MAX }* inclusive)
 alias[trigger:has_opinion_modifier] = {
@@ -574,9 +578,6 @@ alias[trigger:reverse_opinion] = {
     target = scope[character]
     value = int_value_field
 }
-
-### Does the character have the imprisonment reason towards the target?
-alias[trigger:has_imprisonment_reason] = scope[character]
 
 ### checks if the government of the character disallows something
 alias[trigger:government_disallows] = replace_me
@@ -1085,7 +1086,7 @@ alias[trigger:has_province_modifier_duration_remaining] = replace_me
 alias[trigger:num_of_good_genetic_traits] == replace_me_comparison
 
 ### does the scope character have a trait with a certain flag? 	has_trait_with_flag = can_not_marry
-alias[trigger:has_trait_with_flag] = replace_me
+alias[trigger:has_trait_with_flag] = value[trait_flag]
 
 ### Does the character had a focus for that time?
 alias[trigger:has_had_focus_for_days] == replace_me_comparison
@@ -1094,7 +1095,7 @@ alias[trigger:has_had_focus_for_days] == replace_me_comparison
 alias[trigger:defender_war_score] == replace_me_comparison
 
 ### Does the given faith have the given doctrine?? has_doctrine = doctrine_key
-alias[trigger:has_doctrine] = replace_me
+alias[trigger:has_doctrine] = <doctrine>
 
 ### Is the scope character allied to the target character in a war?
 alias[trigger:is_allied_in_war] = scope[character]
@@ -1240,9 +1241,6 @@ alias[trigger:always] = bool
 ### Does the character have this culture?
 alias[trigger:has_culture] = scope[culture]
 
-### for how long has the character been imprisoned with the current type? time_in_prison_type = { days/months/years =,>,< X }  Valid types are "dungeon" or "house_arrest"
-alias[trigger:time_in_prison_type] = replace_me
-
 ### Checks whether the current scope has the specified variable list set has_variable_list = name
 alias[trigger:has_global_variable_list] = replace_me
 
@@ -1272,9 +1270,6 @@ alias[trigger:has_icon] = replace_me
 
 ### Compare the number of bad genetic traits <charater> = { num_of_bad_genetic_traits = 0 }
 alias[trigger:num_of_bad_genetic_traits] == replace_me_comparison
-
-### is the character imprisoned?
-alias[trigger:is_imprisoned] = bool
 
 ### Is the nickname bad?
 alias[trigger:is_bad_nickname] = replace_me
@@ -1478,7 +1473,10 @@ alias[trigger:vassal_contract_obligation_level_can_be_increased] = bool
 alias[trigger:diplomacy] == replace_me_comparison
 
 ### What is the faith's hostility level towards the target faith? faith_hostility_level { target = scope:some_faith value > 1 }
-alias[trigger:faith_hostility_level] == replace_me_comparison
+alias[trigger:faith_hostility_level] = {
+    target = scope[faith]
+    value = int
+}
 
 ### does the character have the required learning skill level?
 alias[trigger:learning] == replace_me_comparison
@@ -2034,6 +2032,9 @@ alias[trigger:is_hybrid_culture] = bool
 ### Is the culture a divergent culture
 alias[trigger:is_divergent_culture] = bool
 
+### Is the target culture from the cultural heritage as the root culture?
+alias[trigger:has_same_culture_heritage] = scope[culture]
+
 ### Scoped character holds any court position
 alias[trigger:has_any_court_position] = bool
 
@@ -2055,10 +2056,56 @@ alias[trigger:is_court_position_employer] = {
     who = scope[character]
 }
 
-### Trigger to check if the target character has a court position. 
+### Trigger to check if the target character holds any court position. 
 alias[trigger:any_court_position_holder] = {
     ## cardinality = 0..1
     type = <court_position>
     ## cardinality = 0..inf
     alias_name[trigger] = alias_match_left[trigger]
 }
+
+### Trigger to check if the target character has a court position. 
+alias[trigger:has_court_position] = <court_position>
+
+### Will the scoped character cover travel expenses for the target?
+alias[trigger:scope:cover_travel_expenses] = bool
+
+##############################################################
+# Inspiration Triggers 
+##############################################################
+
+### Trigger to check if an inspiration exists within scope
+alias[trigger:inspiration] = scope[inspiration]
+
+### 
+alias[trigger:any_inspiration] = {
+    alias_name[trigger] = alias_match_left[trigger]
+}
+
+##############################################################
+# Prison Triggers 
+##############################################################
+
+### is the character imprisoned?
+alias[trigger:is_imprisoned] = bool
+
+### Is the scope character imprisoned by the target character? is_imprisoned_by = TARGET
+alias[trigger:is_imprisoned_by] = scope[character]
+
+### number of days the character has been imprisoned for (0 if not imprisoned)
+alias[trigger:days_in_prison] = int
+
+### is the character imprisoned in a prison of the specified type?  Accepts "dungeon" or "house_arrest"
+alias[trigger:is_in_prison_type] = enum[prison_type]
+
+### for how long has the character been imprisoned? time_in_prison = { days/months/years =,>,< X }
+alias[trigger:time_in_prison] = { enum[duration] = int }
+
+### Does the character have the imprisonment reason towards the target?
+alias[trigger:has_imprisonment_reason] = scope[character]
+
+### for how long has the character been imprisoned with the current type? time_in_prison_type = { days/months/years =,>,< X }  Valid types are "dungeon" or "house_arrest"
+alias[trigger:time_in_prison_type] = { enum[duration] = int }
+
+### is the character currently being tortured?
+alias[trigger:is_being_tortured] = bool

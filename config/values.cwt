@@ -141,5 +141,6 @@ values = {
         swear_fealty
         transfer_type
         employee
+        inspiration
     }
 }
