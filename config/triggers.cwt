@@ -267,7 +267,7 @@ alias[trigger:title_will_leave_sub_realm_on_succession] = scope[character]
 alias[trigger:has_any_secret_relation] = scope[character]
 
 ### checks the tag of the religion of the current faith
-alias[trigger:religion_tag] = replace_me
+alias[trigger:religion_tag] = <religion>
 
 ### does the character have a valid dynasty?
 alias[trigger:has_dynasty] = bool
@@ -1947,7 +1947,7 @@ alias[trigger:current_month] == replace_me_comparison
 alias[trigger:has_dlc] = replace_me
 
 ### Is the given game rule setting enabled? has_game_rule = faster_conversion
-alias[trigger:has_game_rule] = replace_me
+alias[trigger:has_game_rule] = <game_rule>
 
 ### Checks if the current map mode is the specified one has_map_mode = realms An interface trigger, can only be used in specific places
 alias[trigger:has_map_mode] = replace_me

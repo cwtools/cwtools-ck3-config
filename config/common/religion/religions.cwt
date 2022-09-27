@@ -10,7 +10,9 @@ types = {
 
 #TODO: Actually match these with defined traits.
 single_alias[sins_and_virtues] = {
+    ## cardinality = 0..1
     virtues = single_alias_right[trait_effects]
+    ## cardinality = 0..1
     sins = single_alias_right[trait_effects]
 }
 
