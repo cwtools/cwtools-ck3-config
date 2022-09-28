@@ -1308,7 +1308,7 @@ alias[effect:spawn_army] = {
     levies = int_value_field
     ## cardinality = 0..inf
     men_at_arms = {
-        type = <regiment_type>
+        type = <maa_type>
         stacks = int_value_field
     }
     ## cardinality = 0..1

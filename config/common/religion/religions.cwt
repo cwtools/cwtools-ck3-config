@@ -152,7 +152,7 @@ religion = {
 	### The culture of the headquarters of the holy order must have unlocked the required innovation. (It will use the last available type in the list.)
     holy_order_maa = {
         ## cardinality = 1..inf
-        <regiment_type>
+        <maa_type>
     }
 
 }
