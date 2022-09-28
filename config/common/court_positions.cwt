@@ -42,10 +42,13 @@ court_position = {
     ### How good is this character in this position? root scope is the holder of the court position
     aptitude = single_alias_right[score_formula]
 
+    ## cardinality = 0..1
     ### Is this position even visible for usage? Root scope is liege character
     is_shown = single_alias_right[trigger_clause]
+    ## cardinality = 0..1
     ### Is this a valid position for this character to employ? Root scope is the liege character.
     valid_position = single_alias_right[trigger_clause]
+    ## cardinality = 0..1
     ### Is this character even shown for the position? Root scope is liege character
     is_shown_character = single_alias_right[trigger_clause]
     ### Is this a valid character for a position? Also checks the scripted rule "is_eligible_for_court_positions" in code.
