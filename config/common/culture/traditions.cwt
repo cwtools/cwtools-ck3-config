@@ -2,9 +2,15 @@ types = {
     type[tradition] = {
         path = "game/common/culture/traditions"
     }
-    type[cultural_parameter] = {
-        path = "game/common/culture/traditions"
-        skip_root_key = parameter
-        unique = yes
-    }
+}
+
+enums = {
+    complex_enum[cultural_parameter] = {
+		path = "game/common/culture/traditions"
+		name = {
+			parameters = {
+				enum_name = scalar
+			}
+		}
+	}
 }
