@@ -38,7 +38,7 @@ opinion_modifier = {
     enum[duration] = int
     ## cardinality = 0..1
     ### How much does it change towards 0 each month? Should be a positive number
-    monthly_change = int
+    monthly_change = float
     
     ## cardinality = 0..1
     ### Starts at 0/min and grows for its duration (if set) or until it hits its value. Needs either a duration or its value
