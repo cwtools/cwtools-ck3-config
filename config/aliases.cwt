@@ -159,3 +159,7 @@ alias[modifier:ignore_negative_culture_opinion] = bool
 alias[modifier:ignore_different_faith_opinion] = bool
 ## scope = { character combat }
 alias[modifier:no_water_crossing_penalty] = bool
+## scope = character
+alias[modifier:hide_effects] = bool
+## scope = character
+alias[modifier:stacking] = bool
