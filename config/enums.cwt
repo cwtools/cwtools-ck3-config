@@ -66,6 +66,7 @@ enums = {
         stewardship
         learning
         intrigue
+        prowess
     }
     enum[title_tiers] = {
         barony
