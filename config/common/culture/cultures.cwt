@@ -2,156 +2,80 @@ types = {
     ## type_key_filter <> { mercenary_names graphical_cultures }
     type[culture] = {
         path = "game/common/culture/cultures"
-        skip_root_key = any
     }
     type[culture_group] = {
         path = "game/common/culture/cultures"
+        type_per_file = yes
     }
 }
-culture_group = {
-    # TODO: Make graphical cultures somehow matter.
+culture = {
+    ### The color of the culture, used e.g. on the map.
+    color = <color>
+    color = single_alias_right[hsv_color]
+    
     ## cardinality = 0..1
-    ### List of graphical cultures used for coat of arms, buildings, clothings and units. It's possible to give more than one from each type, then all of them will be used.
-    graphical_cultures = single_alias_right[graphical_culture_list]
+    ### The date at which the culture was created.
+    created = date_field
     ## cardinality = 0..1
-    ### List of possible mercenary names and optionally coats of arms.
-    mercenary_names = single_alias_right[mercenary_list]
-    ## cardinality = 1..inf
-    <culture> = {
-        ### The color of the culture, used e.g. on the map.
-        color = Color
-
-        ## cardinality = 0..1
-        ### List of graphical cultures used for coat of arms, buildings, clothings and units. It's possible to give more than one from each type, then all of them will be used.
-        graphical_cultures = single_alias_right[graphical_culture_list]
-        ## cardinality = 0..1
-        ### List of possible mercenary names and optionally coats of arms.
-        mercenary_names = single_alias_right[mercenary_list]
-        
-        ## cardinality = 0..1
-        ### List of possible cadet dynasty names.
-        cadet_dynasty_names = single_alias_right[dynasty_name_list]
-        ## cardinality = 1
-        ### List of possible dynasty names.
-        dynasty_names = single_alias_right[dynasty_name_list]
-
-        ## cardinality = 0..1
-        ### When generating a dynasty name based on a title, add this prefix.
-        dynasty_of_location_prefix = localisation
-        ## cardinality = 0..1
-        ### When generating a dynasty name for a bastard, add this prefix.
-        bastard_dynasty_prefix = localisation
-
-        ## cardinality = 0..1
-        ### Allows dynasties to be named after the founder. The dynasty name will be <founder's first name> + FOUNDER_BASED_NAME_POSTFIX (localization, "id" by default). Defaults to no.
-        founder_named_dynasties = bool
-        ## cardinality = 0..1
-        ### Primary tiltes will be use the house name instead. Defaults to no.
-        dynasty_title_names = bool
-        # TODO: Does this actually works?
-        ## cardinality = 0..1
-        ### Displays the house name first in names. Defaults to no.
-        dynasty_name_first = bool
-
-        ### List of possible names for male children and randomly generated characters.
-        male_names = single_alias_right[localisation_list]
-        ### List of possible names for male children and randomly generated characters.
-        male_names = single_alias_right[weighted_localisation_list]
-
-        ### List of possible names for female children and randomly generated characters.
-        female_names = single_alias_right[localisation_list]
-        ### List of possible names for female children and randomly generated characters.
-        female_names = single_alias_right[weighted_localisation_list]
-
-        ## cardinality = 0..1
-        ### Chance of male children being named after their paternal grandfather. Sum of these three values must not exceed 100.
-		pat_grf_name_chance = int
-        ## cardinality = 0..1
-        ### Chance of male children being named after their maternal grandfather. Sum of these three values must not exceed 100.
-		mat_grf_name_chance = int
-        ## cardinality = 0..1
-        ### Chance of male children being named after their father. Sum of these three values must not exceed 100.
-		father_name_chance = int
-		
-        ## cardinality = 0..1
-        ### Chance of female children being named after their paternal grandmother. Sum of these three values must not exceed 100.
-        pat_grm_name_chance = int
-        ## cardinality = 0..1
-        ### Chance of female children being named after their maternal grandmother. Sum of these three values must not exceed 100.
-		mat_grm_name_chance = int
-        ## cardinality = 0..1
-        ### Chance of female children being named after their mother. Sum of these three values must not exceed 100.
-		mother_name_chance = int
-
-        # TODO: How do these work?
-        # Patronyms. Names after the primary parent. Can use both prefix and suffix together ("McDavidson"). _vowel is used for when the parent's name starts with a vowel.
-        ## cardinality = 0..1
-		patronym_prefix_male = localisation
-        ## cardinality = 0..1
-		patronym_prefix_male_vowel = localisation
-        ## cardinality = 0..1
-		patronym_prefix_female = localisation
-        ## cardinality = 0..1
-        patronym_prefix_female_vowel = localisation
-        
-        ## cardinality = 0..1
-        grammar_transform = enum[grammar_transform]
-		
-        ## cardinality = 0..1
-		patronym_suffix_male = localisation
-        ## cardinality = 0..1
-		patronym_suffix_female = localisation
-
-        ## cardinality = 0..1
-        ### Makes characters from this culture use patronyms in their names. It can be also allowed by the government type. Defaults to no.
-        always_use_patronym = bool
-
-        ## cardinality = 0..1
-        ### Modifier effects on all characters of the culture.
-        character_modifier = single_alias_right[character_modifier]
-
-        ## cardinality = 0..1
-        ### Allows generating character who should have random culture from this culture. Defaults to true.
-        used_for_random = bool
-
-        # TODO: Probably leftovers from CK2
-        ## cardinality = 0..1
-        ### Probably leftover from CK2
-        secondary_event_pictures = <culture>
-        ## cardinality = 0..1
-        ### Probably leftover from CK2
-        prefix = bool
-        ## cardinality = 0..1
-        ### Probably leftover from CK2
-        dukes_called_kings = bool
-
-        ### Weighted list of ethnicities for newly generated characters.
-        ethnicities = single_alias_right[ethnicity_list]
+    ### The culture that this culture branched from.
+    parents = {
+        ## cardinality = 1..inf
+        <culture>
     }
+
+    ### Cultural Ethos
+    ethos = <pillar.ethos>
+    ### Cultural Heritage. Where the culture evolved from.
+	heritage = <pillar.heritage>
+    ### Primary language of members of the culture.
+	language = <pillar.language>
+    ### The martial custom of the culture.
+	martial_custom = <pillar.martial_custom>
+    ### Traditions of the culture
+    traditions = single_alias_right[tradition_list]
+
+    ## cardinality = 0..inf
+    dlc_tradition = {
+        trait = <tradition>
+        requires_dlc_flag = enum[dlc_feature]
+        ## cardinality = 0..1
+        fallback = <tradition>
+    }
+
+    ### List of possible names for randomly generated characters.
+    name_list = <name_list>
+    
+    ### Coat of Arms graphics
+    coa_gfx = { 
+        ## cardinality = 1..inf
+        enum[coa_gfx]
+    }
+    ### Buildings graphics
+    building_gfx = { 
+        ## cardinality = 1..inf
+        enum[building_gfx]
+    }
+    ### Clothing graphics
+    clothing_gfx = { 
+        ## cardinality = 1..inf
+        enum[clothing_gfx]
+    }
+    ### Unit Graphics
+    unit_gfx = { 
+        ## cardinality = 1..inf
+        enum[unit_gfx]
+    }
+
+    ### Weighted list of ethnicities for newly generated characters.
+    ethnicities = single_alias_right[ethnicity_list]
+
+    ## cardinality = 0..1
+    history_loc_override = localisation
 }
 
-single_alias[mercenary_list] = {
+single_alias[tradition_list] = {
     ## cardinality = 0..inf
-    {
-        name = localisation
-        ## cardinality = 0..1
-        coat_of_arms = <coat_of_arms>
-    }
-}
-
-single_alias[dynasty_name_list] = {
-    ## cardinality = 0..inf
-    localisation
-    ## cardinality = 0..inf
-    {
-        ## cardinality = 1..2
-        localisation
-    }
-}
-
-single_alias[graphical_culture_list] = {
-    ## cardinality = 1..inf
-    value_set[graphical_culture]
+    <tradition>
 }
 
 single_alias[ethnicity_list] = {
@@ -160,30 +84,95 @@ single_alias[ethnicity_list] = {
 }
 
 enums = {
-    # TODO: Is there any other?
-    enum[grammar_transform] = {
-        french
+    enum[unit_gfx] = {
+        iberian_muslim_unit_gfx
+        iberian_christian_unit_gfx
+        norse_unit_gfx
+        sub_sahran_unit_gfx
+        mongol_unit_gfx
+        indian_unit_gfx
+        northern_unit_gfx
+        eastern_unit_gfx
+        mena_unit_gfx
+        western_unit_gfx
     }
-    complex_enum[male_names] = {
-        path = "game/common/culture/cultures"
-        name = {
-            scalar = {
-                male_names = {
-                    enum_name
-                    scalar = { enum_name }
-                }
-            }
-        }
+    enum[clothing_gfx] = {
+        mena_clothing_gfx
+        northern_clothing_gfx
+        indian_clothing_gfx
+        mongol_clothing_gfx
+        byzantine_clothing_gfx
+        african_clothing_gfx
+        iberian_christian_clothing_gfx
+        iberian_muslim_clothing_gfx
+        dde_abbasid_clothing_gfx
+        western_clothing_gfx
+        dde_hre_clothing_gfx
+        fp1_norse_clothing_gfx
     }
-    complex_enum[female_names] = {
-        path = "game/common/culture/cultures"
-        name = {
-            scalar = {
-                female_names = {
-                    enum_name
-                    scalar = { enum_name }
-                }
-            }
-        }
+    enum[building_gfx] = {
+        indian_building_gfx
+        mena_building_gfx
+        mediterranean_building_gfx
+        iberian_building_gfx
+        western_building_gfx
+        norse_building_gfx
+        steppe_building_gfx
+        african_building_gfx
+        arabic_group_building_gfx
+        berber_group_building_gfx
+    }
+    enum[coa_gfx] = {
+        western_coa_gfx
+        norwegian_coa_gfx
+        swedish_coa_gfx
+        danish_coa_gfx
+        leonese_coa_gfx
+        iberian_group_coa_gfx
+        castilian_coa_gfx
+        norman_coa_gfx
+        frankish_group_coa_gfx
+        scottish_coa_gfx
+        latin_group_coa_gfx
+        central_african_group_coa_gfx
+        east_african_coa_gfx
+        west_african_group_coa_gfx
+        breton_coa_gfx
+        byzantine_group_coa_gfx
+        english_coa_gfx
+        norse_coa_gfx
+        french_coa_gfx
+        irish_coa_gfx
+        burman_group_coa_gfx
+        dravidian_group_coa_gfx
+        indo_aryan_group_coa_gfx
+        tibetan_group_coa_gfx
+        israelite_group_coa_gfx
+        arabic_group_coa_gfx
+        berber_group_coa_gfx
+        balto_finnic_group_coa_gfx
+        ugro_permian_group_coa_gfx
+        volga_finnic_group_coa_gfx
+        polish_coa_gfx
+        welsh_coa_gfx
+        steppe_coa_gfx
+        german_group_coa_gfx
+        baltic_group_coa_gfx
+        sami_coa_gfx
+        frisian_coa_gfx
+        chinese_group_coa_gfx
+        east_slavic_group_coa_gfx
+        occitan_coa_gfx
+        iranian_group_coa_gfx
+        magyar_group_coa_gfx
+        mongol_coa_gfx
+        indian_coa_gfx
+        east_african_group_coa_gfx
+        south_slavic_group_coa_gfx
+        oghuz_coa_gfx
+        turkic_group_coa_gfx
+        south_slavic_group_coa_gfx
+        anglo_saxon_coa_gfx
+        west_slavic_group_coa_gfx
     }
 }
