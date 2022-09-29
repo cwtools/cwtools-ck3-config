@@ -103,6 +103,14 @@ enums = {
         dungeon
         house_arrest
     }
+    enum[dlc_feature] = {
+        the_fate_of_iberia
+        the_northern_lords
+        friends_and_foes
+        royal_court
+        hybridize_culture
+        diverge_culture
+    }
 }
 
 # Duration alias for LHS use:
