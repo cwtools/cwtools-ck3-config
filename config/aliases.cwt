@@ -151,6 +151,19 @@ single_alias[culture_modifier] = {
     alias_name[modifier] = alias_match_left[modifier]
 }
 
+single_alias[rgb_color] = {
+    ## cardinality = 3..3
+    int[0..255]
+}
+
+# Not sure about this one. Seen some mixed usages of this
+# some with hsv prefixing it, some with <1 for first number,
+# some with degrees, etc.
+single_alias[hsv_color] = {
+    ## cardinality = 3..4
+    float
+}
+
 ## scope = character
 alias[modifier:ignore_negative_opinion_of_culture] = bool
 ## scope = character
