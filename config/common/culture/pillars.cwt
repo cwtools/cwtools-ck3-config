@@ -1,0 +1,17 @@
+types = {
+    type[pillar] = {
+        path = "game/common/culture/pillars"
+        subtype[ethos] = {
+            type = ethos
+        }
+        subtype[heritage] = {
+            type = heritage
+        }
+        subtype[language] = {
+            type = language
+        }
+        subtype[martial_custom] = {
+            type = martial_custom
+        }
+    }
+}
