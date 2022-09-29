@@ -2070,11 +2070,20 @@ alias[trigger:is_hybrid_culture] = bool
 ### Is the culture a divergent culture
 alias[trigger:is_divergent_culture] = bool
 
-### Is the target culture from the cultural heritage as the root culture?
+### Does the culture have the same ethos as the target?
+alias[trigger:has_same_culture_ethos] = scope[culture]
+
+### Does the culture have the same heritage as the target?
 alias[trigger:has_same_culture_heritage] = scope[culture]
 
+### Does the culture have the same language as the target?
+alias[trigger:has_same_culture_language] = scope[culture]
+
+### Does the culture have the same martial tradition as the target?
+alias[trigger:has_same_culture_martial_tradition] = scope[culture]
+
 ### Has this culture achieved specified era<culture> = { has_cultural_era_or_later = culture_era_early_medieval }
-alias[trigger:has_cultural_era_or_later] = replace_me
+alias[trigger:has_cultural_era_or_later] = <era>
 
 ### Does the character have this culture group? has_culture_group = culture_group:east_slavic_group
 alias[trigger:has_culture_group] = scope[culture_group]
@@ -2087,6 +2096,12 @@ alias[trigger:has_same_culture_as] = scope[character]
 
 ### Does the target culture possess this cultural parameter
 alias[trigger:has_cultural_parameter] = enum[cultural_parameter]
+
+### Does the culture have this cultural pillar?
+alias[trigger:has_cultural_pillar] = <pillar>
+
+### Does the culture have this cultural tradition?
+alias[trigger:has_cultural_tradition] = <tradition>
 
 ### Have the culture discovered this innovation?
 alias[trigger:has_innovation] = <innovation>
