@@ -19,9 +19,6 @@ trait = {
     name = localisation
     ## cardinality = 0..1
     name = single_alias_right[complex_desc]
-    ## cardinality = 1..1
-    ### Trait index. Must be unique.
-    index = int
     ## cardinality = 0..1
     icon = single_alias_right[complex_desc]
     ## cardinality = 0..inf
