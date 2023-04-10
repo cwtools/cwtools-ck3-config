@@ -5,7 +5,7 @@ types = {
 }
 
 ## cardinality = 0..inf
-<culture> = {
+culture = {
     ### The color of the culture, used e.g. on the map.
     color = Color
 
