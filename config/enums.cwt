@@ -98,6 +98,20 @@ enums = {
         imprison
         death
     }
+    enum[dlc_feature] = {
+        # taken from the CK3 wiki description for has_dlc_feature trigger
+        # https://ck3.paradoxwikis.com/Triggers
+        garments_of_the_hre
+        fashion_of_the_abbasid_court
+        the_northern_lords
+        hybridize_culture
+        diverge_culture
+        royal_court
+        reform_culture
+        court_artifacts
+        the_fate_of_iberia
+        friends_and_foes 
+    }
 }
 
 # Duration alias for LHS use:
