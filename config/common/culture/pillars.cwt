@@ -46,10 +46,10 @@ pillar = {
     
     ## cardinality = 0..1
     ### Used in martial_custom pillars
-    parameters = single_alias_right[pillar_parameter]
+    parameters = single_alias_right[pillar_parameters]
 }
 
-single_alias[pillar_parameter] = {
+single_alias[pillar_parameters] = {
     ## cardinality = 0..inf
     <string> = bool
 }
