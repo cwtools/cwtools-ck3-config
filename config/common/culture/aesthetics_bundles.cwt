@@ -1,0 +1,36 @@
+types = {
+    type[aesthetics_bundle] = {
+        path = "game/common/culture/aesthetics_bundles"
+
+        localisation = {
+            ## required
+            Name = "$_name"
+        }
+    }
+}
+
+## cardinality = 0..inf
+aesthetic_bundle = {
+    ## cardinality = 1..1
+    name_list = <name_list>
+
+    # TODO: Make graphical cultures somehow matter.
+    ## cardinality = 1..1
+    ### List of graphical cultures used for buildings. It's possible to give more than one from each type, then all of them will be used.
+    building_gfx = single_alias_right[graphical_culture_list]
+    ## cardinality = 1..1
+    ### List of graphical cultures used for clothings. It's possible to give more than one from each type, then all of them will be used.
+    clothing_gfx = single_alias_right[graphical_culture_list]
+    ## cardinality = 1..1
+    ### List of graphical cultures used for units. It's possible to give more than one from each type, then all of them will be used.
+    unit_gfx = single_alias_right[graphical_culture_list]
+    ## cardinality = 1..1
+    ### List of graphical cultures used for coat of arms. It's possible to give more than one from each type, then all of them will be used.
+    coa_gfx = single_alias_right[graphical_culture_list]
+
+    ## cardinality = 0..1
+    ### Whether it'll be shown when diverging
+	### root is the diverging character's culture, scope:character is the character
+	### scope:trait is a list of all the selected culture traits, like in the culture trait script
+    is_shown = single_alias_right[trigger_clause]
+}

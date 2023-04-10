@@ -1,0 +1,64 @@
+types = {
+    type[pillar] = {
+        path = "game/common/culture/pillars"
+
+        subtype[ethos] = {
+            type = ethos
+        }
+        subtype[heritage] = {
+            type = heritage
+        }
+        subtype[language] = {
+            type = language
+        }
+        subtype[martial_custom] = {
+            type = martial_custom
+        }
+    }
+}
+
+## cardinality = 0..inf
+pillar = {
+    ## cardinality = 1..1
+    type = enum[pillar_type]
+
+    ## cardinality = 0..1
+    character_modifier = single_alias_right[character_modifier]
+    ## cardinality = 0..1
+    province_modifier = single_alias_right[province_modifier]
+    ## cardinality = 0..1
+    county_modifier = single_alias_right[county_modifier]
+    ## cardinality = 0..1
+    culture_modifier = single_alias_right[culture_modifier]
+
+    ## cardinality = 0..1
+    ai_will_do = int_value_field
+    ## cardinality = 0..1
+    is_shown = single_alias_right[trigger_clause]
+    ## cardinality = 0..1
+    can_pick = single_alias_right[trigger_clause]
+
+    subtype[language] = {
+        ## cardinality = 0..1
+        ### Used in language pillars
+        color = Color
+    }
+    
+    ## cardinality = 0..1
+    ### Used in martial_custom pillars
+    parameters = single_alias_right[pillar_parameters]
+}
+
+single_alias[pillar_parameters] = {
+    ## cardinality = 0..inf
+    <string> = bool
+}
+
+enums = {
+    enum[pillar_type] = {
+        ethos
+        heritage
+        language
+        martial_custom
+    }
+}

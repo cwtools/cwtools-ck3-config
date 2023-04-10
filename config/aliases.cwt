@@ -124,6 +124,21 @@ single_alias[random_traits_list] = {
     }
 }
 
+single_alias[province_modifier] = {
+    ## push_scope = province
+    alias_name[modifier] = alias_match_left[modifier]
+}
+
+single_alias[culture_modifier] = {
+    ## push_scope = culture
+    alias_name[modifier] = alias_match_left[modifier]
+}
+
+single_alias[county_modifier] = {
+    ## push_scope = title
+    alias_name[modifier] = alias_match_left[modifier]
+}
+
 ## scope = character
 alias[modifier:ignore_negative_culture_opinion] = bool
 ## scope = character
