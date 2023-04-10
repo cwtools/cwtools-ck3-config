@@ -18,10 +18,10 @@ types = {
     history_loc_override = localisation
 
     traditions = single_alias_right[tradition_list]
-    ethos = <pillar> # TODO: enforce "ethos" pillar type
-    heritage = <pillar>  # TODO: enforce "heritage" pillar type
-    language = <pillar>  # TODO: enforce "language" pillar type
-    martial_custom = <pillar>  # TODO: enforce "martial_custom" pillar type
+    ethos = <pillar.ethos> 
+    heritage = <pillar.heritage>
+    language = <pillar.language>
+    martial_custom = <pillar.martial_custom>
 
     ## cardinality = 0..inf
     dlc_fallback_pillar = single_alias_right[dlc_fallback_pillar]

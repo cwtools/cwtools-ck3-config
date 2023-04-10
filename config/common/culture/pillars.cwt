@@ -1,6 +1,19 @@
 types = {
     type[pillar] = {
         path = "game/common/culture/pillars"
+
+        subtype[ethos] = {
+            type = ethos
+        }
+        subtype[heritage] = {
+            type = heritage
+        }
+        subtype[language] = {
+            type = language
+        }
+        subtype[martial_custom] = {
+            type = martial_custom
+        }
     }
 }
 
@@ -25,9 +38,11 @@ pillar = {
     ## cardinality = 0..1
     can_pick = single_alias_right[trigger_clause]
 
-    ## cardinality = 0..1
-    ### Used in language pillars
-    color = Color
+    subtype[language] = {
+        ## cardinality = 0..1
+        ### Used in language pillars
+        color = Color
+    }
     
     ## cardinality = 0..1
     ### Used in martial_custom pillars
