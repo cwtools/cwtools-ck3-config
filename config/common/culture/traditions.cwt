@@ -4,6 +4,51 @@ types = {
     }
 }
 
+## cardinality 0..inf
+tradition = {
+    ## cardinality 1..1
+    category = enum[tradition_category]
+
+    # cardinality 1..1
+    layers = single_alias_right[tradition_image_layers]
+
+    ## cardinality 0..1
+    parameters = single_alias_right[tradition_parameters]
+
+    ## cardinality 0..1
+    character_modifier = single_alias_right[character_modifier]
+
+    ## cardinality 0..1
+    county_modifier = single_alias_right[county_modifier]
+
+    ## cardinality 0..1
+    province_modifier = single_alias_right[province_modifier]
+
+    ## cardinality 0..1
+    doctrine_character_modifier = single_alias_right[character_modifier]
+
+    ## cardinality 0..1
+    can_pick = single_alias_right[trigger_clause]
+    ## cardinality 0..1
+    can_pick_for_hybridization = single_alias_right[trigger_clause]
+
+    ## cardinality 1..1
+    cost = single_alias_right[cost]
+
+    ## cardinality = 0..1
+    ai_will_do = int_value_field
+}
+
+single_alias[tradition_parameters] = {
+    ## cardinality = 0..inf
+    enum[cultural_parameter] = scalar
+}
+
+single_alias[tradition_image_layers] = {
+    ## cardinality = 0..inf
+    int = <string>
+}
+
 enums = {
     complex_enum[cultural_parameter] = {
 		path = "game/common/culture/traditions"
@@ -13,4 +58,12 @@ enums = {
 			}
 		}
 	}
+
+    enum[tradition_category] = {
+        combat
+        realm
+        ritual
+        societal
+        regional
+    }
 }

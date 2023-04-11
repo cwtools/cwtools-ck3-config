@@ -1,13 +1,10 @@
 types = {
-    ## type_key_filter <> { mercenary_names graphical_cultures }
     type[culture] = {
         path = "game/common/culture/cultures"
     }
-    type[culture_group] = {
-        path = "game/common/culture/cultures"
-        type_per_file = yes
-    }
 }
+
+## cardinality = 0..inf
 culture = {
     ### The color of the culture, used e.g. on the map.
     color = <color>
@@ -33,16 +30,32 @@ culture = {
 	martial_custom = <pillar.martial_custom>
     ### Traditions of the culture
     traditions = single_alias_right[tradition_list]
+    
+    # Does not seem to be used in base game.
+    dlc_fallback_pillar {
+        ## cardinality = 1..1
+        ### Replace with this pillar if you lack the DLC feature
+        fallback = <pillar>
+        
+        ## cardinality = 1..1
+        requires_dlc_flag = enum[dlc_feature]
+    }
 
     ## cardinality = 0..inf
     dlc_tradition = {
+        ### Add this tradition if you have the DLC feature.
         trait = <tradition>
+
+        ### The DLC feature that is required.
         requires_dlc_flag = enum[dlc_feature]
+
         ## cardinality = 0..1
+        ### Add this if you don't have the DLC. Optional.
         fallback = <tradition>
     }
 
-    ### List of possible names for randomly generated characters.
+    ## cardinality = 1..inf
+    ### # How to name things. You can have multiple of these entries. The first one is the primary one and will be used for things like prefixes where it doesn't make much sense to randomize between the lists
     name_list = <name_list>
     
     ### Coat of Arms graphics
@@ -70,7 +83,18 @@ culture = {
     ethnicities = single_alias_right[ethnicity_list]
 
     ## cardinality = 0..1
+    ### specify a customloc key for history rather than the default one
     history_loc_override = localisation
+
+    # Does not seem to be used in base game.
+    ## cardinality = 0..1
+    ### Modifier effects on all characters of the culture.
+    character_modifier = single_alias_right[character_modifier]
+
+    # Does not seem to be used in base game.
+    ## cardinality = 0..1
+    ### Allows generating character who should have random culture from this culture. Defaults to true.
+    used_for_random = bool
 }
 
 single_alias[tradition_list] = {

@@ -1,14 +1,17 @@
 types = {
-    ## type_key_filter <> { mercenary_names graphical_cultures }
     type[aesthetic] = {
         path = "game/common/culture/aesthetics_bundles"
+
+        localisation = {
+            ## required
+            Name = "$_name"
+        }
     }
 }
 
+## cardinality = 0..inf
 aesthetic = {
-    ### Check to see whether or not to offer the aesthetic
-    is_shown = single_alias_right[trigger_clause]
-
+    ## cardinality = 1..1
     ### Which name list to use.
     name_list = <name_list>
 
@@ -18,18 +21,24 @@ aesthetic = {
         enum[coa_gfx]
     }
     ### Buildings graphics
-	building_gfx = { 
+    building_gfx = { 
         ## cardinality = 1..inf
         enum[building_gfx]
     }
     ### Clothing graphics
-	clothing_gfx = { 
+    clothing_gfx = { 
         ## cardinality = 1..inf
         enum[clothing_gfx]
     }
     ### Unit Graphics
-	unit_gfx = { 
+    unit_gfx = { 
         ## cardinality = 1..inf
         enum[unit_gfx]
     }
+
+    ## cardinality = 0..1
+    ### Check to see whether or not to offer the aesthetic.
+	### root is the diverging character's culture, scope:character is the character
+	### scope:trait is a list of all the selected culture traits, like in the culture trait script
+    is_shown = single_alias_right[trigger_clause]
 }

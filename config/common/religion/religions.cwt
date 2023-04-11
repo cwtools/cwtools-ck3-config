@@ -97,7 +97,7 @@ religion = {
             ## cardinality = 0..1
             piety_icon_group = replace_me
             ## cardinality = 0..1
-            doctrine_background_icon = filepath/gfx/interface/icons/faith_doctrines]
+            doctrine_background_icon = filepath[gfx/interface/icons/faith_doctrines]
             religious_head = replace_me
         
             ## cardinality = 0..inf

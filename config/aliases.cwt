@@ -164,6 +164,16 @@ single_alias[hsv_color] = {
     float
 }
 
+single_alias[province_modifier] = {
+    ## push_scope = province
+    alias_name[modifier] = alias_match_left[modifier]
+}
+
+single_alias[county_modifier] = {
+    ## push_scope = title
+    alias_name[modifier] = alias_match_left[modifier]
+}
+
 ## scope = character
 alias[modifier:ignore_negative_opinion_of_culture] = bool
 ## scope = character
