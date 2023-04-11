@@ -10,6 +10,15 @@ story_cycle = {
     on_owner_death = single_alias_right[effect_clause]
     ## cardinality = 0..inf
     effect_group = {
+        ## cardinality = 0..1
+        enum[duration] = int
+        ## cardinality = 0..1
+        enum[duration] = {
+                ## cardinality = 2..2
+                int
+            }
+        ## cardinality = 0..1
+        chance = int[1-100]
         ## cardinality = 0..inf
         trigger = single_alias_right[trigger_clause]
         ## cardinality = 0..inf
@@ -36,6 +45,7 @@ story_cycle = {
                 effect = single_alias_right[effect_clause]
             }
         }
+        ## cardinality = 0..1
         fallback = single_alias_right[effect_clause]
     }
 }
