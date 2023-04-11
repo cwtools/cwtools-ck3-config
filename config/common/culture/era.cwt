@@ -21,7 +21,7 @@ era = {
     unlock_casus_belli = <casus_belli>
     ## cardinality = 0..inf
     ### Key of a regiment that can be unlocked. There can be more than one. Actually does unlock the MaA.
-    unlock_maa = <regiment_type>
+    unlock_maa = <maa_type>
     ## cardinality = 0..inf
     ### Key of a law that can be unlocked. There can be more than one. This is only to show on the tooltip, it has to be maulually blocked on the object itself.
     unlock_law = <law>
@@ -29,6 +29,14 @@ era = {
     ## cardinality = 0..inf
     ### Key of a government that can't use the innovations in this era. There can be more than one.
     invalid_for_government = <government>
+
+    ## cardinality = 0..1
+    ### Modifier of this culture era applied to the culture itself.
+    culture_modifier = single_alias_right[modifier_list]
+
+    ## cardinality = 0..1
+    ### Modifiers of this culture era. This will be applied to the characters of that cuture.
+    modifier = single_alias_right[modifier_list]
 
     ## cardinality = 0..inf
     ### A custom effect description that will be added to the list of effects.

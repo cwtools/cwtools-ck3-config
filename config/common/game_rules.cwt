@@ -1,0 +1,11 @@
+types = {
+    type[game_rule_category] = {
+        path = "game/common/game_rules"
+    }
+
+    ## type_key_filter <> is_available_on_create
+    type[game_rule] = {
+        path = "game/common/rules"
+        skip_root_key = any
+    }
+}

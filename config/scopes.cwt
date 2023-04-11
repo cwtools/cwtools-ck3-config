@@ -1,6 +1,6 @@
 scopes = {
     Value = {
-        aliases = { value }
+        aliases = { value base_value }
     }
     Bool = {
         aliases = { bool }
@@ -12,7 +12,7 @@ scopes = {
         aliases = { color }
     }
     Character = {
-        aliases = { character }
+        aliases = { character employee }
     }
     "Landed title" = {
 		aliases = { landed_title "landed title" }
@@ -85,5 +85,11 @@ scopes = {
 	}
 	"Culture group" = {
 		aliases = { culture_group "culture group" }
+	}
+	Inspiration = {
+		aliases = { inspiration }
+	}
+	"Court Amenity Category" = {
+		aliases = { court_amenity_category "court amenity category" }
 	}
 }

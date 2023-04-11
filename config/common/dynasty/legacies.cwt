@@ -39,7 +39,7 @@ dynasty_perk = {
     character_modifier = single_alias_right[character_modifier]
     ## cardinality = 0..inf
     ### Unlocks the given MaA for everyone in the dynasty and also locks it for everyone without the perk.
-    unlock_maa = <regiment_type>
+    unlock_maa = <maa_type>
 
     ## cardinality = 0..1
     ## push_scope = character

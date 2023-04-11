@@ -688,6 +688,8 @@ alias[effect:set_designated_winner] = scope[character]
 alias[effect:else] = {
     ## cardinality = 1..inf
     alias_name[effect] = alias_match_left[effect]
+    ## cardinality = 0..1
+    alias_name[arithmetic_operation] = alias_match_left[effect]
 }
 
 ### ends the combat as the winning side (doesn't end the combat if evaluated to false)
@@ -1263,6 +1265,8 @@ alias[effect:if] = {
         alias_name[trigger] = alias_match_left[trigger]
     }
     alias_name[effect] = alias_match_left[effect]
+    ## cardinality = 0..1
+    alias_name[arithmetic_operation] = alias_match_left[effect]
 }
 
 ### Sets the special title for the scope faction
@@ -1304,7 +1308,7 @@ alias[effect:spawn_army] = {
     levies = int_value_field
     ## cardinality = 0..inf
     men_at_arms = {
-        type = <regiment_type>
+        type = <maa_type>
         stacks = int_value_field
     }
     ## cardinality = 0..1
@@ -1358,6 +1362,8 @@ alias[effect:else_if] = {
         alias_name[trigger] = alias_match_left[trigger]
     }
     alias_name[effect] = alias_match_left[effect]
+    ## cardinality = 0..1
+    alias_name[arithmetic_operation] = alias_match_left[effect]
 }
 
 ### Adds the given law to the scoped character
@@ -1805,7 +1811,7 @@ alias[effect:pay_long_term_income] = {
 ### the scope character pays gold to the target character, pay_gold = { target = X gold = Y } (AI budget category short term)
 alias[effect:pay_short_term_gold] = {
     target = scope[character]
-    enum[duration] = int
+    gold = int_value_field
 }
 
 ### the scope character immediately pays gold corresponding to their income to the target character, pay_income = { target = X days/months/years = Y } (AI budget short term)

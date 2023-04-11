@@ -66,6 +66,7 @@ enums = {
         stewardship
         learning
         intrigue
+        prowess
     }
     enum[title_tiers] = {
         barony
@@ -97,6 +98,10 @@ enums = {
         wound
         imprison
         death
+    }
+    enum[prison_type] = {
+        dungeon
+        house_arrest
     }
     enum[dlc_feature] = {
         # taken from the CK3 wiki description for has_dlc_feature trigger

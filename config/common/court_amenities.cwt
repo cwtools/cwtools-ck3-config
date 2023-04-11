@@ -1,0 +1,28 @@
+types = {
+    type[court_amenity_category] = {
+        path = "game/common/court_amenities"
+    }
+    type[court_amenity_level] = {
+        path = "game/common/court_amenities"
+        skip_root_key = any
+    }
+}
+
+court_amenity_category = {
+    default = <court_amenity_level>
+
+    ## cardinality = 1..inf
+    <court_amenity_level> = {
+        ai_will_do = single_alias_right[formula]
+    }
+
+}
+
+single_alias[court_amenities_setting_name] = {
+    owner_modifier
+    owner_modifier_description
+    courtier_guest_modifier
+    courtier_guest_modifier_description
+    ai_will_do
+    can_pick
+}

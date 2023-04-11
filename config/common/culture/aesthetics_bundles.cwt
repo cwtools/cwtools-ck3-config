@@ -1,5 +1,5 @@
 types = {
-    type[aesthetics_bundle] = {
+    type[aesthetic] = {
         path = "game/common/culture/aesthetics_bundles"
 
         localisation = {
@@ -10,26 +10,34 @@ types = {
 }
 
 ## cardinality = 0..inf
-aesthetic_bundle = {
+aesthetic = {
     ## cardinality = 1..1
+    ### Which name list to use.
     name_list = <name_list>
 
-    # TODO: Make graphical cultures somehow matter.
-    ## cardinality = 1..1
-    ### List of graphical cultures used for buildings. It's possible to give more than one from each type, then all of them will be used.
-    building_gfx = single_alias_right[graphical_culture_list]
-    ## cardinality = 1..1
-    ### List of graphical cultures used for clothings. It's possible to give more than one from each type, then all of them will be used.
-    clothing_gfx = single_alias_right[graphical_culture_list]
-    ## cardinality = 1..1
-    ### List of graphical cultures used for units. It's possible to give more than one from each type, then all of them will be used.
-    unit_gfx = single_alias_right[graphical_culture_list]
-    ## cardinality = 1..1
-    ### List of graphical cultures used for coat of arms. It's possible to give more than one from each type, then all of them will be used.
-    coa_gfx = single_alias_right[graphical_culture_list]
+    ### Coat of Arms graphics
+    coa_gfx = { 
+        ## cardinality = 1..inf
+        enum[coa_gfx]
+    }
+    ### Buildings graphics
+    building_gfx = { 
+        ## cardinality = 1..inf
+        enum[building_gfx]
+    }
+    ### Clothing graphics
+    clothing_gfx = { 
+        ## cardinality = 1..inf
+        enum[clothing_gfx]
+    }
+    ### Unit Graphics
+    unit_gfx = { 
+        ## cardinality = 1..inf
+        enum[unit_gfx]
+    }
 
     ## cardinality = 0..1
-    ### Whether it'll be shown when diverging
+    ### Check to see whether or not to offer the aesthetic.
 	### root is the diverging character's culture, scope:character is the character
 	### scope:trait is a list of all the selected culture traits, like in the culture trait script
     is_shown = single_alias_right[trigger_clause]

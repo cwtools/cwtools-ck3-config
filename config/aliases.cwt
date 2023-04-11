@@ -10,17 +10,36 @@ single_alias[effect_clause] = {
 
 single_alias[cost] = {
     ## cardinality = 0..1
+    gold = single_alias_right[score_formula]
+    ## cardinality = 0..1
     gold = int_value_field
 
+    ## cardinality = 0..1
+    piety = single_alias_right[score_formula]
     ## cardinality = 0..1
     piety = int_value_field
 
     ## cardinality = 0..1
+    prestige = single_alias_right[score_formula]
+    ## cardinality = 0..1
     prestige = int_value_field
+
+    ## cardinality = 0..1
+    renown = single_alias_right[score_formula]
+    ## cardinality = 0..1
+    renown = int_value_field
+
+    ## cardinality = 0..1
+    round = bool
 }
 
 single_alias[character_modifier] = {
     ## push_scope = character
+    alias_name[modifier] = alias_match_left[modifier]
+}
+
+single_alias[modifier_list] = {
+    ## cardinality = 1..inf
     alias_name[modifier] = alias_match_left[modifier]
 }
 
@@ -124,13 +143,29 @@ single_alias[random_traits_list] = {
     }
 }
 
-single_alias[province_modifier] = {
-    ## push_scope = province
+single_alias[culture_modifier] = {
+    ## push_scope = culture
+    parameter = value_set[culture_flag]
+    ## push_scope = character
+    ## cardinality = 1..inf
     alias_name[modifier] = alias_match_left[modifier]
 }
 
-single_alias[culture_modifier] = {
-    ## push_scope = culture
+single_alias[rgb_color] = {
+    ## cardinality = 3..3
+    int[0..255]
+}
+
+# Not sure about this one. Seen some mixed usages of this
+# some with hsv prefixing it, some with <1 for first number,
+# some with degrees, etc.
+single_alias[hsv_color] = {
+    ## cardinality = 3..4
+    float
+}
+
+single_alias[province_modifier] = {
+    ## push_scope = province
     alias_name[modifier] = alias_match_left[modifier]
 }
 
@@ -140,8 +175,14 @@ single_alias[county_modifier] = {
 }
 
 ## scope = character
+alias[modifier:ignore_negative_opinion_of_culture] = bool
+## scope = character
 alias[modifier:ignore_negative_culture_opinion] = bool
 ## scope = character
 alias[modifier:ignore_different_faith_opinion] = bool
 ## scope = { character combat }
 alias[modifier:no_water_crossing_penalty] = bool
+## scope = character
+alias[modifier:hide_effects] = bool
+## scope = character
+alias[modifier:stacking] = bool

@@ -10,7 +10,9 @@ types = {
 
 #TODO: Actually match these with defined traits.
 single_alias[sins_and_virtues] = {
+    ## cardinality = 0..1
     virtues = single_alias_right[trait_effects]
+    ## cardinality = 0..1
     sins = single_alias_right[trait_effects]
 }
 
@@ -37,19 +39,6 @@ single_alias[holy_order_names] = {
         ## cardinality = 0..1
         coat_of_arms = <coat_of_arms>
     }
-}
-
-single_alias[rgb_color] = {
-    ## cardinality 3..3
-    int[0..255]
-}
-
-# Not sure about this one. Seen some mixed usages of this
-# some with hsv prefixing it, some with <1 for first number,
-# some with degrees, etc.
-single_alias[hsv_color] = {
-    ## cardinality 3..4
-    float
 }
 
 enums = {
@@ -150,7 +139,7 @@ religion = {
 	### The culture of the headquarters of the holy order must have unlocked the required innovation. (It will use the last available type in the list.)
     holy_order_maa = {
         ## cardinality = 1..inf
-        <regiment_type>
+        <maa_type>
     }
 
 }

@@ -27,12 +27,11 @@ dynasty = {
     ### Optional motto of the dynasty. Will get a random one if not set.
 	motto = localisation
 
-	# TODO: Are these actually useful?
-    ## cardinality = 0..1
-    ### Probably no longer used.
-	forced_coa_religiongroup = scalar
-    ### Which culture the dynasty belongs to. Might no longer used.
-	culture = <culture>
+	## cardinality = 0..1
+	### Religion group dynasty is forced to be under.
+    forced_coa_religiongroup = scalar
+    ### Which culture the dynasty belongs to.
+	culture = localisation
 }
 
 house = {

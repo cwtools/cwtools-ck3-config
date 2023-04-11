@@ -7,61 +7,99 @@ types = {
 ## cardinality = 0..inf
 culture = {
     ### The color of the culture, used e.g. on the map.
-    color = Color
-
+    color = <color>
+    color = single_alias_right[hsv_color]
+    
     ## cardinality = 0..1
-    ### Optional creation date
+    ### The date at which the culture was created.
     created = date_field
+    ## cardinality = 0..1
+    ### The culture that this culture branched from.
+    parents = {
+        ## cardinality = 1..inf
+        <culture>
+    }
+
+    ### Cultural Ethos
+    ethos = <pillar.ethos>
+    ### Cultural Heritage. Where the culture evolved from.
+	heritage = <pillar.heritage>
+    ### Primary language of members of the culture.
+	language = <pillar.language>
+    ### The martial custom of the culture.
+	martial_custom = <pillar.martial_custom>
+    ### Traditions of the culture
+    traditions = single_alias_right[tradition_list]
+    
+    # Does not seem to be used in base game.
+    dlc_fallback_pillar {
+        ## cardinality = 1..1
+        ### Replace with this pillar if you lack the DLC feature
+        fallback = <pillar>
+        
+        ## cardinality = 1..1
+        requires_dlc_flag = enum[dlc_feature]
+    }
+
+    ## cardinality = 0..inf
+    dlc_tradition = {
+        ### Add this tradition if you have the DLC feature.
+        trait = <tradition>
+
+        ### The DLC feature that is required.
+        requires_dlc_flag = enum[dlc_feature]
+
+        ## cardinality = 0..1
+        ### Add this if you don't have the DLC. Optional.
+        fallback = <tradition>
+    }
+
+    ## cardinality = 1..inf
+    ### # How to name things. You can have multiple of these entries. The first one is the primary one and will be used for things like prefixes where it doesn't make much sense to randomize between the lists
+    name_list = <name_list>
+    
+    ### Coat of Arms graphics
+    coa_gfx = { 
+        ## cardinality = 1..inf
+        enum[coa_gfx]
+    }
+    ### Buildings graphics
+    building_gfx = { 
+        ## cardinality = 1..inf
+        enum[building_gfx]
+    }
+    ### Clothing graphics
+    clothing_gfx = { 
+        ## cardinality = 1..inf
+        enum[clothing_gfx]
+    }
+    ### Unit Graphics
+    unit_gfx = { 
+        ## cardinality = 1..inf
+        enum[unit_gfx]
+    }
+
+    ### Weighted list of ethnicities for newly generated characters.
+    ethnicities = single_alias_right[ethnicity_list]
 
     ## cardinality = 0..1
     ### specify a customloc key for history rather than the default one
     history_loc_override = localisation
 
-    traditions = single_alias_right[tradition_list]
-    ethos = <pillar.ethos> 
-    heritage = <pillar.heritage>
-    language = <pillar.language>
-    martial_custom = <pillar.martial_custom>
-
-    ## cardinality = 0..inf
-    dlc_fallback_pillar = single_alias_right[dlc_fallback_pillar]
-    ## cardinality = 0..inf
-    dlc_tradition = single_alias_right[dlc_tradition]
-
-    ## cardinality = 1..inf
-    ### # How to name things. You can have multiple of these entries. The first one is the primary one and will be used for things like prefixes where it doesn't make much sense to randomize between the lists
-    name_list = <name_list>
-
-    # TODO: Make graphical cultures somehow matter.
-    ## cardinality = 1..1
-    ### List of graphical cultures used for buildings. It's possible to give more than one from each type, then all of them will be used.
-    building_gfx = single_alias_right[graphical_culture_list]
-    ## cardinality = 1..1
-    ### List of graphical cultures used for clothings. It's possible to give more than one from each type, then all of them will be used.
-    clothing_gfx = single_alias_right[graphical_culture_list]
-    ## cardinality = 1..1
-    ### List of graphical cultures used for units. It's possible to give more than one from each type, then all of them will be used.
-    unit_gfx = single_alias_right[graphical_culture_list]
-    ## cardinality = 1..1
-    ### List of graphical cultures used for coat of arms. It's possible to give more than one from each type, then all of them will be used.
-    coa_gfx = single_alias_right[graphical_culture_list]
-
+    # Does not seem to be used in base game.
     ## cardinality = 0..1
     ### Modifier effects on all characters of the culture.
     character_modifier = single_alias_right[character_modifier]
 
+    # Does not seem to be used in base game.
     ## cardinality = 0..1
     ### Allows generating character who should have random culture from this culture. Defaults to true.
     used_for_random = bool
-
-    ### Weighted list of ethnicities for newly generated characters.
-    ethnicities = single_alias_right[ethnicity_list]
 }
-
 
 single_alias[tradition_list] = {
     ## cardinality = 0..inf
-    int = <tradition>
+    <tradition>
 }
 
 single_alias[ethnicity_list] = {
@@ -69,29 +107,96 @@ single_alias[ethnicity_list] = {
     int = <ethnicity>
 }
 
-single_alias[graphical_culture_list] = {
-    ## cardinality = 1..inf
-    value_set[graphical_culture]
-}
-
-single_alias[dlc_fallback_pillar] = {
-    ## cardinality = 1..1
-    ### Replace with this pillar if you lack the DLC feature
-	fallback = <pillar>
-	
-    ## cardinality = 1..1
-    requires_dlc_flag = enum[dlc_feature]
-}
-
-single_alias[dlc_tradition] = {
-    ## cardinality = 1..1
-    ### Add this tradition if you have the DLC feature.
-    trait = <tradition>
-
-    ## cardinality = 1..1
-    ### The DLC feature hat is required.
-    requires_dlc_flag = enum[dlc_feature]
-    ## cardinality = 0..1
-    ### Add this if you don't have the DLC. Optional.
-    fallback = <tradition>
+enums = {
+    enum[unit_gfx] = {
+        iberian_muslim_unit_gfx
+        iberian_christian_unit_gfx
+        norse_unit_gfx
+        sub_sahran_unit_gfx
+        mongol_unit_gfx
+        indian_unit_gfx
+        northern_unit_gfx
+        eastern_unit_gfx
+        mena_unit_gfx
+        western_unit_gfx
+    }
+    enum[clothing_gfx] = {
+        mena_clothing_gfx
+        northern_clothing_gfx
+        indian_clothing_gfx
+        mongol_clothing_gfx
+        byzantine_clothing_gfx
+        african_clothing_gfx
+        iberian_christian_clothing_gfx
+        iberian_muslim_clothing_gfx
+        dde_abbasid_clothing_gfx
+        western_clothing_gfx
+        dde_hre_clothing_gfx
+        fp1_norse_clothing_gfx
+    }
+    enum[building_gfx] = {
+        indian_building_gfx
+        mena_building_gfx
+        mediterranean_building_gfx
+        iberian_building_gfx
+        western_building_gfx
+        norse_building_gfx
+        steppe_building_gfx
+        african_building_gfx
+        arabic_group_building_gfx
+        berber_group_building_gfx
+    }
+    enum[coa_gfx] = {
+        western_coa_gfx
+        norwegian_coa_gfx
+        swedish_coa_gfx
+        danish_coa_gfx
+        leonese_coa_gfx
+        iberian_group_coa_gfx
+        castilian_coa_gfx
+        norman_coa_gfx
+        frankish_group_coa_gfx
+        scottish_coa_gfx
+        latin_group_coa_gfx
+        central_african_group_coa_gfx
+        east_african_coa_gfx
+        west_african_group_coa_gfx
+        breton_coa_gfx
+        byzantine_group_coa_gfx
+        english_coa_gfx
+        norse_coa_gfx
+        french_coa_gfx
+        irish_coa_gfx
+        burman_group_coa_gfx
+        dravidian_group_coa_gfx
+        indo_aryan_group_coa_gfx
+        tibetan_group_coa_gfx
+        israelite_group_coa_gfx
+        arabic_group_coa_gfx
+        berber_group_coa_gfx
+        balto_finnic_group_coa_gfx
+        ugro_permian_group_coa_gfx
+        volga_finnic_group_coa_gfx
+        polish_coa_gfx
+        welsh_coa_gfx
+        steppe_coa_gfx
+        german_group_coa_gfx
+        baltic_group_coa_gfx
+        sami_coa_gfx
+        frisian_coa_gfx
+        chinese_group_coa_gfx
+        east_slavic_group_coa_gfx
+        occitan_coa_gfx
+        iranian_group_coa_gfx
+        magyar_group_coa_gfx
+        mongol_coa_gfx
+        indian_coa_gfx
+        east_african_group_coa_gfx
+        south_slavic_group_coa_gfx
+        oghuz_coa_gfx
+        turkic_group_coa_gfx
+        south_slavic_group_coa_gfx
+        anglo_saxon_coa_gfx
+        west_slavic_group_coa_gfx
+    }
 }

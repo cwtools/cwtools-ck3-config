@@ -1,0 +1,109 @@
+enums = {
+    enum[court_position_category] = {
+        court_position_category_common
+        court_position_category_royal
+        court_position_category_special
+    }
+}
+
+types = {
+    type[court_position] = {
+        path = "game/common/court_positions/types"
+    }
+}
+
+court_position = {
+    ### The primary skill used to define aptitude for the position.
+    skill = enum[attributes]
+    ### The number of positions available within a court.
+    max_available_positions = int
+    ### The subcategroy of the position.
+    category = enum[court_position_category]
+    ### The minimum rank for which this position is available for their court.
+    ## cardinality = 0..1
+    minimum_rank = enum[title_tiers]
+
+    ### The opinion modifier the employee gets towards the liege while they hold this postion.
+    opinion = {
+        value = int_value_field
+        ## cardinality = 0..1
+        scope:liege = character
+        ## cardinality = 0..1
+        scope:employee = character
+    }
+
+    ### How high the aptitude has to be to reach the 5 different modifier levels
+    ## cardinality = 0..1
+    aptitude_level_breakpoints = {
+        ## cardinality = 4..4
+        int
+    }
+
+    ### How good is this character in this position? root scope is the holder of the court position
+    aptitude = single_alias_right[score_formula]
+
+    ## cardinality = 0..1
+    ### Is this position even visible for usage? Root scope is liege character
+    is_shown = single_alias_right[trigger_clause]
+    ## cardinality = 0..1
+    ### Is this a valid position for this character to employ? Root scope is the liege character.
+    valid_position = single_alias_right[trigger_clause]
+    ## cardinality = 0..1
+    ### Is this character even shown for the position? Root scope is liege character
+    is_shown_character = single_alias_right[trigger_clause]
+    ### Is this a valid character for a position? Also checks the scripted rule "is_eligible_for_court_positions" in code.
+    valid_character = single_alias_right[trigger_clause]
+    
+    ### How much it costs to revoke this position.
+    revoke_cost = single_alias_right[cost]
+    ### How much it costs monthly to maintain this poisition.
+    salary = single_alias_right[cost]
+
+    ## cardinality = 0..1
+    ### Non-scaling modifiers gained by the employer of the court position.
+    base_employer_modifier = single_alias_right[modifier_list]
+
+    ## cardinality = 0..1
+    ### Scaling modifiers gained by the employer of the court position as the employee's aptitude level increases. Can define 0-5 scaling modifiers. If less than 5 are defined, the highest will be picked as aptitude level increases.
+    scaling_employer_modifiers = {
+        ## cardinality = 0..1
+        aptitude_level_1 = single_alias_right[modifier_list]
+        ## cardinality = 0..1
+        aptitude_level_2 = single_alias_right[modifier_list]
+        ## cardinality = 0..1
+        aptitude_level_3 = single_alias_right[modifier_list]
+        ## cardinality = 0..1
+        aptitude_level_4 = single_alias_right[modifier_list]
+        ## cardinality = 0..1
+        aptitude_level_5 = single_alias_right[modifier_list]
+    }
+    ## cardinality = 0..1
+    ### Additional, verbose description of position's effect on the employer.
+    custom_employer_modifier_description = localisation
+
+    ## cardinality = 0..1
+    ### Modifiers gained by the holder of the court position.
+    modifier = single_alias_right[modifier_list]
+    ## cardinality = 0..1
+    ### Additional, verbose description of position's effect on the employee.
+    custom_employee_modifier_description = localisation
+
+    ## cardinality = 0..1
+    ### Optional effect to search for a courtier for this position. Root scope is the liege character.
+    search_for_courtier = {
+        ## cardinality = 1..inf
+        alias_name[effect] = alias_match_left[effect] 
+    }
+
+    ### Effect that happens when the position is appointed.
+    on_court_position_received = single_alias_right[effect_clause]
+
+    ### Effect that happens when the position is revoked.
+    on_court_position_revoked = single_alias_right[effect_clause]
+
+    ### Effect that happens when the position is invalidated.
+    on_court_position_invalidated = single_alias_right[effect_clause]
+
+    ### Scripted value to determine whether an AI will hire/fire a position or not. Hires over 0, fires under -50. Look in _court_positions.info for more extensive documentation!
+    candidate_score = single_alias_right[score_formula]
+}

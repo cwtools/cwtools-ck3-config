@@ -1,10 +1,10 @@
 types = {
-    type[regiment_type] = {
-        path = "game/common/regiment_types"
+    type[maa_type] = {
+        path = "game/common/men_at_arms_types"
     }
 }
 
-regiment_type = {
+maa_type = {
     ### Unit archetype of the regiment. Used for modifiers and counters.
     type = value_set[unit_type]
     ## cardinality = 0..1
@@ -24,20 +24,13 @@ regiment_type = {
     ## cardinality = 0..1
     ### Whether holy orders are allowed to be select this regiment type if there are no valid options defined for them after filtering out regiments that haven't been unlocked. Defaults to no.
     holy_order_fallback = bool
+    ## cardinality = 0..1
+    ### Mercs/holy orders won't have a preference towards this MaA if it is unlocked
+    fallback_in_hired_troops_if_unlocked = bool
 
-    ## cardinality = 0..1
-	###  Damage dealt in pursuit phase if on winning side.
-	pursuit = int_value_field
-    ## cardinality = 0..1
-	###  Damage mitigated in pursuit phase if on losing side.
-	screen = int_value_field
-	###  Damage dealt.
-	damage = int_value_field
-	###  Ability to absorb damage.
-	toughness = int_value_field
-    ## cardinality = 0..1
-	###  How much it contributes to sieges.
-	siege_value = value_field
+    ## cardinality = 0..inf
+	###  Unit modifier.
+    alias_name[maa_modifier] = alias_match_left[maa_modifier]
 
 	## cardinality = 0..1
 	###  If set, only affects the pursuit phase. Handy for siege weapons.
@@ -58,26 +51,43 @@ regiment_type = {
 	terrain_bonus = {
         ## cardinality = 1..inf
 		<terrain> = {
-            ## cardinality = 0..1
-            ###  Extra damage dealt in pursuit phase if on winning side.
-            ## cardinality = 0..1
-            pursuit = int_value_field
-            ###  Extra damage mitigated in pursuit phase if on losing side.
-            ## cardinality = 0..1
-            screen = int_value_field
-            ## cardinality = 0..1
-            ###  Extra damage dealt.
-            damage = int_value_field
-            ## cardinality = 0..1
-            ###  Extra ability to absorb damage.
-            ## cardinality = 0..1
-            toughness = int_value_field
-            ## cardinality = 0..1
-            ###  How much more it contributes to sieges.
-            siege_value = value_field
+            ## cardinality = 1..inf
+            alias_name[maa_modifier] = alias_match_left[maa_modifier]
         }
 	}
-	
+
+    ## cardinality = 0..1
+	### Winter modifications for unit
+    winter_bonus = {
+        ## cardinality = 0..1
+    	### Normal winter modifications for unit
+        normal_winter = {
+            ## cardinality = 1..inf
+            alias_name[maa_modifier] = alias_match_left[maa_modifier]
+        }
+        ## cardinality = 0..1
+    	### Harsh winter modifications for unit
+        harsh_winter = {
+            ## cardinality = 1..inf
+            alias_name[maa_modifier] = alias_match_left[maa_modifier]
+        }
+    }
+    
+    ## cardinality = 0..1
+	### Winter modifications for unit
+    era_bonus = {
+        ## cardinality = 1..inf
+    	### Cultural era modifier
+        <era> = {
+            ## cardinality = 1..inf
+            alias_name[maa_modifier] = alias_match_left[maa_modifier]
+        }
+    }
+    
+    ## cardinality = 0..1
+	### Trigger in character scope for whether you can recruit it. Optional. Mutually exclusive with being unlocked by innovation
+    can_recruit = single_alias_right[trigger_clause]
+
 	## cardinality = 0..1
 	### What archetypes it counters, and how much. The number is how many subregiments it counters
 	counters = {
@@ -85,14 +95,18 @@ regiment_type = {
 		value[unit_type] = int_value_field
 	}
 
+    ## cardinality = 0..inf
 	### Size of one sub-regiment.
     stack = int_value_field
     ## cardinality = 0..1
 	### Maximal amount of sub-regiments.
     max_sub_regiments = int_value_field
+    ## cardinality = 0..1
+	### size of sub-regiment for the purpose of hired troops. If not set, this will be the same as the "stack" value
+    hired_stack_size = int_value_field
 
 	## push_scope = character
-    ## cardinality = 0..1
+    ## cardinality = 0..inf
 	###  Script value in character scope. Used in addition to a quality calculation (based on TOUGHNESS_SCORE_MULT, etc.) to figure out what the AI should buy/disband.
 	ai_quality = int_value_field
 }
@@ -109,3 +123,14 @@ alias[modifier:value[unit_type]_pursuit_add] = int_value_field
 alias[modifier:value[unit_type]_pursuit_mult] = value_field
 alias[modifier:value[unit_type]_screen_add] = int_value_field
 alias[modifier:value[unit_type]_screen_mult] = value_field
+
+###  Extra damage dealt in pursuit phase if on winning side.
+alias[maa_modifier:pursuit] = int_value_field
+###  Extra damage mitigated in pursuit phase if on losing side.
+alias[maa_modifier:screen] = int_value_field
+###  Extra damage dealt.
+alias[maa_modifier:damage] = int_value_field
+###  Extra ability to absorb damage.
+alias[maa_modifier:toughness] = int_value_field
+###  How much more it contributes to sieges.
+alias[maa_modifier:siege_value] = int_value_field

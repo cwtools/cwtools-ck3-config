@@ -6,7 +6,7 @@ types = {
         path = "game/common/opinion_modifiers"
 
         subtype[decaying] = {
-            yearly_decay = int
+            decaying = yes
         }
 
         localisation = {
@@ -15,14 +15,66 @@ types = {
     }
 }
 
-opinion = {
-    value = int
+enums = {
+    enum[delay_duration] = {
+        delay_days
+        delay_months
+        delay_years
+    }
+}
+
+opinion_modifier = {
+    ## cardinality = 0..1
+    opinion = int
 
     ## cardinality = 0..1
-    yearly_decay = float
+    ### Decays towards 0
+    decaying = bool
+    ## cardinality = 0..1
+    ### How long does it take before it starts to decay? Only use if decaying = yes
+    enum[delay_duration] = int
+    ## cardinality = 0..1
+    ### How long does it last? Optional
+    enum[duration] = int
+    ## cardinality = 0..1
+    ### How much does it change towards 0 each month? Should be a positive number
+    monthly_change = float
+    
+    ## cardinality = 0..1
+    ### Starts at 0/min and grows for its duration (if set) or until it hits its value. Needs either a duration or its value
+    growing = bool 					
+	## cardinality = 0..1
+    ### Applying it more than once increases its effect rather than just resetting its duration
+    stacking = bool 					
+	## cardinality = 0..1
+    ### Can't be lower than this value
+    min = int 						
+	## cardinality = 0..1
+    ### Can't be higher than this value
+    max = int 						
 
-    subtype[decaying] = {
-        ## cardinality = 0..1
-        enum[minmax] = int
-    }
+	## cardinality = 0..1
+    ### Justification for imprisonment
+	imprisonment_reason = bool
+	## cardinality = 0..1
+    ### Justification for banishment
+    banish_reason = bool
+	## cardinality = 0..1
+    ### Justification for execution
+    execute_reason = bool
+	## cardinality = 0..1
+    ### Justification for title revokation
+    revoke_title_reason = bool
+	## cardinality = 0..1
+    ### Justification for divorce
+    divorce_reason = bool
+
+	## cardinality = 0..1
+	disable_non_aggression_pacts = bool
+	## cardinality = 0..1
+    non_aggression_pact = bool
+	## cardinality = 0..1
+    obedient = bool
+	## cardinality = 0..1
+    non_interference = bool
 }

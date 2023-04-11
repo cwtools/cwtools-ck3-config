@@ -8,6 +8,11 @@ types = {
         path = "game/common/religion/doctrines"
         skip_root_key = any
     }
+
+    type[doctrine_parameter] = {
+        path = "game/common/religion/doctrines"
+        skip_root_key = parameter
+    }
 }
 
 doctrine_group = {
@@ -23,6 +28,13 @@ doctrine_group = {
     desc = localisation
     ### GUI Grouping
     group = scalar
+
+    ## cardinality = 0..1
+    ### When should this doctrine group be shown when choosing doctrines? If not shown, the group will go away entirely on create if present on the old faith
+    is_available_on_create = single_alias_right[trigger_clause]
+    ## cardinality = 0..1
+    ### How many doctrines within the group does the player get to choose? Defaults to 1. The UI will ensure no duplicates
+    number_of_picks = int
 
     # Might be a more eloquent way to find this than using a filtered key for type.
     ## cardinality = ~1..inf
@@ -47,6 +59,9 @@ doctrine_group = {
         ## cardinality = 0..1
         ### How much piety will it cost?
         piety_cost = int_value_field
+        ## cardinality = 0..1
+        ### How much piety will it cost?
+        piety_cost = single_alias_right[score_formula]
 
         ## cardinality = 0..1
         ### When should this doctrine be shown when choosing doctrines?
@@ -66,14 +81,6 @@ doctrine_group = {
         ### The traits that should be considered sins and virtues for this faith.
         traits = single_alias_right[sins_and_virtues]
     }
-
-    ## cardinality = 0..1
-    ### When should this doctrine group be shown when choosing doctrines? If not shown, the group will go away entirely on create if present on the old faith
-    is_available_on_create = single_alias_right[trigger_clause]
-    ## cardinality = 0..1
-    ### How many doctrines within the group does the player get to choose? Defaults to 1. The UI will ensure no duplicates
-    number_of_picks = int
-
 }
 
 # These are defined in game\common\script_values\02_religion_values.txt but are organized in a way that make them inappropriate for
@@ -109,13 +116,13 @@ single_alias[doctrine_param] = {
     hostility_same_family = int
     ## cardinality = 0..1
     hostility_others = int
-    ## cardinality = 0..1
+    ## cardinality = 0..inf
     hostility_override_<doctrine> = int
-    ## cardinality = 0..1
+    ## cardinality = 0..inf
     opinion_of_<doctrine_param> = int
     ## cardinality = 0..1
     piety_from_long_peace = float
-    ## cardinality = 0..1
+    ## cardinality = 0..inf
     allowed_holding_type_<holding> = bool
     ## cardinality = 0..1
     unreformed = bool

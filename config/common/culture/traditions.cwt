@@ -41,7 +41,7 @@ tradition = {
 
 single_alias[tradition_parameters] = {
     ## cardinality = 0..inf
-    <string> = bool
+    enum[cultural_parameter] = scalar
 }
 
 single_alias[tradition_image_layers] = {
@@ -50,6 +50,15 @@ single_alias[tradition_image_layers] = {
 }
 
 enums = {
+    complex_enum[cultural_parameter] = {
+		path = "game/common/culture/traditions"
+		name = {
+			parameters = {
+				enum_name = scalar
+			}
+		}
+	}
+
     enum[tradition_category] = {
         combat
         realm

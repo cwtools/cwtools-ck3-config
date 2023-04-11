@@ -19,14 +19,14 @@ alias[weight:modifier] = single_alias_right[weight_chance_modifier]
 alias[weight:always_modifier] = single_alias_right[weight_chance_modifier]
 alias[weight:compatibility_modifier] = {
     ## cardinality = 0..1
-    trigger = single_alias_right[trigger_clause]
+    alias_name[trigger] = alias_match_left[trigger]
     who = scope[character]
     compatibility_target = scope[character]
     multiplier = value_field
     ## cardinality = 0..1
     ai_value_modifier = {
         ## cardinality = 0..inf
-        trigger = single_alias_right[trigger_clause]
+        alias_name[trigger] = alias_match_left[trigger]
         ## cardinality = 0..inf
         enum[ai_values] = int_value_field
     }
@@ -60,21 +60,26 @@ single_alias[weight_block] = {
     ## cardinality = 0..inf
     <scripted_modifier> = yes
 }
-
+### Trigger-based modifications to base
 single_alias[weight_chance_modifier] = {
     ## cardinality = 0..inf
-    enum[weight_chance_modifier_operators] = value_field
-
-    ## cardinality = 0..inf
     alias_name[trigger] = alias_match_left[trigger]
-
+    
+    ## cardinality = 0..1
+    add = single_alias_right[arithmetic_operation_conditional_add]
+    ## cardinality = 0..1
+    add = int_value_field
+    
+    ## cardinality = 0..1
+    desc = single_alias_right[complex_desc]
     ## cardinality = 0..1
     desc = localisation
 }
 # TODO: Separate these out into target or opinion target
+### Modifications to base vale based on various opinions
 alias[weight:opinion_modifier] = {
     ## cardinality = 0..1
-    trigger = single_alias_right[trigger_clause]
+    alias_name[trigger] = alias_match_left[trigger]
     ## cardinality = 0..1
     who = scope[character]
     ## cardinality = 0..1
@@ -87,6 +92,8 @@ alias[weight:opinion_modifier] = {
     min = value_field
     ## cardinality = 0..1
     max = value_field
+    ## cardinality = 0..1
+    step = value_field
     ## cardinality = 0..1
     desc = single_alias_right[complex_desc]
     ## cardinality = 0..1
@@ -111,7 +118,7 @@ alias[weight:compare_modifier] = {
     ## cardinality = 0..1
     target = scope_field
     ## cardinality = 0..1
-    trigger = single_alias_right[trigger_clause]
+    alias_name[trigger] = alias_match_left[trigger]
     ## cardinality = 0..1
     skill = enum[event_skills]
     ## cardinality = 0..1
@@ -143,16 +150,3 @@ single_alias[ai_chance_block] = single_alias_right[chance_block]
 
 # Temporary alias of an alias until a proper refactor
 single_alias[weight_block] = single_alias_right[chance_block]
-
-single_alias[weight_chance_modifier] = {
-    ## cardinality = 0..inf
-    enum[weight_chance_modifier_operators] = value_field
-
-    ## cardinality = 0..inf
-    alias_name[trigger] = alias_match_left[trigger]
-
-    ## cardinality = 0..1
-    desc = single_alias_right[complex_desc]
-    ## cardinality = 0..1
-    desc = localisation
-}

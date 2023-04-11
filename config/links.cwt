@@ -122,6 +122,17 @@ links = {
         input_scopes = character
         output_scope = character
     }
+    court_position = {
+        desc = " Unknown, add something in code registration"
+        input_scopes = character
+        output_scopes = character
+    }
+    court_amenity_category = {
+        desc = " Unknown, add something in code registration"
+        data_source = <court_amenity_category>
+        input_scopes = character
+        output_scopes = court_amenity_category
+    }
     designated_heir = {
         desc = " Unknown, add something in code registration"
         input_scopes = character
@@ -133,6 +144,11 @@ links = {
         output_scope = dynasty
     }
     employer = {
+        desc = " Unknown, add something in code registration"
+        input_scopes = character
+        output_scope = character
+    }
+    employee = {
         desc = " Unknown, add something in code registration"
         input_scopes = character
         output_scope = character
@@ -562,6 +578,10 @@ links = {
         prefix = character:
         output_scope = character
     }
+    base_value = {
+        desc = " Unknown, add something in code registration"
+        output_scope = value
+    }
     compare_value = {
         desc = " A comparison trigger that will return its value in the context it is used eg: root.gold"
         output_scope = value
@@ -676,5 +696,15 @@ links = {
 		type = both
         prefix = var:
         data_source = value[variable]
+    }
+    inspiration = {
+        desc = " Unknown, add something in code registration"
+        input_scopes = inspiration
+        output_scope = inspiration
+    }
+    inspiration_sponsor = {
+        desc = " Unknown, add something in code registration"
+        input_scopes = inspiration
+        output_scope = character
     }
 }

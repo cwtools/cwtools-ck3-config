@@ -36,17 +36,12 @@ trait = {
     ## replace_scope = { ROOT = character THIS = character }
     ## cardinality = 0..inf
     alias_name[modifier] = alias_match_left[modifier]
-    ## cardinality = 0..1
-    same_opinion_if_same_faith = int_value_field
-    
+    ### Modifier that will be applied for characters with a culture with the specified parameter
+    ## cardinality = 0..inf
+    culture_modifier = single_alias_right[culture_modifier]
+
     ## cardinality = 0..1
     add_commander_trait = bool
-    # Work around for bad expected type on this modifier
-    ## cardinality = 0..1
-    no_water_crossing_penalty = bool
-    # Work around for bad expected type on this modifier
-    ## cardinality = 0..1
-    ignore_negative_culture_opinion = bool
     ## cardinality = 0..1
     disables_combat_leadership = bool
     ## cardinality = 0..1
@@ -66,6 +61,9 @@ trait = {
     ### Will stop visual aging, and make the character immune to natural death. Can still be killed by script. Fertility will match visual age. You can use set_immortal_age to change the visual age
     immortal = bool
 
+    ## cardinality = 0..1
+    shown_in_ruler_designer = bool
+
     ###################################################
     ######Genetics, Inheritance, and Elligabilty#######
     ###################################################
@@ -73,15 +71,9 @@ trait = {
     ## cardinality = 0..1
     ### Chance of being inherited if genetic
     inherit_chance = int[0..100]
-
-    ## cardinality = 0..1
-    ### Chance of being inherited if both parents hold trait
-    both_parent_has_trait_inherit_chance = int[0..100]
-
     ## cardinality = 0..1
     ### How many characters out of 100 are born with this trait (when not inherited). Can have decimals
     birth = float[0..100]
-
     ## cardinality = 0..1
     ### How many characters out of 100 are created with this trait? (As opposed to actually being born; this is for things like generated characters, script characters, etc.)
     random_creation = float[0..100]
@@ -89,22 +81,22 @@ trait = {
     ## cardinality = 0..1
     ### Which parent can the trait be inherited from
     parent_inheritance_sex = enum[character_sex]
-
     ## cardinality = 0..1
     ### What sex of child can inherit this trait
     child_inheritance_sex = enum[character_sex]
-
     ## cardinality = 0..1
     ### Whether the trait can be inherited [Default: no]
     genetic = bool
-
     ## cardinality = 0..1
     ### Whether it is inherited from biological father [Default: yes]
     inherit_from_real_father = bool
-
     ## cardinality = 0..1
     ### Enables children of this character to be considered for inbred trait [Default: no]
     enables_inbred = bool
+    ## cardinality = 0..1
+    ### Chance of being inherited if both parents hold trait
+    both_parent_has_trait_inherit_chance = int[0..100]
+
 
     ## cardinality = 0..1
     potential = single_alias_right[trigger_clause]
@@ -112,6 +104,12 @@ trait = {
     ## cardinality = 0..1
     ### Is this trait considered good [Default: no]
     good = bool
+    ## cardinality = 0..1
+    ### Does this trait preclude inheritance [Default: no]
+    blocks_from_claim_inheritance = bool
+    ## cardinality = 0..1
+    ### Does this trait preclude inheritance [Default: no]
+    blocks_from_claim_inheritance_from_dynasty = bool
 
     # TODO: Implement dna_modifiers. Probably as an alias.
     ## cardinality = 0..1
@@ -178,17 +176,23 @@ trait = {
     fame = bool
 
     ## cardinality = 0..1
+    ### Mark as court-type related [Default: no]
+    court_type_trait = bool
+
+    ## cardinality = 0..1
     lifestyle = bool
 
     ## cardinality = 0..1
     commander = bool
 
-    ## cardinality = 0..1
+    ## cardinality = 0..inf
     flag = value_set[trait_flag]
 
     # TODO: Anything that can refer to a trait can refer to a group. Is there some way we can use this to mark a type name too?
     ## cardinality = 0..1
     group = value_set[trait_group]
+    ## cardinality = 0..1
+    group_equivalence = value_set[trait_group]
 
     #TODO: Does this require group? Test with error log to confirm.
     ## cardinality = 0..1
@@ -200,6 +204,11 @@ trait = {
     ## cardinality = 0..1
     shown_in_encyclopedia = bool
 
+    ## cardinality = 0..1
+    trait_winter_exclusive = bool
+
+    ## cardinality = 0..1
+    culture_succession_prio = children_can_be_born_in_the_purple
 
     ##################
     ######Misc.#######
@@ -242,17 +251,15 @@ trait = {
     ## cardinality = 0..inf
     ### Applied if the associated conditions are fulfilled
     triggered_opinion = {
-        ## cardinality = 1..1
-        ### What opinion modifier to apply if the conditions are fulfilled
-        opinion_modifier = <opinion_modifier>
-        opinion_modifier = single_alias_right[opinion_chance_modifier]
-
-        #TODO: These are supposed to be linked to the parameters in doctrines. This means parameters in doctrines should probably be refactored to a type.
         ## cardinality = 0..1
         ##push_scope = faith
         ### What boolean doctrine parameter to check for
         parameter = scalar
         #parameter = <parameter>
+        
+        ## cardinality = 1..1
+        ### What opinion modifier to apply if the conditions are fulfilled
+        opinion_modifier = <opinion_modifier>
 
         ## cardinality = 0..1
         ### Check that the parameter is *not* set (or set to false), rather than set to true
