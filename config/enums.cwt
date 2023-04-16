@@ -116,6 +116,10 @@ enums = {
         court_artifacts
         the_fate_of_iberia
         friends_and_foes 
+        tours_and_tournaments
+        advanced_activities
+        accolades
+        elegance_of_the_empire
     }
 }
 

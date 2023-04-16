@@ -1907,6 +1907,9 @@ alias[trigger:current_month] == replace_me_comparison
 ### Does the host have this DLC
 alias[trigger:has_dlc] = replace_me
 
+### Does the host have DLC that enables this particular feature
+alias[trigger:has_dlc_feature] = dlc_feature
+
 ### Is the given game rule setting enabled? has_game_rule = faster_conversion
 alias[trigger:has_game_rule] = <game_rule>
 
