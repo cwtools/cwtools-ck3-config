@@ -30,8 +30,7 @@ bookmark = {
     recommended = bool
 
     ## cardinality = 0..1
-	### Set what group this bookmark is part of
-	### left empty bookmark will be ungrouped
+	### Set what group this bookmark is part of. Left empty bookmark will be ungrouped.
 	group = bookmark_group
 
     # TODO: figure out, confirm cardinality, see if it's not a target for an alias
