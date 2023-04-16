@@ -1,0 +1,23 @@
+# Used to group bookmarks together, can contain default data.
+# Key of the bookmark is used as localization tag as well.
+
+types = {
+    type[bookmark_group] = {
+        path = "game/common/bookmarks/groups"
+
+        localisation = {
+            ## required
+            Name = "$"
+
+            ## required
+            Description = "$_desc"
+        }
+    }
+}
+
+bookmark_group = {
+    ## cardinality = 1..1
+	### Bookmarks that are assigned this group will use this as their default start 
+	### date, can be overwritten by the bookmark itself.
+	default_start_date = date_field
+}
