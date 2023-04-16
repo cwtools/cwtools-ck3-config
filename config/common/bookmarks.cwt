@@ -2,7 +2,7 @@
 
 types = {
     type[bookmark] = {
-        path = "game/common/bookmarks"
+        path = "game/common/bookmarks/bookmarks"
 
         localisation = {
             ## required
@@ -15,22 +15,18 @@ types = {
 }
 
 bookmark = {
-    # TODO: figure out, confirm uniqueness
+    # Used in bm_1066_rags_to_riches in vanilla as of 1.8.2
     ## cardinality = 0..1
-    ### If yes, ???. Defaults to no. Probably has to be unique.
-    default = bool
+    test_default = bool
 
-    # TODO: figure out
     start_date = date_field
 
-    # TODO: figure out, confirm cardinality and defaults
     ## cardinality = 0..1
-    ### If yes, ???. Defaults to ???.
+    ### Sets if this bookmark is playable or not. Defaults to yes.
     is_playable = bool
 
-    # TODO: figure out
     ## cardinality = 0..1
-    ### If yes, ???. Defaults to no.
+    ### If bookmark should show as recommended or not. Defaults to no.
     recommended = bool
 
     # TODO: figure out, confirm cardinality, see if it's not a target for an alias
