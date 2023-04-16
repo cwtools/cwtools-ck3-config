@@ -3,7 +3,6 @@ none
 value
 bool
 flag
-color
 character
 landed title
 activity
@@ -27,4 +26,7 @@ army
 holy order
 council task
 mercenary company
-culture group
+artifact
+inspiration
+struggle
+character memory
