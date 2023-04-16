@@ -1,764 +1,3680 @@
 Printing Modifier Definitions:
-Tag: diplomacy, Categories: character
-Tag: martial, Categories: character
-Tag: stewardship, Categories: character
-Tag: intrigue, Categories: character
-Tag: learning, Categories: character
-Tag: prowess, Categories: character
-Tag: negate_diplomacy_penalty_add, Categories: character
-Tag: negate_martial_penalty_add, Categories: character
-Tag: negate_stewardship_penalty_add, Categories: character
-Tag: negate_intrigue_penalty_add, Categories: character
-Tag: negate_learning_penalty_add, Categories: character
-Tag: negate_prowess_penalty_add, Categories: character
-Tag: no_prowess_loss_from_age, Categories: character
-Tag: diplomacy_per_piety_level, Categories: character
-Tag: martial_per_piety_level, Categories: character
-Tag: stewardship_per_piety_level, Categories: character
-Tag: intrigue_per_piety_level, Categories: character
-Tag: learning_per_piety_level, Categories: character
-Tag: prowess_per_piety_level, Categories: character
-Tag: diplomacy_per_prestige_level, Categories: character
-Tag: martial_per_prestige_level, Categories: character
-Tag: stewardship_per_prestige_level, Categories: character
-Tag: intrigue_per_prestige_level, Categories: character
-Tag: learning_per_prestige_level, Categories: character
-Tag: prowess_per_prestige_level, Categories: character
-Tag: piety_level_impact_mult, Categories: character
-Tag: prestige_level_impact_mult, Categories: character
-Tag: diplomacy_per_stress_level, Categories: character
-Tag: martial_per_stress_level, Categories: character
-Tag: stewardship_per_stress_level, Categories: character
-Tag: intrigue_per_stress_level, Categories: character
-Tag: learning_per_stress_level, Categories: character
-Tag: prowess_per_stress_level, Categories: character
-Tag: random_skills_per_child, Categories: character
-Tag: fertility, Categories: character
-Tag: health, Categories: character
-Tag: negate_fertility_penalty_add, Categories: character
-Tag: negate_health_penalty_add, Categories: character
-Tag: monthly_income, Categories: character
-Tag: monthly_income_mult, Categories: character
-Tag: monthly_war_income_add, Categories: character
-Tag: monthly_war_income_mult, Categories: character
-Tag: monthly_income_per_stress_level_add, Categories: character
-Tag: monthly_income_per_stress_level_mult, Categories: character
-Tag: monthly_piety, Categories: character
-Tag: monthly_piety_gain_mult, Categories: character
-Tag: monthly_piety_gain_per_happy_powerful_vassal_add, Categories: character
-Tag: monthly_piety_gain_per_happy_powerful_vassal_mult, Categories: character
-Tag: monthly_piety_gain_per_dread_add, Categories: character
-Tag: monthly_piety_gain_per_dread_mult, Categories: character
-Tag: monthly_piety_gain_per_knight_add, Categories: character
-Tag: monthly_piety_gain_per_knight_mult, Categories: character
-Tag: monthly_prestige, Categories: character
-Tag: monthly_prestige_gain_mult, Categories: character
-Tag: monthly_prestige_gain_per_happy_powerful_vassal_add, Categories: character
-Tag: monthly_prestige_gain_per_happy_powerful_vassal_mult, Categories: character
-Tag: monthly_prestige_gain_per_dread_add, Categories: character
-Tag: monthly_prestige_gain_per_dread_mult, Categories: character
-Tag: monthly_prestige_gain_per_knight_add, Categories: character
-Tag: monthly_prestige_gain_per_knight_mult, Categories: character
-Tag: monthly_piety_from_buildings_mult, Categories: character
-Tag: monthly_prestige_from_buildings_mult, Categories: character
-Tag: monthly_dynasty_prestige, Categories: character
-Tag: monthly_dynasty_prestige_mult, Categories: character
-Tag: stress_gain_mult, Categories: character
-Tag: stress_loss_mult, Categories: character
-Tag: monthly_dread, Categories: character
-Tag: dread_gain_mult, Categories: character
-Tag: dread_loss_mult, Categories: character
-Tag: tyranny_gain_mult, Categories: character
-Tag: tyranny_loss_mult, Categories: character
-Tag: monthly_tyranny, Categories: character
-Tag: dread_baseline_add, Categories: character
-Tag: dread_decay_add, Categories: character
-Tag: dread_decay_mult, Categories: character
-Tag: dread_per_tyranny_add, Categories: character
-Tag: dread_per_tyranny_mult, Categories: character
-Tag: domain_limit, Categories: character
-Tag: vassal_limit, Categories: character
-Tag: domain_tax_mult, Categories: character
-Tag: domain_tax_same_faith_mult, Categories: character
-Tag: domain_tax_different_faith_mult, Categories: character
-Tag: domain_tax_mult_even_if_baron, Categories: character
-Tag: domain_tax_same_faith_mult_even_if_baron, Categories: character
-Tag: domain_tax_different_faith_mult_even_if_baron, Categories: character
-Tag: vassal_tax_mult, Categories: character
-Tag: men_at_arms_maintenance, Categories: character
-Tag: men_at_arms_maintenance_per_dread_mult, Categories: character
-Tag: army_maintenance_mult, Categories: character
-Tag: short_reign_duration_mult, Categories: character
-Tag: long_reign_bonus_mult, Categories: character
-Tag: diplomatic_range_mult, Categories: character
-Tag: inbreeding_chance, Categories: character
-Tag: positive_inactive_inheritance_chance, Categories: character
-Tag: negative_inactive_inheritance_chance, Categories: character
-Tag: positive_random_genetic_chance, Categories: character
-Tag: negative_random_genetic_chance, Categories: character
-Tag: genetic_trait_strengthen_chance, Categories: character
-Tag: life_expectancy, Categories: character
-Tag: years_of_fertility, Categories: character
-Tag: knight_limit, Categories: character
-Tag: knight_effectiveness_mult, Categories: character
-Tag: title_creation_cost, Categories: character
-Tag: title_creation_cost_mult, Categories: character
-Tag: monthly_lifestyle_xp_gain_mult, Categories: character
-Tag: mercenary_hire_cost_add, Categories: character
-Tag: mercenary_hire_cost_mult, Categories: character
-Tag: same_culture_mercenary_hire_cost_add, Categories: character
-Tag: same_culture_mercenary_hire_cost_mult, Categories: character
-Tag: holy_order_hire_cost_mult, Categories: character
-Tag: holy_order_hire_cost_add, Categories: character
-Tag: same_culture_holy_order_hire_cost_mult, Categories: character
-Tag: same_culture_holy_order_hire_cost_add, Categories: character
-Tag: opinion_of_female_rulers, Categories: character
-Tag: opinion_of_male_rulers, Categories: character
-Tag: opinion_of_same_culture, Categories: character
-Tag: opinion_of_different_culture, Categories: character
-Tag: opinion_of_same_faith, Categories: character
-Tag: opinion_of_different_faith, Categories: character
-Tag: opinion_of_liege, Categories: character
-Tag: opinion_of_vassal, Categories: character
-Tag: opinion_of_different_faith_liege, Categories: character
-Tag: same_culture_opinion, Categories: character
-Tag: different_culture_opinion, Categories: character
-Tag: same_faith_opinion, Categories: character
-Tag: different_faith_opinion, Categories: character
-Tag: direct_vassal_opinion, Categories: character
-Tag: fellow_vassal_opinion, Categories: character
-Tag: independent_ruler_opinion, Categories: character
-Tag: general_opinion, Categories: character
-Tag: attraction_opinion, Categories: character
-Tag: religious_vassal_opinion, Categories: character
-Tag: religious_head_opinion, Categories: character
-Tag: spouse_opinion, Categories: character
-Tag: twin_opinion, Categories: character
-Tag: close_relative_opinion, Categories: character
-Tag: dynasty_house_opinion, Categories: character
-Tag: dynasty_opinion, Categories: character
-Tag: liege_opinion, Categories: character
-Tag: different_faith_liege_opinion, Categories: character
-Tag: vassal_opinion, Categories: character
-Tag: clergy_opinion, Categories: character
-Tag: councillor_opinion, Categories: character
-Tag: realm_priest_opinion, Categories: character
-Tag: powerful_vassal_opinion, Categories: character
-Tag: courtier_opinion, Categories: character
-Tag: guest_opinion, Categories: character
-Tag: courtier_and_guest_opinion, Categories: character
-Tag: prisoner_opinion, Categories: character
-Tag: player_heir_opinion, Categories: character
-Tag: child_opinion, Categories: character
-Tag: child_except_player_heir_opinion, Categories: character
-Tag: eligible_child_opinion, Categories: character
-Tag: eligible_child_except_player_heir_opinion, Categories: character
-Tag: ignore_negative_culture_opinion, Categories: character
-Tag: ignore_different_faith_opinion, Categories: character
-Tag: pursue_efficiency, Categories: combat
-Tag: counter_efficiency, Categories: combat
-Tag: min_combat_roll, Categories: combat
-Tag: max_combat_roll, Categories: combat
-Tag: men_at_arms_limit, Categories: combat
-Tag: men_at_arms_cap, Categories: combat
-Tag: embarkation_cost_mult, Categories: combat
-Tag: naval_movement_speed_mult, Categories: combat
-Tag: siege_phase_time, Categories: siege
-Tag: siege_morale_loss, Categories: siege
-Tag: revolting_siege_morale_loss_add, Categories: siege
-Tag: revolting_siege_morale_loss_mult, Categories: siege
-Tag: vassal_tax_contribution_add, Categories: government
-Tag: vassal_tax_contribution_mult, Categories: government
-Tag: intimidated_vassal_tax_contribution_add, Categories: character
-Tag: intimidated_vassal_tax_contribution_mult, Categories: character
-Tag: cowed_vassal_tax_contribution_add, Categories: character
-Tag: cowed_vassal_tax_contribution_mult, Categories: character
-Tag: vassal_levy_contribution_add, Categories: government
-Tag: vassal_levy_contribution_mult, Categories: government
-Tag: intimidated_vassal_levy_contribution_add, Categories: character
-Tag: intimidated_vassal_levy_contribution_mult, Categories: character
-Tag: cowed_vassal_levy_contribution_add, Categories: character
-Tag: cowed_vassal_levy_contribution_mult, Categories: character
-Tag: happy_powerful_vassal_tax_contribution_add, Categories: character
-Tag: happy_powerful_vassal_tax_contribution_mult, Categories: character
-Tag: happy_powerful_vassal_levy_contribution_add, Categories: character
-Tag: happy_powerful_vassal_levy_contribution_mult, Categories: character
-Tag: scheme_power, Categories: scheme
-Tag: scheme_resistance, Categories: scheme
-Tag: scheme_secrecy, Categories: scheme
-Tag: scheme_success_chance, Categories: scheme
-Tag: hostile_scheme_power_add, Categories: character
-Tag: hostile_scheme_power_mult, Categories: character
-Tag: personal_scheme_power_add, Categories: character
-Tag: personal_scheme_power_mult, Categories: character
-Tag: hostile_scheme_resistance_add, Categories: character
-Tag: hostile_scheme_resistance_mult, Categories: character
-Tag: personal_scheme_resistance_add, Categories: character
-Tag: personal_scheme_resistance_mult, Categories: character
-Tag: diplomacy_scheme_power, Categories: character
-Tag: intrigue_scheme_power, Categories: character
-Tag: stewardship_scheme_power, Categories: character
-Tag: martial_scheme_power, Categories: character
-Tag: prowess_scheme_power, Categories: character
-Tag: learning_scheme_power, Categories: character
-Tag: diplomacy_scheme_resistance, Categories: character
-Tag: intrigue_scheme_resistance, Categories: character
-Tag: stewardship_scheme_resistance, Categories: character
-Tag: martial_scheme_resistance, Categories: character
-Tag: prowess_scheme_resistance, Categories: character
-Tag: learning_scheme_resistance, Categories: character
-Tag: scheme_discovery_chance_mult, Categories: character
-Tag: max_personal_schemes_add, Categories: character
-Tag: max_hostile_schemes_add, Categories: character
-Tag: owned_hostile_scheme_success_chance_add, Categories: character
-Tag: owned_personal_scheme_success_chance_add, Categories: character
-Tag: enemy_hostile_scheme_success_chance_add, Categories: character
-Tag: enemy_personal_scheme_success_chance_add, Categories: character
-Tag: movement_speed, Categories: combat
-Tag: retreat_losses, Categories: combat
-Tag: hard_casualty_modifier, Categories: combat
-Tag: enemy_hard_casualty_modifier, Categories: combat
-Tag: advantage, Categories: combat
-Tag: attacker_advantage, Categories: combat
-Tag: defender_advantage, Categories: combat
-Tag: enemy_terrain_advantage, Categories: combat
-Tag: tolerance_advantage_mod, Categories: combat
-Tag: advantage_against_coreligionists, Categories: combat
-Tag: random_advantage, Categories: combat
-Tag: controlled_province_advantage, Categories: combat
-Tag: no_water_crossing_penalty, Categories: combat
-Tag: raid_speed, Categories: combat
-Tag: hostile_county_attrition, Categories: combat
-Tag: supply_duration, Categories: combat
-Tag: supply_limit_mult, Categories: province
-Tag: supply_limit, Categories: province
-Tag: fort_level, Categories: holding
-Tag: supply_capacity_add, Categories: province
-Tag: supply_capacity_mult, Categories: province
-Tag: hostile_raid_time, Categories: province
-Tag: levy_size, Categories: holding
-Tag: garrison_size, Categories: holding
-Tag: levy_reinforcement_rate, Categories: holding
-Tag: levy_reinforcement_rate_same_faith, Categories: character
-Tag: levy_reinforcement_rate_different_faith, Categories: character
-Tag: levy_reinforcement_rate_even_if_baron, Categories: character
-Tag: levy_reinforcement_rate_same_faith_even_if_baron, Categories: character
-Tag: levy_reinforcement_rate_different_faith_even_if_baron, Categories: character
-Tag: levy_reinforcement_rate_friendly_territory, Categories: holding
-Tag: build_speed, Categories: holding
-Tag: build_gold_cost, Categories: holding
-Tag: build_piety_cost, Categories: holding
-Tag: build_prestige_cost, Categories: holding
-Tag: holding_build_speed, Categories: holding
-Tag: holding_build_gold_cost, Categories: holding
-Tag: holding_build_piety_cost, Categories: holding
-Tag: holding_build_prestige_cost, Categories: holding
-Tag: tax_mult, Categories: holding
-Tag: development_growth_factor, Categories: county
-Tag: development_growth, Categories: county
-Tag: character_capital_county_monthly_development_growth_add, Categories: character
-Tag: monthly_county_control_change_add, Categories: county
-Tag: monthly_county_control_change_factor, Categories: county
-Tag: monthly_county_control_change_add_even_if_baron, Categories: county
-Tag: monthly_county_control_change_factor_even_if_baron, Categories: county
-Tag: county_opinion_add, Categories: county
-Tag: different_faith_county_opinion_mult, Categories: county
-Tag: county_opinion_add_even_if_baron, Categories: county
-Tag: different_faith_county_opinion_mult_even_if_baron, Categories: county
-Tag: mercenary_count_mult, Categories: culture
-Tag: cultural_head_fascination_add, Categories: character
-Tag: cultural_head_fascination_mult, Categories: character
-Tag: faith_conversion_piety_cost_add, Categories: character
-Tag: faith_conversion_piety_cost_mult, Categories: character
-Tag: faith_creation_piety_cost_add, Categories: character
-Tag: faith_creation_piety_cost_mult, Categories: character
-Tag: ai_boldness, Categories: ai
-Tag: ai_compassion, Categories: ai
-Tag: ai_sociability, Categories: ai
-Tag: ai_greed, Categories: ai
-Tag: ai_energy, Categories: ai
-Tag: ai_honor, Categories: ai
-Tag: ai_rationality, Categories: ai
-Tag: ai_vengefulness, Categories: ai
-Tag: ai_zeal, Categories: ai
-Tag: ai_war_chance, Categories: ai
-Tag: ai_war_cooldown, Categories: ai
-Tag: castle_holding_build_speed, Categories: county
-Tag: castle_holding_build_gold_cost, Categories: county
-Tag: castle_holding_build_piety_cost, Categories: county
-Tag: castle_holding_build_prestige_cost, Categories: county
-Tag: castle_holding_holding_build_speed, Categories: county
-Tag: castle_holding_holding_build_gold_cost, Categories: county
-Tag: castle_holding_holding_build_piety_cost, Categories: county
-Tag: castle_holding_holding_build_prestige_cost, Categories: county
-Tag: tribal_holding_build_speed, Categories: county
-Tag: tribal_holding_build_gold_cost, Categories: county
-Tag: tribal_holding_build_piety_cost, Categories: county
-Tag: tribal_holding_build_prestige_cost, Categories: county
-Tag: tribal_holding_holding_build_speed, Categories: county
-Tag: tribal_holding_holding_build_gold_cost, Categories: county
-Tag: tribal_holding_holding_build_piety_cost, Categories: county
-Tag: tribal_holding_holding_build_prestige_cost, Categories: county
-Tag: city_holding_build_speed, Categories: county
-Tag: city_holding_build_gold_cost, Categories: county
-Tag: city_holding_build_piety_cost, Categories: county
-Tag: city_holding_build_prestige_cost, Categories: county
-Tag: city_holding_holding_build_speed, Categories: county
-Tag: city_holding_holding_build_gold_cost, Categories: county
-Tag: city_holding_holding_build_piety_cost, Categories: county
-Tag: city_holding_holding_build_prestige_cost, Categories: county
-Tag: church_holding_build_speed, Categories: county
-Tag: church_holding_build_gold_cost, Categories: county
-Tag: church_holding_build_piety_cost, Categories: county
-Tag: church_holding_build_prestige_cost, Categories: county
-Tag: church_holding_holding_build_speed, Categories: county
-Tag: church_holding_holding_build_gold_cost, Categories: county
-Tag: church_holding_holding_build_piety_cost, Categories: county
-Tag: church_holding_holding_build_prestige_cost, Categories: county
-Tag: akan_opinion, Categories: character
-Tag: kru_opinion, Categories: character
-Tag: guan_opinion, Categories: character
-Tag: bedouin_opinion, Categories: character
-Tag: levantine_opinion, Categories: character
-Tag: egyptian_opinion, Categories: character
-Tag: maghrebi_opinion, Categories: character
-Tag: andalusian_opinion, Categories: character
-Tag: yemeni_opinion, Categories: character
-Tag: latgalian_opinion, Categories: character
-Tag: lithuanian_opinion, Categories: character
-Tag: prussian_opinion, Categories: character
-Tag: finnish_opinion, Categories: character
-Tag: sami_opinion, Categories: character
-Tag: estonian_opinion, Categories: character
-Tag: karelian_opinion, Categories: character
-Tag: vepsian_opinion, Categories: character
-Tag: butr_opinion, Categories: character
-Tag: baranis_opinion, Categories: character
-Tag: zaghawa_opinion, Categories: character
-Tag: pictish_opinion, Categories: character
-Tag: welsh_opinion, Categories: character
-Tag: breton_opinion, Categories: character
-Tag: cornish_opinion, Categories: character
-Tag: cumbrian_opinion, Categories: character
-Tag: burmese_opinion, Categories: character
-Tag: mon_opinion, Categories: character
-Tag: armenian_opinion, Categories: character
-Tag: greek_opinion, Categories: character
-Tag: alan_opinion, Categories: character
-Tag: georgian_opinion, Categories: character
-Tag: assyrian_opinion, Categories: character
-Tag: kanuri_opinion, Categories: character
-Tag: hausa_opinion, Categories: character
-Tag: sao_opinion, Categories: character
-Tag: nupe_opinion, Categories: character
-Tag: saxon_opinion, Categories: character
-Tag: franconian_opinion, Categories: character
-Tag: swabian_opinion, Categories: character
-Tag: bavarian_opinion, Categories: character
-Tag: frisian_opinion, Categories: character
-Tag: dutch_opinion, Categories: character
-Tag: german_opinion, Categories: character
-Tag: han_opinion, Categories: character
-Tag: tamil_opinion, Categories: character
-Tag: telugu_opinion, Categories: character
-Tag: kannada_opinion, Categories: character
-Tag: ethiopian_opinion, Categories: character
-Tag: nubian_opinion, Categories: character
-Tag: welayta_opinion, Categories: character
-Tag: daju_opinion, Categories: character
-Tag: russian_opinion, Categories: character
-Tag: ilmenian_opinion, Categories: character
-Tag: severian_opinion, Categories: character
-Tag: volhynian_opinion, Categories: character
-Tag: frankish_opinion, Categories: character
-Tag: french_opinion, Categories: character
-Tag: norman_opinion, Categories: character
-Tag: occitan_opinion, Categories: character
-Tag: outremer_opinion, Categories: character
-Tag: irish_opinion, Categories: character
-Tag: gaelic_opinion, Categories: character
-Tag: basque_opinion, Categories: character
-Tag: castilian_opinion, Categories: character
-Tag: catalan_opinion, Categories: character
-Tag: portuguese_opinion, Categories: character
-Tag: visigothic_opinion, Categories: character
-Tag: galician_opinion, Categories: character
-Tag: asturleonese_opinion, Categories: character
-Tag: aragonese_opinion, Categories: character
-Tag: suebi_opinion, Categories: character
-Tag: bengali_opinion, Categories: character
-Tag: oriya_opinion, Categories: character
-Tag: assamese_opinion, Categories: character
-Tag: hindustani_opinion, Categories: character
-Tag: gujarati_opinion, Categories: character
-Tag: punjabi_opinion, Categories: character
-Tag: rajput_opinion, Categories: character
-Tag: sindhi_opinion, Categories: character
-Tag: marathi_opinion, Categories: character
-Tag: kashmiri_opinion, Categories: character
-Tag: sinhala_opinion, Categories: character
-Tag: nepali_opinion, Categories: character
-Tag: persian_opinion, Categories: character
-Tag: sogdian_opinion, Categories: character
-Tag: tocharian_opinion, Categories: character
-Tag: kurdish_opinion, Categories: character
-Tag: afghan_opinion, Categories: character
-Tag: baloch_opinion, Categories: character
-Tag: saka_opinion, Categories: character
-Tag: daylamite_opinion, Categories: character
-Tag: khwarezmian_opinion, Categories: character
-Tag: tajik_opinion, Categories: character
-Tag: ashkenazi_opinion, Categories: character
-Tag: sephardi_opinion, Categories: character
-Tag: italian_opinion, Categories: character
-Tag: roman_opinion, Categories: character
-Tag: cisalpine_opinion, Categories: character
-Tag: sardinian_opinion, Categories: character
-Tag: sicilian_opinion, Categories: character
-Tag: lombard_opinion, Categories: character
-Tag: mogyer_opinion, Categories: character
-Tag: hungarian_opinion, Categories: character
-Tag: mongol_opinion, Categories: character
-Tag: buryat_opinion, Categories: character
-Tag: oirat_opinion, Categories: character
-Tag: naiman_opinion, Categories: character
-Tag: kerait_opinion, Categories: character
-Tag: khitan_opinion, Categories: character
-Tag: tuyuhun_opinion, Categories: character
-Tag: jurchen_opinion, Categories: character
-Tag: norse_opinion, Categories: character
-Tag: swedish_opinion, Categories: character
-Tag: norwegian_opinion, Categories: character
-Tag: danish_opinion, Categories: character
-Tag: tangut_opinion, Categories: character
-Tag: qiang_opinion, Categories: character
-Tag: soninke_opinion, Categories: character
-Tag: bozo_opinion, Categories: character
-Tag: mossi_opinion, Categories: character
-Tag: sorko_opinion, Categories: character
-Tag: gaw_opinion, Categories: character
-Tag: songhai_opinion, Categories: character
-Tag: pulaar_opinion, Categories: character
-Tag: serer_opinion, Categories: character
-Tag: wolof_opinion, Categories: character
-Tag: somali_opinion, Categories: character
-Tag: beja_opinion, Categories: character
-Tag: afar_opinion, Categories: character
-Tag: croatian_opinion, Categories: character
-Tag: bosnian_opinion, Categories: character
-Tag: serbian_opinion, Categories: character
-Tag: vlach_opinion, Categories: character
-Tag: bulgarian_opinion, Categories: character
-Tag: bodpa_opinion, Categories: character
-Tag: zhangzhung_opinion, Categories: character
-Tag: sumpa_opinion, Categories: character
-Tag: tsangpa_opinion, Categories: character
-Tag: kirati_opinion, Categories: character
-Tag: lhomon_opinion, Categories: character
-Tag: turkish_opinion, Categories: character
-Tag: pecheneg_opinion, Categories: character
-Tag: cuman_opinion, Categories: character
-Tag: khazar_opinion, Categories: character
-Tag: bolghar_opinion, Categories: character
-Tag: bashkir_opinion, Categories: character
-Tag: avar_opinion, Categories: character
-Tag: karluk_opinion, Categories: character
-Tag: kimek_opinion, Categories: character
-Tag: kipchak_opinion, Categories: character
-Tag: laktan_opinion, Categories: character
-Tag: kirghiz_opinion, Categories: character
-Tag: uyghur_opinion, Categories: character
-Tag: yughur_opinion, Categories: character
-Tag: uriankhai_opinion, Categories: character
-Tag: chuvash_opinion, Categories: character
-Tag: shatuo_opinion, Categories: character
-Tag: ongud_opinion, Categories: character
-Tag: komi_opinion, Categories: character
-Tag: khanty_opinion, Categories: character
-Tag: samoyed_opinion, Categories: character
-Tag: mordvin_opinion, Categories: character
-Tag: merya_opinion, Categories: character
-Tag: meshchera_opinion, Categories: character
-Tag: mari_opinion, Categories: character
-Tag: muroma_opinion, Categories: character
-Tag: malinke_opinion, Categories: character
-Tag: bobo_opinion, Categories: character
-Tag: gur_opinion, Categories: character
-Tag: marka_opinion, Categories: character
-Tag: mel_opinion, Categories: character
-Tag: english_opinion, Categories: character
-Tag: anglo_saxon_opinion, Categories: character
-Tag: old_saxon_opinion, Categories: character
-Tag: scottish_opinion, Categories: character
-Tag: pommeranian_opinion, Categories: character
-Tag: czech_opinion, Categories: character
-Tag: polish_opinion, Categories: character
-Tag: polabian_opinion, Categories: character
-Tag: slovien_opinion, Categories: character
-Tag: yoruba_opinion, Categories: character
-Tag: edo_opinion, Categories: character
-Tag: igbo_opinion, Categories: character
-Tag: ewe_opinion, Categories: character
-Tag: feudal_government_opinion, Categories: character
-Tag: feudal_government_vassal_opinion, Categories: character
-Tag: feudal_government_opinion_same_faith, Categories: character
-Tag: feudal_government_tax_contribution_add, Categories: character
-Tag: feudal_government_tax_contribution_mult, Categories: character
-Tag: feudal_government_levy_contribution_add, Categories: character
-Tag: feudal_government_levy_contribution_mult, Categories: character
-Tag: republic_government_opinion, Categories: character
-Tag: republic_government_vassal_opinion, Categories: character
-Tag: republic_government_opinion_same_faith, Categories: character
-Tag: republic_government_tax_contribution_add, Categories: character
-Tag: republic_government_tax_contribution_mult, Categories: character
-Tag: republic_government_levy_contribution_add, Categories: character
-Tag: republic_government_levy_contribution_mult, Categories: character
-Tag: theocracy_government_opinion, Categories: character
-Tag: theocracy_government_vassal_opinion, Categories: character
-Tag: theocracy_government_opinion_same_faith, Categories: character
-Tag: theocracy_government_tax_contribution_add, Categories: character
-Tag: theocracy_government_tax_contribution_mult, Categories: character
-Tag: theocracy_government_levy_contribution_add, Categories: character
-Tag: theocracy_government_levy_contribution_mult, Categories: character
-Tag: clan_government_opinion, Categories: character
-Tag: clan_government_vassal_opinion, Categories: character
-Tag: clan_government_opinion_same_faith, Categories: character
-Tag: clan_government_tax_contribution_add, Categories: character
-Tag: clan_government_tax_contribution_mult, Categories: character
-Tag: clan_government_levy_contribution_add, Categories: character
-Tag: clan_government_levy_contribution_mult, Categories: character
-Tag: tribal_government_opinion, Categories: character
-Tag: tribal_government_vassal_opinion, Categories: character
-Tag: tribal_government_opinion_same_faith, Categories: character
-Tag: tribal_government_tax_contribution_add, Categories: character
-Tag: tribal_government_tax_contribution_mult, Categories: character
-Tag: tribal_government_levy_contribution_add, Categories: character
-Tag: tribal_government_levy_contribution_mult, Categories: character
-Tag: mercenary_government_opinion, Categories: character
-Tag: mercenary_government_vassal_opinion, Categories: character
-Tag: mercenary_government_opinion_same_faith, Categories: character
-Tag: mercenary_government_tax_contribution_add, Categories: character
-Tag: mercenary_government_tax_contribution_mult, Categories: character
-Tag: mercenary_government_levy_contribution_add, Categories: character
-Tag: mercenary_government_levy_contribution_mult, Categories: character
-Tag: holy_order_government_opinion, Categories: character
-Tag: holy_order_government_vassal_opinion, Categories: character
-Tag: holy_order_government_opinion_same_faith, Categories: character
-Tag: holy_order_government_tax_contribution_add, Categories: character
-Tag: holy_order_government_tax_contribution_mult, Categories: character
-Tag: holy_order_government_levy_contribution_add, Categories: character
-Tag: holy_order_government_levy_contribution_mult, Categories: character
-Tag: max_rp_slander_schemes_add, Categories: character
-Tag: rp_slander_scheme_power_add, Categories: character
-Tag: rp_slander_scheme_power_mult, Categories: character
-Tag: rp_slander_scheme_resistance_add, Categories: character
-Tag: rp_slander_scheme_resistance_mult, Categories: character
-Tag: max_abduct_schemes_add, Categories: character
-Tag: abduct_scheme_power_add, Categories: character
-Tag: abduct_scheme_power_mult, Categories: character
-Tag: abduct_scheme_resistance_add, Categories: character
-Tag: abduct_scheme_resistance_mult, Categories: character
-Tag: max_befriend_schemes_add, Categories: character
-Tag: befriend_scheme_power_add, Categories: character
-Tag: befriend_scheme_power_mult, Categories: character
-Tag: befriend_scheme_resistance_add, Categories: character
-Tag: befriend_scheme_resistance_mult, Categories: character
-Tag: max_claim_throne_schemes_add, Categories: character
-Tag: claim_throne_scheme_power_add, Categories: character
-Tag: claim_throne_scheme_power_mult, Categories: character
-Tag: claim_throne_scheme_resistance_add, Categories: character
-Tag: claim_throne_scheme_resistance_mult, Categories: character
-Tag: max_convert_to_witchcraft_schemes_add, Categories: character
-Tag: convert_to_witchcraft_scheme_power_add, Categories: character
-Tag: convert_to_witchcraft_scheme_power_mult, Categories: character
-Tag: convert_to_witchcraft_scheme_resistance_add, Categories: character
-Tag: convert_to_witchcraft_scheme_resistance_mult, Categories: character
-Tag: max_courting_schemes_add, Categories: character
-Tag: courting_scheme_power_add, Categories: character
-Tag: courting_scheme_power_mult, Categories: character
-Tag: courting_scheme_resistance_add, Categories: character
-Tag: courting_scheme_resistance_mult, Categories: character
-Tag: max_elope_schemes_add, Categories: character
-Tag: elope_scheme_power_add, Categories: character
-Tag: elope_scheme_power_mult, Categories: character
-Tag: elope_scheme_resistance_add, Categories: character
-Tag: elope_scheme_resistance_mult, Categories: character
-Tag: max_fabricate_hook_schemes_add, Categories: character
-Tag: fabricate_hook_scheme_power_add, Categories: character
-Tag: fabricate_hook_scheme_power_mult, Categories: character
-Tag: fabricate_hook_scheme_resistance_add, Categories: character
-Tag: fabricate_hook_scheme_resistance_mult, Categories: character
-Tag: max_murder_schemes_add, Categories: character
-Tag: murder_scheme_power_add, Categories: character
-Tag: murder_scheme_power_mult, Categories: character
-Tag: murder_scheme_resistance_add, Categories: character
-Tag: murder_scheme_resistance_mult, Categories: character
-Tag: max_seduce_schemes_add, Categories: character
-Tag: seduce_scheme_power_add, Categories: character
-Tag: seduce_scheme_power_mult, Categories: character
-Tag: seduce_scheme_resistance_add, Categories: character
-Tag: seduce_scheme_resistance_mult, Categories: character
-Tag: max_sway_schemes_add, Categories: character
-Tag: sway_scheme_power_add, Categories: character
-Tag: sway_scheme_power_mult, Categories: character
-Tag: sway_scheme_resistance_add, Categories: character
-Tag: sway_scheme_resistance_mult, Categories: character
-Tag: monthly_diplomacy_lifestyle_xp_gain_mult, Categories: character
-Tag: monthly_martial_lifestyle_xp_gain_mult, Categories: character
-Tag: monthly_stewardship_lifestyle_xp_gain_mult, Categories: character
-Tag: monthly_intrigue_lifestyle_xp_gain_mult, Categories: character
-Tag: monthly_learning_lifestyle_xp_gain_mult, Categories: character
-Tag: plains_attrition_mult, Categories: combat
-Tag: plains_cancel_negative_supply, Categories: combat
-Tag: plains_advantage, Categories: combat
-Tag: plains_min_combat_roll, Categories: combat
-Tag: plains_max_combat_roll, Categories: combat
-Tag: farmlands_attrition_mult, Categories: combat
-Tag: farmlands_cancel_negative_supply, Categories: combat
-Tag: farmlands_advantage, Categories: combat
-Tag: farmlands_min_combat_roll, Categories: combat
-Tag: farmlands_max_combat_roll, Categories: combat
-Tag: hills_attrition_mult, Categories: combat
-Tag: hills_cancel_negative_supply, Categories: combat
-Tag: hills_advantage, Categories: combat
-Tag: hills_min_combat_roll, Categories: combat
-Tag: hills_max_combat_roll, Categories: combat
-Tag: mountains_attrition_mult, Categories: combat
-Tag: mountains_cancel_negative_supply, Categories: combat
-Tag: mountains_advantage, Categories: combat
-Tag: mountains_min_combat_roll, Categories: combat
-Tag: mountains_max_combat_roll, Categories: combat
-Tag: desert_attrition_mult, Categories: combat
-Tag: desert_cancel_negative_supply, Categories: combat
-Tag: desert_advantage, Categories: combat
-Tag: desert_min_combat_roll, Categories: combat
-Tag: desert_max_combat_roll, Categories: combat
-Tag: desert_mountains_attrition_mult, Categories: combat
-Tag: desert_mountains_cancel_negative_supply, Categories: combat
-Tag: desert_mountains_advantage, Categories: combat
-Tag: desert_mountains_min_combat_roll, Categories: combat
-Tag: desert_mountains_max_combat_roll, Categories: combat
-Tag: oasis_attrition_mult, Categories: combat
-Tag: oasis_cancel_negative_supply, Categories: combat
-Tag: oasis_advantage, Categories: combat
-Tag: oasis_min_combat_roll, Categories: combat
-Tag: oasis_max_combat_roll, Categories: combat
-Tag: jungle_attrition_mult, Categories: combat
-Tag: jungle_cancel_negative_supply, Categories: combat
-Tag: jungle_advantage, Categories: combat
-Tag: jungle_min_combat_roll, Categories: combat
-Tag: jungle_max_combat_roll, Categories: combat
-Tag: forest_attrition_mult, Categories: combat
-Tag: forest_cancel_negative_supply, Categories: combat
-Tag: forest_advantage, Categories: combat
-Tag: forest_min_combat_roll, Categories: combat
-Tag: forest_max_combat_roll, Categories: combat
-Tag: taiga_attrition_mult, Categories: combat
-Tag: taiga_cancel_negative_supply, Categories: combat
-Tag: taiga_advantage, Categories: combat
-Tag: taiga_min_combat_roll, Categories: combat
-Tag: taiga_max_combat_roll, Categories: combat
-Tag: wetlands_attrition_mult, Categories: combat
-Tag: wetlands_cancel_negative_supply, Categories: combat
-Tag: wetlands_advantage, Categories: combat
-Tag: wetlands_min_combat_roll, Categories: combat
-Tag: wetlands_max_combat_roll, Categories: combat
-Tag: steppe_attrition_mult, Categories: combat
-Tag: steppe_cancel_negative_supply, Categories: combat
-Tag: steppe_advantage, Categories: combat
-Tag: steppe_min_combat_roll, Categories: combat
-Tag: steppe_max_combat_roll, Categories: combat
-Tag: floodplains_attrition_mult, Categories: combat
-Tag: floodplains_cancel_negative_supply, Categories: combat
-Tag: floodplains_advantage, Categories: combat
-Tag: floodplains_min_combat_roll, Categories: combat
-Tag: floodplains_max_combat_roll, Categories: combat
-Tag: drylands_attrition_mult, Categories: combat
-Tag: drylands_cancel_negative_supply, Categories: combat
-Tag: drylands_advantage, Categories: combat
-Tag: drylands_min_combat_roll, Categories: combat
-Tag: drylands_max_combat_roll, Categories: combat
-Tag: heavy_infantry_max_size_add, Categories: character
-Tag: heavy_infantry_max_size_mult, Categories: character
-Tag: heavy_infantry_siege_value_add, Categories: character
-Tag: heavy_infantry_siege_value_mult, Categories: character
-Tag: heavy_infantry_damage_add, Categories: character
-Tag: heavy_infantry_damage_mult, Categories: character
-Tag: heavy_infantry_toughness_add, Categories: character
-Tag: heavy_infantry_toughness_mult, Categories: character
-Tag: heavy_infantry_pursuit_add, Categories: character
-Tag: heavy_infantry_pursuit_mult, Categories: character
-Tag: heavy_infantry_screen_add, Categories: character
-Tag: heavy_infantry_screen_mult, Categories: character
-Tag: pikemen_max_size_add, Categories: character
-Tag: pikemen_max_size_mult, Categories: character
-Tag: pikemen_siege_value_add, Categories: character
-Tag: pikemen_siege_value_mult, Categories: character
-Tag: pikemen_damage_add, Categories: character
-Tag: pikemen_damage_mult, Categories: character
-Tag: pikemen_toughness_add, Categories: character
-Tag: pikemen_toughness_mult, Categories: character
-Tag: pikemen_pursuit_add, Categories: character
-Tag: pikemen_pursuit_mult, Categories: character
-Tag: pikemen_screen_add, Categories: character
-Tag: pikemen_screen_mult, Categories: character
-Tag: archers_max_size_add, Categories: character
-Tag: archers_max_size_mult, Categories: character
-Tag: archers_siege_value_add, Categories: character
-Tag: archers_siege_value_mult, Categories: character
-Tag: archers_damage_add, Categories: character
-Tag: archers_damage_mult, Categories: character
-Tag: archers_toughness_add, Categories: character
-Tag: archers_toughness_mult, Categories: character
-Tag: archers_pursuit_add, Categories: character
-Tag: archers_pursuit_mult, Categories: character
-Tag: archers_screen_add, Categories: character
-Tag: archers_screen_mult, Categories: character
-Tag: light_cavalry_max_size_add, Categories: character
-Tag: light_cavalry_max_size_mult, Categories: character
-Tag: light_cavalry_siege_value_add, Categories: character
-Tag: light_cavalry_siege_value_mult, Categories: character
-Tag: light_cavalry_damage_add, Categories: character
-Tag: light_cavalry_damage_mult, Categories: character
-Tag: light_cavalry_toughness_add, Categories: character
-Tag: light_cavalry_toughness_mult, Categories: character
-Tag: light_cavalry_pursuit_add, Categories: character
-Tag: light_cavalry_pursuit_mult, Categories: character
-Tag: light_cavalry_screen_add, Categories: character
-Tag: light_cavalry_screen_mult, Categories: character
-Tag: heavy_cavalry_max_size_add, Categories: character
-Tag: heavy_cavalry_max_size_mult, Categories: character
-Tag: heavy_cavalry_siege_value_add, Categories: character
-Tag: heavy_cavalry_siege_value_mult, Categories: character
-Tag: heavy_cavalry_damage_add, Categories: character
-Tag: heavy_cavalry_damage_mult, Categories: character
-Tag: heavy_cavalry_toughness_add, Categories: character
-Tag: heavy_cavalry_toughness_mult, Categories: character
-Tag: heavy_cavalry_pursuit_add, Categories: character
-Tag: heavy_cavalry_pursuit_mult, Categories: character
-Tag: heavy_cavalry_screen_add, Categories: character
-Tag: heavy_cavalry_screen_mult, Categories: character
-Tag: skirmishers_max_size_add, Categories: character
-Tag: skirmishers_max_size_mult, Categories: character
-Tag: skirmishers_siege_value_add, Categories: character
-Tag: skirmishers_siege_value_mult, Categories: character
-Tag: skirmishers_damage_add, Categories: character
-Tag: skirmishers_damage_mult, Categories: character
-Tag: skirmishers_toughness_add, Categories: character
-Tag: skirmishers_toughness_mult, Categories: character
-Tag: skirmishers_pursuit_add, Categories: character
-Tag: skirmishers_pursuit_mult, Categories: character
-Tag: skirmishers_screen_add, Categories: character
-Tag: skirmishers_screen_mult, Categories: character
-Tag: siege_weapon_max_size_add, Categories: character
-Tag: siege_weapon_max_size_mult, Categories: character
-Tag: siege_weapon_siege_value_add, Categories: character
-Tag: siege_weapon_siege_value_mult, Categories: character
-Tag: siege_weapon_damage_add, Categories: character
-Tag: siege_weapon_damage_mult, Categories: character
-Tag: siege_weapon_toughness_add, Categories: character
-Tag: siege_weapon_toughness_mult, Categories: character
-Tag: siege_weapon_pursuit_add, Categories: character
-Tag: siege_weapon_pursuit_mult, Categories: character
-Tag: siege_weapon_screen_add, Categories: character
-Tag: siege_weapon_screen_mult, Categories: character
+Tag: beja_opinion
+Use areas: character
+
+Tag: siberian_religion_opinion
+Use areas: character
+
+Tag: dynasty_opinion
+Use areas: character
+
+Tag: guest_opinion
+Use areas: character
+
+Tag: jungle_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: ai_amenity_target_baseline
+Use areas: character
+
+Tag: hills_attrition_mult
+Use areas: character
+
+Tag: tribal_government_levy_contribution_mult
+Use areas: character
+
+Tag: same_culture_mercenary_hire_cost_mult
+Use areas: character
+
+Tag: same_faith_opinion
+Use areas: character
+
+Tag: befriend_scheme_power_add
+Use areas: character
+
+Tag: bobo_opinion
+Use areas: character
+
+Tag: army_screen_mult
+Use areas: character
+
+Tag: scheme_resistance
+Use areas: scheme
+
+Tag: elephant_cavalry_damage_add
+Use areas: character
+
+Tag: opinion_of_different_culture
+Use areas: character
+
+Tag: meshchera_opinion
+Use areas: character
+
+Tag: west_african_roog_pagan_opinion
+Use areas: character
+
+Tag: akan_opinion
+Use areas: character
+
+Tag: holy_order_government_levy_contribution_mult
+Use areas: character
+
+Tag: gayomarthianism_opinion
+Use areas: character
+
+Tag: diplomatic_range_mult
+Use areas: character
+
+Tag: taiga_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: tribal_government_levy_contribution_add
+Use areas: character
+
+Tag: hinduism_religion_opinion
+Use areas: character
+
+Tag: mountains_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: owned_hostile_scheme_success_chance_add
+Use areas: character
+
+Tag: elope_scheme_power_add
+Use areas: character
+
+Tag: scheme_power_against_nemesis_mult
+Use areas: character
+
+Tag: khitan_opinion
+Use areas: character
+
+Tag: pikemen_max_size_mult
+Use areas: character
+
+Tag: desert_development_growth
+Use areas: character, province, and county
+
+Tag: archers_pursuit_add
+Use areas: character
+
+Tag: siege_weapon_damage_add
+Use areas: character
+
+Tag: happy_powerful_vassal_tax_contribution_add
+Use areas: character
+
+Tag: happy_powerful_vassal_levy_contribution_mult
+Use areas: character
+
+Tag: scheme_power_against_friend_mult
+Use areas: character
+
+Tag: archers_max_size_mult
+Use areas: character
+
+Tag: ignore_different_faith_opinion
+Use areas: character
+
+Tag: light_cavalry_max_size_add
+Use areas: character
+
+Tag: feudal_government_opinion
+Use areas: character
+
+Tag: random_advantage
+Use areas: character
+
+Tag: build_gold_cost
+Use areas: character, province, and county
+
+Tag: yemeni_opinion
+Use areas: character
+
+Tag: plains_development_growth
+Use areas: character, province, and county
+
+Tag: ismaili_opinion
+Use areas: character
+
+Tag: castle_holding_build_piety_cost
+Use areas: character, province, and county
+
+Tag: tuyuhun_opinion
+Use areas: character
+
+Tag: scheme_power_against_court_physician_mult
+Use areas: character
+
+Tag: castle_holding_holding_build_prestige_cost
+Use areas: character, province, and county
+
+Tag: theocracy_government_levy_contribution_add
+Use areas: character
+
+Tag: estonian_opinion
+Use areas: character
+
+Tag: mahayana_opinion
+Use areas: character
+
+Tag: desert_mountains_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: lithuanian_opinion
+Use areas: character
+
+Tag: scheme_power_against_antiquarian_mult
+Use areas: character
+
+Tag: clan_government_tax_contribution_mult
+Use areas: character
+
+Tag: jungle_development_growth
+Use areas: character, province, and county
+
+Tag: oasis_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: qiangic_religion_opinion
+Use areas: character
+
+Tag: opinion_of_female_rulers
+Use areas: character
+
+Tag: farmlands_supply_limit
+Use areas: character, province, and county
+
+Tag: ethiopian_opinion
+Use areas: character
+
+Tag: world_innovation_elephants_development_growth
+Use areas: character, province, and county
+
+Tag: hills_development_growth
+Use areas: character, province, and county
+
+Tag: jungle_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: breton_opinion
+Use areas: character
+
+Tag: faith_creation_piety_cost_add
+Use areas: character
+
+Tag: floodplains_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: light_cavalry_screen_mult
+Use areas: character
+
+Tag: dualism_religion_opinion
+Use areas: character
+
+Tag: floodplains_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: drylands_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: skirmishers_pursuit_mult
+Use areas: character
+
+Tag: abduct_scheme_resistance_mult
+Use areas: character
+
+Tag: insular_celtic_opinion
+Use areas: character
+
+Tag: aragonese_opinion
+Use areas: character
+
+Tag: camel_cavalry_pursuit_mult
+Use areas: character
+
+Tag: galician_opinion
+Use areas: character
+
+Tag: bolghar_opinion
+Use areas: character
+
+Tag: west_african_bori_pagan_opinion
+Use areas: character
+
+Tag: skirmishers_pursuit_add
+Use areas: character
+
+Tag: shaivism_opinion
+Use areas: character
+
+Tag: religious_vassal_opinion
+Use areas: character
+
+Tag: camel_cavalry_maintenance_mult
+Use areas: character
+
+Tag: kru_opinion
+Use areas: character
+
+Tag: hard_casualty_modifier
+Use areas: character and terrain
+
+Tag: claim_throne_scheme_power_mult
+Use areas: character
+
+Tag: vassal_tax_mult
+Use areas: character
+
+Tag: naval_movement_speed_mult
+Use areas: character
+
+Tag: heavy_infantry_pursuit_mult
+Use areas: character
+
+Tag: taiga_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: holy_order_government_vassal_opinion
+Use areas: character
+
+Tag: mountains_development_growth
+Use areas: character, province, and county
+
+Tag: lombard_opinion
+Use areas: character
+
+Tag: hostile_scheme_resistance_add
+Use areas: character
+
+Tag: same_culture_opinion
+Use areas: character
+
+Tag: dynasty_house_opinion
+Use areas: character
+
+Tag: tajik_opinion
+Use areas: character
+
+Tag: prowess
+Use areas: character
+
+Tag: elephant_cavalry_max_size_mult
+Use areas: character
+
+Tag: scheme_power_against_mentor_add
+Use areas: character
+
+Tag: wetlands_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: heavy_infantry_maintenance_mult
+Use areas: character
+
+Tag: desert_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: steal_back_artifact_scheme_power_add
+Use areas: character
+
+Tag: domain_tax_different_faith_mult
+Use areas: character
+
+Tag: monthly_income_per_stress_level_mult
+Use areas: character
+
+Tag: pikemen_damage_add
+Use areas: character
+
+Tag: archer_cavalry_pursuit_mult
+Use areas: character
+
+Tag: tribal_holding_build_gold_cost
+Use areas: character, province, and county
+
+Tag: buryat_opinion
+Use areas: character
+
+Tag: cowed_vassal_tax_contribution_add
+Use areas: character
+
+Tag: scheme_power_against_guardian_mult
+Use areas: character
+
+Tag: siege_weapon_recruitment_cost_mult
+Use areas: character
+
+Tag: jurchen_opinion
+Use areas: character
+
+Tag: opinion_of_same_faith
+Use areas: character
+
+Tag: scheme_power_against_antiquarian_add
+Use areas: character
+
+Tag: floodplains_min_combat_roll
+Use areas: character
+
+Tag: monthly_prestige
+Use areas: character
+
+Tag: feudal_government_vassal_opinion
+Use areas: character
+
+Tag: monthly_diplomacy_lifestyle_xp_gain_mult
+Use areas: character
+
+Tag: church_holding_holding_build_prestige_cost
+Use areas: character, province, and county
+
+Tag: sufri_opinion
+Use areas: character
+
+Tag: plains_development_growth_factor
+Use areas: character, province, and county
+
+Tag: drylands_attrition_mult
+Use areas: character
+
+Tag: oasis_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: burmese_opinion
+Use areas: character
+
+Tag: plains_tax_mult
+Use areas: character, province, and county
+
+Tag: personal_scheme_power_mult
+Use areas: character
+
+Tag: negate_diplomacy_penalty_add
+Use areas: character
+
+Tag: stewardship_per_stress_level
+Use areas: character
+
+Tag: mozarabic_church_opinion
+Use areas: character
+
+Tag: raid_speed
+Use areas: character
+
+Tag: han_opinion
+Use areas: character
+
+Tag: kipchak_opinion
+Use areas: character
+
+Tag: floodplains_max_combat_roll
+Use areas: character
+
+Tag: light_cavalry_recruitment_cost_mult
+Use areas: character
+
+Tag: befriend_scheme_resistance_mult
+Use areas: character
+
+Tag: waaqism_religion_opinion
+Use areas: character
+
+Tag: clergy_opinion
+Use areas: character
+
+Tag: max_convert_to_witchcraft_schemes_add
+Use areas: character
+
+Tag: taiga_development_growth_factor
+Use areas: character, province, and county
+
+Tag: suebi_opinion
+Use areas: character
+
+Tag: drylands_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: heavy_cavalry_recruitment_cost_mult
+Use areas: character
+
+Tag: farmlands_tax_mult
+Use areas: character, province, and county
+
+Tag: courtier_opinion
+Use areas: character
+
+Tag: holy_order_hire_cost_mult
+Use areas: character
+
+Tag: diplomacy_scheme_power
+Use areas: character
+
+Tag: hills_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: stewardship_scheme_power
+Use areas: character
+
+Tag: gur_opinion
+Use areas: character
+
+Tag: wetlands_min_combat_roll
+Use areas: character
+
+Tag: holy_order_government_tax_contribution_add
+Use areas: character
+
+Tag: muroma_opinion
+Use areas: character
+
+Tag: skirmishers_siege_value_add
+Use areas: character
+
+Tag: scottish_opinion
+Use areas: character
+
+Tag: west_african_roog_religion_opinion
+Use areas: character
+
+Tag: nepali_opinion
+Use areas: character
+
+Tag: learn_language_scheme_power_mult
+Use areas: character
+
+Tag: pikemen_max_size_add
+Use areas: character
+
+Tag: archer_cavalry_damage_mult
+Use areas: character
+
+Tag: camel_cavalry_screen_add
+Use areas: character
+
+Tag: taiga_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: sindhi_opinion
+Use areas: character
+
+Tag: heavy_infantry_screen_mult
+Use areas: character
+
+Tag: murder_scheme_power_mult
+Use areas: character
+
+Tag: different_faith_county_opinion_mult
+Use areas: character
+
+Tag: max_steal_back_artifact_schemes_add
+Use areas: character
+
+Tag: scheme_power_against_lover_mult
+Use areas: character
+
+Tag: wetlands_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: cultural_acceptance_gain_mult
+Use areas: culture
+
+Tag: domain_tax_mult_even_if_baron
+Use areas: character
+
+Tag: monthly_tyranny
+Use areas: character
+
+Tag: baltic_religion_opinion
+Use areas: character
+
+Tag: desert_mountains_development_growth_factor
+Use areas: character, province, and county
+
+Tag: scheme_power_against_ward_add
+Use areas: character
+
+Tag: scheme_power_against_potential_lover_mult
+Use areas: character
+
+Tag: jainism_religion_opinion
+Use areas: character
+
+Tag: monthly_county_control_change_at_war_add
+Use areas: character, province, and county
+
+Tag: light_cavalry_damage_mult
+Use areas: character
+
+Tag: castle_holding_build_gold_cost
+Use areas: character, province, and county
+
+Tag: tribal_holding_holding_build_prestige_cost
+Use areas: character, province, and county
+
+Tag: oasis_min_combat_roll
+Use areas: character
+
+Tag: floodplains_attrition_mult
+Use areas: character
+
+Tag: theocracy_government_tax_contribution_mult
+Use areas: character
+
+Tag: different_faith_liege_opinion
+Use areas: character
+
+Tag: development_growth
+Use areas: character, province, and county
+
+Tag: diplomacy_per_stress_level
+Use areas: character
+
+Tag: monthly_piety_gain_per_knight_mult
+Use areas: character
+
+Tag: conversos_opinion
+Use areas: character
+
+Tag: baltic_pagan_opinion
+Use areas: character
+
+Tag: steppe_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: messalian_opinion
+Use areas: character
+
+Tag: monthly_county_control_change_factor
+Use areas: character, province, and county
+
+Tag: floodplains_development_growth_factor
+Use areas: character, province, and county
+
+Tag: light_cavalry_toughness_mult
+Use areas: character
+
+Tag: oasis_development_growth_factor
+Use areas: character, province, and county
+
+Tag: swabian_opinion
+Use areas: character
+
+Tag: pictish_opinion
+Use areas: character
+
+Tag: heavy_cavalry_maintenance_mult
+Use areas: character
+
+Tag: tamil_opinion
+Use areas: character
+
+Tag: world_steppe_development_growth_factor
+Use areas: character, province, and county
+
+Tag: realm_priest_opinion
+Use areas: character
+
+Tag: oasis_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: kushitism_religion_opinion
+Use areas: character
+
+Tag: supply_capacity_mult
+Use areas: character
+
+Tag: abduct_scheme_power_mult
+Use areas: character
+
+Tag: direct_vassal_opinion
+Use areas: character
+
+Tag: monthly_court_grandeur_change_add
+Use areas: character
+
+Tag: skirmishers_damage_add
+Use areas: character
+
+Tag: adamites_opinion
+Use areas: character
+
+Tag: no_disembark_penalty
+Use areas: character
+
+Tag: volhynian_opinion
+Use areas: character
+
+Tag: bashkir_opinion
+Use areas: character
+
+Tag: cuman_opinion
+Use areas: character
+
+Tag: forest_supply_limit
+Use areas: character, province, and county
+
+Tag: monthly_lifestyle_xp_gain_mult
+Use areas: character
+
+Tag: yazidi_opinion
+Use areas: character
+
+Tag: ilmenian_opinion
+Use areas: character
+
+Tag: kirghiz_opinion
+Use areas: character
+
+Tag: mercenary_government_tax_contribution_mult
+Use areas: character
+
+Tag: baloch_opinion
+Use areas: character
+
+Tag: wetlands_development_growth
+Use areas: character, province, and county
+
+Tag: convert_to_witchcraft_scheme_power_add
+Use areas: character
+
+Tag: elephant_cavalry_recruitment_cost_mult
+Use areas: character
+
+Tag: domain_tax_mult
+Use areas: character
+
+Tag: hellenic_pagan_opinion
+Use areas: character
+
+Tag: heavy_infantry_pursuit_add
+Use areas: character
+
+Tag: archer_cavalry_toughness_mult
+Use areas: character
+
+Tag: polish_opinion
+Use areas: character
+
+Tag: holy_order_government_opinion
+Use areas: character
+
+Tag: hostile_scheme_power_add
+Use areas: character
+
+Tag: heavy_infantry_max_size_mult
+Use areas: character
+
+Tag: cultural_head_acceptance_gain_mult
+Use areas: character
+
+Tag: pommeranian_opinion
+Use areas: character
+
+Tag: archers_siege_value_add
+Use areas: character
+
+Tag: siege_weapon_toughness_add
+Use areas: character
+
+Tag: monthly_prestige_gain_per_happy_powerful_vassal_add
+Use areas: character
+
+Tag: ai_vengefulness
+Use areas: character
+
+Tag: vassal_levy_contribution_mult
+Use areas: character
+
+Tag: siege_weapon_pursuit_mult
+Use areas: character
+
+Tag: murder_scheme_resistance_mult
+Use areas: character
+
+Tag: stress_gain_mult
+Use areas: character
+
+Tag: mountains_levy_size
+Use areas: character, province, and county
+
+Tag: castle_holding_holding_build_piety_cost
+Use areas: character, province, and county
+
+Tag: steal_back_artifact_scheme_power_mult
+Use areas: character
+
+Tag: rf_abrahamic_opinion
+Use areas: character
+
+Tag: tribal_holding_build_speed
+Use areas: character, province, and county
+
+Tag: scheme_power_against_soulmate_mult
+Use areas: character
+
+Tag: republic_government_levy_contribution_mult
+Use areas: character
+
+Tag: no_prowess_loss_from_age
+Use areas: character
+
+Tag: scheme_power_against_court_physician_add
+Use areas: character
+
+Tag: desert_supply_limit
+Use areas: character, province, and county
+
+Tag: plains_advantage
+Use areas: character
+
+Tag: supply_limit_mult
+Use areas: character, province, and county
+
+Tag: oasis_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: plains_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: player_heir_opinion
+Use areas: character
+
+Tag: personal_scheme_resistance_add
+Use areas: character
+
+Tag: wetlands_levy_size
+Use areas: character, province, and county
+
+Tag: republic_government_vassal_opinion
+Use areas: character
+
+Tag: nupe_opinion
+Use areas: character
+
+Tag: steppe_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: church_holding_build_piety_cost
+Use areas: character, province, and county
+
+Tag: vepsian_opinion
+Use areas: character
+
+Tag: floodplains_levy_size
+Use areas: character, province, and county
+
+Tag: light_cavalry_pursuit_mult
+Use areas: character
+
+Tag: city_holding_build_prestige_cost
+Use areas: character, province, and county
+
+Tag: bosnian_church_opinion
+Use areas: character
+
+Tag: monthly_court_grandeur_change_mult
+Use areas: character
+
+Tag: learning
+Use areas: character
+
+Tag: negate_learning_penalty_add
+Use areas: character
+
+Tag: catholic_opinion
+Use areas: character
+
+Tag: drylands_development_growth
+Use areas: character, province, and county
+
+Tag: heavy_cavalry_pursuit_mult
+Use areas: character
+
+Tag: hills_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: iconoclast_opinion
+Use areas: character
+
+Tag: holy_order_hire_cost_add
+Use areas: character
+
+Tag: mercenary_hire_cost_mult
+Use areas: character
+
+Tag: light_cavalry_pursuit_add
+Use areas: character
+
+Tag: mountains_advantage
+Use areas: character
+
+Tag: tengri_pagan_opinion
+Use areas: character
+
+Tag: pecheneg_opinion
+Use areas: character
+
+Tag: hard_casualty_winter
+Use areas: province
+
+Tag: zhengyi_opinion
+Use areas: character
+
+Tag: camel_cavalry_max_size_add
+Use areas: character
+
+Tag: frankish_opinion
+Use areas: character
+
+Tag: forest_tax_mult
+Use areas: character, province, and county
+
+Tag: martial_scheme_power
+Use areas: character
+
+Tag: intrigue_scheme_power
+Use areas: character
+
+Tag: camel_cavalry_toughness_add
+Use areas: character
+
+Tag: wetlands_advantage
+Use areas: character
+
+Tag: scheme_power
+Use areas: scheme
+
+Tag: stewardship_scheme_resistance
+Use areas: character
+
+Tag: owned_scheme_secrecy_add
+Use areas: character
+
+Tag: camel_cavalry_siege_value_mult
+Use areas: character
+
+Tag: kashmiri_opinion
+Use areas: character
+
+Tag: taiga_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: mercenary_government_opinion_same_faith
+Use areas: character
+
+Tag: komi_opinion
+Use areas: character
+
+Tag: wetlands_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: max_murder_schemes_add
+Use areas: character
+
+Tag: elephant_cavalry_siege_value_mult
+Use areas: character
+
+Tag: seduce_scheme_resistance_add
+Use areas: character
+
+Tag: defender_advantage
+Use areas: character
+
+Tag: heavy_infantry_toughness_add
+Use areas: character
+
+Tag: cowed_vassal_levy_contribution_mult
+Use areas: character
+
+Tag: islam_religion_opinion
+Use areas: character
+
+Tag: intimidated_vassal_levy_contribution_mult
+Use areas: character
+
+Tag: elephant_cavalry_toughness_add
+Use areas: character
+
+Tag: norwegian_opinion
+Use areas: character
+
+Tag: scheme_power_against_rival_mult
+Use areas: character
+
+Tag: archer_cavalry_max_size_add
+Use areas: character
+
+Tag: defender_holding_advantage
+Use areas: character, province, and county
+
+Tag: scheme_power_against_intrigue_mentor_add
+Use areas: character
+
+Tag: norse_opinion
+Use areas: character
+
+Tag: akom_pagan_opinion
+Use areas: character
+
+Tag: light_cavalry_max_size_mult
+Use areas: character
+
+Tag: siege_weapon_toughness_mult
+Use areas: character
+
+Tag: desert_mountains_cancel_negative_supply
+Use areas: character
+
+Tag: steppe_development_growth_factor
+Use areas: character, province, and county
+
+Tag: general_opinion
+Use areas: character
+
+Tag: desert_tax_mult
+Use areas: character, province, and county
+
+Tag: vassal_tax_contribution_add
+Use areas: character
+
+Tag: development_growth_factor
+Use areas: character, province, and county
+
+Tag: learning_per_piety_level
+Use areas: character
+
+Tag: oasis_advantage
+Use areas: character
+
+Tag: mon_opinion
+Use areas: character
+
+Tag: samaritan_opinion
+Use areas: character
+
+Tag: scheme_power_against_intrigue_mentor_mult
+Use areas: character
+
+Tag: alawite_opinion
+Use areas: character
+
+Tag: finnish_opinion
+Use areas: character
+
+Tag: tribal_holding_holding_build_piety_cost
+Use areas: character, province, and county
+
+Tag: steppe_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: republic_government_tax_contribution_add
+Use areas: character
+
+Tag: negate_prowess_penalty_add
+Use areas: character
+
+Tag: monthly_county_control_change_add
+Use areas: character, province, and county
+
+Tag: tani_religion_opinion
+Use areas: character
+
+Tag: vajrayana_opinion
+Use areas: character
+
+Tag: jungle_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: steppe_tax_mult
+Use areas: character, province, and county
+
+Tag: clan_government_tax_contribution_add
+Use areas: character
+
+Tag: farmlands_min_combat_roll
+Use areas: character
+
+Tag: faith_conversion_piety_cost_mult
+Use areas: character
+
+Tag: kimek_opinion
+Use areas: character
+
+Tag: taoism_religion_opinion
+Use areas: character
+
+Tag: same_heritage_county_advantage_add
+Use areas: character
+
+Tag: assyrian_opinion
+Use areas: character
+
+Tag: farmlands_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: kabarism_opinion
+Use areas: character
+
+Tag: forest_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: heavy_cavalry_damage_add
+Use areas: character
+
+Tag: saxon_opinion
+Use areas: character
+
+Tag: norse_pagan_opinion
+Use areas: character
+
+Tag: independent_ruler_opinion
+Use areas: character
+
+Tag: priscillianism_opinion
+Use areas: character
+
+Tag: winter_movement_speed
+Use areas: character
+
+Tag: claim_throne_scheme_resistance_mult
+Use areas: character
+
+Tag: monthly_intrigue_lifestyle_xp_gain_mult
+Use areas: character
+
+Tag: heavy_cavalry_screen_add
+Use areas: character
+
+Tag: forest_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: courting_scheme_power_add
+Use areas: character
+
+Tag: punjabi_opinion
+Use areas: character
+
+Tag: yazidi_religion_opinion
+Use areas: character
+
+Tag: mountains_min_combat_roll
+Use areas: character
+
+Tag: taiga_cancel_negative_supply
+Use areas: character
+
+Tag: mazdayasna_opinion
+Use areas: character
+
+Tag: different_faith_opinion
+Use areas: character
+
+Tag: muwalladi_opinion
+Use areas: character
+
+Tag: hellenism_religion_opinion
+Use areas: character
+
+Tag: archer_cavalry_siege_value_add
+Use areas: character
+
+Tag: elephant_cavalry_damage_mult
+Use areas: character
+
+Tag: kochinim_opinion
+Use areas: character
+
+Tag: czech_opinion
+Use areas: character
+
+Tag: coastal_advantage
+Use areas: character
+
+Tag: tocharian_opinion
+Use areas: character
+
+Tag: desert_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: danish_opinion
+Use areas: character
+
+Tag: mercenary_count_mult
+Use areas: culture
+
+Tag: ai_boldness
+Use areas: character
+
+Tag: ai_compassion
+Use areas: character
+
+Tag: scheme_power_against_nemesis_add
+Use areas: character
+
+Tag: sogdian_opinion
+Use areas: character
+
+Tag: scheme_power_against_oaf_mult
+Use areas: character
+
+Tag: seduce_scheme_resistance_mult
+Use areas: character
+
+Tag: pikemen_damage_mult
+Use areas: character
+
+Tag: desert_mountains_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: archers_maintenance_mult
+Use areas: character
+
+Tag: feudal_government_levy_contribution_mult
+Use areas: character
+
+Tag: sway_scheme_resistance_add
+Use areas: character
+
+Tag: powerful_vassal_opinion
+Use areas: character
+
+Tag: castle_holding_holding_build_gold_cost
+Use areas: character, province, and county
+
+Tag: archers_damage_mult
+Use areas: character
+
+Tag: steppe_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: theocracy_government_levy_contribution_mult
+Use areas: character
+
+Tag: build_piety_cost
+Use areas: character, province, and county
+
+Tag: tribal_holding_build_prestige_cost
+Use areas: character, province, and county
+
+Tag: desert_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: pulaar_opinion
+Use areas: character
+
+Tag: bon_religion_opinion
+Use areas: character
+
+Tag: scheme_power_against_intrigue_student_add
+Use areas: character
+
+Tag: clan_government_opinion_same_faith
+Use areas: character
+
+Tag: supply_limit
+Use areas: character, province, and county
+
+Tag: oasis_attrition_mult
+Use areas: character
+
+Tag: personal_scheme_power_add
+Use areas: character
+
+Tag: kushitism_pagan_opinion
+Use areas: character
+
+Tag: intrigue_per_stress_level
+Use areas: character
+
+Tag: heavy_cavalry_toughness_add
+Use areas: character
+
+Tag: church_holding_build_gold_cost
+Use areas: character, province, and county
+
+Tag: rabbinism_opinion
+Use areas: character
+
+Tag: personal_scheme_resistance_mult
+Use areas: character
+
+Tag: christianity_religion_opinion
+Use areas: character
+
+Tag: jungle_advantage
+Use areas: character
+
+Tag: hills_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: forest_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: forest_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: meshefaresism_opinion
+Use areas: character
+
+Tag: catalan_opinion
+Use areas: character
+
+Tag: mercenary_hire_cost_add
+Use areas: character
+
+Tag: drylands_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: khurramism_opinion
+Use areas: character
+
+Tag: oriya_opinion
+Use areas: character
+
+Tag: fellow_vassal_opinion
+Use areas: character
+
+Tag: independent_primary_defender_advantage_add
+Use areas: character
+
+Tag: skirmishers_recruitment_cost_mult
+Use areas: character
+
+Tag: army_damage_mult
+Use areas: character
+
+Tag: ai_zeal
+Use areas: character
+
+Tag: revolting_siege_morale_loss_mult
+Use areas: character
+
+Tag: revolting_siege_morale_loss_add
+Use areas: character
+
+Tag: smartism_opinion
+Use areas: character
+
+Tag: camel_cavalry_recruitment_cost_mult
+Use areas: character
+
+Tag: monthly_dread
+Use areas: character
+
+Tag: cainitism_opinion
+Use areas: character
+
+Tag: heavy_infantry_siege_value_add
+Use areas: character
+
+Tag: holy_order_government_opinion_same_faith
+Use areas: character
+
+Tag: anglo_saxon_opinion
+Use areas: character
+
+Tag: khwarezmian_opinion
+Use areas: character
+
+Tag: assamese_opinion
+Use areas: character
+
+Tag: elope_scheme_resistance_add
+Use areas: character
+
+Tag: archer_cavalry_maintenance_mult
+Use areas: character
+
+Tag: italian_opinion
+Use areas: character
+
+Tag: learn_language_scheme_power_add
+Use areas: character
+
+Tag: wetlands_supply_limit
+Use areas: character, province, and county
+
+Tag: holy_order_government_levy_contribution_add
+Use areas: character
+
+Tag: ashkenazi_opinion
+Use areas: character
+
+Tag: desert_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: scheme_power_against_best_friend_mult
+Use areas: character
+
+Tag: siege_weapon_siege_value_mult
+Use areas: character
+
+Tag: vassal_tax_contribution_mult
+Use areas: character
+
+Tag: scheme_power_against_soldier_friend_add
+Use areas: character
+
+Tag: desert_cancel_negative_supply
+Use areas: character
+
+Tag: desert_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: monthly_county_control_change_factor_even_if_baron
+Use areas: character
+
+Tag: mongol_opinion
+Use areas: character
+
+Tag: opinion_of_different_faith_liege
+Use areas: character
+
+Tag: monthly_prestige_gain_per_dread_mult
+Use areas: character
+
+Tag: intimidated_vassal_levy_contribution_add
+Use areas: character
+
+Tag: archers_screen_add
+Use areas: character
+
+Tag: advantage
+Use areas: character
+
+Tag: title_creation_cost_mult
+Use areas: character
+
+Tag: steppe_development_growth
+Use areas: character, province, and county
+
+Tag: clan_government_vassal_opinion
+Use areas: character
+
+Tag: cumbrian_opinion
+Use areas: character
+
+Tag: learning_per_stress_level
+Use areas: character
+
+Tag: monthly_piety
+Use areas: character
+
+Tag: scheme_power_against_potential_rival_mult
+Use areas: character
+
+Tag: siege_phase_time
+Use areas: character
+
+Tag: opinion_of_different_faith
+Use areas: character
+
+Tag: mundhum_religion_opinion
+Use areas: character
+
+Tag: church_holding_holding_build_piety_cost
+Use areas: character, province, and county
+
+Tag: nizari_opinion
+Use areas: character
+
+Tag: plains_levy_size
+Use areas: character, province, and county
+
+Tag: monthly_income_mult
+Use areas: character
+
+Tag: city_holding_holding_build_prestige_cost
+Use areas: character, province, and county
+
+Tag: digambara_opinion
+Use areas: character
+
+Tag: vassal_limit
+Use areas: character
+
+Tag: faith_conversion_piety_cost_add
+Use areas: character
+
+Tag: monthly_prestige_gain_per_knight_mult
+Use areas: character
+
+Tag: clan_government_opinion
+Use areas: character
+
+Tag: farmlands_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: adoptionist_opinion
+Use areas: character
+
+Tag: coptic_opinion
+Use areas: character
+
+Tag: heavy_cavalry_max_size_add
+Use areas: character
+
+Tag: supply_duration
+Use areas: character
+
+Tag: drylands_max_combat_roll
+Use areas: character
+
+Tag: avar_opinion
+Use areas: character
+
+Tag: oasis_supply_limit
+Use areas: character, province, and county
+
+Tag: slavic_pagan_opinion
+Use areas: character
+
+Tag: french_opinion
+Use areas: character
+
+Tag: chuvash_opinion
+Use areas: character
+
+Tag: jungle_max_combat_roll
+Use areas: character
+
+Tag: melieism_opinion
+Use areas: character
+
+Tag: german_opinion
+Use areas: character
+
+Tag: forest_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: health
+Use areas: character
+
+Tag: close_relative_opinion
+Use areas: character
+
+Tag: courtier_and_guest_opinion
+Use areas: character
+
+Tag: drylands_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: heavy_cavalry_siege_value_mult
+Use areas: character
+
+Tag: hills_levy_size
+Use areas: character, province, and county
+
+Tag: forest_cancel_negative_supply
+Use areas: character
+
+Tag: taiga_supply_limit
+Use areas: character, province, and county
+
+Tag: diplomacy_scheme_resistance
+Use areas: character
+
+Tag: convert_to_witchcraft_scheme_resistance_mult
+Use areas: character
+
+Tag: drylands_supply_limit
+Use areas: character, province, and county
+
+Tag: skirmishers_siege_value_mult
+Use areas: character
+
+Tag: slovien_opinion
+Use areas: character
+
+Tag: gaelic_opinion
+Use areas: character
+
+Tag: west_african_orisha_religion_opinion
+Use areas: character
+
+Tag: asturleonese_opinion
+Use areas: character
+
+Tag: zoroastrianism_religion_opinion
+Use areas: character
+
+Tag: camel_cavalry_pursuit_add
+Use areas: character
+
+Tag: ashari_opinion
+Use areas: character
+
+Tag: holy_order_government_tax_contribution_mult
+Use areas: character
+
+Tag: hindustani_opinion
+Use areas: character
+
+Tag: kalikula_shaktism_opinion
+Use areas: character
+
+Tag: scheme_power_against_best_friend_add
+Use areas: character
+
+Tag: levy_reinforcement_rate
+Use areas: character, province, and county
+
+Tag: elephant_cavalry_max_size_add
+Use areas: character
+
+Tag: max_seduce_schemes_add
+Use areas: character
+
+Tag: archers_siege_value_mult
+Use areas: character
+
+Tag: max_combat_roll
+Use areas: character
+
+Tag: scheme_power_against_rival_add
+Use areas: character
+
+Tag: steal_back_artifact_scheme_resistance_mult
+Use areas: character
+
+Tag: life_expectancy
+Use areas: character
+
+Tag: different_faith_county_opinion_mult_even_if_baron
+Use areas: character
+
+Tag: mountains_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: light_cavalry_siege_value_mult
+Use areas: character
+
+Tag: desert_min_combat_roll
+Use areas: character
+
+Tag: naiman_opinion
+Use areas: character
+
+Tag: domain_tax_same_faith_mult
+Use areas: character
+
+Tag: desert_mountains_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: monthly_piety_gain_per_happy_powerful_vassal_mult
+Use areas: character
+
+Tag: levantine_opinion
+Use areas: character
+
+Tag: archers_damage_add
+Use areas: character
+
+Tag: desert_mountains_supply_limit
+Use areas: character, province, and county
+
+Tag: ibadi_opinion
+Use areas: character
+
+Tag: castle_holding_build_speed
+Use areas: character, province, and county
+
+Tag: city_holding_build_speed
+Use areas: character, province, and county
+
+Tag: inbreeding_chance
+Use areas: character
+
+Tag: build_prestige_cost
+Use areas: character, province, and county
+
+Tag: eligible_child_except_player_heir_opinion
+Use areas: character
+
+Tag: tribal_holding_build_piety_cost
+Use areas: character, province, and county
+
+Tag: scheme_power_against_potential_lover_add
+Use areas: character
+
+Tag: ghulat_opinion
+Use areas: character
+
+Tag: basque_pagan_opinion
+Use areas: character
+
+Tag: steppe_min_combat_roll
+Use areas: character
+
+Tag: republic_government_levy_contribution_add
+Use areas: character
+
+Tag: prestige_level_impact_mult
+Use areas: character
+
+Tag: plains_cancel_negative_supply
+Use areas: character
+
+Tag: bavarian_opinion
+Use areas: character
+
+Tag: afar_opinion
+Use areas: character
+
+Tag: wolof_opinion
+Use areas: character
+
+Tag: jungle_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: theocracy_government_vassal_opinion
+Use areas: character
+
+Tag: shangqing_opinion
+Use areas: character
+
+Tag: franconian_opinion
+Use areas: character
+
+Tag: zhangzhung_opinion
+Use areas: character
+
+Tag: advantage_against_coreligionists
+Use areas: character
+
+Tag: winter_advantage
+Use areas: character
+
+Tag: world_steppe_development_growth
+Use areas: character, province, and county
+
+Tag: judaism_religion_opinion
+Use areas: character
+
+Tag: church_holding_holding_build_speed
+Use areas: character, province, and county
+
+Tag: oasis_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: sao_opinion
+Use areas: character
+
+Tag: bosnian_opinion
+Use areas: character
+
+Tag: drylands_development_growth_factor
+Use areas: character, province, and county
+
+Tag: light_cavalry_maintenance_mult
+Use areas: character
+
+Tag: jungle_cancel_negative_supply
+Use areas: character
+
+Tag: hostile_scheme_resistance_mult
+Use areas: character
+
+Tag: claim_throne_scheme_power_add
+Use areas: character
+
+Tag: farmlands_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: mordvin_opinion
+Use areas: character
+
+Tag: ai_greed
+Use areas: character
+
+Tag: hills_cancel_negative_supply
+Use areas: character
+
+Tag: forest_development_growth_factor
+Use areas: character, province, and county
+
+Tag: army_toughness_mult
+Use areas: character
+
+Tag: mel_opinion
+Use areas: character
+
+Tag: samoyed_opinion
+Use areas: character
+
+Tag: zurvanism_opinion
+Use areas: character
+
+Tag: ignore_negative_opinion_of_culture
+Use areas: character
+
+Tag: norman_opinion
+Use areas: character
+
+Tag: twin_opinion
+Use areas: character
+
+Tag: shatuo_opinion
+Use areas: character
+
+Tag: west_african_religion_opinion
+Use areas: character
+
+Tag: mercenary_government_levy_contribution_add
+Use areas: character
+
+Tag: attacker_advantage
+Use areas: character
+
+Tag: skirmishers_damage_mult
+Use areas: character
+
+Tag: masmudi_opinion
+Use areas: character
+
+Tag: fabricate_hook_scheme_resistance_add
+Use areas: character
+
+Tag: wetlands_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: men_at_arms_recruitment_cost
+Use areas: character
+
+Tag: fort_level
+Use areas: character, province, and county
+
+Tag: langobard_opinion
+Use areas: character
+
+Tag: heavy_infantry_toughness_mult
+Use areas: character
+
+Tag: elope_scheme_power_mult
+Use areas: character
+
+Tag: mountains_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: archers_max_size_add
+Use areas: character
+
+Tag: archer_cavalry_screen_mult
+Use areas: character
+
+Tag: elephant_cavalry_screen_add
+Use areas: character
+
+Tag: cowed_vassal_tax_contribution_mult
+Use areas: character
+
+Tag: monthly_war_income_mult
+Use areas: character
+
+Tag: pikemen_toughness_mult
+Use areas: character
+
+Tag: archers_toughness_add
+Use areas: character
+
+Tag: siege_weapon_screen_add
+Use areas: character
+
+Tag: intimidated_vassal_tax_contribution_add
+Use areas: character
+
+Tag: tyranny_loss_mult
+Use areas: character
+
+Tag: desert_attrition_mult
+Use areas: character
+
+Tag: sorko_opinion
+Use areas: character
+
+Tag: scheme_power_against_bully_add
+Use areas: character
+
+Tag: mogyer_opinion
+Use areas: character
+
+Tag: levy_reinforcement_rate_same_faith_even_if_baron
+Use areas: character
+
+Tag: scheme_power_against_intrigue_student_mult
+Use areas: character
+
+Tag: republic_government_tax_contribution_mult
+Use areas: character
+
+Tag: egyptian_opinion
+Use areas: character
+
+Tag: desert_development_growth_factor
+Use areas: character, province, and county
+
+Tag: monthly_prestige_gain_per_dread_add
+Use areas: character
+
+Tag: prowess_per_piety_level
+Use areas: character
+
+Tag: intrigue
+Use areas: character
+
+Tag: theocracy_government_tax_contribution_add
+Use areas: character
+
+Tag: magyar_pagan_opinion
+Use areas: character
+
+Tag: farmlands_development_growth
+Use areas: character, province, and county
+
+Tag: butr_opinion
+Use areas: character
+
+Tag: church_holding_holding_build_gold_cost
+Use areas: character, province, and county
+
+Tag: frisian_opinion
+Use areas: character
+
+Tag: jungle_min_combat_roll
+Use areas: character
+
+Tag: farmlands_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: haymanot_opinion
+Use areas: character
+
+Tag: karelian_opinion
+Use areas: character
+
+Tag: jungle_levy_size
+Use areas: character, province, and county
+
+Tag: monthly_prestige_gain_per_knight_add
+Use areas: character
+
+Tag: orthodox_opinion
+Use areas: character
+
+Tag: steppe_levy_size
+Use areas: character, province, and county
+
+Tag: negate_fertility_penalty_add
+Use areas: character
+
+Tag: drylands_min_combat_roll
+Use areas: character
+
+Tag: skirmishers_max_size_mult
+Use areas: character
+
+Tag: waldensian_opinion
+Use areas: character
+
+Tag: army_siege_value_mult
+Use areas: character
+
+Tag: cultural_head_fascination_add
+Use areas: character
+
+Tag: floodplains_supply_limit
+Use areas: character, province, and county
+
+Tag: kirati_opinion
+Use areas: character
+
+Tag: camel_cavalry_max_size_mult
+Use areas: character
+
+Tag: hills_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: mazdakism_opinion
+Use areas: character
+
+Tag: nubian_opinion
+Use areas: character
+
+Tag: karluk_opinion
+Use areas: character
+
+Tag: sumpa_opinion
+Use areas: character
+
+Tag: tengrism_religion_opinion
+Use areas: character
+
+Tag: monthly_piety_from_buildings_mult
+Use areas: character
+
+Tag: intrigue_scheme_resistance
+Use areas: character
+
+Tag: learning_scheme_power
+Use areas: character
+
+Tag: camel_cavalry_damage_add
+Use areas: character
+
+Tag: max_befriend_schemes_add
+Use areas: character
+
+Tag: finnish_pagan_opinion
+Use areas: character
+
+Tag: same_culture_holy_order_hire_cost_mult
+Use areas: character
+
+Tag: claim_throne_scheme_resistance_add
+Use areas: character
+
+Tag: taiga_advantage
+Use areas: character
+
+Tag: mercenary_government_opinion
+Use areas: character
+
+Tag: elephant_cavalry_maintenance_mult
+Use areas: character
+
+Tag: wetlands_development_growth_factor
+Use areas: character, province, and county
+
+Tag: sephardi_opinion
+Use areas: character
+
+Tag: english_opinion
+Use areas: character
+
+Tag: archer_cavalry_toughness_add
+Use areas: character
+
+Tag: scheme_power_against_friend_add
+Use areas: character
+
+Tag: opinion_of_same_culture
+Use areas: character
+
+Tag: taiga_levy_size
+Use areas: character, province, and county
+
+Tag: mercenary_government_levy_contribution_mult
+Use areas: character
+
+Tag: heavy_infantry_damage_add
+Use areas: character
+
+Tag: desert_advantage
+Use areas: character
+
+Tag: guan_opinion
+Use areas: character
+
+Tag: quranist_opinion
+Use areas: character
+
+Tag: fabricate_hook_scheme_resistance_mult
+Use areas: character
+
+Tag: heavy_infantry_screen_add
+Use areas: character
+
+Tag: archer_cavalry_max_size_mult
+Use areas: character
+
+Tag: qiang_opinion
+Use areas: character
+
+Tag: cisalpine_opinion
+Use areas: character
+
+Tag: light_cavalry_siege_value_add
+Use areas: character
+
+Tag: siege_weapon_maintenance_mult
+Use areas: character
+
+Tag: domain_tax_different_faith_mult_even_if_baron
+Use areas: character
+
+Tag: genetic_trait_strengthen_chance
+Use areas: character
+
+Tag: counter_efficiency
+Use areas: character and terrain
+
+Tag: scheme_power_against_mentor_mult
+Use areas: character
+
+Tag: siege_weapon_damage_mult
+Use areas: character
+
+Tag: hungarian_opinion
+Use areas: character
+
+Tag: men_at_arms_maintenance
+Use areas: character
+
+Tag: scheme_power_against_potential_friend_add
+Use areas: character
+
+Tag: plains_max_combat_roll
+Use areas: character
+
+Tag: monthly_piety_gain_per_happy_powerful_vassal_add
+Use areas: character
+
+Tag: prowess_per_prestige_level
+Use areas: character
+
+Tag: siege_weapon_screen_mult
+Use areas: character
+
+Tag: plains_supply_limit
+Use areas: character, province, and county
+
+Tag: druze_opinion
+Use areas: character
+
+Tag: imami_opinion
+Use areas: character
+
+Tag: clan_government_levy_contribution_mult
+Use areas: character
+
+Tag: welsh_opinion
+Use areas: character
+
+Tag: tribal_holding_holding_build_gold_cost
+Use areas: character, province, and county
+
+Tag: armenian_apostolic_opinion
+Use areas: character
+
+Tag: floodplains_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: eligible_child_opinion
+Use areas: character
+
+Tag: oasis_cancel_negative_supply
+Use areas: character
+
+Tag: baranis_opinion
+Use areas: character
+
+Tag: nestorian_opinion
+Use areas: character
+
+Tag: jungle_supply_limit
+Use areas: character, province, and county
+
+Tag: oasis_tax_mult
+Use areas: character, province, and county
+
+Tag: steppe_supply_limit
+Use areas: character, province, and county
+
+Tag: tribal_government_opinion_same_faith
+Use areas: character
+
+Tag: hills_max_combat_roll
+Use areas: character
+
+Tag: dread_per_tyranny_mult
+Use areas: character
+
+Tag: slavic_religion_opinion
+Use areas: character
+
+Tag: hills_supply_limit
+Use areas: character, province, and county
+
+Tag: forest_advantage
+Use areas: character
+
+Tag: negative_random_genetic_chance
+Use areas: character
+
+Tag: drylands_cancel_negative_supply
+Use areas: character
+
+Tag: heavy_cavalry_damage_mult
+Use areas: character
+
+Tag: monthly_prestige_from_buildings_mult
+Use areas: character
+
+Tag: farmlands_levy_size
+Use areas: character, province, and county
+
+Tag: valentinianism_opinion
+Use areas: character
+
+Tag: prowess_scheme_resistance
+Use areas: character
+
+Tag: vlach_opinion
+Use areas: character
+
+Tag: manichean_opinion
+Use areas: character
+
+Tag: opinion_of_liege
+Use areas: character
+
+Tag: random_skills_per_child
+Use areas: character
+
+Tag: heavy_cavalry_pursuit_add
+Use areas: character
+
+Tag: rajput_opinion
+Use areas: character
+
+Tag: malinke_opinion
+Use areas: character
+
+Tag: waaqism_pagan_opinion
+Use areas: character
+
+Tag: gujarati_opinion
+Use areas: character
+
+Tag: army_pursuit_mult
+Use areas: character
+
+Tag: max_fabricate_hook_schemes_add
+Use areas: character
+
+Tag: camel_cavalry_siege_value_add
+Use areas: character
+
+Tag: maturidi_opinion
+Use areas: character
+
+Tag: heavy_infantry_siege_value_mult
+Use areas: character
+
+Tag: short_reign_duration_mult
+Use areas: character
+
+Tag: learn_language_scheme_resistance_add
+Use areas: character
+
+Tag: enemy_terrain_advantage
+Use areas: character
+
+Tag: murder_scheme_resistance_add
+Use areas: character
+
+Tag: scheme_secrecy
+Use areas: scheme
+
+Tag: owned_personal_scheme_success_chance_add
+Use areas: character
+
+Tag: wetlands_max_combat_roll
+Use areas: character
+
+Tag: pikemen_siege_value_mult
+Use areas: character
+
+Tag: mountains_supply_limit
+Use areas: character, province, and county
+
+Tag: kerait_opinion
+Use areas: character
+
+Tag: radhanite_opinion
+Use areas: character
+
+Tag: councillor_opinion
+Use areas: character
+
+Tag: elephant_cavalry_pursuit_mult
+Use areas: character
+
+Tag: scheme_power_against_guardian_add
+Use areas: character
+
+Tag: monthly_dynasty_prestige
+Use areas: character
+
+Tag: opinion_of_parents
+Use areas: character
+
+Tag: pikemen_toughness_add
+Use areas: character
+
+Tag: archer_cavalry_siege_value_mult
+Use areas: character
+
+Tag: sway_scheme_resistance_mult
+Use areas: character
+
+Tag: levy_reinforcement_rate_friendly_territory
+Use areas: character, province, and county
+
+Tag: long_reign_bonus_mult
+Use areas: character
+
+Tag: scheme_power_against_student_add
+Use areas: character
+
+Tag: tyranny_gain_mult
+Use areas: character
+
+Tag: intrigue_per_piety_level
+Use areas: character
+
+Tag: levy_reinforcement_rate_different_faith_even_if_baron
+Use areas: character
+
+Tag: pikemen_maintenance_mult
+Use areas: character
+
+Tag: siege_weapon_siege_value_add
+Use areas: character
+
+Tag: zayidi_opinion
+Use areas: character
+
+Tag: castle_holding_holding_build_speed
+Use areas: character, province, and county
+
+Tag: monthly_county_control_change_at_war_mult
+Use areas: character, province, and county
+
+Tag: rf_pagan_opinion
+Use areas: character
+
+Tag: desert_mountains_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: cowed_vassal_levy_contribution_add
+Use areas: character
+
+Tag: feudal_government_tax_contribution_add
+Use areas: character
+
+Tag: bozo_opinion
+Use areas: character
+
+Tag: steppe_advantage
+Use areas: character
+
+Tag: child_opinion
+Use areas: character
+
+Tag: desert_mountains_tax_mult
+Use areas: character, province, and county
+
+Tag: floodplains_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: hostile_scheme_power_mult
+Use areas: character
+
+Tag: republic_government_opinion_same_faith
+Use areas: character
+
+Tag: world_innovation_camels_development_growth
+Use areas: character, province, and county
+
+Tag: plains_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: oasis_max_combat_roll
+Use areas: character
+
+Tag: drylands_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: farmlands_development_growth_factor
+Use areas: character, province, and county
+
+Tag: ari_opinion
+Use areas: character
+
+Tag: sabianism_opinion
+Use areas: character
+
+Tag: cathar_opinion
+Use areas: character
+
+Tag: daju_opinion
+Use areas: character
+
+Tag: ongud_opinion
+Use areas: character
+
+Tag: prisoner_opinion
+Use areas: character
+
+Tag: floodplains_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: heavy_cavalry_toughness_mult
+Use areas: character
+
+Tag: gond_opinion
+Use areas: character
+
+Tag: tsangpa_opinion
+Use areas: character
+
+Tag: west_african_orisha_pagan_opinion
+Use areas: character
+
+Tag: khurmazta_opinion
+Use areas: character
+
+Tag: west_african_bidu_pagan_opinion
+Use areas: character
+
+Tag: courting_scheme_resistance_add
+Use areas: character
+
+Tag: taiga_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: tribal_government_tax_contribution_add
+Use areas: character
+
+Tag: malvi_opinion
+Use areas: character
+
+Tag: ai_war_cooldown
+Use areas: character
+
+Tag: hills_development_growth_factor
+Use areas: character, province, and county
+
+Tag: max_claim_throne_schemes_add
+Use areas: character
+
+Tag: drylands_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: embarkation_cost_mult
+Use areas: character
+
+Tag: hills_tax_mult
+Use areas: character, province, and county
+
+Tag: finno_ugric_religion_opinion
+Use areas: character
+
+Tag: holding_build_gold_cost
+Use areas: character, province, and county
+
+Tag: convert_to_witchcraft_scheme_power_mult
+Use areas: character
+
+Tag: wetlands_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: old_saxon_opinion
+Use areas: character
+
+Tag: heavy_infantry_max_size_add
+Use areas: character
+
+Tag: skirmishers_screen_add
+Use areas: character
+
+Tag: monthly_learning_lifestyle_xp_gain_mult
+Use areas: character
+
+Tag: marka_opinion
+Use areas: character
+
+Tag: edo_opinion
+Use areas: character
+
+Tag: polabian_opinion
+Use areas: character
+
+Tag: pikemen_pursuit_add
+Use areas: character
+
+Tag: archer_cavalry_recruitment_cost_mult
+Use areas: character
+
+Tag: taiga_tax_mult
+Use areas: character, province, and county
+
+Tag: daylamite_opinion
+Use areas: character
+
+Tag: happy_powerful_vassal_tax_contribution_mult
+Use areas: character
+
+Tag: fabricate_hook_scheme_power_mult
+Use areas: character
+
+Tag: scheme_power_against_bully_mult
+Use areas: character
+
+Tag: siege_weapon_max_size_mult
+Use areas: character
+
+Tag: movement_speed
+Use areas: character
+
+Tag: mountains_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: learn_language_scheme_resistance_mult
+Use areas: character
+
+Tag: monthly_county_control_change_add_even_if_baron
+Use areas: character
+
+Tag: feudal_government_levy_contribution_add
+Use areas: character
+
+Tag: monthly_piety_gain_per_dread_mult
+Use areas: character
+
+Tag: dread_gain_mult
+Use areas: character
+
+Tag: martial
+Use areas: character
+
+Tag: desert_mountains_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: plains_min_combat_roll
+Use areas: character
+
+Tag: scheme_power_against_oaf_add
+Use areas: character
+
+Tag: malabarism_opinion
+Use areas: character
+
+Tag: armenian_opinion
+Use areas: character
+
+Tag: learning_per_prestige_level
+Use areas: character
+
+Tag: martial_per_piety_level
+Use areas: character
+
+Tag: steppe_max_combat_roll
+Use areas: character
+
+Tag: city_holding_build_piety_cost
+Use areas: character, province, and county
+
+Tag: oasis_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: floodplains_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: clan_government_levy_contribution_add
+Use areas: character
+
+Tag: scheme_success_chance
+Use areas: scheme
+
+Tag: tribal_holding_holding_build_speed
+Use areas: character, province, and county
+
+Tag: monthly_martial_lifestyle_xp_gain_mult
+Use areas: character
+
+Tag: lollard_opinion
+Use areas: character
+
+Tag: martial_per_stress_level
+Use areas: character
+
+Tag: floodplains_cancel_negative_supply
+Use areas: character
+
+Tag: sedism_opinion
+Use areas: character
+
+Tag: old_bon_opinion
+Use areas: character
+
+Tag: floodplains_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: heavy_cavalry_max_size_mult
+Use areas: character
+
+Tag: hills_advantage
+Use areas: character
+
+Tag: oasis_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: kannada_opinion
+Use areas: character
+
+Tag: hills_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: siberian_pagan_opinion
+Use areas: character
+
+Tag: dread_per_tyranny_add
+Use areas: character
+
+Tag: greek_opinion
+Use areas: character
+
+Tag: bulgarian_opinion
+Use areas: character
+
+Tag: monthly_prestige_gain_mult
+Use areas: character
+
+Tag: skirmishers_toughness_add
+Use areas: character
+
+Tag: russian_opinion
+Use areas: character
+
+Tag: abduct_scheme_power_add
+Use areas: character
+
+Tag: north_african_acham_pagan_opinion
+Use areas: character
+
+Tag: germanic_religion_opinion
+Use areas: character
+
+Tag: faith_creation_piety_cost_mult
+Use areas: character
+
+Tag: monthly_stewardship_lifestyle_xp_gain_mult
+Use areas: character
+
+Tag: forest_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: martial_scheme_resistance
+Use areas: character
+
+Tag: prowess_scheme_power
+Use areas: character
+
+Tag: skirmishers_maintenance_mult
+Use areas: character
+
+Tag: taiga_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: ai_honor
+Use areas: character
+
+Tag: andalusian_opinion
+Use areas: character
+
+Tag: yughur_opinion
+Use areas: character
+
+Tag: laktan_opinion
+Use areas: character
+
+Tag: taiga_max_combat_roll
+Use areas: character
+
+Tag: wetlands_attrition_mult
+Use areas: character
+
+Tag: irish_opinion
+Use areas: character
+
+Tag: khanty_opinion
+Use areas: character
+
+Tag: murder_scheme_power_add
+Use areas: character
+
+Tag: krishnaism_opinion
+Use areas: character
+
+Tag: retreat_losses
+Use areas: character and terrain
+
+Tag: courting_scheme_resistance_mult
+Use areas: character
+
+Tag: fabricate_hook_scheme_power_add
+Use areas: character
+
+Tag: pikemen_siege_value_add
+Use areas: character
+
+Tag: siege_weapon_max_size_add
+Use areas: character
+
+Tag: max_hostile_schemes_add
+Use areas: character
+
+Tag: oirat_opinion
+Use areas: character
+
+Tag: monthly_income_per_stress_level_add
+Use areas: character
+
+Tag: scheme_power_against_victim_add
+Use areas: character
+
+Tag: ai_amenity_spending
+Use areas: character
+
+Tag: igbo_opinion
+Use areas: character
+
+Tag: archers_toughness_mult
+Use areas: character
+
+Tag: monthly_dynasty_prestige_mult
+Use areas: character
+
+Tag: wetlands_tax_mult
+Use areas: character, province, and county
+
+Tag: stewardship_per_piety_level
+Use areas: character
+
+Tag: desert_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: desert_mountains_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: guanches_opinion
+Use areas: character
+
+Tag: castle_holding_build_prestige_cost
+Use areas: character, province, and county
+
+Tag: scheme_power_against_victim_mult
+Use areas: character
+
+Tag: serer_opinion
+Use areas: character
+
+Tag: ai_sociability
+Use areas: character
+
+Tag: stewardship_per_prestige_level
+Use areas: character
+
+Tag: desert_mountains_max_combat_roll
+Use areas: character
+
+Tag: steppe_cancel_negative_supply
+Use areas: character
+
+Tag: feudal_government_opinion_same_faith
+Use areas: character
+
+Tag: plains_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: martial_per_prestige_level
+Use areas: character
+
+Tag: title_creation_cost
+Use areas: character
+
+Tag: oasis_levy_size
+Use areas: character, province, and county
+
+Tag: paulician_opinion
+Use areas: character
+
+Tag: pursue_efficiency
+Use areas: character and terrain
+
+Tag: basque_religion_opinion
+Use areas: character
+
+Tag: farmlands_advantage
+Use areas: character
+
+Tag: jungle_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: steppe_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: theocracy_government_opinion_same_faith
+Use areas: character
+
+Tag: plains_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: turkish_opinion
+Use areas: character
+
+Tag: pagan_opinion
+Use areas: character
+
+Tag: monthly_piety_gain_mult
+Use areas: character
+
+Tag: world_innovation_elephants_development_growth_factor
+Use areas: character, province, and county
+
+Tag: cornish_opinion
+Use areas: character
+
+Tag: farmlands_max_combat_roll
+Use areas: character
+
+Tag: svetambara_opinion
+Use areas: character
+
+Tag: knight_effectiveness_mult
+Use areas: character
+
+Tag: light_cavalry_screen_add
+Use areas: character
+
+Tag: alan_opinion
+Use areas: character
+
+Tag: mandeaism_opinion
+Use areas: character
+
+Tag: dread_decay_add
+Use areas: character
+
+Tag: donyipoloism_opinion
+Use areas: character
+
+Tag: mountains_cancel_negative_supply
+Use areas: character
+
+Tag: befriend_scheme_power_mult
+Use areas: character
+
+Tag: heavy_cavalry_siege_value_add
+Use areas: character
+
+Tag: forest_max_combat_roll
+Use areas: character
+
+Tag: west_african_pagan_opinion
+Use areas: character
+
+Tag: hills_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: ai_war_chance
+Use areas: character
+
+Tag: basque_opinion
+Use areas: character
+
+Tag: forest_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: mountains_max_combat_roll
+Use areas: character
+
+Tag: heavy_infantry_damage_mult
+Use areas: character
+
+Tag: religious_head_opinion
+Use areas: character
+
+Tag: advaitism_opinion
+Use areas: character
+
+Tag: holding_build_speed
+Use areas: character, province, and county
+
+Tag: wetlands_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: enemy_hard_casualty_modifier
+Use areas: character and terrain
+
+Tag: tax_mult
+Use areas: character, province, and county
+
+Tag: camel_cavalry_screen_mult
+Use areas: character
+
+Tag: afghan_opinion
+Use areas: character
+
+Tag: county_opinion_add
+Use areas: character and county
+
+Tag: kurdish_opinion
+Use areas: character
+
+Tag: seduce_scheme_power_mult
+Use areas: character
+
+Tag: elephant_cavalry_screen_mult
+Use areas: character
+
+Tag: sway_scheme_power_add
+Use areas: character
+
+Tag: scheme_power_against_ward_mult
+Use areas: character
+
+Tag: prowess_no_portrait
+Extra info: Doesn't affect portraits. Note that you can get some odd results when using negative values for people with negate_prowess_penalty_add
+Use areas: character
+
+Tag: min_combat_roll
+Use areas: character
+
+Tag: desert_mountains_attrition_mult
+Use areas: character
+
+Tag: intimidated_vassal_tax_contribution_mult
+Use areas: character
+
+Tag: gaw_opinion
+Use areas: character
+
+Tag: artifact_decay_reduction_mult
+Use areas: character, province, and county
+
+Tag: archer_cavalry_pursuit_add
+Use areas: character
+
+Tag: county_opinion_add_even_if_baron
+Use areas: character
+
+Tag: pikemen_screen_mult
+Use areas: character
+
+Tag: mossi_opinion
+Use areas: character
+
+Tag: levy_reinforcement_rate_different_faith
+Use areas: character
+
+Tag: desert_max_combat_roll
+Use areas: character
+
+Tag: tangut_opinion
+Use areas: character
+
+Tag: steppe_attrition_mult
+Use areas: character
+
+Tag: happy_powerful_vassal_levy_contribution_add
+Use areas: character
+
+Tag: diplomacy_per_piety_level
+Use areas: character
+
+Tag: domain_limit
+Use areas: character
+
+Tag: scheme_power_against_crush_add
+Use areas: character
+
+Tag: desert_mountains_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: steppe_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: culture_tradition_max_add
+Use areas: culture
+
+Tag: yumaism_opinion
+Use areas: character
+
+Tag: zaghawa_opinion
+Use areas: character
+
+Tag: city_holding_holding_build_gold_cost
+Use areas: character, province, and county
+
+Tag: najdat_opinion
+Use areas: character
+
+Tag: supply_capacity_add
+Use areas: character
+
+Tag: negate_intrigue_penalty_add
+Use areas: character
+
+Tag: negate_health_penalty_add
+Use areas: character
+
+Tag: bon_opinion
+Use areas: character
+
+Tag: sethianism_opinion
+Use areas: character
+
+Tag: garrison_size
+Use areas: character, province, and county
+
+Tag: forest_min_combat_roll
+Use areas: character
+
+Tag: negative_inactive_inheritance_chance
+Use areas: character
+
+Tag: west_african_bori_religion_opinion
+Use areas: character
+
+Tag: farmlands_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: positive_inactive_inheritance_chance
+Use areas: character
+
+Tag: led_by_owner_extra_advantage_add
+Use areas: character
+
+Tag: drylands_advantage
+Use areas: character
+
+Tag: spouse_opinion
+Use areas: character
+
+Tag: hills_min_combat_roll
+Use areas: character
+
+Tag: north_african_religion_opinion
+Use areas: character
+
+Tag: max_abduct_schemes_add
+Use areas: character
+
+Tag: taiga_attrition_mult
+Use areas: character
+
+Tag: controlled_province_advantage
+Use areas: character
+
+Tag: drylands_levy_size
+Use areas: character, province, and county
+
+Tag: camel_cavalry_damage_mult
+Use areas: character
+
+Tag: max_loot_mult
+Use areas: character
+
+Tag: holding_build_piety_cost
+Use areas: character, province, and county
+
+Tag: max_courting_schemes_add
+Use areas: character
+
+Tag: scheme_discovery_chance_mult
+Use areas: character
+
+Tag: taiga_min_combat_roll
+Use areas: character
+
+Tag: mercenary_government_vassal_opinion
+Use areas: character
+
+Tag: occitan_opinion
+Use areas: character
+
+Tag: mari_opinion
+Use areas: character
+
+Tag: persian_opinion
+Use areas: character
+
+Tag: men_at_arms_limit
+Use areas: character
+
+Tag: portuguese_opinion
+Use areas: character
+
+Tag: supply_loss_winter
+Use areas: province
+
+Tag: courting_scheme_power_mult
+Use areas: character
+
+Tag: archer_cavalry_damage_add
+Use areas: character
+
+Tag: saka_opinion
+Use areas: character
+
+Tag: monthly_war_income_add
+Use areas: character
+
+Tag: taiga_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: zun_pagan_opinion
+Use areas: character
+
+Tag: elope_scheme_resistance_mult
+Use areas: character
+
+Tag: tolerance_advantage_mod
+Use areas: character
+
+Tag: archer_cavalry_screen_add
+Use areas: character
+
+Tag: ewe_opinion
+Use areas: character
+
+Tag: mountains_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: yoruba_opinion
+Use areas: character
+
+Tag: sardinian_opinion
+Use areas: character
+
+Tag: levy_reinforcement_rate_even_if_baron
+Use areas: character
+
+Tag: desert_mountains_advantage
+Use areas: character
+
+Tag: songhai_opinion
+Use areas: character
+
+Tag: years_of_fertility
+Use areas: character
+
+Tag: knight_limit
+Use areas: character
+
+Tag: scheme_power_against_soulmate_add
+Use areas: character
+
+Tag: roman_opinion
+Use areas: character
+
+Tag: scheme_power_against_potential_friend_mult
+Use areas: character
+
+Tag: sway_scheme_power_mult
+Use areas: character
+
+Tag: pikemen_recruitment_cost_mult
+Use areas: character
+
+Tag: desert_mountains_levy_size
+Use areas: character, province, and county
+
+Tag: wetlands_supply_limit_mult
+Use areas: character, province, and county
+
+Tag: theocracy_government_opinion
+Use areas: character
+
+Tag: monthly_prestige_gain_per_happy_powerful_vassal_mult
+Use areas: character
+
+Tag: monthly_piety_gain_per_dread_add
+Use areas: character
+
+Tag: scheme_power_against_soldier_friend_mult
+Use areas: character
+
+Tag: opinion_of_vassal
+Use areas: character
+
+Tag: archers_recruitment_cost_mult
+Use areas: character
+
+Tag: city_holding_holding_build_piety_cost
+Use areas: character, province, and county
+
+Tag: floodplains_advantage
+Use areas: character
+
+Tag: tribal_government_opinion
+Use areas: character
+
+Tag: plains_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: child_except_player_heir_opinion
+Use areas: character
+
+Tag: desert_mountains_min_combat_roll
+Use areas: character
+
+Tag: prussian_opinion
+Use areas: character
+
+Tag: alevi_opinion
+Use areas: character
+
+Tag: lamaism_opinion
+Use areas: character
+
+Tag: farmlands_attrition_mult
+Use areas: character
+
+Tag: bogomilist_opinion
+Use areas: character
+
+Tag: diplomacy_per_prestige_level
+Use areas: character
+
+Tag: theravada_opinion
+Use areas: character
+
+Tag: light_cavalry_toughness_add
+Use areas: character
+
+Tag: stress_loss_mult
+Use areas: character
+
+Tag: opinion_of_male_rulers
+Use areas: character
+
+Tag: oasis_development_growth
+Use areas: character, province, and county
+
+Tag: paganism_religion_opinion
+Use areas: character
+
+Tag: positive_random_genetic_chance
+Use areas: character
+
+Tag: kiratism_opinion
+Use areas: character
+
+Tag: skirmishers_max_size_add
+Use areas: character
+
+Tag: forest_attrition_mult
+Use areas: character
+
+Tag: serbian_opinion
+Use areas: character
+
+Tag: magyar_religion_opinion
+Use areas: character
+
+Tag: dread_baseline_add
+Use areas: character
+
+Tag: hills_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: attraction_opinion
+Use areas: character
+
+Tag: hostile_raid_time
+Use areas: character, province, and county
+
+Tag: jungle_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: mountains_attrition_mult
+Use areas: character
+
+Tag: taiga_development_growth
+Use areas: character, province, and county
+
+Tag: same_culture_holy_order_hire_cost_add
+Use areas: character
+
+Tag: ignore_opinion_of_different_faith
+Use areas: character
+
+Tag: men_at_arms_cap
+Use areas: character
+
+Tag: marathi_opinion
+Use areas: character
+
+Tag: severian_opinion
+Use areas: character
+
+Tag: camel_cavalry_toughness_mult
+Use areas: character
+
+Tag: monthly_income
+Use areas: character and province
+
+Tag: befriend_scheme_resistance_add
+Use areas: character
+
+Tag: vaishnavism_opinion
+Use areas: character
+
+Tag: mercenary_government_tax_contribution_add
+Use areas: character
+
+Tag: visigothic_opinion
+Use areas: character
+
+Tag: no_water_crossing_penalty
+Use areas: character
+
+Tag: elephant_cavalry_toughness_mult
+Use areas: character
+
+Tag: max_personal_schemes_add
+Use areas: character
+
+Tag: pikemen_pursuit_mult
+Use areas: character
+
+Tag: carantanian_opinion
+Use areas: character
+
+Tag: different_culture_opinion
+Use areas: character
+
+Tag: seduce_scheme_power_add
+Use areas: character
+
+Tag: max_learn_language_schemes_add
+Use areas: character
+
+Tag: archers_pursuit_mult
+Use areas: character
+
+Tag: enemy_personal_scheme_success_chance_add
+Use areas: character
+
+Tag: mountains_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: sicilian_opinion
+Use areas: character
+
+Tag: desert_levy_size
+Use areas: character, province, and county
+
+Tag: scheme_power_against_student_mult
+Use areas: character
+
+Tag: dread_loss_mult
+Use areas: character
+
+Tag: levy_reinforcement_rate_same_faith
+Use areas: character
+
+Tag: scheme_power_against_potential_rival_add
+Use areas: character
+
+Tag: soninke_opinion
+Use areas: character
+
+Tag: desert_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: pikemen_screen_add
+Use areas: character
+
+Tag: siege_weapon_pursuit_add
+Use areas: character
+
+Tag: domain_tax_same_faith_mult_even_if_baron
+Use areas: character
+
+Tag: build_speed
+Use areas: character, province, and county
+
+Tag: desert_mountains_development_growth
+Use areas: character, province, and county
+
+Tag: qarmatian_opinion
+Use areas: character
+
+Tag: vassal_levy_contribution_add
+Use areas: character
+
+Tag: rf_eastern_opinion
+Use areas: character
+
+Tag: plains_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: light_cavalry_damage_add
+Use areas: character
+
+Tag: feudal_government_tax_contribution_mult
+Use areas: character
+
+Tag: kanuri_opinion
+Use areas: character
+
+Tag: jungle_development_growth_factor
+Use areas: character, province, and county
+
+Tag: republic_government_opinion
+Use areas: character
+
+Tag: monthly_piety_gain_per_knight_add
+Use areas: character
+
+Tag: siege_morale_loss
+Use areas: character
+
+Tag: prowess_per_stress_level
+Use areas: character
+
+Tag: rrmeaism_opinion
+Use areas: character
+
+Tag: georgian_opinion
+Use areas: character
+
+Tag: somali_opinion
+Use areas: character
+
+Tag: church_holding_build_prestige_cost
+Use areas: character, province, and county
+
+Tag: azariqa_opinion
+Use areas: character
+
+Tag: farmlands_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: city_holding_holding_build_speed
+Use areas: character, province, and county
+
+Tag: abduct_scheme_resistance_add
+Use areas: character
+
+Tag: floodplains_tax_mult
+Use areas: character, province, and county
+
+Tag: tribal_government_vassal_opinion
+Use areas: character
+
+Tag: fertility
+Use areas: character
+
+Tag: negate_stewardship_penalty_add
+Use areas: character
+
+Tag: levy_size
+Use areas: character, province, and county
+
+Tag: farmlands_cancel_negative_supply
+Use areas: character
+
+Tag: drylands_holding_construction_prestige_cost
+Use areas: character, province, and county
+
+Tag: uriankhai_opinion
+Use areas: character
+
+Tag: court_grandeur_baseline_add
+Use areas: character
+
+Tag: farmlands_holding_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: jungle_tax_mult
+Use areas: character, province, and county
+
+Tag: ignore_negative_culture_opinion
+Use areas: character
+
+Tag: ai_rationality
+Use areas: character
+
+Tag: cultural_head_fascination_mult
+Use areas: character
+
+Tag: castilian_opinion
+Use areas: character
+
+Tag: merya_opinion
+Use areas: character
+
+Tag: uyghur_opinion
+Use areas: character
+
+Tag: kitebacilweism_opinion
+Use areas: character
+
+Tag: quanzhen_opinion
+Use areas: character
+
+Tag: welayta_opinion
+Use areas: character
+
+Tag: forest_levy_size
+Use areas: character, province, and county
+
+Tag: bengali_opinion
+Use areas: character
+
+Tag: urartuism_opinion
+Use areas: character
+
+Tag: defender_winter_advantage
+Use areas: province
+
+Tag: tribal_government_tax_contribution_mult
+Use areas: character
+
+Tag: drylands_tax_mult
+Use areas: character, province, and county
+
+Tag: heavy_cavalry_screen_mult
+Use areas: character
+
+Tag: convert_to_witchcraft_scheme_resistance_add
+Use areas: character
+
+Tag: srikula_shaktism_opinion
+Use areas: character
+
+Tag: army_maintenance_mult
+Use areas: character
+
+Tag: holding_build_prestige_cost
+Use areas: character, province, and county
+
+Tag: learning_scheme_resistance
+Use areas: character
+
+Tag: vassal_opinion
+Use areas: character
+
+Tag: max_elope_schemes_add
+Use areas: character
+
+Tag: wetlands_cancel_negative_supply
+Use areas: character
+
+Tag: skirmishers_screen_mult
+Use areas: character
+
+Tag: same_culture_mercenary_hire_cost_add
+Use areas: character
+
+Tag: additional_fort_level
+Use areas: character, province, and county
+
+Tag: mountains_development_growth_factor
+Use areas: character, province, and county
+
+Tag: zunism_religion_opinion
+Use areas: character
+
+Tag: hostile_county_attrition
+Use areas: character
+
+Tag: enemy_hostile_scheme_success_chance_add
+Use areas: character
+
+Tag: elephant_cavalry_siege_value_add
+Use areas: character
+
+Tag: ai_energy
+Use areas: character
+
+Tag: sinhala_opinion
+Use areas: character
+
+Tag: mutazila_opinion
+Use areas: character
+
+Tag: heavy_infantry_recruitment_cost_mult
+Use areas: character
+
+Tag: bedouin_opinion
+Use areas: character
+
+Tag: character_capital_county_monthly_development_growth_add
+Use areas: character
+
+Tag: elephant_cavalry_pursuit_add
+Use areas: character
+
+Tag: mountains_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: archers_screen_mult
+Use areas: character
+
+Tag: steal_back_artifact_scheme_resistance_add
+Use areas: character
+
+Tag: men_at_arms_maintenance_per_dread_mult
+Use areas: character
+
+Tag: swedish_opinion
+Use areas: character
+
+Tag: scheme_power_against_lover_add
+Use areas: character
+
+Tag: scheme_power_against_crush_mult
+Use areas: character
+
+Tag: mountains_tax_mult
+Use areas: character, province, and county
+
+Tag: max_sway_schemes_add
+Use areas: character
+
+Tag: akom_religion_opinion
+Use areas: character
+
+Tag: diplomacy
+Use areas: character
+
+Tag: stewardship
+Use areas: character
+
+Tag: sami_opinion
+Use areas: character
+
+Tag: intrigue_per_prestige_level
+Use areas: character
+
+Tag: liege_opinion
+Use areas: character
+
+Tag: piety_level_impact_mult
+Use areas: character
+
+Tag: karaism_opinion
+Use areas: character
+
+Tag: latgalian_opinion
+Use areas: character
+
+Tag: yapaniya_opinion
+Use areas: character
+
+Tag: church_holding_build_speed
+Use areas: character, province, and county
+
+Tag: jungle_attrition_mult
+Use areas: character
+
+Tag: hausa_opinion
+Use areas: character
+
+Tag: hafizi_opinion
+Use areas: character
+
+Tag: city_holding_build_gold_cost
+Use areas: character, province, and county
+
+Tag: maghrebi_opinion
+Use areas: character
+
+Tag: jungle_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: plains_attrition_mult
+Use areas: character
+
+Tag: negate_martial_penalty_add
+Use areas: character
+
+Tag: buddhism_religion_opinion
+Use areas: character
+
+Tag: steppe_holding_construction_gold_cost
+Use areas: character, province, and county
+
+Tag: plains_construction_piety_cost
+Use areas: character, province, and county
+
+Tag: forest_development_growth
+Use areas: character, province, and county
+
+Tag: bodpa_opinion
+Use areas: character
+
+Tag: dread_decay_mult
+Use areas: character
+
+Tag: floodplains_development_growth
+Use areas: character, province, and county
+
+Tag: croatian_opinion
+Use areas: character
+
+Tag: telugu_opinion
+Use areas: character
+
+Tag: khazar_opinion
+Use areas: character
+
+Tag: world_innovation_camels_development_growth_factor
+Use areas: character, province, and county
+
+Tag: skirmishers_toughness_mult
+Use areas: character
+
+Tag: dutch_opinion
+Use areas: character
+
+Tag: lhomon_opinion
+Use areas: character
+

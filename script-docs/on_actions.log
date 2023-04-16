@@ -2,6 +2,12 @@ On Action Documentation:
 
 --------------------
 
+on_tradition_removed:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 stress_loss_confider:
 From Code: No
 Expected Scope: character
@@ -20,9 +26,21 @@ Expected Scope: character
 
 --------------------
 
+on_death_relation_best_friend:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 on_rank_down:
 From Code: Yes
 Expected Scope: none
+
+--------------------
+
+fp2_lyonese_monk_events_phase_controversy_events:
+From Code: No
+Expected Scope: character
 
 --------------------
 
@@ -62,15 +80,15 @@ Expected Scope: character
 
 --------------------
 
-lover_ongoing_distance_fallback:
+playdate_host_event_selection:
 From Code: No
-Expected Scope: character
+Expected Scope: none
 
 --------------------
 
-on_weight_changed:
-From Code: Yes
-Expected Scope: character
+fp2_lyonese_monk_events_cycle:
+From Code: No
+Expected Scope: none
 
 --------------------
 
@@ -80,7 +98,31 @@ Expected Scope: character
 
 --------------------
 
+on_artifact_claim_lost:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 standard_claim_throne_method_setup:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+three_yearly_culture_pulse:
+From Code: Yes
+Expected Scope: culture
+
+--------------------
+
+on_remove_relation_best_friend:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+task_convince_dejure_side_effects:
 From Code: No
 Expected Scope: character
 
@@ -98,20 +140,14 @@ Expected Scope: faith
 
 --------------------
 
-lover_ongoing_distance:
-From Code: No
-Expected Scope: character
-
---------------------
-
 peasant_affair_peasant_at_court:
 From Code: No
 Expected Scope: character
 
 --------------------
 
-on_knight_combat_pulse:
-From Code: Yes
+fp2_struggle_council_toledo_organize:
+From Code: No
 Expected Scope: character
 
 --------------------
@@ -119,6 +155,12 @@ Expected Scope: character
 elope_ongoing:
 From Code: No
 Expected Scope: character
+
+--------------------
+
+on_artifact_changed_owner:
+From Code: Yes
+Expected Scope: artifact
 
 --------------------
 
@@ -140,6 +182,12 @@ Expected Scope: character
 
 --------------------
 
+on_tradition_added:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 on_war_transferred:
 From Code: Yes
 Expected Scope: character
@@ -158,9 +206,9 @@ Expected Scope: character
 
 --------------------
 
-parent_ongoing:
-From Code: No
-Expected Scope: character
+yearly_struggle_playable_pulse:
+From Code: Yes
+Expected Scope: none
 
 --------------------
 
@@ -173,6 +221,12 @@ Expected Scope: none
 claim_throne_failed:
 From Code: No
 Expected Scope: character
+
+--------------------
+
+on_hook_used:
+From Code: Yes
+Expected Scope: none
 
 --------------------
 
@@ -195,6 +249,18 @@ Expected Scope: character
 --------------------
 
 stewardship_duty_special_2000_mediation_stage_2:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+ongoing_doppelganger_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+house_feud_ai_scheme_pulse:
 From Code: No
 Expected Scope: character
 
@@ -256,6 +322,12 @@ Expected Scope: character
 
 on_siege_completion:
 From Code: Yes
+Expected Scope: character
+
+--------------------
+
+hold_court_event_selection:
+From Code: No
 Expected Scope: character
 
 --------------------
@@ -332,6 +404,12 @@ Expected Scope: faith
 
 --------------------
 
+on_set_relation_nemesis:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 faith_fervor_events_pulse:
 From Code: No
 Expected Scope: faith
@@ -350,7 +428,7 @@ Expected Scope: character
 
 --------------------
 
-vassal_ongoing:
+on_yearly_invisible_events:
 From Code: No
 Expected Scope: character
 
@@ -368,6 +446,12 @@ Expected Scope: none
 
 --------------------
 
+inspiration_maintenance_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 learning_lifestyle_ongoing_events:
 From Code: No
 Expected Scope: character
@@ -382,7 +466,13 @@ Expected Scope: character
 
 on_raid_action_start:
 From Code: Yes
-Expected Scope: none
+Expected Scope: army
+
+--------------------
+
+fp2_struggle_council_toledo_debate:
+From Code: No
+Expected Scope: character
 
 --------------------
 
@@ -416,6 +506,12 @@ Expected Scope: character
 
 --------------------
 
+ongoing_visited_by_ghosts_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 diplomacy_lifestyle_rare_events:
 From Code: No
 Expected Scope: character
@@ -431,6 +527,12 @@ Expected Scope: none
 claim_throne_ongoing:
 From Code: No
 Expected Scope: character
+
+--------------------
+
+on_death_relation_lover:
+From Code: No
+Expected Scope: none
 
 --------------------
 
@@ -485,12 +587,6 @@ Expected Scope: character
 task_find_secrets_side_effects:
 From Code: No
 Expected Scope: character
-
---------------------
-
-on_battle_owner_battle_end:
-From Code: No
-Expected Scope: none
 
 --------------------
 
@@ -566,6 +662,12 @@ Expected Scope: character
 
 --------------------
 
+inspiration_invalidated_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 on_3rd_birthday:
 From Code: No
 Expected Scope: character
@@ -573,6 +675,12 @@ Expected Scope: character
 --------------------
 
 on_yearly_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+on_birthday_adulthood:
 From Code: No
 Expected Scope: character
 
@@ -602,9 +710,21 @@ Expected Scope: character
 
 --------------------
 
+inspiration_maintenance_quarterly_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 stewardship_duty_special_2000_mediation_background_events:
 From Code: No
 Expected Scope: character
+
+--------------------
+
+on_set_relation_soulmate:
+From Code: No
+Expected Scope: none
 
 --------------------
 
@@ -626,6 +746,12 @@ Expected Scope: character
 
 --------------------
 
+on_death_relation_friend:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 on_defeat_raid_army:
 From Code: Yes
 Expected Scope: army
@@ -640,6 +766,12 @@ Expected Scope: character
 
 intrigue_lifestyle_common_events:
 From Code: No
+Expected Scope: character
+
+--------------------
+
+on_court_language_changed:
+From Code: Yes
 Expected Scope: character
 
 --------------------
@@ -663,6 +795,12 @@ Expected Scope: character
 --------------------
 
 task_promote_culture_side_effects:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+fp2_lyonese_monk_events_phase_teachings_events:
 From Code: No
 Expected Scope: character
 
@@ -710,6 +848,12 @@ Expected Scope: character
 
 --------------------
 
+steal_back_artifact_failure:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 on_raid_loot_delivered:
 From Code: Yes
 Expected Scope: army
@@ -717,6 +861,12 @@ Expected Scope: army
 --------------------
 
 peasant_affair_shows_up_at_court:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+inspiration_start_events:
 From Code: No
 Expected Scope: character
 
@@ -736,7 +886,7 @@ Expected Scope: character
 
 on_title_lost:
 From Code: Yes
-Expected Scope: none
+Expected Scope: character
 
 --------------------
 
@@ -770,6 +920,12 @@ Expected Scope: character
 
 --------------------
 
+steal_back_artifact_ongoing:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 parent_meddling_outcome:
 From Code: No
 Expected Scope: character
@@ -782,9 +938,27 @@ Expected Scope: character
 
 --------------------
 
+fp2_struggle_council_toledo_attend:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+ongoing_sycophant_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 on_character_culture_change:
 From Code: Yes
-Expected Scope: character
+Expected Scope: none
+
+--------------------
+
+on_artifact_broken_through_effect:
+From Code: Yes
+Expected Scope: artifact
 
 --------------------
 
@@ -796,6 +970,18 @@ Expected Scope: character
 
 on_birth_child:
 From Code: Yes
+Expected Scope: character
+
+--------------------
+
+inspiration_completed_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+fp2_yearly_events:
+From Code: No
 Expected Scope: character
 
 --------------------
@@ -812,9 +998,21 @@ Expected Scope: character
 
 --------------------
 
+on_death_relation_rival:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 on_holy_order_hired:
 From Code: Yes
 Expected Scope: none
+
+--------------------
+
+playdate_start_events:
+From Code: No
+Expected Scope: character
 
 --------------------
 
@@ -854,6 +1052,12 @@ Expected Scope: character
 
 --------------------
 
+bp1_yearly_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 horse_riding_accident_outcome:
 From Code: No
 Expected Scope: character
@@ -862,12 +1066,6 @@ Expected Scope: character
 
 stewardship_lifestyle_rare_events:
 From Code: No
-Expected Scope: character
-
---------------------
-
-on_commander_combat_pulse:
-From Code: Yes
 Expected Scope: character
 
 --------------------
@@ -885,6 +1083,12 @@ Expected Scope: character
 --------------------
 
 befriend_rival_ongoing:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+fp2_struggle_council_toledo_fallback:
 From Code: No
 Expected Scope: character
 
@@ -944,12 +1148,6 @@ Expected Scope: none
 
 --------------------
 
-secrets_ongoing:
-From Code: No
-Expected Scope: character
-
---------------------
-
 on_perks_refunded:
 From Code: Yes
 Expected Scope: none
@@ -968,7 +1166,7 @@ Expected Scope: character
 
 --------------------
 
-RP_slander_succeeded:
+house_feud_inheritance_events:
 From Code: No
 Expected Scope: character
 
@@ -1016,9 +1214,9 @@ Expected Scope: none
 
 --------------------
 
-on_commander_battle_end:
+inspiration_ongoing_events:
 From Code: No
-Expected Scope: none
+Expected Scope: character
 
 --------------------
 
@@ -1034,15 +1232,15 @@ Expected Scope: character
 
 --------------------
 
-on_game_start:
-From Code: Yes
+on_set_relation_guardian:
+From Code: No
 Expected Scope: none
 
 --------------------
 
-lover_ongoing_fallback:
-From Code: No
-Expected Scope: character
+on_game_start:
+From Code: Yes
+Expected Scope: none
 
 --------------------
 
@@ -1076,7 +1274,19 @@ Expected Scope: character
 
 --------------------
 
+manage_guards_marshal_task_side_effects:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 on_stress_level_2:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+culture_divergence_emergence_events:
 From Code: No
 Expected Scope: character
 
@@ -1089,6 +1299,12 @@ Expected Scope: character
 --------------------
 
 martial_lifestyle_common_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+learn_language_ongoing:
 From Code: No
 Expected Scope: character
 
@@ -1112,6 +1328,12 @@ Expected Scope: character
 
 --------------------
 
+on_court_type_changed:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 intrigue_lifestyle_uncommon_events:
 From Code: No
 Expected Scope: character
@@ -1131,6 +1353,12 @@ Expected Scope: none
 --------------------
 
 rival_quarterly_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+ongoing_house_feud_events:
 From Code: No
 Expected Scope: character
 
@@ -1160,6 +1388,12 @@ Expected Scope: character
 
 --------------------
 
+playdate_event_selection:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 peasant_affair_looking_for_peasant:
 From Code: No
 Expected Scope: character
@@ -1178,13 +1412,19 @@ Expected Scope: character
 
 --------------------
 
-spouse_ongoing:
+sway_failure:
 From Code: No
 Expected Scope: character
 
 --------------------
 
-sway_failure:
+on_player_royal_court_first_gained:
+From Code: Yes
+Expected Scope: character
+
+--------------------
+
+dungeon_ongoing_reformed:
 From Code: No
 Expected Scope: character
 
@@ -1192,6 +1432,12 @@ Expected Scope: character
 
 map_painting_event_selection:
 From Code: No
+Expected Scope: character
+
+--------------------
+
+on_artifact_durability_low:
+From Code: Yes
 Expected Scope: character
 
 --------------------
@@ -1234,11 +1480,17 @@ Expected Scope: character
 
 on_explicit_claim_gain:
 From Code: Yes
-Expected Scope: character
+Expected Scope: none
 
 --------------------
 
 on_courtier_ready_to_move_to_pool:
+From Code: Yes
+Expected Scope: character
+
+--------------------
+
+on_absent_from_royal_court:
 From Code: Yes
 Expected Scope: character
 
@@ -1259,6 +1511,12 @@ Expected Scope: character
 on_potential_great_holy_war_invalidation:
 From Code: Yes
 Expected Scope: great holy war
+
+--------------------
+
+fp1_trade_events_cycle:
+From Code: No
+Expected Scope: none
 
 --------------------
 
@@ -1328,6 +1586,12 @@ Expected Scope: none
 
 --------------------
 
+yearly_culture_pulse:
+From Code: Yes
+Expected Scope: culture
+
+--------------------
+
 on_commander_combat_finished:
 From Code: No
 Expected Scope: none
@@ -1346,13 +1610,13 @@ Expected Scope: character
 
 --------------------
 
-RP_slander_failed:
+stewardship_duty_special_2000_mediation_stage_1:
 From Code: No
 Expected Scope: character
 
 --------------------
 
-stewardship_duty_special_2000_mediation_stage_1:
+culture_hybridization_emergence_events:
 From Code: No
 Expected Scope: character
 
@@ -1394,8 +1658,32 @@ Expected Scope: character
 
 --------------------
 
+fp1_yearly_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+on_baron_found_or_created_for_title:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+fp2_lyonese_monk_events_cycle_no_valid_events_fallback:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 pilgrimage_generic_destination_events:
 From Code: No
+Expected Scope: character
+
+--------------------
+
+five_year_struggle_playable_pulse:
+From Code: Yes
 Expected Scope: character
 
 --------------------
@@ -1412,14 +1700,20 @@ Expected Scope: great holy war
 
 --------------------
 
-friendship_ongoing:
+yearly_playable_pulse:
+From Code: Yes
+Expected Scope: character
+
+--------------------
+
+fp1_trade_events_random:
 From Code: No
 Expected Scope: character
 
 --------------------
 
-yearly_playable_pulse:
-From Code: Yes
+jester_ongoing:
+From Code: No
 Expected Scope: character
 
 --------------------
@@ -1460,6 +1754,18 @@ Expected Scope: character
 
 --------------------
 
+on_ruler_designer_finished:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_trigger_court_events:
+From Code: Yes
+Expected Scope: character
+
+--------------------
+
 martial_lifestyle_uncommon_events:
 From Code: No
 Expected Scope: character
@@ -1478,13 +1784,13 @@ Expected Scope: character
 
 --------------------
 
-rivalry_ongoing_fallback:
+on_birthday_education_events:
 From Code: No
 Expected Scope: character
 
 --------------------
 
-on_birthday_education_events:
+playdate_fallback:
 From Code: No
 Expected Scope: character
 
@@ -1508,6 +1814,12 @@ Expected Scope: character
 
 --------------------
 
+on_court_grandeur_level_changed:
+From Code: Yes
+Expected Scope: character
+
+--------------------
+
 stress_threshold_level_1_event:
 From Code: No
 Expected Scope: character
@@ -1527,6 +1839,18 @@ Expected Scope: character
 --------------------
 
 seduce_ongoing_milestone_2:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+on_county_auto_granted_to_local_culture:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+fp2_lyonese_monk_events_phase_schism_events:
 From Code: No
 Expected Scope: character
 
@@ -1559,12 +1883,6 @@ Expected Scope: none
 on_siege_looting:
 From Code: Yes
 Expected Scope: none
-
---------------------
-
-RP_slander_ongoing:
-From Code: No
-Expected Scope: character
 
 --------------------
 
@@ -1604,6 +1922,12 @@ Expected Scope: character
 
 --------------------
 
+on_county_auto_granted_to_liege_culture:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 on_10th_birthday:
 From Code: No
 Expected Scope: character
@@ -1612,7 +1936,7 @@ Expected Scope: character
 
 on_title_destroyed:
 From Code: Yes
-Expected Scope: none
+Expected Scope: character
 
 --------------------
 
@@ -1658,19 +1982,37 @@ Expected Scope: character
 
 --------------------
 
+on_death_relation_nemesis:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+train_commanders_monthly_on_action:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 learn_commander_trait_success:
 From Code: No
 Expected Scope: character
 
 --------------------
 
-rivalry_ongoing:
+escape_from_prison_failure:
 From Code: No
 Expected Scope: character
 
 --------------------
 
-escape_from_prison_failure:
+steal_back_artifact_success:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+task_bestow_royal_favor_side_effects:
 From Code: No
 Expected Scope: character
 
@@ -1683,6 +2025,12 @@ Expected Scope: character
 --------------------
 
 feast_main_event_selection:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+dungeon_ongoing_neglected:
 From Code: No
 Expected Scope: character
 
@@ -1712,6 +2060,12 @@ Expected Scope: character
 
 --------------------
 
+on_artifact_durability_very_low:
+From Code: Yes
+Expected Scope: artifact
+
+--------------------
+
 pagan_destination_events:
 From Code: No
 Expected Scope: character
@@ -1724,7 +2078,7 @@ Expected Scope: character
 
 --------------------
 
-RP_slander_setup:
+on_yearly_common_events:
 From Code: No
 Expected Scope: character
 
@@ -1772,6 +2126,12 @@ Expected Scope: none
 
 --------------------
 
+on_set_relation_best_friend:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 claim_throne_setup:
 From Code: No
 Expected Scope: character
@@ -1814,6 +2174,12 @@ Expected Scope: none
 
 --------------------
 
+on_culture_created:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 on_rank_up:
 From Code: Yes
 Expected Scope: none
@@ -1826,6 +2192,12 @@ Expected Scope: character
 
 --------------------
 
+on_death_relation_soulmate:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 learning_lifestyle_common_events:
 From Code: No
 Expected Scope: character
@@ -1833,6 +2205,12 @@ Expected Scope: character
 --------------------
 
 on_vassal_become_powerful:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_artifact_claim_gained:
 From Code: Yes
 Expected Scope: none
 
@@ -1886,13 +2264,13 @@ Expected Scope: none
 
 --------------------
 
-relation_upgrade_quarterly_pulse:
+hindu_destination_events:
 From Code: No
 Expected Scope: character
 
 --------------------
 
-hindu_destination_events:
+learn_language_failure:
 From Code: No
 Expected Scope: character
 
@@ -1942,13 +2320,7 @@ Expected Scope: character
 
 on_explicit_claim_lost:
 From Code: Yes
-Expected Scope: character
-
---------------------
-
-ongoing_trait_events:
-From Code: No
-Expected Scope: character
+Expected Scope: none
 
 --------------------
 
@@ -1965,6 +2337,12 @@ Expected Scope: none
 --------------------
 
 murder_save_roll:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+learn_language_success:
 From Code: No
 Expected Scope: character
 
@@ -2042,6 +2420,12 @@ Expected Scope: character
 
 --------------------
 
+inspiration_maintenance_global_pulse:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 disease_outbreak_pulse:
 From Code: No
 Expected Scope: character
@@ -2072,6 +2456,18 @@ Expected Scope: character
 
 --------------------
 
+on_building_completed:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_councillor_left:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 task_disrupt_schemes_side_effects:
 From Code: No
 Expected Scope: character
@@ -2081,6 +2477,12 @@ Expected Scope: character
 task_religious_relations_side_effects:
 From Code: No
 Expected Scope: character
+
+--------------------
+
+fp2_iberian_struggle_starting_events:
+From Code: No
+Expected Scope: struggle
 
 --------------------
 
@@ -2120,9 +2522,21 @@ Expected Scope: character
 
 --------------------
 
+task_accept_culture_side_effects:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 five_year_playable_pulse:
 From Code: Yes
 Expected Scope: character
+
+--------------------
+
+on_artifact_broken_through_decay:
+From Code: Yes
+Expected Scope: artifact
 
 --------------------
 
@@ -2147,6 +2561,12 @@ Expected Scope: character
 escape_from_prison:
 From Code: No
 Expected Scope: character
+
+--------------------
+
+on_artifact_succession:
+From Code: Yes
+Expected Scope: artifact
 
 --------------------
 
@@ -2175,12 +2595,6 @@ Expected Scope: character
 --------------------
 
 chivalry_setup:
-From Code: No
-Expected Scope: character
-
---------------------
-
-lover_ongoing:
 From Code: No
 Expected Scope: character
 
